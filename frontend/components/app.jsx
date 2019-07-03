@@ -12,8 +12,10 @@ const App = () => (
       <div className="navlogo"/>
       <GreetingContainer/>
     </header>
-    <AuthRoute path ="/login" component={LogInFormContainer} />
-    <AuthRoute path ="/signup" component={SignUpFormContainer} />
+    <div className="navitems">
+      <AuthRoute path ="/login" component={LogInFormContainer} />
+      <AuthRoute path ="/signup" component={SignUpFormContainer} />
+    </div>
   </div>
 );
 
