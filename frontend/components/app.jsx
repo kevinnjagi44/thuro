@@ -8,8 +8,8 @@ import SignUpFormContainer from './session_form/signup_form_container';
 
 const App = () => (
   <div>
-    <header>
-      <h1>TuroClone App</h1>
+    <header className="navbar"> 
+      <div className="navlogo"/>
       <GreetingContainer/>
     </header>
     <AuthRoute path ="/login" component={LogInFormContainer} />
