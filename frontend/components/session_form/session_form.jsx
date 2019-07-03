@@ -21,7 +21,7 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.processForm(user);
+    this.props.processForm(user).then(this.props.closeModal);
   }
 
   renderErrors() {
@@ -41,10 +41,11 @@ class SessionForm extends React.Component {
       return (
 
         <div>
-          <form onSubmit={this.handleSubmit}>
+          <form className="modal-form" onSubmit={this.handleSubmit}>
             Welcome Back to TuroClone!
             <br />
-            Please {this.props.formType} or {this.props.navLink}
+            Please {this.props.formType} or {this.props.otherForm}
+            <div className="modal-x" onClick={this.props.closeModal}>X</div>
             {this.renderErrors()}
             <div>
               <br />
@@ -73,10 +74,11 @@ class SessionForm extends React.Component {
       return (
 
         <div>
-          <form onSubmit={this.handleSubmit}>
+          <form className="modal-form" onSubmit={this.handleSubmit}>
             Welcome to TuroClone!
             <br />
-            Please {this.props.formType} or {this.props.navLink}
+            Please {this.props.formType} or {this.props.otherForm}
+            <div className="modal-x" onClick={this.props.closeModal}>X</div>
             {this.renderErrors()}
             <div>
               <br />

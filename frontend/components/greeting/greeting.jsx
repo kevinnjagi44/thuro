@@ -1,19 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom'; 
 
-const Greeting = ({ currentUser, logout }) => {
+const Greeting = ({ currentUser, logout, openModal }) => {
+  
   const loggedOut = () => {
-     
     return (
     <nav>
-      <Link to="/login">Login</Link>
-      &nbsp;or&nbsp;
-      <Link to="/signup">Sign Up</Link>
+      {/* <Link to="/login">Login</Link> */}
+      <button className="navbutton" onClick={() => openModal('login')}>Login</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <button className="navbutton" onClick={() => openModal('signup')}>Sign up</button>
+      {/* <Link to="/signup">Sign up</Link> */}
     </nav>
     )};
 
-  const loggedIn = () => {
-     
+  const loggedIn = () => {   
     return (
     <nav>
       <h2>Hi, {currentUser.fname}.</h2>

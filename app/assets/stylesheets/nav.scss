@@ -4,19 +4,36 @@
 .navbar {
   background-color: #231f20;
   font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
-  line-height: 6.5;
-  padding-right: 15px;
+  font-weight: 700;
+  line-height: 5;
+  padding-right: 265px;
   padding-left: 15px;
   font-size: 13px;
-  height: 85px;
+  height: 60px;
   display: flex;
   vertical-align: text-bottom;
   justify-content: space-between;
 }
 
+.navbutton {
+  background: #231f20;
+  color: #ffffff;
+  border: none;
+  font-size: 13px;
+}
+
+.navbutton:hover{
+  background: #231f20;
+  color: #ffffff;
+  text-decoration: underline;
+
+  cursor: pointer;
+}
+
 .navitems {
   vertical-align: text-bottom;
-  line-height: 20px;
+  line-height: 5;
+  padding-right: 555px;
 }
 
 .navlogo {
@@ -24,7 +41,6 @@
   background-position: left top;
   background-attachment: fixed;
   background-size: cover;
-  // padding-left: 30px;
   position: relative;
   // background-repeat: no-repeat;
   // height: 10%;
