@@ -5,11 +5,15 @@ import { login } from '../../actions/session_actions';
 import SessionForm from './session_form';
 
 const mapStateToProps = ({ errors }) => {
-  return {
+  return ({
     errors: errors.session,
     formType: 'login',
+    formFields: {
+      email: '',
+      password: ''
+    },
     navLink: <Link to="/signup">Sign Up Instead</Link>
-  };
+  });
 };
 
 const mapDispatchToProps = dispatch => {
@@ -18,7 +22,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(SessionForm);
+export default connect(mapStateToProps,mapDispatchToProps)(SessionForm);
