@@ -10,6 +10,7 @@ class SessionForm extends React.Component {
     };
     this.state = this.props.formFields;
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemoUser = this.handleDemoUser.bind(this);
   }
 
   update(field) {
@@ -22,6 +23,14 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user).then(this.props.closeModal);
+  }
+
+  handleDemoUser(e) {
+    e.preventDefault();
+    this.props.processForm({
+      email: 'demo@email.com',
+      password: 'password'
+    }).then(this.props.closeModal);
   }
 
   renderErrors() {
@@ -39,14 +48,11 @@ class SessionForm extends React.Component {
   render() {
     if (this.props.formType == 'login') {
       return (
-
+    // LOGIN FORM //
         <div>
           <form className="modal-form" onSubmit={this.handleSubmit}>
-            Welcome Back to TuroClone!
+            <h3 className="modal-form-header">Welcome Back</h3>
             <br />
-            Please {this.props.formType} or {this.props.otherForm}
-            <div className="modal-x" onClick={this.props.closeModal}>X</div>
-            {this.renderErrors()}
             <div>
               <br />
               <label>Email:
@@ -65,53 +71,63 @@ class SessionForm extends React.Component {
               <br />
               <br />
               <input type="submit" value={this.props.formType} />
+              <input type="submit" onClick={this.handleDemoUser} value="Demo Login" />
             </div>
+            Don't have an account? {this.props.otherForm}
+            {/* Please {this.props.formType} or {this.props.otherForm} */}
+            <div className="modal-x" onClick={this.props.closeModal}>X</div>
+            {this.renderErrors()}
           </form>
         </div>
 
       )
     } else {
       return (
-
+      // SIGNUP FORM //
         <div>
           <form className="modal-form" onSubmit={this.handleSubmit}>
-            Welcome to TuroClone!
-            <br />
-            Please {this.props.formType} or {this.props.otherForm}
-            <div className="modal-x" onClick={this.props.closeModal}>X</div>
-            {this.renderErrors()}
             <div>
+              Welcome to TuroClone!
               <br />
-              <label>First Name:
-                <input type="text"
-                  value={this.state.fname}
-                  onChange={this.update('fname')}
-                />
-              </label>
-              <br />
-              <label>Last Name:
-                <input type="text"
-                  value={this.state.lname}
-                  onChange={this.update('lname')}
-                />
-              </label>
-              <br />
-              <label>Email:
-                <input type="text"
-                  value={this.state.email}
-                  onChange={this.update('email')}
-                />
-              </label>
-              <br />
-              <label>Password:
-                <input type="password"
-                  value={this.state.password}
-                  onChange={this.update('password')}
-                />
-              </label>
-              <br />
-              <br />
-              <input type="submit" value={this.props.formType} />
+              Please {this.props.formType} or {this.props.otherForm}
+              <div className="modal-x" onClick={this.props.closeModal}>X</div>
+              {this.renderErrors()}
+              <div>
+                <br />
+                <label>First Name:
+                  <br />
+                  <input type="text"
+                    value={this.state.fname}
+                    onChange={this.update('fName')}
+                  />
+                </label>
+
+                <label>Last Name: 
+                  <input type="text"
+                    value={this.state.lname}
+                    onChange={this.update('lName')}
+                  />
+                </label>
+                <br />
+                <label>Email:
+                  <br />
+                  <input type="text"
+                    value={this.state.email}
+                    onChange={this.update('email')}
+                  />
+                </label>
+                <br />
+                <label>Password:
+                  <br />
+                  <input type="password"
+                    value={this.state.password}
+                    onChange={this.update('password')}
+                  />
+                </label>
+                <br />
+                <br />
+                <input type="submit" value={this.props.formType} />
+              </div>
             </div>
           </form>
         </div>

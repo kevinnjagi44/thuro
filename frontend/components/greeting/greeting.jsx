@@ -18,7 +18,6 @@ const Greeting = ({ currentUser, logout, openModal }) => {
     return (
     <nav>
       <h2>Hi, {currentUser.fname}.</h2>
-      <h3>In case you didn't know, your last name is {currentUser.lname}.</h3>
       <button onClick={logout}>Log Out</button>
     </nav>  
   )};
