@@ -6,6 +6,7 @@ import LogInFormContainer from './session_form/login_form_container';
 import SignUpFormContainer from './session_form/signup_form_container';
 import { Link } from 'react-router-dom';
 import Modal from './modal/modal';
+// import modalBg from '../../app/assets/images/modal-bg.jpg';
 
 const App = () => (
   <div>

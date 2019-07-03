@@ -25,11 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	window.login = login;
 	window.signup = signup;
 	window.logout = logout;
+	
 	//TESTING END
 	const root = document.getElementById('root');
 	ReactDOM.render(<Root store={store} />, root);
 });
-
-
-
-
