@@ -22,13 +22,11 @@ const Greeting = ({ currentUser, logout }) => {
     </nav>  
   )};
 
-  // if (currentUser) {
-  //   return loggedIn();
-  // } else {
-  //   return loggedOut();
-  // };
-
-  return currentUser ? loggedIn() : loggedOut();
+  if (currentUser) {
+    return loggedIn();
+  } else {
+    return loggedOut();
+  };
 
 };
 
