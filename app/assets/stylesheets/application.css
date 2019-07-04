@@ -16,5 +16,6 @@
 
   @import "reset.scss";
   @import "nav.scss";
+  @import "dropdown.scss";
   @import "main.scss";
   @import "modal.scss";
