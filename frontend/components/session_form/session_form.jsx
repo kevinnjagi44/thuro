@@ -49,32 +49,39 @@ class SessionForm extends React.Component {
     if (this.props.formType == 'login') {
       return (
     // LOGIN FORM //
-        <div>
+        <div className="modal-container">
           <form className="modal-form" onSubmit={this.handleSubmit}>
-            <h3 className="modal-form-header">Welcome Back</h3>
+            <h3 className="modal-form-header">Welcome back</h3>
             <br />
-            <div>
+            <div className="modal-container">
               <br />
-              <label>Email:
+              <label>Email
                 <br/>
-                <input type="text"
+                <input type="text" 
+                  placeholder="Email" 
                   value={this.state.email}
                   onChange={this.update('email')}
                 />
               </label>
               <br />
-              <label>Password:
+              <label>Password
                 <br/>
-                <input type="password"
+                <input type="password" 
+                  placeholder="Password" 
                   value={this.state.password}
                   onChange={this.update('password')}
                 />
               </label>
               <br />
               <br />
-              <input type="submit" value={this.props.formType} />
-              <input type="submit" onClick={this.handleDemoUser} value="Demo Login" />
+              <input type="submit" value={this.props.formType} value="Log in" />
+              <br/>
+              <br/>
+              <input type="submit" onClick={this.handleDemoUser} value="Demo Log in" />
             </div>
+            <br/>
+            or
+            <br/>
             Don't have an account? {this.props.otherForm}
             {/* Please {this.props.formType} or {this.props.otherForm} */}
             <div className="modal-x" onClick={this.props.closeModal}>X</div>
@@ -86,50 +93,50 @@ class SessionForm extends React.Component {
     } else {
       return (
       // SIGNUP FORM //
-        <div>
+        <div className="modal-container">
           <form className="modal-form" onSubmit={this.handleSubmit}>
             <div>
-              Welcome to TuroClone!
+              <h3 className="modal-form-header">Let's get started</h3>
               <br />
-              Please {this.props.formType} or {this.props.otherForm}
               <div className="modal-x" onClick={this.props.closeModal}>X</div>
               {this.renderErrors()}
-              <div>
+              <div className="modal-container">
                 <br />
-                <label>First Name:
+                <label>First Name
                   <br />
                   <input type="text"
                     value={this.state.fname}
                     onChange={this.update('fName')}
-                  />
+                    />
                 </label>
 
-                <label>Last Name: 
+                <label>Last Name
                   <input type="text"
                     value={this.state.lname}
                     onChange={this.update('lName')}
-                  />
+                    />
                 </label>
                 <br />
-                <label>Email:
+                <label>Email
                   <br />
                   <input type="text"
                     value={this.state.email}
                     onChange={this.update('email')}
-                  />
+                    />
                 </label>
                 <br />
-                <label>Password:
+                <label>Password
                   <br />
                   <input type="password"
                     value={this.state.password}
                     onChange={this.update('password')}
-                  />
+                    />
                 </label>
                 <br />
                 <br />
-                <input type="submit" value={this.props.formType} />
+                <input type="submit" value={this.props.formType} value="Sign up"/>
               </div>
+                Already have an account? {this.props.otherForm}
             </div>
           </form>
         </div>

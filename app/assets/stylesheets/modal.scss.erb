@@ -16,26 +16,33 @@
 }
 
 .modal-x {
-   position: absolute;
-   top: -20px;
-   right: -15px;
-   cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
 }
 
 .modal-form-header {
   font-family: Freight,HoeflerText-Black,Times New Roman,serif;
   font-size: 40px;
   text-align: center;
+  line-height: 1.2;
+  margin: 30px 0 10px;
+  text-transform: none;
+  font-weight: 0;
 }
 
 .modal-container {
-  padding: 40px 30px;
+  align-content: center;
 }
 
 .modal-form {
-  width: 367px;
-  height: 588px;
-  // background-image: url(<%= asset_path '/modal-bg.jpg' %>);
+  width: 396px;
+  height: 534px;
+  background-image: url('http://turo.com/iframes/dunlop-dialog/assets/99c10876228241e2c8cc35b6b82952cc.jpg');
   // background-size: 367px 588px;
   // background-repeat: no-repeat;
   border: 1px solid black;
@@ -44,25 +51,31 @@
   color: #FFFFFF;
   line-height: 1.5;
   display: block;
-  border-radius: 25px;
+  border-radius: 8px;
   padding: 20px;
+  align-content: center;
 }
 
 .modal-form input[type="text"] {
-  width: 350px;
-  height: 25px;
+  font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
+  width: 98.5%;
+  height: 35px;
+  font-size: 13px;
+  color: #231F20;
 }
 
 .modal-form input[type="password"] {
-  width: 350px;
-  height:25px;
+  width: 98.5%;
+  height:35px;
 }
 
 .modal-form input[type="submit"] {
-  width: 350px;
-  height:50px;
+  width: 98.5%;
+  height: 50px;
   background: #59D389;
   color: #FFFFFF;
+  font-weight: 100;
   font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
   font-size: 18px;
+  border: 0px;
 }
