@@ -79,11 +79,11 @@ class SessionForm extends React.Component {
               <br/>
               <input type="submit" onClick={this.handleDemoUser} value="Demo Log in" />
             </div>
-            <br/>
-            or
-            <br/>
-            Don't have an account? {this.props.otherForm}
-            {/* Please {this.props.formType} or {this.props.otherForm} */}
+            <div className="modal-bottom"> 
+              <br />
+              Don't have an account? {this.props.otherForm}
+              {/* Please {this.props.formType} or {this.props.otherForm} */}
+            </div>
             <div className="modal-x" onClick={this.props.closeModal}>X</div>
             {this.renderErrors()}
           </form>
@@ -133,10 +133,13 @@ class SessionForm extends React.Component {
                     />
                 </label>
                 <br />
-                <br />
-                <input type="submit" value={this.props.formType} value="Sign up"/>
+                  <br />
+                  <input type="submit" value={this.props.formType} value="Sign up"/>
+                <div className="modal-bottom">
+                  <br/>
+                  Already have an account? {this.props.otherForm}
+                </div>
               </div>
-                Already have an account? {this.props.otherForm}
             </div>
           </form>
         </div>
