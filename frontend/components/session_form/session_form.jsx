@@ -106,14 +106,14 @@ class SessionForm extends React.Component {
                   <br />
                   <input type="text"
                     value={this.state.fname}
-                    onChange={this.update('fName')}
+                    onChange={this.update('fname')}
                     />
                 </label>
 
                 <label>Last Name
                   <input type="text"
                     value={this.state.lname}
-                    onChange={this.update('lName')}
+                    onChange={this.update('lname')}
                     />
                 </label>
                 <br />
