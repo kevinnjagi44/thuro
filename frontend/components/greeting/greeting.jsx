@@ -16,10 +16,10 @@ const Greeting = ({ currentUser, logout, openModal }) => {
 
   const loggedIn = () => {   
     return (
-    <nav className="nav-item-wrapper">
-      <div className="nav-profile">
+    <nav>
+      <div className="nav-item-wrapper">
         <div className="dropdown">
-          <div className="dropbtn" onClick={logout}/>
+          <div className="nav-profile"/>
           <div className="dropdown-content">
             <a onClick={logout}>Log out</a>
           </div>
