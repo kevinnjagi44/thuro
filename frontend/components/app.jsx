@@ -12,10 +12,12 @@ const App = () => (
   <div>
     <Modal/>
     <header className="navbar"> 
-      <div className="navlogo"/>
+      <div className="navlogo-wrapper">
         <Link to="/">
-          <div className="navitems">LOGO HERE</div>
+           <div className="navlogo"/>
+          {/* <div className="navitems"/> */}
         </Link>
+        </div>
       <GreetingContainer/>
     </header>
 
