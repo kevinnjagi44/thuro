@@ -12,7 +12,7 @@ const App = () => (
   <div>
     <Modal/>
     <header className="navbar"> 
-      <div className="navlogo-wrapper">
+      <div className="nav-item-wrapper">
         <Link to="/">
            <div className="navlogo"/>
           {/* <div className="navitems"/> */}

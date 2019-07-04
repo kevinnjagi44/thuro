@@ -16,9 +16,11 @@ const Greeting = ({ currentUser, logout, openModal }) => {
 
   const loggedIn = () => {   
     return (
-    <nav>
+    <nav className="nav-item-wrapper">
+      <div className="nav-profile" onClick={logout}/>
       {/* <h2>Hi, {currentUser.fname}.</h2> */}
-      <button onClick={logout}>Log Out</button>
+        {/* <img src="https://github.com/fsiino/torino/blob/master/app/assets/images/profile-icon.png?raw=true" height='38px' onClick={logout} /> */}
+      {/* <button onClick={logout}>Log Out</button> */}
     </nav>  
   )};
 

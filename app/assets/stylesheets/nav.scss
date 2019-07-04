@@ -12,7 +12,6 @@
   justify-content: space-between;
 }
 
-
 .nav-wrapper {
   display: flex;
   justify-content: space-between;
@@ -38,17 +37,25 @@
   padding-right: 555px;
 }
 
-.navlogo-wrapper {
+.nav-item-wrapper {
   padding: 15px;
   padding-left: 10px;
 }
 
+.nav-profile {
+  background-image: url('https://github.com/fsiino/torino/blob/master/app/assets/images/profile-icon.png?raw=true');
+  background-size: 39px 35px;
+  position: relative;
+  padding: 19px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
 .navlogo {
   background-image: url('https://github.com/fsiino/torino/blob/master/app/assets/images/torino-logo.png?raw=true');
-    background-size: 50%;
-    width: 157px;
-    position: relative;
-    // padding-bottom: 43px;
-    padding: 15px;
-    background-repeat: no-repeat;
+  background-size: 50%;
+  width: 157px;
+  position: relative;
+  padding: 22px;
+  background-repeat: no-repeat;
 }
