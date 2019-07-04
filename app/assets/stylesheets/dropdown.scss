@@ -8,14 +8,10 @@
   border: none;
   outline: none;
   color: white;
-  padding: 14px 16px;
+  padding: 14px;
   background-color: inherit;
   font-family: inherit;
   margin: 0;
-}
-
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
 }
 
 .dropdown-content {
@@ -42,3 +38,4 @@
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
