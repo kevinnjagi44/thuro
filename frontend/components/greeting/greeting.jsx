@@ -21,7 +21,7 @@ const Greeting = ({ currentUser, logout, openModal }) => {
         <div className="dropdown">
           <div className="dropbtn" onClick={logout}/>
           <div className="dropdown-content">
-            <a href="{logout}">Log out</a>
+            <a onClick={logout}>Log out</a>
           </div>
         </div>
       </div>
