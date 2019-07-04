@@ -17,7 +17,7 @@ const Greeting = ({ currentUser, logout, openModal }) => {
   const loggedIn = () => {   
     return (
     <nav>
-      <h2>Hi, {currentUser.fname}.</h2>
+      {/* <h2>Hi, {currentUser.fname}.</h2> */}
       <button onClick={logout}>Log Out</button>
     </nav>  
   )};
