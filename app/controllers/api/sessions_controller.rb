@@ -10,7 +10,7 @@ class Api::SessionsController < ApplicationController
       # render "api/users/show"
       render json: @user
     else
-      render json: ["Invalid email/password combination"], status: 418
+      render json: ["Invalid email/password combination"]
     end
   end
 

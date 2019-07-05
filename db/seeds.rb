@@ -14,3 +14,57 @@ demo = User.create!(
   lname: 'user'
 )
 
+frankie = User.create!(
+  email: 'frankie@aa.io',
+  password: 'password',
+  fname: 'frankie',
+  lname: 'siino'
+)
+
+steve = User.create!(
+  email: 'steve@mi.com',
+  password: 'password',
+  fname: 'steve',
+  lname: 'yee'
+)
+
+# Seed Cars
+car1 = Car.create!(
+  owner_id: frankie.id,
+  rate: '110',
+  make: 'Ford',
+  model: 'Mustang', 
+  year: 2012,
+  color: 'black',
+  transmission: 'manual',
+  seats: '4',
+  description: 'Fun ride. Ignore the stains in the back.',
+  plate: '9DJ28H',
+  address: '825 Battery St',
+  city: 'San Francisco',
+  state: 'CA',
+  zip: 94111,
+  lat: 37.799017,
+  lng: -122.401116
+)
+
+car2 = Car.create!(
+  owner_id: steve.id,
+  rate: '160',
+  make: 'Lexus',
+  model: 'IS350', 
+  year: 2018,
+  color: 'gray',
+  transmission: 'automatic',
+  seats: '5',
+  description: 'Clean ride. Good fun.',
+  plate: '6D8SA6S',
+  address: '1200 39th Ave',
+  city: 'San Francisco',
+  state: 'CA',
+  zip: 94122,
+  lat: 37.763562, 
+  lng: -122.498625
+)
+
+ 
