@@ -52,6 +52,7 @@
   font-size: 16px;  
   border: 1px solid #ffffff;
   padding: 8px 14px;
+  background: transparent;
   align-content: center;
   cursor: pointer;
 }
@@ -87,7 +88,7 @@
 .modal-form input[type="submit"] {
   width: 98.5%;
   height: 50px;
-  background: transparent;
+  background: #59D389;
   color: #FFFFFF;
   font-weight: 100;
   font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;

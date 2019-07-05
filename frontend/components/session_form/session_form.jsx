@@ -14,7 +14,7 @@ class SessionForm extends React.Component {
     this.prettyDemoUser = this.prettyDemoUser.bind(this);
   }
 
-// BEGIN PRETTY DEMO LOGIN
+// ** Begin animated demo login **
   async prettyDemoUser(e) {
     e.preventDefault();
 
@@ -44,8 +44,7 @@ class SessionForm extends React.Component {
     document.getElementById('session-submit-btn').click();
     document.getElementById('password-input').blur();
   }
-
-//END PRETTY DEMO LOGIN
+// ** End animated demo login ** 
 
   update(field) {
     return e => this.setState({
@@ -70,7 +69,7 @@ class SessionForm extends React.Component {
 
   renderErrors() {
     return (
-      <ul>
+      <ul className="error-messages">
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>
             {error}

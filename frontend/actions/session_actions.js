@@ -18,6 +18,8 @@ export const receiveErrors = errors => ({
   errors
 });
 
+//add new const to clearerrors
+
 export const signup = user => dispatch => (APIUtil.signup(user)
   .then(user => (dispatch(receiveCurrentUser(user))), 
   err => (dispatch (receiveErrors(err.responseJSON))))
