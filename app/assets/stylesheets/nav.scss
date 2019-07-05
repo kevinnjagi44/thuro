@@ -17,14 +17,16 @@
 }
 
 .navbutton {
-  background: #231f20;
+  // background: #231f20;
+  background: transparent;
   color: #ffffff;
   border: none;
   font-size: 13px;
 }
 
 .navbutton:hover {
-  background: #231f20;
+  // background: #231f20;
+  background: transparent;
   color: #ffffff;
   text-decoration: underline;
   cursor: pointer;
