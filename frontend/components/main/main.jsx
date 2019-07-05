@@ -24,7 +24,7 @@ class Main extends React.Component {
         </div>
 
         <div className="footer-top">
-          *&nbsp;&nbsp;&nbsp;All Liberty Mutual liability insurance in the US is offered through Turo Insurance Agency. Terms, conditions, and exclusions apply.
+          *&nbsp;&nbsp;&nbsp;All Liberty Mutual liability insurance in the US is offered through Torino Insurance Agency. Terms, conditions, and exclusions apply.
         </div>
 
         <div className="footer-container">
@@ -38,14 +38,14 @@ class Main extends React.Component {
                 <li>Make money with your car</li>
                 <li>Carculator</li>
                 <li>All-Star Hosts</li>
-                <li>Turo for business</li>
+                <li>Torino for business</li>
               </ul>
             </div>
         
             <div className="footer-col">
               <ul>
                 <li><h2 className="footer-header">Learn more</h2></li>
-                <li>How Turo works</li>
+                <li>How Torino works</li>
                 <li>Policies</li>
                 <li>Trust & safety</li>
                 <li>Owner tools</li>
@@ -95,7 +95,7 @@ class Main extends React.Component {
           <div className="footer-2-col-container">
             <div className="footer-bottom-row">
               <ul>
-                <li><h2 className="footer-header">About Turo</h2></li>
+                <li><h2 className="footer-header">About Torino</h2></li>
                 <li>
                   &copy; 2019 Torino&nbsp;&nbsp;&nbsp;
                 </li>
