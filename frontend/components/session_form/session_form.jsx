@@ -3,7 +3,6 @@ import { withRouter } from 'react-router-dom';
 
 class SessionForm extends React.Component {
   constructor(props) {
-    
     super(props);
     this.state = {
       email: '',
@@ -15,10 +14,10 @@ class SessionForm extends React.Component {
     this.prettyDemoUser = this.prettyDemoUser.bind(this);
   }
 
-
   componentWillUnmount () {
     this.props.clearErrors();
   }
+
 // ** Begin animated demo login **
   async prettyDemoUser(e) {
     e.preventDefault();
@@ -118,13 +117,11 @@ class SessionForm extends React.Component {
               <input id="session-submit-btn" type="submit" value={this.props.formType} value="Log in" />
               <br/>
               <br/>
-              {/* <input type="submit" onClick={this.handleDemoUser} value="Demo Log in" /> */}
               <input type="submit" onClick={this.prettyDemoUser} value="Demo Log in" />
             </div>
             <div className="modal-bottom"> 
               <br />
               Don't have an account? &nbsp; {this.props.otherForm}
-              {/* Please {this.props.formType} or {this.props.otherForm} */}
             </div>
             <div className="modal-x" onClick={this.props.closeModal}>X</div>
             {this.renderErrors()}
