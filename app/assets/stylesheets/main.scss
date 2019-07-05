@@ -18,9 +18,10 @@ body {
     // background-position-x: 5%;   
     display: block;
     // width: 1070px;
-    height: 613px;
-    // position: fixed;
-    background-position: 0px -171px;
+    height: 645px;
+  // position: fixed;
+  z-index: -2;
+  background-position: 0px -250px;
 }
 
 a {

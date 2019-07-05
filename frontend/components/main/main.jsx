@@ -85,7 +85,7 @@ class Main extends React.Component {
           <div className="footer-col">
             <ul>
               <li><h2 className="footer-header">Talk to us</h2></li>
-              <li>social media iconz</li> 
+                <li><img src="https://github.com/fsiino/torino/blob/master/app/assets/images/footer-social.png?raw=true"/></li> 
               <li>Read our blog</li>
               <li>Contact customer support</li>
             </ul>
@@ -94,10 +94,10 @@ class Main extends React.Component {
         </div>
       </div>
 
-        {/* <div className="footer-2-col-container">
+        <div className="footer-2-col-container">
           <div className="footer-bottom-row">
-            <h2 className="footer-header">About Turo</h2>
             <ul>
+              <li><h2 className="footer-header">About Turo</h2></li>
               <li>
                 &copy; 2019 Torino&nbsp;&nbsp;&nbsp;
               </li>
@@ -125,9 +125,12 @@ class Main extends React.Component {
             </ul>
           </div>
           <div className="footer-bottom-row">
-            <h2 className="footer-header">Language</h2>
+            <ul>
+              <li><h2 className="footer-header">Language</h2></li>
+              <li><img src="https://github.com/fsiino/torino/blob/master/app/assets/images/english-us.png?raw=true"/>&nbsp;English (USA)</li>
+            </ul>
           </div>
-        </div> */}
+        </div>
 
       </div>
 
