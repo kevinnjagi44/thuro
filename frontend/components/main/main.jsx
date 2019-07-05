@@ -9,6 +9,8 @@ class Main extends React.Component {
     return (
       <div> 
 
+      {/* Main */}
+
         <div className="main-container">
           <div>
             <div className="spacer">
@@ -18,10 +20,43 @@ class Main extends React.Component {
             <h2 className="caption">Book unforgettable cars from local hosts around the world</h2>
           </div>
         </div>
+
+      {/* Middle */} 
+
         
-        <div>
-          Middle stuff here
+        <div className="mid-container">
+          <h3 className="mid-h2">Skip The Rental Counter</h3>
+          <h2 className="mid-h3">Discover the world’s largest car sharing marketplace</h2>
+
+          <br/>
+          <br/>
+          <div className="mid-flex-container">
+          
+            {/* <h3 className="mid-header">Endless options</h3> */}
+
+            <div className="mid-desc">Choose from hundreds of models you won’t find anywhere else. Pick it up or get it delivered where you want it.
+
+            {/* <h3 className="mid-header">24/7 customer support</h3> */}
+            <br/>
+            <br/>
+            Rest easy knowing that everyone in the Turo community is screened, and 24/7 customer support and roadside assistance are just a click away.</div>
+
+            {/* <h3 className="mid-header">Free cancellation</h3> */}
+
+            <br/>
+            <div className="mid-desc">Cancel for free up to 24 hours before your trip starts. Because life happens and it helps to be flexible when it does.
+            
+            {/* <h3 className="mid-header">Insurance options included</h3> */}
+            <br/>
+            <br/>
+            Drive confidently with your choice of protection plans offered through Turo Insurance Agency — you’re covered up to $1 million in liability insurance provided by Liberty Mutual.</div >
+            
+          </div>
         </div>
+
+
+      {/* Footer */}
+
 
         <div className="footer-top">
           *&nbsp;&nbsp;&nbsp;All Liberty Mutual liability insurance in the US is offered through Torino Insurance Agency. Terms, conditions, and exclusions apply.

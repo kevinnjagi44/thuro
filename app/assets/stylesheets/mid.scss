@@ -1,0 +1,37 @@
+.mid-container {
+  color: #231f20;
+  padding: 0px 200px 0px 200px;
+}
+
+.mid-flex-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.mid-h2 {
+  text-align: center;
+font-family: Plantin,AmericanTypewriter-Condensed,Times New Roman,serif;
+    line-height: 1.2;
+    text-transform: uppercase;  
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.mid-h3 {
+  text-align: center;
+  font-family: Freight,HoeflerText-Black,Times New Roman,serif;
+  font-size: 52px;
+  // font-weight: 400;
+}
+
+.mid-header {
+  font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
+}
+
+.mid-desc {
+  color: #231f20;
+  font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+}
