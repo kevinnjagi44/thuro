@@ -10,8 +10,42 @@ class SessionForm extends React.Component {
     };
     this.state = this.props.formFields;
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleDemoUser = this.handleDemoUser.bind(this);
+    // this.handleDemoUser = this.handleDemoUser.bind(this);
+    this.prettyDemoUser = this.prettyDemoUser.bind(this);
   }
+
+// BEGIN PRETTY DEMO LOGIN
+  async prettyDemoUser(e) {
+    e.preventDefault();
+
+    const demoUser = {
+      email: 'demo@email.com',
+      password: 'password'
+    };
+
+    const sleep = ms => new Promise(res => setTimeout(res, ms));
+
+    document.getElementById('email-input').focus();
+    for (let i = 1; i <= demoUser.email.length; i++) {
+      this.setState({ email: demoUser.email.substr(0, i) });
+      await sleep(50);
+    }
+
+    await sleep(250);
+
+    document.getElementById('password-input').focus();
+    for (let i = 1; i <= demoUser.password.length; i++) {
+      this.setState({ password: demoUser.password.substr(0, i) });
+      await sleep(50);
+    }
+
+    await sleep(250);
+
+    document.getElementById('session-submit-btn').click();
+    document.getElementById('password-input').blur();
+  }
+
+//END PRETTY DEMO LOGIN
 
   update(field) {
     return e => this.setState({
@@ -26,13 +60,13 @@ class SessionForm extends React.Component {
       .then(this.props.closeModal);
   }
 
-  handleDemoUser(e) {
-    e.preventDefault();
-    this.props.processForm({
-      email: 'demo@email.com',
-      password: 'password'
-    }).then(this.props.closeModal);
-  }
+  // handleDemoUser(e) {
+  //   e.preventDefault();
+  //   this.props.processForm({
+  //     email: 'demo@email.com',
+  //     password: 'password'
+  //   }).then(this.props.closeModal);
+  // }
 
   renderErrors() {
     return (
@@ -59,6 +93,7 @@ class SessionForm extends React.Component {
               <label>Email
                 <br/>
                 <input type="text" 
+                  id="email-input" 
                   placeholder="Email" 
                   value={this.state.email}
                   onChange={this.update('email')}
@@ -68,6 +103,7 @@ class SessionForm extends React.Component {
               <label>Password
                 <br/>
                 <input type="password" 
+                  id="password-input" 
                   placeholder="Password" 
                   value={this.state.password}
                   onChange={this.update('password')}
@@ -75,10 +111,11 @@ class SessionForm extends React.Component {
               </label>
               <br />
               <br />
-              <input type="submit" value={this.props.formType} value="Log in" />
+              <input id="session-submit-btn" type="submit" value={this.props.formType} value="Log in" />
               <br/>
               <br/>
-              <input type="submit" onClick={this.handleDemoUser} value="Demo Log in" />
+              {/* <input type="submit" onClick={this.handleDemoUser} value="Demo Log in" /> */}
+              <input type="submit" onClick={this.prettyDemoUser} value="Demo Log in" />
             </div>
             <div className="modal-bottom"> 
               <br />
