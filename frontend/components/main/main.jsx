@@ -23,9 +23,9 @@ class Main extends React.Component {
 
       {/* Middle */} 
 
-        
         <div className="mid-container">
           <h3 className="mid-h2">Skip The Rental Counter</h3>
+          <br/>
           <h2 className="mid-h3">Discover the world’s largest car sharing marketplace</h2>
 
           <br/>
