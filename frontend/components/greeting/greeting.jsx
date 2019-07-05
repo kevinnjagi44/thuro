@@ -6,11 +6,9 @@ const Greeting = ({ currentUser, logout, openModal }) => {
   const loggedOut = () => {
     return (
     <nav>
-      {/* <Link to="/login">Login</Link> */}
       <button className="navbutton" onClick={() => openModal('login')}>Login</button>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <button className="navbutton" onClick={() => openModal('signup')}>Sign up</button>
-      {/* <Link to="/signup">Sign up</Link> */}
     </nav>
     )};
 
