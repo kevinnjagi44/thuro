@@ -14,7 +14,8 @@ body {
     // height: 645px;
     height: 615px;
     z-index: -2;
-    background-position: 0px -120px;
+    background-position: center;
+    position: relative;
 }
 
 a {
@@ -25,11 +26,11 @@ a {
 .banner {
     font-family: Freight,HoeflerText-Black,Times New Roman,serif;
     font-size: 72px;
-    font-weight: normal;
+    font-weight: inherit;
     box-sizing: border-box;
     text-align: center;
     padding: 0px 10% 0px 10%;
-    
+    cursor: text;
 }
 
 .caption {
@@ -38,6 +39,7 @@ a {
     font-size: 22px;
     line-height: 1.2;
     text-align: center;
+    cursor: text;    
 }
 
 .spacer {

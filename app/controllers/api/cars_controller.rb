@@ -31,7 +31,7 @@ class CarsController < ApplicationController
       :seats, 
       :description, 
       :plate, 
-      :address. 
+      :address, 
       :city, 
       :state, 
       :zip,
