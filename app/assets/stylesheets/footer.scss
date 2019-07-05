@@ -25,11 +25,11 @@
   text-decoration: none;
   background-color: #231f20;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .footer-2-col-container {
-  padding: 30px 200px 0px 200px;  
+  // padding: 30px 200px 0px 200px;  
   font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
   font-weight: 700;
   color: #ffffff;
@@ -45,6 +45,7 @@
   font-size: 13px;
   text-decoration: none;
   line-height: 1.8;
+  cursor: not-allowed;
 
   li {
     display: inline;
@@ -70,4 +71,8 @@
   li {
     cursor: not-allowed
   }
+}
+
+.footer-spacer {
+  height: 30px;
 }
