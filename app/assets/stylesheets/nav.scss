@@ -39,8 +39,9 @@
 .nav-profile {
   background-image: url('https://github.com/fsiino/torino/blob/master/app/assets/images/profile-icon.png?raw=true');
   background-size: 39px 35px;
+  background-position: center;
   position: relative;
-  padding: 19px;
+  padding: 30px;
   background-repeat: no-repeat;
   cursor: pointer;
 }
