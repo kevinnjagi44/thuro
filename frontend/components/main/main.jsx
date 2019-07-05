@@ -8,11 +8,21 @@ class Main extends React.Component {
   render () {
     return (
       <div>
-        <div className="spacer">
-          &nbsp;
+        <div>
+          <div className="spacer">
+            &nbsp;
+          </div>
+          <h2 className="banner">Way better than a rental car</h2>
+          <h2 className="caption">Book unforgettable cars from local hosts around the world</h2>
         </div>
-        <h2 className="banner">Way better than a rental car</h2>
-        <h2 className="caption">Book unforgettable cars from local hosts around the world</h2>
+
+        <div>
+          Middle stuff here
+        </div>
+
+        <div className="footer">
+          Footer
+        </div>
       </div>
     )
   }

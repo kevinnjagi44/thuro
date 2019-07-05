@@ -8,6 +8,8 @@ import { Link } from 'react-router-dom';
 import Modal from './modal/modal';
 import Main from './main/main';
 
+import Footer from './footer/footer';
+
 const App = () => (
   <div>
     <Modal/>
