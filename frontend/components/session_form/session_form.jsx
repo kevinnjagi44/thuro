@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 
 class SessionForm extends React.Component {
   constructor(props) {
+    
     super(props);
     this.state = {
       email: '',
@@ -14,6 +15,10 @@ class SessionForm extends React.Component {
     this.prettyDemoUser = this.prettyDemoUser.bind(this);
   }
 
+
+  componentWillUnmount () {
+    this.props.clearErrors();
+  }
 // ** Begin animated demo login **
   async prettyDemoUser(e) {
     e.preventDefault();
