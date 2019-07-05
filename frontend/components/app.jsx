@@ -12,12 +12,9 @@ const App = () => (
   <div>
     <Modal/>
     <header className="navbar"> 
-      <div className="nav-item-wrapper">
         <Link to="/">
-           <div className="navlogo"/>
-          {/* <div className="navitems"/> */}
+          <img className="navlogo" alt="logo" src="https://github.com/fsiino/torino/blob/master/app/assets/images/torino-logo.png?raw=true"/>
         </Link>
-        </div>
       <GreetingContainer/>
     </header>
 

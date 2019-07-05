@@ -3,8 +3,8 @@
   font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
   font-weight: 700;
   line-height: 5;
-  padding-right: 265px;
-  padding-left: 60px;
+  padding-left: 17%;
+  padding-right: 17%;
   font-size: 13px;
   height: 60px;
   display: flex;
@@ -17,7 +17,6 @@
 }
 
 .navbutton {
-  // background: #231f20;
   background: transparent;
   color: #ffffff;
   border: none;
@@ -25,7 +24,6 @@
 }
 
 .navbutton:hover {
-  // background: #231f20;
   background: transparent;
   color: #ffffff;
   text-decoration: underline;
@@ -38,11 +36,6 @@
   padding-right: 555px;
 }
 
-.nav-item-wrapper {
-  padding-top: 13px;
-  padding-left: 209px;
-}
-
 .nav-profile {
   background-image: url('https://github.com/fsiino/torino/blob/master/app/assets/images/profile-icon.png?raw=true');
   background-size: 39px 35px;
@@ -53,10 +46,7 @@
 }
 
 .navlogo {
-  background-image: url('https://github.com/fsiino/torino/blob/master/app/assets/images/torino-logo.png?raw=true');
-  background-size: 50%;
-  width: 157px;
-  position: absolute;
-  padding: 22px;
-  background-repeat: no-repeat;
+  height: 30px;
+  padding: 15px;
+  border: none;
 }
