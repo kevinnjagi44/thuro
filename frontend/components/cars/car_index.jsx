@@ -19,7 +19,7 @@ class CarIndex extends React.Component {
           <button>Price</button>
           <button>Book instantly</button>
           <button>Delivery</button>
-          <button>More Filters</button>
+          <button><img src="https://github.com/fsiino/torino/blob/master/app/assets/images/filters.png?raw=true" />More Filters</button>
         </div>
 
 
