@@ -10,11 +10,11 @@
 
 .mid-h2 {
   text-align: center;
-font-family: Plantin,AmericanTypewriter-Condensed,Times New Roman,serif;
-    line-height: 1.2;
-    text-transform: uppercase;  
-    font-size: 24px;
-    font-weight: 400;
+  font-family: Plantin,AmericanTypewriter-Condensed,Times New Roman,serif;
+  line-height: 1.2;
+  text-transform: uppercase;  
+  font-size: 24px;
+  font-weight: 400;
 }
 
 .mid-h3 {
@@ -34,3 +34,46 @@ font-family: Plantin,AmericanTypewriter-Condensed,Times New Roman,serif;
   font-size: 16px;
   line-height: 1.5;
 }
+
+// begin grid
+
+.item-1 {
+  grid-area: icon1;
+}
+.item-2 {
+  grid-area: blurb1;
+}
+.item-3 {
+  grid-area: icon2;
+}
+.item-4 {
+  grid-area: blurb2;
+}
+.item-5 {
+  grid-area: icon3;
+}
+.item-6 {
+  grid-area: blurb3;
+}
+.item-7 {
+  grid-area: icon4;
+}
+.item-8 {
+  grid-area: blurb4;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 63px 296px 61px 299px;
+  grid-template-rows: 176px 160px;
+  grid-template-areas: 
+    "icon1 blurb1 icon2 blurb2"
+    "icon3 blurb3 icon4 blurb4";
+  color: #231f20;
+  font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;    
+}
+
+// end grid

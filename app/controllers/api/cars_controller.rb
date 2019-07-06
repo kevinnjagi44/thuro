@@ -19,7 +19,6 @@ class Api::CarsController < ApplicationController
     @car = Car.find(params[:id])
   end
 
-
   def car_params
     params.require(:car).permit(
       :rate, 

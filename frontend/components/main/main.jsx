@@ -30,25 +30,38 @@ class Main extends React.Component {
 
           <br/>
           <br/>
-          <div className="mid-flex-container">
-          
-            {/* <h3 className="mid-header">Endless options</h3> */}
+          <div className="grid-container">
 
-            <div className="mid-desc">Choose from hundreds of models you won’t find anywhere else. Pick it up or get it delivered where you want it.
+            <div className="item-1">
+              <img alt="car-photos" src="https://github.com/fsiino/torino/blob/master/app/assets/images/ic-car-photos.png?raw=true"/>
+            </div>
 
-            {/* <h3 className="mid-header">24/7 customer support</h3> */}
-            <br/>
-            <br/>
-            Rest easy knowing that everyone in the Turo community is screened, and 24/7 customer support and roadside assistance are just a click away.</div>
+            <div className="item-2">
+              <h3 className="mid-header">Endless options</h3>
+              Choose from hundreds of models you won’t find anywhere else. Pick it up or get it delivered where you want it.</div>
 
-            {/* <h3 className="mid-header">Free cancellation</h3> */}
+            <div className="thumbs-up">
+              <img alt="car-photos" src="https://github.com/fsiino/torino/blob/master/app/assets/images/ic-thumbs-up.png?raw=true" />
+            </div>              
 
-            <br/>
-            <div className="mid-desc">Cancel for free up to 24 hours before your trip starts. Because life happens and it helps to be flexible when it does.
-            
-            {/* <h3 className="mid-header">Insurance options included</h3> */}
-            <br/>
-            <br/>
+            <div className="item-4">
+              <h3 className="mid-header">Free cancellation</h3>
+              Cancel for free up to 24 hours before your trip starts. Because life happens and it helps to be flexible when it does.</div>
+
+            <div className="item-5">
+              <img alt="support" src="https://github.com/fsiino/torino/blob/master/app/assets/images/ic-support.png?raw=true" />
+            </div>            
+
+            <div className="item-6">
+              <h3 className="mid-header">24/7 customer support</h3>
+              Rest easy knowing that everyone in the Turo community is screened, and 24/7 customer support and roadside assistance are just a click away.</div>
+
+            <div className="item-7">
+              <img alt="shield" src="https://github.com/fsiino/torino/blob/master/app/assets/images/ic-shield-check.png?raw=true" />
+            </div>            
+
+            <div className="item-8">
+              <h3 className="mid-header">Insurance options included</h3>
             Drive confidently with your choice of protection plans offered through Turo Insurance Agency — you’re covered up to $1 million in liability insurance provided by Liberty Mutual.</div >
             
           </div>
