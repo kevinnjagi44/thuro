@@ -7,7 +7,7 @@ const carsReducer = (state = {}, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_CARS:
-      return action.benches;
+      return action.cars;
     default:
       return state;
   }
