@@ -43,7 +43,7 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'pry-rails'
   gem 'annotate'
-  gem 'aws-sdk-s3', '~>1', require: false
+  # gem 'aws-sdk-s3', '~>1', require: false
 end
 
 group :development do

@@ -119,7 +119,7 @@
     background-color: #8f63f4;
     color: white;
   }    
-  
+
 }
 
 .wires-header {
@@ -141,4 +141,59 @@
   margin-left: 33%;
   margin-right: 33%;
   text-align: center;
+}
+
+.porsche {
+  background-image: url('https://github.com/fsiino/torino/blob/master/app/assets/images/porsche.jpg?raw=true');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+  height: 585px;
+  background-position: center;
+  position: relative;
+  text-align: center;  
+
+  button {
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+    font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 30px;
+    padding: 11px 18px ;
+    opacity: 1;
+    transition: 0.7s;   
+  }
+
+  button:hover {
+    opacity: 0.1;
+    border: 1px solid white;
+    cursor: not-allowed;
+  }
+
+}
+
+.porsche-h3 {
+  font-family: Plantin,AmericanTypewriter-Condensed,Times New Roman,serif;
+  line-height: 1.2;
+  text-transform: uppercase;  
+  font-size: 22px;
+}
+
+.porsche-h2 {
+  font-family: Freight,HoeflerText-Black,Times New Roman,serif;
+  line-height: 1;
+  font-weight: 400;
+  font-size: 62px;
+}
+
+.porsche-p {
+  font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-left: 35%;
+  margin-right: 35%;
 }

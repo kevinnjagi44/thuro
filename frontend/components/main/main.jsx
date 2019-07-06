@@ -23,6 +23,30 @@ class Main extends React.Component {
 
       {/* Middle */} 
 
+      {/* Cars Slider */}
+
+      {/* Porsche */}
+
+      <div className="spacer">
+        <font color="black">Cars shoveler here</font>
+      </div>
+
+      <div className="porsche">
+          <div className="spacer"/>
+          <h3 className="porsche-h3">DRIVING AT ITS FINEST</h3>
+          
+          <h2 className="porsche-h2">Discover the Porsche 
+            <br/>Host Program</h2>
+          <p className="porsche-p">
+            Turo and Porsche are proud to introduce the Porsche Host Program, a pilot program in San Francisco and Los Angeles that combines curated Porsche vehicles with top Turo hosts to give you the complete Porsche experience.
+          </p>
+
+          <form action="#">
+            <button type="submit">Explore the program</button>
+          </form>
+
+      </div>
+
         <div className="mid-container">
           <h3 className="mid-h2">Skip The Rental Counter</h3>
           <br/>
@@ -70,8 +94,6 @@ class Main extends React.Component {
             <form align="center" action="#">
               <button className="post-grid" type="submit">Book the perfect car</button>
             </form>     
-
-
 
           <div className="wires-container">
             <h3 className="wires-header">The car that pays for itself</h3>
