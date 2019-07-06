@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 class Main extends React.Component {
   constructor(props) {
@@ -24,8 +25,12 @@ class Main extends React.Component {
       {/* Search */}
 
       <form action="">
-        
+
       </form>
+
+      <Link to="/cars">
+        <button>all cars</button>
+      </Link>
 
       {/* Middle */} 
 
