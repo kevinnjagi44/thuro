@@ -75,24 +75,38 @@ class Main extends React.Component {
 
         {/* Porsche */}
 
-        <div className="spacer">
-          <font color="black">Cars shoveler here</font>
-        </div>
+        <div className="spacer"/>
 
         <div className="porsche">
-          <div className="spacer" />
-          <h3 className="porsche-h3">DRIVING AT ITS FINEST</h3>
+          <div className="porsche-container">
+            <h3 className="porsche-h3">DRIVING AT ITS FINEST</h3>
+            <br />            <br />
+            <h2 className="porsche-h2">Discover the Porsche
+              <br />Host Program</h2>
+            <br />
+            <p className="porsche-p">
+              Torino and Porsche are proud to introduce the Porsche Host Program, a pilot program in San Francisco and Los Angeles that combines curated Porsche vehicles with top Torino hosts to give you the complete Porsche experience.
+            </p>
+            <br />
 
-          <h2 className="porsche-h2">Discover the Porsche
-            <br />Host Program</h2>
-          <p className="porsche-p">
-            Turo and Porsche are proud to introduce the Porsche Host Program, a pilot program in San Francisco and Los Angeles that combines curated Porsche vehicles with top Turo hosts to give you the complete Porsche experience.
-          </p>
+            <form action="">
+              <button type="submit">Explore the program</button>
+            </form>
+          </div>
+        </div>
 
-          <form action="#">
-            <button type="submit">Explore the program</button>
-          </form>
+        <div className="book-container">
+          <img className="book-pic" alt="book-unlock-go" src="https://github.com/fsiino/torino/blob/master/app/assets/images/book-unlock-go.jpg?raw=true"/>
 
+          <div className="book-separator">
+            <h2 className="book-header">Book, unlock, and go!</h2>
+              <br/>
+            <p className="book-desc">Unlock the next level of car sharing convenience with Turo Go — find, book, and unlock cars on demand, right from the Turo app.</p>
+            <form align="center" action="">
+              <button className="post-grid" type="submit">Learn more</button>
+            </form>    
+          </div>
+          
         </div>
 
         {/* Wires */}

@@ -148,7 +148,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   display: block;
-  height: 585px;
+  height: 560px;
   background-position: center;
   position: relative;
   text-align: center;  
@@ -196,4 +196,39 @@
   line-height: 1.5;
   margin-left: 35%;
   margin-right: 35%;
+}
+
+.book-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 60px 240px 0px 240px;
+}
+
+.book-header {
+  font-size: 56px;
+  color: #231F20;
+  font-family: Freight,HoeflerText-Black,Times New Roman,serif;
+  line-height: 1;
+}
+
+.book-desc {
+  color: #231F20;
+  font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.book-separator {
+  padding: 50px;
+}
+
+.book-pic {
+  max-width: 400px;
+  max-height: 225px;
+  padding-top: 50px;
+}
+
+.porsche-container {
+  padding-top:60px;
 }
