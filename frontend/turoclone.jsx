@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 import {login, signup, logout} from './actions/session_actions';
-// import {fetchCars} from './util/car_api_util';
 import {fetchCars} from './actions/car_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -27,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	window.login = login;
 	window.signup = signup;
 	window.logout = logout;
-
 	window.fetchCars = fetchCars;
 	//TESTING END
 
