@@ -27,7 +27,8 @@ class Main extends React.Component {
           <h3 className="mid-h2">Skip The Rental Counter</h3>
           <br/>
           <h2 className="mid-h3">Discover the world’s largest car sharing marketplace</h2>
-
+        </div>
+        
           <br/>
           <br/>
           <div className="grid-container">
@@ -65,7 +66,6 @@ class Main extends React.Component {
             Drive confidently with your choice of protection plans offered through Turo Insurance Agency — you’re covered up to $1 million in liability insurance provided by Liberty Mutual.</div >
             
           </div>
-        </div>
 
 
       {/* Footer */}
