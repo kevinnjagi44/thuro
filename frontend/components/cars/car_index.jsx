@@ -15,10 +15,10 @@ class CarIndex extends React.Component {
 
       <div>
         <div className="search-filter-btns">
-          <button>Sort by</button>
-          <button>Price</button>
-          <button>Book instantly</button>
-          <button>Delivery</button>
+          <button>Sort by</button>&nbsp;&nbsp;
+          <button>Price</button>&nbsp;&nbsp;
+          <button>Book instantly</button>&nbsp;&nbsp;
+          <button>Delivery</button>&nbsp;&nbsp;
           <button><img src="https://github.com/fsiino/torino/blob/master/app/assets/images/filters.png?raw=true" />&nbsp;More Filters</button>
         </div>
 

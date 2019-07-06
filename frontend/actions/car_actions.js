@@ -3,6 +3,7 @@ import * as APIUtil from '../util/car_api_util';
 export const RECEIVE_CARS = 'RECEIVE_CARS';
 export const RECEIVE_CAR = 'RECEIVE_CAR';
 // export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
+export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 
 export const receiveCars = cars => ({
   type: RECEIVE_CARS,
@@ -15,6 +16,11 @@ export const receiveCar = car => ({
   // reviews
 });
 
+// export const receiveErrors = errors => ({
+//   type: RECEIVE_ERRORS,
+//   errors
+// });
+
 export const fetchCars = () => dispatch => (
   APIUtil.fetchCars().then(cars => (
     dispatch(receiveCars(cars))
@@ -26,4 +32,5 @@ export const fetchCar = (car) => dispatch => (
     dispatch(receiveCar(car))
   ))
 );
+
 

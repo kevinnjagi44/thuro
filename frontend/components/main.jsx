@@ -84,19 +84,19 @@ class Main extends React.Component {
 
         {/* Cars Slider */}
 
-        {/* Porsche */}
+        {/* Borsche */}
 
         <div className="spacer"/>
 
-        <div className="porsche">
-          <div className="porsche-container">
-            <h3 className="porsche-h3">DRIVING AT ITS FINEST</h3>
+        <div className="borsche">
+          <div className="borsche-container">
+            <h3 className="borsche-h3">DRIVING AT ITS FINEST</h3>
             <br />            <br />
-            <h2 className="porsche-h2">Discover the Porsche
+            <h2 className="borsche-h2">Discover the Borsche
               <br />Host Program</h2>
             <br />
-            <p className="porsche-p">
-              Torino and Porsche are proud to introduce the Porsche Host Program, a pilot program in San Francisco and Los Angeles that combines curated Porsche vehicles with top Torino hosts to give you the complete Porsche experience.
+            <p className="borsche-p">
+              Torino and Borsche are proud to introduce the Borsche Host Program, a pilot program in San Francisco and Los Angeles that combines curated Borsche vehicles with top Torino hosts to give you the complete Borsche experience.
             </p>
             <br />
 
@@ -112,7 +112,7 @@ class Main extends React.Component {
           <div className="book-separator">
             <h2 className="book-header">Book, unlock, and go!</h2>
               <br/>
-            <p className="book-desc">Unlock the next level of car sharing convenience with Turo Go — find, book, and unlock cars on demand, right from the Turo app.</p>
+            <p className="book-desc">Unlock the next level of car sharing convenience with Torino Go — find, book, and unlock cars on demand, right from the Torino app.</p>
             <form align="center" action="">
               <button className="post-grid" type="submit">Learn more</button>
             </form>    

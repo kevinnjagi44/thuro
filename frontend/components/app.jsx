@@ -5,8 +5,8 @@ import { AuthRoute } from '../util/route_util';
 import LogInFormContainer from './session_form/login_form_container';
 import SignUpFormContainer from './session_form/signup_form_container';
 import { Link, Switch } from 'react-router-dom';
-import Modal from './modal/modal';
-import Main from './main/main';
+import Modal from './modal';
+import Main from './main';
 import Footer from './footer';
 import CarIndexContainer from './cars/car_index_container';
 
