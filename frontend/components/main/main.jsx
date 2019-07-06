@@ -55,7 +55,7 @@ class Main extends React.Component {
 
             <div className="item-6">
               <h3 className="mid-header">24/7 customer support</h3>
-              Rest easy knowing that everyone in the Turo community is screened, and 24/7 customer support and roadside assistance are just a click away.</div>
+              Rest easy knowing that everyone in the Torino community is screened, and 24/7 customer support and roadside assistance are just a click away.</div>
 
             <div className="item-7">
               <img alt="shield" src="https://github.com/fsiino/torino/blob/master/app/assets/images/ic-shield-check.png?raw=true" />
@@ -63,7 +63,7 @@ class Main extends React.Component {
 
             <div className="item-8">
               <h3 className="mid-header">Insurance options included</h3>
-            Drive confidently with your choice of protection plans offered through Turo Insurance Agency — you’re covered up to $1 million in liability insurance provided by Liberty Mutual.</div >
+            Drive confidently with your choice of protection plans offered through Torino Insurance Agency — you’re covered up to $1 million in liability insurance provided by Liberty Mutual.</div >
             
           </div>
 
