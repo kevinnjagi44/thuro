@@ -21,6 +21,12 @@ class Main extends React.Component {
           </div>
         </div>
 
+      {/* Search */}
+
+      <form action="">
+        
+      </form>
+
       {/* Middle */} 
 
         <div className="mid-container">
