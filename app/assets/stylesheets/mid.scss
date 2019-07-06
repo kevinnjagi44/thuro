@@ -1,11 +1,7 @@
 .mid-container {
   color: #231f20;
   padding: 0px 200px 0px 200px;
-}
-
-.mid-flex-container {
-  display: flex;
-  justify-content: space-around;
+  margin: 14px 148px 8px 126px;  
 }
 
 .mid-h2 {
@@ -20,11 +16,13 @@
 .mid-h3 {
   text-align: center;
   font-family: Freight,HoeflerText-Black,Times New Roman,serif;
-  font-size: 52px;
+  font-size: 46px;
 }
 
 .mid-header {
   font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
+  font-size: 22px;
+  font-weight: 700;
 }
 
 .mid-desc {
@@ -63,6 +61,7 @@
 }
 
 .grid-container {
+  justify-content: center;
   display: grid;
   grid-template-columns: 63px 296px 61px 299px;
   grid-template-rows: 176px 160px;
