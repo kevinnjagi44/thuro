@@ -7,6 +7,7 @@ import SignUpFormContainer from './session_form/signup_form_container';
 import { Link, Switch } from 'react-router-dom';
 import Modal from './modal/modal';
 import Main from './main/main';
+import Footer from './footer';
 import CarIndexContainer from './cars/car_index_container';
 
 const App = () => (
@@ -26,8 +27,8 @@ const App = () => (
       <Route path="/" component={Main} />
     </Switch>
 
-    </Footer>
-    
+    <Footer/>
+
   </div>
 );
 
