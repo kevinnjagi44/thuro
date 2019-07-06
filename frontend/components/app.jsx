@@ -25,6 +25,9 @@ const App = () => (
       <Route exact path="/cars" component={CarIndexContainer} />
       <Route path="/" component={Main} />
     </Switch>
+
+    </Footer>
+    
   </div>
 );
 
