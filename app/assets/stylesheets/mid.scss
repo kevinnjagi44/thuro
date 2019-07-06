@@ -78,5 +78,33 @@
 // end grid
 
 .wires-container {
-  // background-image: url()
+  background-image: url('https://github.com/fsiino/torino/blob/master/app/assets/images/mid-bg.png?raw=true');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+  height: 615px;
+  z-index: -2;
+  background-position: center;
+  position: relative;
+}
+
+.wires-header {
+  font-family: Freight,HoeflerText-Black,Times New Roman,serif;
+  line-height: 1;
+  font-size: 56px;
+  color: #231F20;
+  text-align: center;
+  padding-top: 170px;
+}
+
+.wires-text {
+  color: #231f20;
+  font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 15px;
+  margin-left: 33%;
+  margin-right: 33%;
+  text-align: center;
 }
