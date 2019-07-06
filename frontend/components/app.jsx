@@ -4,7 +4,7 @@ import { Route } from 'react-router-dom';
 import { AuthRoute } from '../util/route_util';
 import LogInFormContainer from './session_form/login_form_container';
 import SignUpFormContainer from './session_form/signup_form_container';
-import { Link } from 'react-router-dom';
+import { Link, Switch } from 'react-router-dom';
 import Modal from './modal/modal';
 import Main from './main/main';
 import CarIndexContainer from './cars/car_index_container';
@@ -19,16 +19,12 @@ const App = () => (
       <GreetingContainer/>
     </header>
 
-    <div className="navitems">
+    <Switch>
       <AuthRoute path ="/login" component={LogInFormContainer} />
       <AuthRoute path ="/signup" component={SignUpFormContainer} />
       <Route exact path="/cars" component={CarIndexContainer} />
-    </div>
-    
-    <div>
       <Route path="/" component={Main} />
-    </div>
-
+    </Switch>
   </div>
 );
 
