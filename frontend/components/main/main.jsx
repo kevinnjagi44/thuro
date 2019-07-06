@@ -67,6 +67,10 @@ class Main extends React.Component {
             
           </div>
 
+          <div className="wires-container">
+
+          </div>
+
 
       {/* Footer */}
 
