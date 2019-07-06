@@ -83,9 +83,28 @@
   background-repeat: no-repeat;
   display: block;
   height: 615px;
-  z-index: -2;
+  // z-index: -1;
   background-position: center;
   position: relative;
+  text-align: center;
+
+  button { 
+    border: 1px solid black;
+    color: #231F20;
+    font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 30px;
+    padding: 11px 18px ;
+    transition: 0.8s;    
+  }
+
+  button:hover {
+    background-color: #8f63f4;
+    color: white;
+  }
+
 }
 
 .wires-header {
@@ -107,4 +126,9 @@
   margin-left: 33%;
   margin-right: 33%;
   text-align: center;
+
+
+
+    
+  
 }

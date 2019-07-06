@@ -72,6 +72,11 @@ class Main extends React.Component {
             <p className="wires-text">Make a dent in your monthly car payments — on average, Turo hosts can cover their payments by sharing their cars just nine days per month.</p>
             <br/><br/>  
             <p className="wires-text">You’re covered with up to $1 million in liability insurance, and your car is contractually protected against theft and physical damage. Or bring your own commercial rental insurance and take a bigger piece of the pie.*</p>
+
+          <form action="#">
+            <button type="submit">List your car</button>
+          </form>
+
           </div>
 
 
