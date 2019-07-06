@@ -12,10 +12,28 @@ class CarIndex extends React.Component {
 
   render() {
     return (
+
       <div>
-        {/* {car.make} */} 
-        If we got here, it works.
-          
+        <div className="search-filter-btns">
+          <button>Sort by</button>
+          <button>Price</button>
+          <button>Book instantly</button>
+          <button>Delivery</button>
+          <button>More Filters</button>
+        </div>
+
+
+        <div className="car-index-container">
+          {this.props.cars.map(car=>
+            <div>
+              {car.year}<br/>
+              {car.make}<br />
+              {car.model}<br />
+              {car.price}<br />
+            </div>
+            )}
+            
+        </div>
       </div>
     )
   }

@@ -1,7 +1,7 @@
 import React from 'react';
 // import { Link } from 'react-router-dom'; 
 
-const Greeting = ({ currentUser, logout, openModal }) => {
+const NavBar = ({ currentUser, logout, openModal }) => {
   
   const loggedOut = () => {
     return (
@@ -30,4 +30,4 @@ const Greeting = ({ currentUser, logout, openModal }) => {
 
 };
 
-export default Greeting;
+export default NavBar;
