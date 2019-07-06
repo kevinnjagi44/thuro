@@ -63,13 +63,19 @@ class Main extends React.Component {
 
             <div className="item-8">
               <h3 className="mid-header">Insurance options included</h3>
-            Drive confidently with your choice of protection plans offered through Torino Insurance Agency — you’re covered up to $1 million in liability insurance provided by Liberty Mutual.</div >
-            
+            Drive confidently with your choice of protection plans offered through Torino Insurance Agency — you’re covered up to $1 million in liability insurance provided by Liberty Mutual.</div>
+
           </div>
+
+            <form align="center" action="#">
+              <button className="post-grid" type="submit">Book the perfect car</button>
+            </form>     
+
+
 
           <div className="wires-container">
             <h3 className="wires-header">The car that pays for itself</h3>
-            <p className="wires-text">Make a dent in your monthly car payments — on average, Turo hosts can cover their payments by sharing their cars just nine days per month.</p>
+            <p className="wires-text">Make a dent in your monthly car payments — on average, Torino hosts can cover their payments by sharing their cars just nine days per month.</p>
             <br/><br/>  
             <p className="wires-text">You’re covered with up to $1 million in liability insurance, and your car is contractually protected against theft and physical damage. Or bring your own commercial rental insurance and take a bigger piece of the pie.*</p>
 

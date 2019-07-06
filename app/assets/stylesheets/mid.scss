@@ -72,10 +72,26 @@
   font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.5;    
+  line-height: 1.5;
 }
 
 // end grid
+
+.post-grid {
+  border: none;
+  color: white;
+  background-color: #59d389;
+  font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 30px;
+  padding: 11px 18px ;
+  opacity: 0.75;
+  transition: 0.7s;   
+}
+
+.post-grid:hover {opacity: 1}
 
 .wires-container {
   background-image: url('https://github.com/fsiino/torino/blob/master/app/assets/images/mid-bg.png?raw=true');
@@ -83,12 +99,11 @@
   background-repeat: no-repeat;
   display: block;
   height: 615px;
-  // z-index: -1;
   background-position: center;
   position: relative;
   text-align: center;
 
-  button { 
+    button { 
     border: 1px solid black;
     color: #231F20;
     font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
@@ -100,11 +115,11 @@
     transition: 0.8s;    
   }
 
-  button:hover {
+    button:hover {
     background-color: #8f63f4;
     color: white;
-  }
-
+  }    
+  
 }
 
 .wires-header {
@@ -126,9 +141,4 @@
   margin-left: 33%;
   margin-right: 33%;
   text-align: center;
-
-
-
-    
-  
 }
