@@ -13,7 +13,7 @@ class CarIndex extends React.Component {
   render() {
     return (
 
-      <div>
+      <div> 
         <div className="search-filter-btns">
           <button>Sort by</button>&nbsp;&nbsp;
           <button>Price</button>&nbsp;&nbsp;
