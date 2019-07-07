@@ -35,3 +35,59 @@
 .car-create-container {
   color: black;
 }
+
+.car-create-banner {
+  background-image: url('https://github.com/fsiino/torino/blob/master/app/assets/images/car-create-banner.jpg?raw=true');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+  height: 125px;
+  background-position: center;
+  position: relative;
+}
+
+.car-create-banner-text {
+  color: #ffffff;
+  font-weight: normal;
+  font-size: 36px;
+  font-family: Plantin,AmericanTypewriter-Condensed,Times New Roman,serif;
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-weight: 200;
+  padding-left: 20%;
+  padding-top: 80px;
+}
+
+.car-create-form-container {
+  padding-top: 10px;
+  padding-left: 20%;
+  padding-right: 20%;
+
+  input[type="text"] {
+    height: 35px;
+    padding: 3px 10px;
+    font-size: 13px;
+    border: 1px solid #c7c7c7;
+    color: #231f20;
+    width: 100%;
+    -webkit-appearance: none;
+    border-radius: 0;
+  }
+
+  label, h3 {
+    color: #231f20;
+    font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 1.5;
+    padding-top: 5px;
+  }
+
+  h2 {
+  font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  }
+}
+
+
