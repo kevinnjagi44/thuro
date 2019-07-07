@@ -8,7 +8,7 @@ class Footer extends React.Component {
       <div>
 
         <div className="footer-top">
-          *&nbsp;&nbsp;&nbsp;All Liberty Mutual liability insurance in the US is offered through Torino Insurance Agency. Terms, conditions, and exclusions apply.
+          *&nbsp;&nbsp;&nbsp;All Freedom Reciprocal liability insurance in the US is offered through Torino Insurance Agency. Terms, conditions, and exclusions apply.
         </div>
 
         <div className="footer-container">

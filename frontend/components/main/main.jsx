@@ -74,7 +74,7 @@ class Main extends React.Component {
 
             <div className="item-8">
               <h3 className="mid-header">Insurance options included</h3>
-            Drive confidently with your choice of protection plans offered through Torino Insurance Agency — you’re covered up to $1 million in liability insurance provided by Liberty Mutual.</div>
+            Drive confidently with your choice of protection plans offered through Torino Insurance Agency — you’re covered up to $1 million in liability insurance provided by Freedom Reciprocal.</div>
 
           </div>
 

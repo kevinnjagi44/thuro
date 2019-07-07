@@ -17,6 +17,8 @@
 #  city         :string           not null
 #  state        :string           not null
 #  zip          :integer          not null
+#  lat          :float            not null
+#  lng          :float            not null
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #
