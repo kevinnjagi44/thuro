@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     resources :cars, only: [:create, :index, :show, :update, :destroy]
   end
 
+  resources :cars, only: [:show] # Test photo display
+
   root "static_pages#root"
   
 end

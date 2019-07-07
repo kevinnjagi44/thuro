@@ -1,0 +1,8 @@
+<h1><%= @car.make %></h1>
+<h1><%= @car.model %></h1>
+
+<% if @car.photo.attachment %>
+
+  <img src="<%= url_for(@car.photo) %>">
+
+<% end %>

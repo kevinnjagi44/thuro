@@ -11,6 +11,8 @@ class CarIndex extends React.Component {
     this.props.fetchCars();
   }
 
+  
+
   render() {
     return (
 
@@ -31,6 +33,7 @@ class CarIndex extends React.Component {
               {car.make}<br />
               {car.model}<br />
               {car.price}<br />
+              <img src={car.photoUrl} width="100px"/>
             </div>
             )}
             
@@ -38,6 +41,20 @@ class CarIndex extends React.Component {
 
         {/* <CarMap/> */}
       </div>
+
+
+      // <ul>
+      //   {this.props.cars.map(car => {
+      //     return (
+      //       <li key={car.id}>
+      //         <h2>{car.model}</h2>
+      //         <img src={car.photoUrl} />
+      //       </li>
+      //     );
+      //   })}
+      // </ul>
+
+
     )
   }
 
