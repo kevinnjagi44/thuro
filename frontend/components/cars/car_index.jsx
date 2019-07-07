@@ -9,9 +9,8 @@ class CarIndex extends React.Component {
   
   componentDidMount() {
     this.props.fetchCars();
+    window.scrollTo(0, 0);
   }
-
-  
 
   render() {
     return (
@@ -29,11 +28,11 @@ class CarIndex extends React.Component {
         <div className="car-index-container">
           {this.props.cars.map(car=>
             <div>
+              <img className="car-idx-photo" src={car.photoUrl} width="100px"/>
+              <div className="car-make-model">{car.make}&nbsp;
+                {car.model}<br /></div>
               {car.year}<br/>
-              {car.make}<br />
-              {car.model}<br />
               {car.price}<br />
-              <img src={car.photoUrl} width="100px"/>
             </div>
             )}
             

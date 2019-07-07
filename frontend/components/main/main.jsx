@@ -13,20 +13,40 @@ class Main extends React.Component {
       {/* Main */}
 
         <div className="main-container">
-          <div>
             <div className="spacer">
               &nbsp;
             </div>
             <h2 className="banner">Way better than a rental car</h2>
             <h2 className="caption">Book unforgettable cars from local hosts around the world</h2>
-          </div>
-        </div>
 
       {/* Search */}
 
-      <form action="">
+          <div className="search-container">
+            <form action="">
+              <div>
+              <label htmlFor="">Where<br/>
+                <input type="text"/>
+              </label>
+              </div>
 
-      </form>
+              <div>
+                <label htmlFor="">From<br />
+                <input type="text"/>
+              </label>
+              </div>
+
+              <div>
+                <label htmlFor="">Until<br />
+                <input type="text"/>
+              </label>
+              </div>
+
+              <input type="submit"/>
+
+            </form>
+          </div>
+        </div>
+
 
       <Link to="/cars">
         <button>all cars</button>
