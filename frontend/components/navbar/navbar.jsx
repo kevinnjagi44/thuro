@@ -6,7 +6,7 @@ const NavBar = ({ currentUser, logout, openModal }) => {
   const loggedOut = () => {
     return (
     <nav>
-      <Link to="/cars/create">
+      <Link to="/cars/new">
         <button className="navbutton">List your car</button>
       </Link>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -19,7 +19,7 @@ const NavBar = ({ currentUser, logout, openModal }) => {
   const loggedIn = () => {   
     return (
       <nav>
-        <Link to="/cars/create">
+        <Link to="/cars/new">
           <button className="navbutton">List your car</button>
         </Link>
         &nbsp;&nbsp;&nbsp;

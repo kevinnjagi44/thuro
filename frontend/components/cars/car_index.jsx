@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import CarMap from '../car_map/car_map';
 
 class CarIndex extends React.Component {
   constructor(props) {
@@ -34,6 +35,8 @@ class CarIndex extends React.Component {
             )}
             
         </div>
+
+        {/* <CarMap/> */}
       </div>
     )
   }

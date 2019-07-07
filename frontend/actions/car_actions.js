@@ -28,8 +28,14 @@ export const fetchCars = () => dispatch => (
 );
 
 export const fetchCar = (car) => dispatch => (
-  APIUtil.fetchCar().then(car => (
+  APIUtil.fetchCar(car).then(car => (
     dispatch(receiveCar(car))
+  ))
+);
+
+export const createCar = (car) => dispatch => (
+  APIUtil.createCar(car).then(car => (
+    dispatch(receiveCar(car))//, errors => dispatch(receiveErrors(errors))
   ))
 );
 

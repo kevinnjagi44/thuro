@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+//index 
+
 .car-index-container {
   color: black;
 }
@@ -21,10 +23,15 @@
     margin-top: 30px;
     padding: 7px 15px ;
     transition: 0.5s;    
-}
+  }
 
   button:hover {
     background-color: #f1f1f1;
-}   
+  }   
+}
 
+//create
+
+.car-create-container {
+  color: black;
 }

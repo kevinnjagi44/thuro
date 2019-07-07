@@ -5,10 +5,11 @@ import { AuthRoute } from '../util/route_util';
 import LogInFormContainer from './session_form/login_form_container';
 import SignUpFormContainer from './session_form/signup_form_container';
 import { Link, Switch } from 'react-router-dom';
-import Modal from './modal';
-import Main from './main';
-import Footer from './footer';
+import Modal from './modal/modal';
+import Main from './main/main';
+import Footer from './footer/footer';
 import CarIndexContainer from './cars/car_index_container';
+import CarCreateContainer from './cars/car_create_container';
 
 const App = () => (
   <div>
@@ -24,6 +25,7 @@ const App = () => (
       <AuthRoute path ="/login" component={LogInFormContainer} />
       <AuthRoute path ="/signup" component={SignUpFormContainer} />
       <Route exact path="/cars" component={CarIndexContainer} />
+      <Route exact path="/cars/new" component={CarCreateContainer} />
       <Route path="/" component={Main} />
     </Switch>
 
