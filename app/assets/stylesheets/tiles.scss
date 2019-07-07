@@ -1,0 +1,59 @@
+.tiles-container {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 50px;
+  // padding-left: auto;
+  // padding-right: auto;
+    max-width: 1270px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 90px;
+}
+
+.tiles-bmw {
+  background-image: url('https://github.com/fsiino/torino/blob/master/app/assets/images/bmw.jpg?raw=true');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+  height: 470px;
+  width: 595px;
+  background-position: center;
+  position: relative;
+  text-align: center;  
+
+}
+
+.tiles-map {
+  background-image: url('https://github.com/fsiino/torino/blob/master/app/assets/images/map.jpg?raw=true');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+  height: 470px;
+  width: 595px;
+  background-position: center;
+  position: relative;
+  text-align: center;  
+}
+
+.tiles-text-h3 {
+  margin-top: 30%;
+  font-family: Plantin,AmericanTypewriter-Condensed,Times New Roman,serif;
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-size: 24px;
+}
+
+.tiles-text-h2 {
+  padding-top: 10px;
+  font-family: Freight,HoeflerText-Black,Times New Roman,serif;
+  line-height: 1;
+  font-size: 56px;
+}
+
+.tiles-text-desc {
+  padding-top: 10px;  
+  font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+}

@@ -120,6 +120,23 @@ class Main extends React.Component {
           
         </div>
 
+        {/* Tiles */}
+
+        <div className="tiles-container">
+          <div className="tiles-bmw">
+            <h3 className="tiles-text-h3">ASK THE</h3>
+            <h2 className="tiles-text-h2">Carculator</h2>
+            <p className="tiles-text-desc">Find out how much your car could earn for you.</p>
+          </div>
+
+          <div className="tiles-map">
+            <h3 className="tiles-text-h3">READ UP ON</h3>
+            <h2 className="tiles-text-h2">That good-good</h2>
+            <p className="tiles-text-desc">Preuse cool cars and good stories on the Flexo blog.</p>
+          </div>
+
+        </div>
+
         {/* Wires */}
 
           <div className="wires-container">
