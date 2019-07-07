@@ -78,9 +78,11 @@ class Main extends React.Component {
 
           </div>
 
-            <form align="center" action="#">
+          <Link to="/cars/">
+            <form align="center">
               <button className="post-grid" type="submit">Book the perfect car</button>
             </form>    
+          </Link>
 
         {/* Cars Slider */}
 
@@ -145,9 +147,9 @@ class Main extends React.Component {
             <br/><br/>  
             <p className="wires-text">You’re covered with up to $1 million in liability insurance, and your car is contractually protected against theft and physical damage. Or bring your own commercial rental insurance and take a bigger piece of the pie.*</p>
 
-          <form action="#">
-            <button type="submit">List your car</button>
-          </form>
+            <Link to="/cars/new">
+              <button type="submit">List your car</button>
+            </Link>
 
           </div>
 
