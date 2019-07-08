@@ -49,7 +49,7 @@ class CarCreate extends React.Component {
     //   formData.append('car[photos][]', this.state.photos[i]);
     // }
 
-    this.props.createCar(formData).then((car) => this.props.history.push(`/cars/${car.id}`));
+    this.props.createCar(formData).then((car) => this.props.history.push(`/cars/${this.state.id}`));
   }
 
   // handlefile(e) {

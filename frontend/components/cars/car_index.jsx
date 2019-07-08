@@ -50,7 +50,6 @@ class CarIndex extends React.Component {
 
         </div>
 
-        <div className="finite-scroll"/>
       </div>
 
 

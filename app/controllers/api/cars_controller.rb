@@ -13,7 +13,8 @@ class Api::CarsController < ApplicationController
     @car.owner_id = current_user.id
     if @car.save
       # render "api/cars"
-      render :show
+      # render :show
+      render :index
     else
       render json: @car.errors.full_messages, status: 422
     end
@@ -47,8 +48,8 @@ class Api::CarsController < ApplicationController
       :state, 
       :zip,
       :lat,
-      :lng
-      # photos: []
+      :lng,
+      photos: []
     )
   end
 
