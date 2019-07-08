@@ -41,12 +41,12 @@ class CarCreate extends React.Component {
     // formData.append('car[lat]', this.coords['lat']);
     // formData.append('car[lng]', this.coords['lng']);
 
-    // this.props.createCar(formData);
+    this.props.createCar(formData);
     // this.navigateToSearch();
 
-    for(let i = 0; i < this.state.photos.length; i++) {
-      formData.append('car[photos][]', this.state.photos[i]);
-    }
+    // for(let i = 0; i < this.state.photos.length; i++) {
+    //   formData.append('car[photos][]', this.state.photos[i]);
+    // }
 
     this.props.createCar(formData).then((data) => this.props.history.push(`/cars/${data.car.id}`));
   }
@@ -116,9 +116,9 @@ class CarCreate extends React.Component {
           </label>
           <label>Transmission 
             <br/>
-            <input type="radio" value="automatic" name="trans"/>Automatic&nbsp;
-            <input type="radio" value="manual" name="trans" />Manual&nbsp;
-            <input type="radio" value="none" name="trans" />N/A&nbsp;
+            <input type="radio" value="automatic" name="transmission" onChange={this.update("transmission")}/>Automatic&nbsp;
+            <input type="radio" value="manual" name="transmission" onChange={this.update("transmission")}/>Manual&nbsp;
+            <input type="radio" value="none" name="transmission" onChange={this.update("transmission")} />N/A&nbsp;
           </label>
 
           <br/><br/><br/>
@@ -137,7 +137,7 @@ class CarCreate extends React.Component {
             </textarea>
           </label>
 
-          <h3>Features</h3>
+          {/* <h3>Features</h3>
             <div className="features-wrapper">
               <div>
                 <label><input type="checkbox" value="awd" /> All-wheel-drive</label><br/>
@@ -165,9 +165,9 @@ class CarCreate extends React.Component {
                 <label><input type="checkbox" value="usb_input" /> USB input</label><br />
               </div>
             </div>
-          <br/><br/>
+          <br/><br/> */}
       
-          <h3>Photos</h3>
+          {/* <h3>Photos</h3> */}
 
           {/* <input type="file" onChange={this.handleFile.bind(this)} /> */}
           <input type="file" onChange={e => this.setState({ photos: e.target.files })} multiple />

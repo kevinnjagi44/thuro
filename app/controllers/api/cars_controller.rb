@@ -10,9 +10,11 @@ class Api::CarsController < ApplicationController
   def create
     @car = Car.new(car_params)
     if @car.save
-      render "api/cars/show"
+      # render "api/cars/show"
+      # render "api/cars"
+      render :index
     else
-      render json: @cars.errors.full_messages, status: 422
+      render json: @car.errors.full_messages, status: 422
     end
   end
   
@@ -41,10 +43,10 @@ class Api::CarsController < ApplicationController
       :address, 
       :city, 
       :state, 
-      :zip,
-      :lat,
-      :lng,
-      photos: []
+      :zip
+      # :lat,
+      # :lng,
+      # photos: []
     )
   end
 

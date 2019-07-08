@@ -21,9 +21,10 @@ const mapStateToProps = state => ({
     lat: -0,
     lng: 0,
     // photoFile: null
-    photos: []
+    // photos: []
   },
-  formType: 'create'
+  formType: 'create',
+  errors: state.errors.session
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 import {login, signup, logout} from './actions/session_actions';
-import {fetchCars} from './actions/car_actions';
+import {fetchCars, fetchCar, editCar, removeCar} from './actions/car_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
 	let store;
@@ -27,6 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	window.signup = signup;
 	window.logout = logout;
 	window.fetchCars = fetchCars;
+	// window.fetchCar = fetchCar;
+	// window.editCar = editCar;
+	// window.removeCar = removeCar;
 	//TESTING END
 
 	const root = document.getElementById('root');
