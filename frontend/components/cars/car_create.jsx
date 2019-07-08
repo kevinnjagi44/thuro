@@ -185,12 +185,12 @@ class CarCreate extends React.Component {
 
           <br/>
 
-          <label htmlFor="">Lat
+          {/* <label htmlFor="">Lat
             <input type="text" placeholder="Lat" value={this.props.lat} onChange={this.update("lat")} />
           </label>
           <label htmlFor="">Lon
             <input type="text" placeholder="Lon" value={this.props.lng} onChange={this.update("lng")} />
-          </label>
+          </label> */}
 
           <input className="car-create-submit-btn" type="submit" value="Finish"/>
 
