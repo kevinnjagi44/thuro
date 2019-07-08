@@ -10,6 +10,7 @@ import Main from './main/main';
 import Footer from './footer/footer';
 import CarIndexContainer from './cars/car_index_container';
 import CarCreateContainer from './cars/car_create_container';
+import CarShowContainer from './cars/car_show_container';
 
 const App = () => (
   <div>
@@ -25,6 +26,7 @@ const App = () => (
       <AuthRoute path ="/login" component={LogInFormContainer} />
       <AuthRoute path ="/signup" component={SignUpFormContainer} />
       <Route exact path="/cars" component={CarIndexContainer} />
+      <Route exact path={`/cars/:id`} component={CarShowContainer} />
       <ProtectedRoute exact path="/cars/new" component={CarCreateContainer} />
       <Route exact path="/cars/new" component={CarCreateContainer} />
       <Route path="/" component={Main} />

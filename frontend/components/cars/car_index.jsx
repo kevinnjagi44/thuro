@@ -1,13 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import CarMap from '../car_map/car_map';
+import { Link } from 'react-router-dom';
 
 class CarIndex extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      zoom: 5
-    };
   }
   
   componentDidMount() {
@@ -33,9 +30,11 @@ class CarIndex extends React.Component {
           <div className="car-listings-container">
           {this.props.cars.map(car=>
             <div className="car-tile-container">
-              <div className="car-idx-photo">
-                <img className="car-idx-photo" src={car.photoUrl} />
-              </div>
+              <Link to={`/cars/${car.id}`}>
+                <div className="car-idx-photo">
+                  <img className="car-idx-photo" src={car.photoUrl} />
+                </div>
+              </Link>
               <div className="car-price">
                 ${car.rate} /day
               </div>

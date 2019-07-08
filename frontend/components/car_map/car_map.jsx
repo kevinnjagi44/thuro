@@ -17,7 +17,7 @@ class CarMap extends React.Component {
         lat: 37.773972,
         lng: -122.431297
       }, // San Francisco coords
-      zoom: 13
+      zoom: 11
     };
     const map = this.refs.map;
     this.map = new google.maps.Map(map, mapOptions);
