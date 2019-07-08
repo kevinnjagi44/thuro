@@ -30,6 +30,10 @@
   }   
 }
 
+.car-map-container {
+  
+}
+
 //create
 
 .car-create-container {
@@ -105,11 +109,4 @@
     -webkit-appearance: none;
     border-radius: 0;
   }
-}
-
-.map-container {
-  width: 40%;
-  height: 100%;
-  position: absolute;
-  top: 12.5vh;
 }

@@ -5,6 +5,9 @@ import CarMap from '../car_map/car_map';
 class CarIndex extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      zoom: 5
+    };
   }
   
   componentDidMount() {
@@ -36,7 +39,7 @@ class CarIndex extends React.Component {
             </div>
             )}
             
-            <div className="map-container">
+            <div>
               <CarMap cars={this.props.cars} />
           </div>
 
