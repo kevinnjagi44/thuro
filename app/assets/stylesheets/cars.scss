@@ -31,7 +31,7 @@
 }
 
 .car-map-container {
-  
+
 }
 
 //create
@@ -108,5 +108,24 @@
     width: 100%;
     -webkit-appearance: none;
     border-radius: 0;
+    resize: none;
   }
+}
+
+.features-wrapper {
+  display: flex; 
+  justify-content: space-between;
+}
+
+.car-create-submit-btn {
+  background-color: #8f63f4;
+  border: 1px solid #8f63f4;
+  color: #fff;
+  font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  height: 34px;
+  padding: 0 14px;
+  margin: 20px 0;
+  cursor: pointer;
 }
