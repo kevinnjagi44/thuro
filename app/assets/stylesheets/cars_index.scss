@@ -1,0 +1,70 @@
+
+.map {
+  width: 700px;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.car-index-container {
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+  padding-left: 1%;
+  overflow: scroll;
+}
+
+.search-filter-btns {
+  display: flex;
+  justify-content: left;
+  padding-left: 1%;
+  
+
+  button { 
+    border: 1px solid black;
+    color: #231F20;
+    font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    margin-top: 30px;
+    padding: 7px 15px ;
+    transition: 0.5s;    
+  }
+
+  button:hover {
+    background-color: #f1f1f1;
+  }   
+}
+
+.car-index-items {
+  display: flex;
+  justify-content: space-around;;
+}
+
+.car-idx-photo {
+  max-width: 490px;
+  max-height: 300px;
+  padding: 15px;
+  border-radius: 25px;
+}
+
+.car-map-container {
+    // position: fixed;
+    // left: 100;
+    // top: 160px;
+    // right: 0; 
+    // bottom: 0;
+    // height: 100%;
+    // width: 100%;
+    padding: 0px;
+    border-width: 0px;
+    margin: 0px;
+    position: sticky;
+}
+
+.finite-scroll {
+  scroll-snap-stop: always;
+}

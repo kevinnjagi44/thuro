@@ -4,7 +4,7 @@ import CarCreate from './car_create';
 
 const mapStateToProps = state => ({
   formfields: {
-    owner_id: state.session.id,
+    ownerId: state.session.id,
     rate: '',
     make: '',
     model: '',

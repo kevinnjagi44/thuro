@@ -3,7 +3,7 @@ import React from 'react';
 class CarCreate extends React.Component {
   constructor(props) {
     super(props);
-    this.state = props.formFields;
+    this.state = this.props.formFields;
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -12,7 +12,16 @@ class CarCreate extends React.Component {
   }
 
   handleSubmit(e) {
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append('bench[description]', this.state.description);
+    formData.append('bench[seating]', this.state.seating);
+    // add our coordinates
+    formData.append('bench[lat]', this.coords['lat']);
+    formData.append('bench[lng]', this.coords['lng']);
 
+    this.props.createCar(formData);
+    this.navigateToSearch();
   }
 
   render() {

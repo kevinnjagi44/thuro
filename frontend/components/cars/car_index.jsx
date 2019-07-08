@@ -18,7 +18,8 @@ class CarIndex extends React.Component {
   render() {
     return (
 
-      <div> 
+      <div>
+
         <div className="search-filter-btns">
           <button>Sort by</button>&nbsp;&nbsp;
           <button>Price</button>&nbsp;&nbsp;
@@ -29,23 +30,27 @@ class CarIndex extends React.Component {
 
 
         <div className="car-index-container">
+          <div className="car-index-items">
           {this.props.cars.map(car=>
             <div key={car.id}>
-              <img className="car-idx-photo" src={car.photoUrl} width="100px"/>
+              <img className="car-idx-photo" src={car.photoUrl} />
               <div className="car-make-model">{car.make}&nbsp;
                 {car.model}<br /></div>
                 {car.year}<br/>
                 {car.price}<br />
             </div>
             )}
-            
-            <div>
-              <CarMap cars={this.props.cars} />
           </div>
+            
+            <div className="car-map-container">
+              <CarMap cars={this.props.cars} />
+            </div>
 
         </div>
 
+        <div className="finite-scroll"/>
       </div>
+
 
     )
   }

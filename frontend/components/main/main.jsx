@@ -22,7 +22,7 @@ class Main extends React.Component {
       {/* Search */}
 
           <div className="search-container">
-            <form action="">
+            <form action="" >
               <div>
               <label htmlFor="">Where<br/>
                 <input type="text"/>
@@ -41,16 +41,14 @@ class Main extends React.Component {
               </label>
               </div>
 
-              <input type="submit"/>
+              <Link to="/cars">
+                <input type="submit"/>
+              </Link>
 
             </form>
           </div>
         </div>
 
-
-      <Link to="/cars">
-        <button>all cars</button>
-      </Link>
 
       {/* Middle */} 
 
