@@ -31,6 +31,7 @@ class CarCreate extends React.Component {
     formData.append('car[color]', this.state.color);
     formData.append('car[transmission]', this.state.transmission);
     formData.append('car[seats]', this.state.seats);
+    formData.append('car[mpg]', this.state.mpg);
     formData.append('car[description]', this.state.description);
     formData.append('car[plate]', this.state.plate);
     formData.append('car[address]', this.state.address);
@@ -38,8 +39,8 @@ class CarCreate extends React.Component {
     formData.append('car[state]', this.state.state);
     formData.append('car[zip]', this.state.zip);
     // add our coordinates
-    // formData.append('car[lat]', this.coords['lat']);
-    // formData.append('car[lng]', this.coords['lng']);
+    formData.append('car[lat]', this.state.lat);
+    formData.append('car[lng]', this.state.lng);
 
     this.props.createCar(formData);
     // this.navigateToSearch();
@@ -48,7 +49,7 @@ class CarCreate extends React.Component {
     //   formData.append('car[photos][]', this.state.photos[i]);
     // }
 
-    this.props.createCar(formData).then((data) => this.props.history.push(`/cars/${data.car.id}`));
+    this.props.createCar(formData).then((car) => this.props.history.push(`/cars/${car.id}`));
   }
 
   // handlefile(e) {
@@ -170,9 +171,16 @@ class CarCreate extends React.Component {
           {/* <h3>Photos</h3> */}
 
           {/* <input type="file" onChange={this.handleFile.bind(this)} /> */}
-          <input type="file" onChange={e => this.setState({ photos: e.target.files })} multiple />
+          {/* <input type="file" onChange={e => this.setState({ photos: e.target.files })} multiple /> */}
 
           <br/>
+
+          <label htmlFor="">Lat
+            <input type="text" placeholder="Lat" value={this.props.lat} onChange={this.update("lat")} />
+          </label>
+          <label htmlFor="">Lon
+            <input type="text" placeholder="Lon" value={this.props.lng} onChange={this.update("lng")} />
+          </label>
 
           <input className="car-create-submit-btn" type="submit" value="Finish"/>
 

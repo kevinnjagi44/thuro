@@ -1,18 +1,19 @@
 class Api::CarsController < ApplicationController
 
-  before_action :require_logged_in, only: [:create]
+  skip_before_action :verify_authenticity_token
+
+  # before_action :require_logged_in, only: [:create]
 
   def index
     @cars = Car.all
-    render :index
   end
 
   def create
     @car = Car.new(car_params)
+    @car.owner_id = current_user.id
     if @car.save
-      # render "api/cars/show"
       # render "api/cars"
-      render :index
+      render :show
     else
       render json: @car.errors.full_messages, status: 422
     end
@@ -20,13 +21,13 @@ class Api::CarsController < ApplicationController
   
   def show
     @car = Car.find(params[:id])
-    render :show
+    render "api/cars/show"
   end
 
   def destroy
     @car = Car.find(params[:id])
     @car.destroy
-    render "api/cars/show"
+    render "api/cars"
   end
 
   def car_params
@@ -38,14 +39,15 @@ class Api::CarsController < ApplicationController
       :color, 
       :transmission, 
       :seats, 
+      :mpg,
       :description, 
       :plate, 
       :address, 
       :city, 
       :state, 
-      :zip
-      # :lat,
-      # :lng,
+      :zip,
+      :lat,
+      :lng
       # photos: []
     )
   end

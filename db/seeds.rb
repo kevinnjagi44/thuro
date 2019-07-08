@@ -50,20 +50,20 @@ car1 = Car.create!(
 )
 
 car2 = Car.create!(
-  # owner_id: steve.id,
   owner_id: 14,
   rate: '160',
   make: 'Lexus',
   model: 'IS350', 
-  year: 2018,
+  year: '1990',
   color: 'gray',
-  transmission: Car::TRANSMISSION_TYPE.sample,
+  transmission: 'automatic',
   seats: '5',
   description: 'Clean ride. Good fun.',
   plate: '6D8SA6S',
   address: '1200 39th Ave',
   city: 'San Francisco',
   state: 'CA',
+  mpg: 24,
   zip: 94122,
   lat: 37.763562, 
   lng: -122.498625

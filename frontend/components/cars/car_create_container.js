@@ -12,14 +12,15 @@ const mapStateToProps = state => ({
     color: '',
     transmission: '',
     seats: '',
+    mpg: '',
     description: '',
     plate: '',
     address: '',
     city: '',
     state: '',
     zip: '',
-    lat: -0,
-    lng: 0,
+    lat: '',
+    lng: ''
     // photoFile: null
     // photos: []
   },

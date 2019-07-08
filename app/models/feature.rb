@@ -14,13 +14,13 @@ class Feature < ApplicationRecord
 
   validates :type, inclusion: FEATURE_LIST, unless: -> { feature.blank? }
 
-  has_many :car_features,
-    foreign_key: :feature_id,
-    class_name: :CarFeature
+  # has_many :car_features,
+  #   foreign_key: :feature_id,
+  #   class_name: :CarFeature
 
-  has_many :cars,
-    through: :car_features,
-    source: :car
+  # has_many :cars,
+  #   through: :car_features,
+  #   source: :car
 
 end
 

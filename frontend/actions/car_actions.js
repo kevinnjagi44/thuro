@@ -41,7 +41,7 @@ export const fetchCar = (car) => dispatch => (
 
 export const createCar = (car) => dispatch => (
   APIUtil.createCar(car).then(car => (
-    dispatch(receiveCar(car))//, errors => dispatch(receiveErrors(errors))
+    dispatch(receiveCar(car)), errors => dispatch(receiveErrors(errors))
   ))
 );
 

@@ -37,9 +37,9 @@ class Car < ApplicationRecord
     foreign_key: :owner_id, 
     class_name: :User
 
-  has_many :features,
-    through: :car_features,
-    source: :feature
+  # has_many :features,
+  #   through: :car_features,
+  #   source: :feature
 
   # has_many_attached :photos
 
