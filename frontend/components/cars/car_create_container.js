@@ -20,7 +20,7 @@ const mapStateToProps = state => ({
     zip: '',
     lat: -0,
     lng: 0,
-    photoFile: null
+    // photoFile: null
   },
   formType: 'create'
 });
