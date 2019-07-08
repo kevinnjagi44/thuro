@@ -5,6 +5,7 @@ class CarCreate extends React.Component {
     super(props);
     this.state = this.props.formFields;
     this.handleSubmit = this.handleSubmit.bind(this);
+    // this.handleFile = this.handleFile.bind(this);
   }
 
   componentDidMount() {
@@ -43,6 +44,10 @@ class CarCreate extends React.Component {
     this.props.createCar(formData);
     this.navigateToSearch();
   }
+
+  // handlefile(e) {
+  //   this.setState({photoFile: e.currentTarget.files[0]});
+  // }
 
   render() {
     return (
@@ -157,6 +162,10 @@ class CarCreate extends React.Component {
           <br/><br/>
       
           <h3>Photos</h3>
+
+          {/* <input type="file" onChange={this.handleFile.bind(this)} /> */}
+
+          <br/>
 
           <input className="car-create-submit-btn" type="submit" value="Finish"/>
 
