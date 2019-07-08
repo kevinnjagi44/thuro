@@ -38,11 +38,17 @@ class CarCreate extends React.Component {
     formData.append('car[state]', this.state.state);
     formData.append('car[zip]', this.state.zip);
     // add our coordinates
-    formData.append('car[lat]', this.coords['lat']);
-    formData.append('car[lng]', this.coords['lng']);
+    // formData.append('car[lat]', this.coords['lat']);
+    // formData.append('car[lng]', this.coords['lng']);
 
-    this.props.createCar(formData);
-    this.navigateToSearch();
+    // this.props.createCar(formData);
+    // this.navigateToSearch();
+
+    for(let i = 0; i < this.state.photos.length; i++) {
+      formData.append('car[photos][]', this.state.photos[i]);
+    }
+
+    this.props.createCar(formData).then((data) => this.props.history.push(`/cars/${data.car.id}`));
   }
 
   // handlefile(e) {
@@ -58,7 +64,7 @@ class CarCreate extends React.Component {
           </h3>
         </div>
 
-        <form className="car-create-form-container">
+        <form className="car-create-form-container" onSubmit={this.handleSubmit}>
 
           <h2>Your Car</h2>
 
@@ -126,7 +132,7 @@ class CarCreate extends React.Component {
           </label>
 
           <label>Description
-            <textarea>
+            <textarea placeholder="Description" value={this.props.description} onChange={this.update("description")}>
               
             </textarea>
           </label>
@@ -164,6 +170,7 @@ class CarCreate extends React.Component {
           <h3>Photos</h3>
 
           {/* <input type="file" onChange={this.handleFile.bind(this)} /> */}
+          <input type="file" onChange={e => this.setState({ photos: e.target.files })} multiple />
 
           <br/>
 

@@ -21,6 +21,12 @@ class Api::CarsController < ApplicationController
     render :show
   end
 
+  def destroy
+    @car = Car.find(params[:id])
+    @car.destroy
+    render "api/cars/show"
+  end
+
   def car_params
     params.require(:car).permit(
       :rate, 
@@ -37,7 +43,8 @@ class Api::CarsController < ApplicationController
       :state, 
       :zip,
       :lat,
-      :lng
+      :lng,
+      photos: []
     )
   end
 
