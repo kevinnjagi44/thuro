@@ -78,18 +78,19 @@
 .car-price {
   color: black;
   position: absolute;
-  bottom: 8px;
+  bottom: 28px;
   right: 16px;
   font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
   border-radius: 3px;
   background: #ffffff;
+  // display: inline-flex;
 }
 
 .car-make-model-yr {
   color: black;
   position: absolute;
-  bottom: 8px;
-  right: 16px;
+  bottom: 50px;
+  right: 30px;
   font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
   border-radius: 3px;
   background: #ffffff;

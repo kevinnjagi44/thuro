@@ -37,12 +37,13 @@ class CarIndex extends React.Component {
                 <img className="car-idx-photo" src={car.photoUrl} />
               </div>
               <div className="car-price">
-                {car.rate}
+                ${car.rate} /day
               </div>
               <div className="car-make-model-yr">{car.make}&nbsp;
-                {car.model}<br /></div>
                 {car.year}<br/>
+                {car.model}<br />
               </div>
+            </div>
             )}
           </div>
             

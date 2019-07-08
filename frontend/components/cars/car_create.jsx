@@ -42,7 +42,7 @@ class CarCreate extends React.Component {
     formData.append('car[lat]', this.state.lat);
     formData.append('car[lng]', this.state.lng);
 
-    this.props.createCar(formData);
+    // this.props.createCar(formData);
     // this.navigateToSearch();
 
     // for(let i = 0; i < this.state.photos.length; i++) {
