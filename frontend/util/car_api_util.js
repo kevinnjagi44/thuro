@@ -2,7 +2,8 @@ export const fetchCars = () => {
   return (
     $.ajax({
       method: 'GET',
-      url: '/api/cars'
+      url: '/api/cars',
+      // data
     })
   );
 };
@@ -42,5 +43,5 @@ export const deleteCar = (id) => {
       method: 'DELETE',
       url: `/api/cars/${id}`
     })
-  )
-}
+  );
+};

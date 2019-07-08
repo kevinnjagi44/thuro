@@ -27,32 +27,22 @@ class CarIndex extends React.Component {
 
         <div className="car-index-container">
           {this.props.cars.map(car=>
-            <div>
+            <div key={car.id}>
               <img className="car-idx-photo" src={car.photoUrl} width="100px"/>
               <div className="car-make-model">{car.make}&nbsp;
                 {car.model}<br /></div>
-              {car.year}<br/>
-              {car.price}<br />
+                {car.year}<br/>
+                {car.price}<br />
             </div>
             )}
             
+            <div className="map-container">
+              <CarMap cars={this.props.cars} />
+          </div>
+
         </div>
 
-        {/* <CarMap/> */}
       </div>
-
-
-      // <ul>
-      //   {this.props.cars.map(car => {
-      //     return (
-      //       <li key={car.id}>
-      //         <h2>{car.model}</h2>
-      //         <img src={car.photoUrl} />
-      //       </li>
-      //     );
-      //   })}
-      // </ul>
-
 
     )
   }
