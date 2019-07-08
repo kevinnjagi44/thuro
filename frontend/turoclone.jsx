@@ -27,9 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	window.signup = signup;
 	window.logout = logout;
 	window.fetchCars = fetchCars;
-	// window.fetchCar = fetchCar;
-	// window.editCar = editCar;
-	// window.removeCar = removeCar;
+	window.fetchCar = fetchCar;
+	window.editCar = editCar;
+	window.removeCar = removeCar;
 	//TESTING END
 
 	const root = document.getElementById('root');

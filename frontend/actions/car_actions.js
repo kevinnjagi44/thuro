@@ -6,23 +6,23 @@ export const DELETE_CAR = 'DELETE_CAR';
 // export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 
-export const receiveCars = cars => ({
+export const receiveCars = (cars) => ({
   type: RECEIVE_CARS,
   cars
 });
 
-export const receiveCar = car => ({
+export const receiveCar = (car) => ({
   type: RECEIVE_CAR,
   car
   // reviews
 });
 
-export const removeCar = carId => ({
+export const removeCar = (carId) => ({
   type: DELETE_CAR,
   carId: carId
 });
 
-export const receiveErrors = errors => ({
+export const receiveErrors = (errors) => ({
   type: RECEIVE_ERRORS,
   errors
 });

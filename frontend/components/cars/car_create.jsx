@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 class CarCreate extends React.Component {
   constructor(props) {
@@ -10,6 +11,10 @@ class CarCreate extends React.Component {
 
   componentDidMount() {
     window.scrollTo(0, 0);
+  }
+
+  navigateToIdx() {
+    this.props.history.push('/cars/');
   }
 
   update(field) {
@@ -42,14 +47,19 @@ class CarCreate extends React.Component {
     formData.append('car[lat]', this.state.lat);
     formData.append('car[lng]', this.state.lng);
 
-    // this.props.createCar(formData);
-    // this.navigateToSearch();
-
     // for(let i = 0; i < this.state.photos.length; i++) {
     //   formData.append('car[photos][]', this.state.photos[i]);
     // }
 
-    this.props.createCar(formData).then((car) => this.props.history.push(`/cars/${this.state.id}`));
+    // this.props.createCar(formData).then((car) => this.props.history.push(`/cars/${car.id}`));
+
+    // this.props.createCar(formData).then((data) => this.props.history.push(`/cars/${data.car.id}`));
+
+    // this.props.createCar(formData).then((car) => this.props.history.push(`/cars/${car.id}`));
+
+    this.props.createCar(formData);
+    this.navigateToIdx();
+
   }
 
   // handlefile(e) {
@@ -192,4 +202,4 @@ class CarCreate extends React.Component {
 
 }
 
-export default CarCreate;
+export default withRouter(CarCreate);

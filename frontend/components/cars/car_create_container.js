@@ -19,9 +19,9 @@ const mapStateToProps = state => ({
     city: '',
     state: '',
     zip: '',
-    lat: '',
-    lng: '',
-    photoFile: null
+    lat: 0,
+    lng: 0
+    // photoFile: null
     // photos: []
   },
   formType: 'create',
@@ -29,7 +29,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  createCar: car => dispatch(createCar(car))
+  createCar: car => dispatch(createCar(car)),
+  fetchCar: car => dispatch(fetchCar(car))
 });
 
 export default connect(
