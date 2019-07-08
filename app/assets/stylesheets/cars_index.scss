@@ -13,6 +13,7 @@
   padding-top: 50px;
   padding-left: 1%;
   overflow: scroll;
+  height: calc(100vh - 120px);
 }
 
 .search-filter-btns {
@@ -52,19 +53,34 @@
 }
 
 .car-map-container {
-    // position: fixed;
-    // left: 100;
-    // top: 160px;
-    // right: 0; 
-    // bottom: 0;
-    // height: 100%;
-    // width: 100%;
-    padding: 0px;
-    border-width: 0px;
-    margin: 0px;
-    position: sticky;
+  padding: 0px;
+  border-width: 0px;
+  margin: 0px;
+  position: sticky;
 }
 
-.finite-scroll {
-  scroll-snap-stop: always;
+.car-tile-container {
+  position: relative;
+  text-align: center;
+  color: white;  
+}
+
+.car-price {
+  color: black;
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
+  border-radius: 3px;
+  background: #ffffff;
+}
+
+.car-make-model-yr {
+  color: black;
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
+  border-radius: 3px;
+  background: #ffffff;
 }

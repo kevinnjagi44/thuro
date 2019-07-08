@@ -32,13 +32,15 @@ class CarIndex extends React.Component {
         <div className="car-index-container">
           <div className="car-index-items">
           {this.props.cars.map(car=>
-            <div key={car.id}>
+            <div className="car-tile-container">
               <img className="car-idx-photo" src={car.photoUrl} />
-              <div className="car-make-model">{car.make}&nbsp;
+              <div className="car-price">
+                {car.rate}
+              </div>
+              <div className="car-make-model-yr">{car.make}&nbsp;
                 {car.model}<br /></div>
                 {car.year}<br/>
-                {car.price}<br />
-            </div>
+              </div>
             )}
           </div>
             

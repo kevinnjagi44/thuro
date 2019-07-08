@@ -29,7 +29,7 @@ class Car < ApplicationRecord
 
   COLORS = %w(black brown gray silver white red orange yellow gold purple blue green).freeze
 
-  validates :rate, :make, :model, :year, :color, :transmission, :seats, :description, :plate, :address, :city, :state, :zip, presence: true
+  validates :rate, :make, :model, :year, :color, :transmission, :seats, :description, :plate, :address, :city, :state, :zip, :mpg, presence: true
 
   validates :transmission, inclusion: TRANSMISSION_TYPE, unless: -> { color.blank? }
 

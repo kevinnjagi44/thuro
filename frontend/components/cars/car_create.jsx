@@ -11,14 +11,34 @@ class CarCreate extends React.Component {
     window.scrollTo(0, 0);
   }
 
+  update(field) {
+    return e => {
+      this.setState({
+        [field]: e.currentTarget.value,
+      });
+    };
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     const formData = new FormData();
-    formData.append('bench[description]', this.state.description);
-    formData.append('bench[seating]', this.state.seating);
+    formData.append('car[address]', this.state.address);
+    formData.append('car[rate]', this.state.rate);
+    formData.append('car[make]', this.state.make);
+    formData.append('car[model]', this.state.model);
+    formData.append('car[year]', this.state.year);
+    formData.append('car[color]', this.state.color);
+    formData.append('car[transmission]', this.state.transmission);
+    formData.append('car[seats]', this.state.seats);
+    formData.append('car[description]', this.state.description);
+    formData.append('car[plate]', this.state.plate);
+    formData.append('car[address]', this.state.address);
+    formData.append('car[city]', this.state.city);
+    formData.append('car[state]', this.state.state);
+    formData.append('car[zip]', this.state.zip);
     // add our coordinates
-    formData.append('bench[lat]', this.coords['lat']);
-    formData.append('bench[lng]', this.coords['lng']);
+    formData.append('car[lat]', this.coords['lat']);
+    formData.append('car[lng]', this.coords['lng']);
 
     this.props.createCar(formData);
     this.navigateToSearch();
@@ -44,16 +64,16 @@ class CarCreate extends React.Component {
           <br/>
 
           <label>Address
-            <input type="text" placeholder="Address"></input>
+            <input type="text" placeholder="Address" value={this.props.address} onChange={this.update("address")}></input>
           </label>
           <label>City
-            <input type="text" placeholder="City"></input>
+            <input type="text" placeholder="City" value={this.props.city} onChange={this.update("city")}></input>
           </label>
           <label>State
-            <input type="text" placeholder="State"></input>
+            <input type="text" placeholder="State" value={this.props.state} onChange={this.update("state")}></input>
           </label>
           <label>Zip
-            <input type="text" placeholder="Zip"></input>
+            <input type="text" placeholder="Zip" value={this.props.zip} onChange={this.update("zip")}></input>
           </label>
 
           <br/><br/>
@@ -63,22 +83,25 @@ class CarCreate extends React.Component {
           <br/>
 
           <label htmlFor="">Year
-            <input type="text" placeholder="Year"/>
+            <input type="text" placeholder="Year" value={this.props.year} onChange={this.update("year")}/>
           </label>
           <label htmlFor="">Make
-            <input type="text" placeholder="Make"/>
+            <input type="text" placeholder="Make" value={this.props.make} onChange={this.update("make")}/>
           </label>
           <label htmlFor="">Model
-            <input type="text" placeholder="Model"/>
+            <input type="text" placeholder="Model" value={this.props.model} onChange={this.update("model")}/>
           </label>
           <label htmlFor="">Color
-            <input type="text" placeholder="Color"/>
+            <input type="text" placeholder="Color" value={this.props.color} onChange={this.update("color")}/>
           </label>
           <label htmlFor="">MPG
-            <input type="text" placeholder="MPG"/>
+            <input type="text" placeholder="MPG" value={this.props.mpg} onChange={this.update("mpg")}/>
           </label>
           <label htmlFor="">Seats
-            <input type="text" placeholder="Seats"/>
+            <input type="text" placeholder="Seats" value={this.props.seats} onChange={this.update("seats")}/>
+          </label>
+          <label htmlFor="">License plate
+            <input type="text" placeholder="License plate" value={this.props.plate} onChange={this.update("plate")}/>
           </label>
           <label>Transmission 
             <br/>
@@ -94,7 +117,7 @@ class CarCreate extends React.Component {
           <br/>
 
           <label htmlFor="">Daily Rate (USD)
-            <input type="text" placeholder="Daily Rate" />
+            <input type="text" placeholder="Daily Rate" value={this.props.rate} onChange={this.update("rate")}/>
           </label>
 
           <label>Description
