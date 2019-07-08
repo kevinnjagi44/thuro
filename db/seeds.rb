@@ -28,47 +28,75 @@
 #   lname: 'yee'
 # )
 
+# pop = User.create!(
+#   email: 'joe@se.com',
+#   password: 'password',
+#   fname: 'joe',
+#   lname: 'siino'
+# )
+
 # Seed Cars
-car1 = Car.create!(
-  # owner_id: frankie.id,
-  owner_id: 17,
-  rate: '110',
-  make: 'Ford',
-  model: 'Mustang', 
-  year: 2012,
-  color: 'black',
+# car1 = Car.create!(
+#   # owner_id: frankie.id,
+#   owner_id: 17,
+#   rate: '110',
+#   make: 'Ford',
+#   model: 'Mustang', 
+#   year: 2012,
+#   color: 'black',
+#   transmission: 'manual',
+#   seats: '4',
+#   description: 'Fun ride. Ignore the stains in the back.',
+#   plate: '9DJ28H',
+#   address: '825 Battery St',
+#   city: 'San Francisco',
+#   state: 'CA',
+#   mpg: 24,
+#   zip: 94111,
+#   lat: 37.799017,
+#   lng: -122.401116
+# )
+
+# car2 = Car.create!(
+#   # owner_id: steve.id,
+#   owner_id: 18,
+#   rate: '160',
+#   make: 'Lexus',
+#   model: 'IS350', 
+#   year: '1990',
+#   color: 'gray',
+#   transmission: 'automatic',
+#   seats: '5',
+#   description: 'Clean ride. Good fun.',
+#   plate: '6D8SA6S',
+#   address: '1200 39th Ave',
+#   city: 'San Francisco',
+#   state: 'CA',
+#   mpg: 28,
+#   zip: 94122,
+#   lat: 37.763562, 
+#   lng: -122.498625
+# )
+
+car3 = Car.create!(
+  # owner_id: pop.id,
+  owner_id: 19,
+  rate: '130',
+  make: 'Fiat',
+  model: 'Spyder', 
+  year: '1975',
+  color: 'blue',
   transmission: 'manual',
   seats: '4',
-  description: 'Fun ride. Ignore the stains in the back.',
-  plate: '9DJ28H',
-  address: '825 Battery St',
-  city: 'San Francisco',
-  state: 'CA',
-  mpg: 24,
-  zip: 94111,
-  lat: 37.799017,
-  lng: -122.401116
-)
-
-car2 = Car.create!(
-  # owner_id: steve.id,
-  owner_id: 18,
-  rate: '160',
-  make: 'Lexus',
-  model: 'IS350', 
-  year: '1990',
-  color: 'gray',
-  transmission: 'automatic',
-  seats: '5',
-  description: 'Clean ride. Good fun.',
-  plate: '6D8SA6S',
-  address: '1200 39th Ave',
+  description: 'A classic.',
+  plate: '3DH3JD8',
+  address: '2300 3rd St',
   city: 'San Francisco',
   state: 'CA',
   mpg: 28,
-  zip: 94122,
-  lat: 37.763562, 
-  lng: -122.498625
+  zip: 94107,
+  lat: 37.759995, 
+  lng: -122.388470
 )
 
 
