@@ -1,6 +1,6 @@
 class Api::CarsController < ApplicationController
 
-  skip_before_action :verify_authenticity_token
+  # skip_before_action :verify_authenticity_token
 
   # before_action :require_logged_in, only: [:create]
 
@@ -17,6 +17,16 @@ class Api::CarsController < ApplicationController
       # render :index
     else
       render json: @car.errors.full_messages, status: 422
+    end
+  end
+
+  def update
+    @car = Car.find(params[:id])
+    if @car.update_attributes(car_params)
+      # render :show
+      render "api/cars/show"
+    else
+      render json: @cars.errors.full_messages, status: 422
     end
   end
   

@@ -4,10 +4,10 @@ import { withRouter } from 'react-router-dom';
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      email: '',
-      password: ''
-    };
+    // this.state = {
+    //   email: '',
+    //   password: ''
+    // };
     this.state = this.props.formFields;
     this.handleSubmit = this.handleSubmit.bind(this);
     this.prettyDemoUser = this.prettyDemoUser.bind(this);
@@ -50,6 +50,14 @@ class SessionForm extends React.Component {
   }
 // ** End animated demo login ** 
 
+// handleDemoUser(e) {
+//   e.preventDefault();
+//   this.props.processForm({
+//     email: 'demo@email.com',
+//     password: 'password'
+//   }).then(this.props.closeModal);
+// }
+
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
@@ -63,13 +71,6 @@ class SessionForm extends React.Component {
       .then(this.props.closeModal);
   }
 
-  // handleDemoUser(e) {
-  //   e.preventDefault();
-  //   this.props.processForm({
-  //     email: 'demo@email.com',
-  //     password: 'password'
-  //   }).then(this.props.closeModal);
-  // }
 
   renderErrors() {
     return (
@@ -84,7 +85,7 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    if (this.props.formType == 'login') {
+    if (this.props.formType === 'login') {
       return (
     // LOGIN FORM //
         <div className="modal-container">

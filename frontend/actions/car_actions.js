@@ -27,14 +27,16 @@ export const receiveErrors = (errors) => ({
   errors
 });
 
+// ******************************* //
+
 export const fetchCars = () => dispatch => (
   APIUtil.fetchCars().then(cars => (
     dispatch(receiveCars(cars))
   ))
 );
 
-export const fetchCar = (car) => dispatch => (
-  APIUtil.fetchCar(car).then(car => (
+export const fetchCar = (id) => dispatch => (
+  APIUtil.fetchCar(id).then(car => (
     dispatch(receiveCar(car))
   ))
 );
@@ -44,7 +46,6 @@ export const createCar = (car) => dispatch => (
     dispatch(receiveCar(car)), errors => dispatch(receiveErrors(errors))
   ))
 );
-
 
 export const editCar = (car) => dispatch => (
   APIUtil.editCar(car).then(car => (

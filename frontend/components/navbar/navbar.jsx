@@ -41,3 +41,4 @@ const NavBar = ({ currentUser, logout, openModal }) => {
 };
 
 export default NavBar;
+

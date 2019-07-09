@@ -11,6 +11,7 @@ import Footer from './footer/footer';
 import CarIndexContainer from './cars/car_index_container';
 import CarCreateContainer from './cars/car_create_container';
 import CarShowContainer from './cars/car_show_container';
+import CarUpdateContainer from './cars/car_update_container';
 
 const App = () => (
   <div>
@@ -20,17 +21,20 @@ const App = () => (
           <img className="navlogo" alt="logo" src="https://github.com/fsiino/torino/blob/master/app/assets/images/torino-logo.png?raw=true"/>
         </Link>
       <NavBarContainer/>
-    </header>
-
-    <Switch>
       <AuthRoute path ="/login" component={LogInFormContainer} />
       <AuthRoute path ="/signup" component={SignUpFormContainer} />
-      <Route exact path="/cars" component={CarIndexContainer} />
-      <Route exact path={`/cars/:id`} component={CarShowContainer} />
+    </header>
+
+    
+    <Switch>
       <ProtectedRoute exact path="/cars/new" component={CarCreateContainer} />
-      <Route exact path="/cars/new" component={CarCreateContainer} />
+      <ProtectedRoute exact path="/cars/:id/edit" component={CarUpdateContainer} />
+      <Route exact path="/cars/:id" component={CarShowContainer} />
+      <Route exact path="/cars" component={CarIndexContainer} />
+      {/* <Route exact path="/cars/new" component={CarCreateContainer} /> */}
       <Route path="/" component={Main} />
     </Switch>
+
 
     <Footer/>
 
