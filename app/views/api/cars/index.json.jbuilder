@@ -3,7 +3,7 @@
   json.extract! car, :owner_id, :id, :rate, :make, :model, :year, :color,:transmission, :seats, :description, :plate, :address, :city, :state, :zip, :lat, :lng, :mpg    
 
     if car.photo.attachment 
-      json.photoUrl url_for(car.photo)
+      json.photo url_for(car.photo) #was photoUrl
     end 
 
   end

@@ -21,8 +21,9 @@ const mapStateToProps = state => ({
     zip: '',
     lat: 0,
     lng: 0,
-    photoFile: null
-    // photos: []
+    // photo: null
+    // photoFile: null
+    photos: []
   },
   formType: 'create',
   errors: state.errors.session

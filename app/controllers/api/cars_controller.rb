@@ -59,6 +59,7 @@ class Api::CarsController < ApplicationController
       :zip,
       :lat,
       :lng,
+      # :photo
       photos: []
     )
   end
