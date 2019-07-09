@@ -12,7 +12,6 @@ class CarShow extends React.Component {
     const id = this.props.match.params.id;
     this.props.fetchCar(id);
   }
-  
 
   navigateToIdx() {
     this.props.history.push('/cars/');
@@ -26,13 +25,11 @@ class CarShow extends React.Component {
   }
 
     render() {
-      // debugger
       // if (this.props.car.owner_id === this.props.currentUserId) {
-      // debugger
       if (!this.props.car) {
         return null;
       }
-      // debugger
+
       return (
 
         <div className="car-show-container">
@@ -56,8 +53,8 @@ class CarShow extends React.Component {
               <span className="car-show-year">
                 {this.props.car.year}
               </span>
-              <div className="star-wrapper">
-                <div className="inner">
+              <div className="car-show-star-wrapper">
+                <div className="car-show-star-inner">
                   <div className="car-show-left-full-star"/>
                   <div className="car-show-left-full-star"/>
                   <div className="car-show-left-full-star"/>
@@ -65,6 +62,19 @@ class CarShow extends React.Component {
                   <div className="car-show-left-full-star"/>
                 </div>
               </div>
+
+            <div className="car-show-features">
+              features
+            </div>
+
+            <div className="car-show-host">
+              host
+            </div>
+
+            <div className="car-show-desc">
+              <p>{this.props.car.description}</p>
+            </div>
+            
           </div>
           
           

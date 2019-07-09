@@ -79,14 +79,26 @@
       margin-right: 4px;
   }
 
-  .star-inner {
+  .car-show-star-inner {
     overflow: hidden;
     width: 100%;
   }
   
-  .star-wrapper {
+  .car-show-star-wrapper {
     overflow: hidden;
     width: 200px;
+  }
+
+  .car-show-host {
+
+  }
+
+  .car-show-desc {
+    color: #231f20;
+    font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
   }
   
 }
@@ -181,7 +193,6 @@
         background: transparent;
         border: none;
         color: #59d389;
-        cursor: pointer;
         font-weight: 700;
         height: auto;
         line-height: unset;
