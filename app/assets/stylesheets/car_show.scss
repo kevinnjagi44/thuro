@@ -1,3 +1,5 @@
+// whole page container
+
 .car-show-container{
   color: black;
   width: 100%;
@@ -12,7 +14,7 @@
   position: relative;
 }
 
-// **** main section **** //
+// main section wrapping left and right panels
 
 .car-show-main-section {
   display: flex;
@@ -37,6 +39,10 @@
     font-family: Freight, HoeflerText-Black, Times New Roman, serif;
     font-size: 32px;
     font-weight: 200;
+  }
+
+  .car-show-left-ratings {
+    
   }
 
 
@@ -101,7 +107,7 @@
     }
 
 
-    .car-whow-rental {
+    .car-show-rental {
 
     }
 

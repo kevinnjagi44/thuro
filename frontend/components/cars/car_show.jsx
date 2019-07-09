@@ -54,7 +54,7 @@ class CarShow extends React.Component {
           <br/><br/><br/>
           <div className="car-show-main-section">
         
-          {/* LEFT */}
+          {/* LEFT PANEL */}
           
             <div className="car-show-left-container">
               <span className="car-show-title">
@@ -62,6 +62,9 @@ class CarShow extends React.Component {
               </span>&nbsp;
               <span className="car-show-year">
                 {this.props.car.year}
+              </span>
+              <span className="car-show-left-ratings">
+                <img src=""
               </span>
             </div>
           
