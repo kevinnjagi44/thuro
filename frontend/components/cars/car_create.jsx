@@ -47,6 +47,9 @@ class CarCreate extends React.Component {
     // add our coordinates
     formData.append('car[lat]', this.state.lat);
     formData.append('car[lng]', this.state.lng);
+    // add photos
+    formData.append('post[photo]', this.state.photoFile);
+
 
     // for(let i = 0; i < this.state.photos.length; i++) {
     //   formData.append('car[photos][]', this.state.photos[i]);
@@ -63,9 +66,9 @@ class CarCreate extends React.Component {
 
   }
 
-  // handlefile(e) {
-  //   this.setState({photoFile: e.currentTarget.files[0]});
-  // }
+  handlefile(e) {
+    this.setState({photoFile: e.currentTarget.files[0]});
+  }
 
   render() {
     return (
@@ -194,6 +197,9 @@ class CarCreate extends React.Component {
           </label> */}
 
           <input className="car-create-submit-btn" type="submit" value="Finish"/>
+
+          <input type="file"
+            onChange={this.handleFile.bind(this)} />
 
         </form>
 
