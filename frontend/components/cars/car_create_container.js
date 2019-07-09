@@ -21,6 +21,21 @@ const mapStateToProps = state => ({
     zip: '',
     lat: 0,
     lng: 0,
+    awd: false,
+    audioInput: false,
+    bikeRack: false,
+    bluetooth: false,
+    childSeat: false,
+    convertible: false,
+    gps: false,
+    heatedSeats: false,
+    longtermCar: false,
+    petFriendly: false,
+    skiRack: false,
+    snowTiresChains: false,
+    sunroof: false,
+    tollPass: false,
+    usbInput: false,
     // photo: null
     // photoFile: null
     photos: []

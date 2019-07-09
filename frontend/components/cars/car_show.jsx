@@ -42,7 +42,7 @@ class CarShow extends React.Component {
           </div>
 
           <br/><br/><br/>
-          
+
           <div className="car-show-main-section">
         
           {/* LEFT PANEL */}
@@ -50,7 +50,9 @@ class CarShow extends React.Component {
             <div className="car-show-left-container">
               <div className="car-show-grid-container">
                 <div className="item-1">
-                  The car
+                  <div className="car-show-left-sec">
+                    The car
+                  </div>
                 </div>
                 <div className="item-2">
 
@@ -77,7 +79,9 @@ class CarShow extends React.Component {
                   </div>
                 </div>
                 <div className="item-4">
-                  Host stuff here
+                  <div className="car-show-left-content">
+                    Host stuff here
+                  </div>
                 </div>
 
                 <div className="item-5">
@@ -87,7 +91,7 @@ class CarShow extends React.Component {
                 </div>
 
                 <div className="item-6">
-                  <div className="car-show-desc">
+                  <div className="car-show-left-content">
                     <p>{this.props.car.description}</p>
                   </div>
                 </div>
@@ -99,7 +103,9 @@ class CarShow extends React.Component {
                 </div>
 
                 <div className="item-8">
-                  Features here
+                  <div className="car-show-left-content">
+                    Features here
+                  </div>
                 </div>
               </div>
           </div>
@@ -180,37 +186,7 @@ class CarShow extends React.Component {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      
 
 
 //     } else {
