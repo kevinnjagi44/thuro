@@ -32,7 +32,7 @@ class CarUpdate extends React.Component {
     //   formData.append('car[photos][]', this.state.photos[i]);
     // }
 
-    this.props.editCar(this.state);
+    this.props.editCar(this.state, this.state.id);
     this.navigateToShow();
 
   }

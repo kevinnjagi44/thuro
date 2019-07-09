@@ -62,8 +62,10 @@ class CarCreate extends React.Component {
 
     // this.props.createCar(formData).then((car) => this.props.history.push(`/cars/${car.id}`));
     
-    this.props.createCar(formData);
-    this.navigateToIdx();
+    // this.props.createCar(formData,this.state.id);
+    // this.navigateToIdx();
+
+    this.props.createCar(formData,this.state.id).then(() => this.props.history.push('/cars/'));
 
   }
 

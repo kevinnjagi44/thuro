@@ -58,15 +58,18 @@
   overflow: scroll;
 }
 
+.car-idx-photo-wrapper {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
 .car-idx-photo {
   width: 319px;
   height: 200px;
   padding: 15px;
-  border-radius: 25px;
   overflow: hidden;
-  border-radius: 6px;
 }
-
 
 .car-tile-container {
   padding-right: 24.5px;
@@ -78,13 +81,12 @@
 .car-price {
   color: black;
   position: absolute;
-  bottom: 74px;
-  right: 34px;
+  bottom: 92px;
+  right: 48px;
   font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
   border-radius: 3px;
   background: #ffffff;
   font-weight: 600;
-  // display: inline-flex;
 }
 
 .price-per-day {
@@ -98,22 +100,25 @@
 
 .car-make-model {
   color: black;
-  // position: absolute;
-  // position: flex;
-  // padding-left: 30px;
-  left: 30px;
+  padding-left: 12px;
   justify-content: left;
-  padding-top: 4px;
   font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
   border-radius: 3px;
-  background: #ffffff;
+  font-size: 24px;
+  font-family: Plantin,AmericanTypewriter-Condensed,Times New Roman,serif;
+  font-weight: 400;
+  letter-spacing: -.5px;
+  line-height: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .car-year {
-  // position: absolute;
   color: black; 
-  padding-top: 4px;
   left: 28px;  
-
-
+  font-size: 18px;
+  font-family: Plantin,AmericanTypewriter-Condensed,Times New Roman,serif;
+  font-weight: 400;
 }

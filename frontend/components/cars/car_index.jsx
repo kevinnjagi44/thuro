@@ -31,7 +31,7 @@ class CarIndex extends React.Component {
           {this.props.cars.map(car=>
             <div className="car-tile-container">
               <Link to={`/cars/${car.id}`}>
-                <div className="car-idx-photo">
+                <div className="car-idx-photo-wrapper">
                   <img className="car-idx-photo" src={car.photoUrl} />
                 </div>
               </Link>
@@ -39,12 +39,12 @@ class CarIndex extends React.Component {
                 ${car.rate}<span className="price-per-day"> /day</span>
               </div>
               <div className="car-make-model-year-container">
-                <div className="car-make-model">
+                <span className="car-make-model">
                   {car.make}&nbsp;{car.model}
-                </div>
-                <div className="car-year">
+                </span>
+                <span className="car-year">
                   &nbsp;{car.year}<br />
-                </div>
+                </span>
               </div>
             </div>
             )}

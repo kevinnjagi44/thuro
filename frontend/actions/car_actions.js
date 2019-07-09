@@ -47,8 +47,8 @@ export const createCar = (car) => dispatch => (
   ))
 );
 
-export const editCar = (car) => dispatch => (
-  APIUtil.editCar(car).then(car => (
+export const editCar = (car, carId) => dispatch => (
+  APIUtil.editCar(car,carId).then(car => (
     dispatch(receiveCar(car))
   ))
 );

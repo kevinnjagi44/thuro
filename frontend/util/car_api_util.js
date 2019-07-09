@@ -29,11 +29,12 @@ export const createCar = (car) => {
   );
 };
 
-export const editCar = (car) => {
+export const editCar = (car, carId) => {
   return (
     $.ajax({
       method: 'PATCH',
-      url: `/api/cars/${car.id}`,
+      // url: `/api/cars/${car.id}`,
+      url: `/api/cars/${carId}`,
       data: {car}
     })
   );

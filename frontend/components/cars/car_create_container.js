@@ -30,7 +30,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  createCar: car => dispatch(createCar(car)),
+  createCar: (car, carId) => dispatch(createCar(car, carId)),
   fetchCar: car => dispatch(fetchCar(car))
 });
 
