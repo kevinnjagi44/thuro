@@ -41,7 +41,7 @@ class Car < ApplicationRecord
     through: :car_features,
     source: :feature
 
-  has_one_attached :photo
+  has_many_attached :photos
 
   # def self.in_bounds(bounds)
   #   self.where("lat < ?", bounds[:northEast][:lat])
