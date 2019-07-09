@@ -46,6 +46,58 @@
 
 .car-show-left-container {
 
+
+  // begin grid
+
+.item-1 {
+  grid-area: g-car-l;
+}
+.item-2 {
+  grid-area: g-car-c;
+}
+.item-3 {
+  grid-area: g-host-l;
+}
+.item-4 {
+  grid-area: g-host-c;
+}
+.item-5 {
+  grid-area: g-desc-l;
+}
+.item-6 {
+  grid-area: g-desc-c;
+}
+.item-7 {
+  grid-area: g-feat-l;
+}
+.item-8 {
+  grid-area: g-feat-c;
+}
+
+.car-show-grid-container {
+  justify-content: left;
+  display: grid;
+  grid-template-columns: 118px 100%;
+  grid-template-areas: 
+  "g-car-l g-car-c"
+  "g-host-l g-host-c"
+  "g-desc-l g-desc-c"
+  "g-feat-l g-feat-c";
+}
+
+// end grid
+
+.car-show-left-sec {
+  font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #5d5d5d;
+  font-size: 13px;
+  margin-bottom: 15px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+
   .car-show-title {
     flex: 0 1 auto;
     font-family: Freight, HoeflerText-Black, Times New Roman, serif;  

@@ -42,39 +42,66 @@ class CarShow extends React.Component {
           </div>
 
           <br/><br/><br/>
+          
           <div className="car-show-main-section">
         
           {/* LEFT PANEL */}
           
             <div className="car-show-left-container">
-              <span className="car-show-title">
-                {this.props.car.make} {this.props.car.model}
-              </span>&nbsp;
-              <span className="car-show-year">
-                {this.props.car.year}
-              </span>
-              <div className="car-show-star-wrapper">
-                <div className="car-show-star-inner">
-                  <div className="car-show-left-full-star"/>
-                  <div className="car-show-left-full-star"/>
-                  <div className="car-show-left-full-star"/>
-                  <div className="car-show-left-full-star"/>
-                  <div className="car-show-left-full-star"/>
+              <div className="car-show-grid-container">
+                <div className="item-1">
+                  The car
+                </div>
+                <div className="item-2">
+
+                  <span className="car-show-title">
+                    {this.props.car.make} {this.props.car.model}
+                  </span>&nbsp;
+                  <span className="car-show-year">
+                    {this.props.car.year}
+                  </span>
+                  <div className="car-show-star-wrapper">
+                    <div className="car-show-star-inner">
+                      <div className="car-show-left-full-star"/>
+                      <div className="car-show-left-full-star"/>
+                      <div className="car-show-left-full-star"/>
+                      <div className="car-show-left-full-star"/>
+                      <div className="car-show-left-full-star"/>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="item-3">
+                  <div className="car-show-left-sec">
+                    Hosted by
+                  </div>
+                </div>
+                <div className="item-4">
+                  Host stuff here
+                </div>
+
+                <div className="item-5">
+                  <div className="car-show-left-sec">
+                    Description
+                  </div>
+                </div>
+
+                <div className="item-6">
+                  <div className="car-show-desc">
+                    <p>{this.props.car.description}</p>
+                  </div>
+                </div>
+
+                <div className="item-7">
+                  <div className="car-show-left-sec">
+                    Features
+                  </div>
+                </div>
+
+                <div className="item-8">
+                  Features here
                 </div>
               </div>
-
-            <div className="car-show-features">
-              features
-            </div>
-
-            <div className="car-show-host">
-              host
-            </div>
-
-            <div className="car-show-desc">
-              <p>{this.props.car.description}</p>
-            </div>
-            
           </div>
           
           
