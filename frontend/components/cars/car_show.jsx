@@ -28,11 +28,11 @@ class CarShow extends React.Component {
     render() {
       // debugger
       // if (this.props.car.owner_id === this.props.currentUserId) {
-// debugger
+      // debugger
       if (!this.props.car) {
         return null;
       }
-// debugger
+      // debugger
       return (
 
         <div className="car-show-container">
@@ -53,14 +53,20 @@ class CarShow extends React.Component {
 
           <div className="main-section">
         
-        {/* LEFT */}
-        
-        
-        
-        
-        
-        {/* RIGHT PANEL */}
-        
+          {/* LEFT */}
+          
+            <div className="car-show-left-container">
+            left side content
+            </div>
+          
+          
+          
+          {/* RIGHT PANEL */}
+
+            <div className="car-show-right-container">
+              right side content
+            </div>
+          
         
           </div>
         </div>
