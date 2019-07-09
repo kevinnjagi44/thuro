@@ -18,6 +18,7 @@ class CarCreate extends React.Component {
   }
 
   update(field) {
+    // debugger
     return e => {
       this.setState({
         [field]: e.currentTarget.value,
@@ -51,10 +52,18 @@ class CarCreate extends React.Component {
     
     // formData.append('car[photo]', this.state.photo);
 
+    // debugger
 
-    for(let i = 0; i < this.state.photos.length; i++) {
+    if (this.state.photos) {
+      for(let i = 0; i < this.state.photos.length; i++) {
       formData.append('car[photos][]', this.state.photos[i]);
+      }
     }
+
+      // for(let i = 0; i < this.state.photos.length; i++) {
+      // formData.append('car[photos][]', this.state.photos[i]);
+      // }
+
 
     // this.props.createCar(formData).then((car) => this.props.history.push(`/cars/${car.id}`));
 
@@ -65,7 +74,10 @@ class CarCreate extends React.Component {
     // this.props.createCar(formData,this.state.id);
     // this.navigateToIdx();
 
-    this.props.createCar(formData,this.state.id).then(() => this.props.history.push('/cars/'));
+    // this.props.createCar(formData).then(() => this.props.history.push('/cars/'));
+
+    this.props.createCar(formData);
+    this.navigateToIdx();
 
   }
 
@@ -74,6 +86,7 @@ class CarCreate extends React.Component {
   // }
 
   render() {
+    // debugger
     return (
       <div className="car-create-container">
         <div className="car-create-banner">
@@ -155,7 +168,7 @@ class CarCreate extends React.Component {
             </textarea>
           </label>
 
-          {/* <h3>Features</h3>
+          <h3>Features</h3>
             <div className="features-wrapper">
               <div>
                 <label><input type="checkbox" value="awd" /> All-wheel-drive</label><br/>
@@ -183,7 +196,7 @@ class CarCreate extends React.Component {
                 <label><input type="checkbox" value="usb_input" /> USB input</label><br />
               </div>
             </div>
-          <br/><br/> */}
+          <br/><br/>
       
           {/* <h3>Photos</h3> */}
 

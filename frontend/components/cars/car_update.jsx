@@ -9,6 +9,7 @@ class CarUpdate extends React.Component {
 
   componentDidMount() {
     this.props.fetchCar(this.props.match.params.id);
+    window.scrollTo(0, 0);
   }
 
   navigateToShow() {
@@ -38,6 +39,7 @@ class CarUpdate extends React.Component {
   }
 
   render() {
+    // debugger
     return (
       <div className="car-create-container">
         <div className="car-create-banner">
@@ -98,9 +100,9 @@ class CarUpdate extends React.Component {
           </label>
           <label>Transmission
             <br />
-            <input type="radio" value="automatic" name="transmission" onChange={this.update("transmission")} />Automatic&nbsp;
-            <input type="radio" value="manual" name="transmission" onChange={this.update("transmission")} />Manual&nbsp;
-            <input type="radio" value="none" name="transmission" onChange={this.update("transmission")} />N/A&nbsp;
+            <input type="radio" value={this.state.transmission} name="transmission" onChange={this.update("transmission")} />Automatic&nbsp;
+            <input type="radio" value={this.state.transmission}  name="transmission" onChange={this.update("transmission")} />Manual&nbsp;
+            <input type="radio" value={this.state.transmission}  name="transmission" onChange={this.update("transmission")} />N/A&nbsp;
           </label>
 
           <br /><br /><br />

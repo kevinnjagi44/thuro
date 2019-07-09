@@ -11,12 +11,12 @@
 
 class CarFeature < ApplicationRecord
 
-  # belongs_to :car,
-  #   foreign_key: :car_id,
-  #   class_name: :Car
+  belongs_to :car,
+    foreign_key: :car_id,
+    class_name: :Car
 
-  # belongs_to :feature,
-  #   foreign_key: :feature_id,
-  #   class_name: :Feature
+  belongs_to :feature,
+    foreign_key: :feature_id,
+    class_name: :Feature
 
 end
