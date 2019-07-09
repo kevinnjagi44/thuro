@@ -36,11 +36,15 @@ class CarIndex extends React.Component {
                 </div>
               </Link>
               <div className="car-price">
-                ${car.rate} /day
+                ${car.rate}<span className="price-per-day"> /day</span>
               </div>
-              <div className="car-make-model-yr">{car.make}&nbsp;
-                {car.year}<br/>
-                {car.model}<br />
+              <div className="car-make-model-year-container">
+                <div className="car-make-model">
+                  {car.make}&nbsp;{car.model}
+                </div>
+                <div className="car-year">
+                  &nbsp;{car.year}<br />
+                </div>
               </div>
             </div>
             )}

@@ -78,20 +78,42 @@
 .car-price {
   color: black;
   position: absolute;
-  bottom: 28px;
-  right: 16px;
+  bottom: 74px;
+  right: 34px;
   font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
   border-radius: 3px;
   background: #ffffff;
+  font-weight: 600;
   // display: inline-flex;
 }
 
-.car-make-model-yr {
+.price-per-day {
+  font-weight: none;
+}
+
+.car-make-model-year-container {
+    position: flex;
+    justify-content: space-between;
+}
+
+.car-make-model {
   color: black;
-  position: absolute;
-  bottom: 50px;
-  right: 30px;
+  // position: absolute;
+  // position: flex;
+  // padding-left: 30px;
+  left: 30px;
+  justify-content: left;
+  padding-top: 4px;
   font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
   border-radius: 3px;
   background: #ffffff;
+}
+
+.car-year {
+  // position: absolute;
+  color: black; 
+  padding-top: 4px;
+  left: 28px;  
+
+
 }
