@@ -1,6 +1,6 @@
 // whole page container
 
-.car-show-container{
+.car-show-container {
   color: black;
   width: 100%;
 }
@@ -41,12 +41,35 @@
     font-weight: 200;
   }
 
-  .car-show-left-ratings {
-    
+  .car-show-left-full-star {
+      background-image: url('https://github.com/fsiino/torino/blob/master/app/assets/images/review-full-star.png?raw=true');
+      background-size: 20px 20px;
+      height: 20px;
+      width: 20px;
+      margin-right: 4px;
+      float: left;
   }
 
+  .car-show-left-half-star {
+      background-image: url('https://github.com/fsiino/torino/blob/master/app/assets/images/review-full-star.png?raw=true');
+      background-size: 20px 20px;
+      height: 20px;
+      width: 20px;
+      margin-right: 4px;
+  }
 
+  .star-inner {
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .star-wrapper {
+    overflow: hidden;
+    width: 200px;
+  }
+  
 }
+
 
 // right panel
 
