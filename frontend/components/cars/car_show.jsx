@@ -84,6 +84,11 @@ class CarShow extends React.Component {
               <span className="car-show-price">
                 {this.props.car.rate}
               </span>
+              &nbsp;
+              <span className="car-show-per-day">
+                per day
+              </span>
+
               <div className="car-show-distance-container">
 
                 <div className="car-show-rental">
@@ -112,7 +117,18 @@ class CarShow extends React.Component {
                 </div>
               </div>
 
-              <button className="car-show-add-fav-btn">Add to favorites</button>
+              <div className="car-show-insurance-container">
+                <div className="car-show-insurance-header">
+                  Insurance provided via
+                </div>
+                <div className="car-show-insurance-co">
+                  Freedom Reciprocal
+                </div>
+              </div>
+
+              <button className="car-show-add-fav-btn">
+                <img className="car-show-add-fav-icon" src="https://github.com/fsiino/torino/blob/master/app/assets/images/add-fav-transp.png?raw=true"/>&nbsp;Add to favorites
+              </button>
             </div> 
           
         

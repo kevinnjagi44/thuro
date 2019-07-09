@@ -70,10 +70,14 @@
   
 }
 
-
 // right panel
 
 .car-show-right-container {
+
+
+  .car-show-rental {
+    padding: 10px 10px;
+  }  
 
   .car-show-price {
     // font-family: Freight,HoeflerText-Black,Times New Roman,serif;
@@ -93,8 +97,15 @@
     line-height: .8;
     margin: 15px 0 0 5px;
     vertical-align: top;
-    }
+  }
 
+  .car-show-per-day {
+    font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 1px;
+    text-align: right;
+  }
 
     .car-show-distance-container {
 
@@ -104,6 +115,8 @@
         font-size: 13px;
         font-family: BasisBold, Avenir, Helvetica Neue, Helvetica, sans-serif;
         font-weight: 500;
+        border-top: 1px solid #e6e6e6;
+        padding-top: 20px;
       }
 
       .car-show-distance {
@@ -129,11 +142,35 @@
 
     }
 
+    .car-show-insurance-container {
 
-    .car-show-rental {
+      .car-show-insurance-header {
+        border-top: 1px solid #e6e6e6;
+        font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 13px;
+        text-transform: uppercase;
+        color: #5d5d5d;        
+        padding-top: 20px;
+      }
 
+      .car-show-insurance-co {
+        background: transparent;
+        border: none;
+        color: #59d389;
+        cursor: pointer;
+        font-weight: 700;
+        height: auto;
+        line-height: unset;
+        padding: 0;
+        text-align: left;
+        white-space: normal;
+        font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
+        font-size: 16px;       
+        line-height: 1.5; 
+        padding-top: 10px;
+      }
     }
-
 
     .car-show-add-fav-btn {
       width: 100%;
@@ -149,6 +186,17 @@
       flex-direction: row;
       justify-content: center;
       align-items: center;
+      transition: 0.5s;    
     }
+
+    .car-show-add-fav-btn:hover {
+      background-color: #e2e2e2;
+    }
+
+    .car-show-add-fav-icon {
+      width: 16px;
+      height: 16px;
+  }
+
 }
 
