@@ -7,80 +7,83 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Seed Users
-# demo = User.create!(
-#   email: 'demo@email.com',
-#   password: 'password',
-#   fname: 'demo',
-#   lname: 'user'
-# )
+demo = User.create!(
+  email: 'demo@email.com',
+  password: 'password',
+  fname: 'demo',
+  lname: 'user'
+)
 
-# frankie = User.create!(
-#   email: 'frankie@aa.io',
-#   password: 'password',
-#   fname: 'frankie',
-#   lname: 'siino'
-# )
+frankie = User.create!(
+  email: 'frankie@aa.io',
+  password: 'password',
+  fname: 'frankie',
+  lname: 'siino'
+)
 
-# steve = User.create!(
-#   email: 'steve@mi.com',
-#   password: 'password',
-#   fname: 'steve',
-#   lname: 'yee'
-# )
+steve = User.create!(
+  email: 'steve@mi.com',
+  password: 'password',
+  fname: 'steve',
+  lname: 'yee'
+)
 
-# pop = User.create!(
-#   email: 'joe@se.com',
-#   password: 'password',
-#   fname: 'joe',
-#   lname: 'siino'
-# )
+pop = User.create!(
+  email: 'joe@se.com',
+  password: 'password',
+  fname: 'joe',
+  lname: 'siino'
+)
 
 # Seed Cars
-# car1 = Car.create!(
-#   # owner_id: frankie.id,
-#   owner_id: 17,
-#   rate: '110',
-#   make: 'Ford',
-#   model: 'Mustang', 
-#   year: 2012,
-#   color: 'black',
-#   transmission: 'manual',
-#   seats: '4',
-#   description: 'Fun ride. Ignore the stains in the back.',
-#   plate: '9DJ28H',
-#   address: '825 Battery St',
-#   city: 'San Francisco',
-#   state: 'CA',
-#   mpg: 24,
-#   zip: 94111,
-#   lat: 37.799017,
-#   lng: -122.401116
-# )
+car1 = Car.create!(
+  # owner_id: frankie.id,
+  # owner_id: 17,
+  owner_id: 3,
+  rate: '110',
+  make: 'Ford',
+  model: 'Mustang', 
+  year: 2012,
+  color: 'black',
+  transmission: 'manual',
+  seats: '4',
+  description: 'Fun ride. Ignore the stains in the back.',
+  plate: '9DJ28H',
+  address: '825 Battery St',
+  city: 'San Francisco',
+  state: 'CA',
+  mpg: 24,
+  zip: 94111,
+  lat: 37.799017,
+  lng: -122.401116
+)
 
-# car2 = Car.create!(
-#   # owner_id: steve.id,
-#   owner_id: 18,
-#   rate: '160',
-#   make: 'Lexus',
-#   model: 'IS350', 
-#   year: '1990',
-#   color: 'gray',
-#   transmission: 'automatic',
-#   seats: '5',
-#   description: 'Clean ride. Good fun.',
-#   plate: '6D8SA6S',
-#   address: '1200 39th Ave',
-#   city: 'San Francisco',
-#   state: 'CA',
-#   mpg: 28,
-#   zip: 94122,
-#   lat: 37.763562, 
-#   lng: -122.498625
-# )
+car2 = Car.create!(
+  # owner_id: steve.id,
+  # owner_id: 18,
+  owner_id: 4,
+  rate: '160',
+  make: 'Lexus',
+  model: 'IS350', 
+  year: '1990',
+  color: 'gray',
+  transmission: 'automatic',
+  seats: '5',
+  description: 'Clean ride. Good fun.',
+  plate: '6D8SA6S',
+  address: '1200 39th Ave',
+  city: 'San Francisco',
+  state: 'CA',
+  mpg: 28,
+  zip: 94122,
+  lat: 37.763562, 
+  lng: -122.498625
+)
 
 car3 = Car.create!(
   # owner_id: pop.id,
-  owner_id: 19,
+  # owner_id: 19,
+  owner_id: 5,
   rate: '130',
   make: 'Fiat',
   model: 'Spyder', 
