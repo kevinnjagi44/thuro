@@ -8,19 +8,118 @@
 .car-show-img-banner {
   display: block;
   height: 95vh;
-  width: 100vw;
+  width: 100%;
   position: relative;
 }
+
 // **** main section **** //
+
+.car-show-main-section {
+  display: flex;
+  justify-content: space-around;
+}
+
 // left section
 
 .car-show-left-container {
 
-}
-.car-show-right-container {
+  .car-show-title {
+    flex: 0 1 auto;
+    font-family: Freight, HoeflerText-Black, Times New Roman, serif;  
+    font-weight: 600;
+    line-height: 1.2;
+    min-width: 0;
+    font-size: 36px;
+    text-transform: uppercase;
+  }
+
+  .car-show-year {
+    font-family: Freight, HoeflerText-Black, Times New Roman, serif;
+    font-size: 32px;
+    font-weight: 200;
+  }
+
 
 }
-
-
 
 // right panel
+
+.car-show-right-container {
+
+  .car-show-price {
+    // font-family: Freight,HoeflerText-Black,Times New Roman,serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 45px;
+    font-weight: 400;
+    line-height: 1;
+    margin: 0 0 0 5px;    
+    font-size: 62px;
+  }
+
+  .car-show-usd {
+    // font-family: Plantin,AmericanTypewriter-Condensed,Times New Roman,serif;
+    font-family: Times New Roman,serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: .8;
+    margin: 15px 0 0 5px;
+    vertical-align: top;
+    }
+
+
+    .car-show-distance-container {
+
+      .car-show-distance-header {
+        text-transform: uppercase;
+        color: #5d5d5d;
+        font-size: 13px;
+        font-family: BasisBold, Avenir, Helvetica Neue, Helvetica, sans-serif;
+        font-weight: 500;
+      }
+
+      .car-show-distance {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .car-show-distance-time {
+        color: #231f20;
+        font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      .car-show-distance-mi {
+        color: #231f20;
+        font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+    }
+
+
+    .car-whow-rental {
+
+    }
+
+
+    .car-show-add-fav-btn {
+      width: 100%;
+      border: 1px solid black;
+      background: #fff;
+      cursor: pointer;
+      color: #231f20;
+      font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
+      font-weight: 700;
+      height: 34px;
+      font-size: 16px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+}
+

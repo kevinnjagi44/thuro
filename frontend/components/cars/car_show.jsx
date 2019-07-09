@@ -51,12 +51,18 @@ class CarShow extends React.Component {
           <br/>
           <button onClick={this.handleDelete}>Delete this car</button>
 
-          <div className="main-section">
+          <br/><br/><br/>
+          <div className="car-show-main-section">
         
           {/* LEFT */}
           
             <div className="car-show-left-container">
-            left side content
+              <span className="car-show-title">
+                {this.props.car.make} {this.props.car.model}
+              </span>&nbsp;
+              <span className="car-show-year">
+                {this.props.car.year}
+              </span>
             </div>
           
           
@@ -64,13 +70,65 @@ class CarShow extends React.Component {
           {/* RIGHT PANEL */}
 
             <div className="car-show-right-container">
-              right side content
-            </div>
+              <span className="car-show-usd">
+                $
+              </span>
+              <span className="car-show-price">
+                {this.props.car.rate}
+              </span>
+              <div className="car-show-distance-container">
+
+                <div className="car-show-rental">
+                  Placeholder for car rental dropdowns
+                </div>
+
+                <div className="car-show-distance-header">
+                  Distance included
+                </div>
+
+                <div className="car-show-distance">
+
+                  <div className="car-show-distance-time">
+                
+                    Day<br/>
+                    Week<br/>
+                    Month
+                    
+                  </div>
+
+                  <div className="car-show-distance-mi">
+                    200 mi<br/>
+                    1000 mi<br/>
+                    2250 mi
+                  </div>
+                </div>
+              </div>
+
+              <button className="car-show-add-fav-btn">Add to favorites</button>
+            </div> 
           
         
           </div>
         </div>
       )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
