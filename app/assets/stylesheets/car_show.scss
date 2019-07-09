@@ -3,6 +3,27 @@
 .car-show-container {
   color: black;
   width: 100%;
+
+    button {
+      width: 100%;
+      border: 1px solid black;
+      background: #fff;
+      cursor: pointer;
+      color: #231f20;
+      font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
+      font-weight: 700;
+      height: 34px;
+      font-size: 16px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      transition: 0.5s;    
+    }
+
+    button:hover {
+      background-color: #e2e2e2;
+    }
 }
 
 // image banner
@@ -73,7 +94,8 @@
 // right panel
 
 .car-show-right-container {
-
+  border-bottom: 1px solid #e6e6e6;
+  width: 18%;
 
   .car-show-rental {
     padding: 10px 10px;
@@ -143,6 +165,7 @@
     }
 
     .car-show-insurance-container {
+      border-bottom: 1px solid #e6e6e6;
 
       .car-show-insurance-header {
         border-top: 1px solid #e6e6e6;
@@ -169,34 +192,14 @@
         font-size: 16px;       
         line-height: 1.5; 
         padding-top: 10px;
+        padding-bottom: 20px;
       }
-    }
-
-    .car-show-add-fav-btn {
-      width: 100%;
-      border: 1px solid black;
-      background: #fff;
-      cursor: pointer;
-      color: #231f20;
-      font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
-      font-weight: 700;
-      height: 34px;
-      font-size: 16px;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      transition: 0.5s;    
-    }
-
-    .car-show-add-fav-btn:hover {
-      background-color: #e2e2e2;
     }
 
     .car-show-add-fav-icon {
       width: 16px;
       height: 16px;
-  }
-
+    }
+  
 }
 

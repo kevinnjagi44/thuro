@@ -43,13 +43,6 @@ class CarShow extends React.Component {
             {/* <img className="car-show-img-banner" src={this.props.car.id.photoUrl} /> */}
             <img className="car-show-img-banner" alt="car photo" src={this.props.car.photoUrls[0]} />
           </div>
-          <h1>Hi, this is the show page</h1>
-          <br/>
-          <Link to={`/cars/${this.props.car.id}/edit`}>
-            <button>Edit this car</button>
-          </Link>
-          <br/>
-          <button onClick={this.handleDelete}>Delete this car</button>
 
           <br/><br/><br/>
           <div className="car-show-main-section">
@@ -92,7 +85,17 @@ class CarShow extends React.Component {
               <div className="car-show-distance-container">
 
                 <div className="car-show-rental">
-                  Placeholder for car rental dropdowns
+                  
+                  Rentals will go here.
+
+                </div>
+
+                <div>
+                  <Link to={`/cars/${this.props.car.id}/edit`}>
+                    <button>Edit this car</button>
+                  </Link>
+                  <br />
+                  <button onClick={this.handleDelete}>Delete this car</button>
                 </div>
 
                 <div className="car-show-distance-header">
@@ -129,10 +132,12 @@ class CarShow extends React.Component {
               <button className="car-show-add-fav-btn">
                 <img className="car-show-add-fav-icon" src="https://github.com/fsiino/torino/blob/master/app/assets/images/add-fav-transp.png?raw=true"/>&nbsp;Add to favorites
               </button>
+              <br/>
             </div> 
           
-        
+                
           </div>
+          <br/>
         </div>
       )
 
