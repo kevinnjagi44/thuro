@@ -28,6 +28,7 @@ class CarCreate extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const formData = new FormData();
+    formData.append('car[ownerId]', this.state.ownerId);
     formData.append('car[address]', this.state.address);
     formData.append('car[rate]', this.state.rate);
     formData.append('car[make]', this.state.make);

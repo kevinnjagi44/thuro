@@ -26,6 +26,7 @@ const NavBar = ({ currentUser, logout, openModal }) => {
         <div className="dropdown">
           <div className="nav-profile"/>
           <div className="dropdown-content">
+            <a className="dropdown-user">{currentUser.fname} {currentUser.lname}</a> 
             <a onClick={logout}>Log out</a>
           </div>
         </div>

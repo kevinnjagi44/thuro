@@ -13,7 +13,7 @@ class CarUpdate extends React.Component {
 
   navigateToShow() {
     // this.props.history.push(`/cars/${car.id}`);
-    // this.props.history.push(`/cars/${id}`);
+    this.props.history.push('/cars/');
   }
 
   update(field) {
@@ -32,7 +32,6 @@ class CarUpdate extends React.Component {
   }
 
   render() {
-    // debugger
     return (
       <div className="car-create-container">
         <div className="car-create-banner">
