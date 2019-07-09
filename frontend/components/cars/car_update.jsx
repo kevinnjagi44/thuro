@@ -26,6 +26,12 @@ class CarUpdate extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+
+    // const formData = new FormData();
+    // for (let i = 0; i < this.state.photos.length; i++) {
+    //   formData.append('car[photos][]', this.state.photos[i]);
+    // }
+
     this.props.editCar(this.state);
     this.navigateToShow();
 
@@ -146,7 +152,10 @@ class CarUpdate extends React.Component {
           {/* <h3>Photos</h3> */}
 
           {/* <input type="file" onChange={this.handleFile.bind(this)} /> */}
-          {/* <input type="file" onChange={e => this.setState({ photos: e.target.files })} multiple /> */}
+
+
+
+          <input type="file" onChange={e => this.setState({ photos: e.target.files })} multiple />
 
           <br />
 

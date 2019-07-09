@@ -12,8 +12,8 @@ class Api::CarsController < ApplicationController
     @car = Car.new(car_params)
     @car.owner_id = current_user.id
     if @car.save
-      # render "api/cars"
-      render :show
+      render "api/cars/show"
+      # render :show
       # render :index
     else
       render json: @car.errors.full_messages, status: 422
@@ -26,7 +26,7 @@ class Api::CarsController < ApplicationController
       # render :show
       render "api/cars/show"
     else
-      render json: @cars.errors.full_messages, status: 422
+      render json: @car.errors.full_messages, status: 422
     end
   end
   
@@ -37,8 +37,12 @@ class Api::CarsController < ApplicationController
 
   def destroy
     @car = Car.find(params[:id])
-    @car.destroy
-    render "api/cars"
+    if @car.delete
+      @cars = Car.all
+      render "api/cars/show"
+    else
+      render json: @car.errors.full_messages, status: 422
+    end
   end
 
   def car_params

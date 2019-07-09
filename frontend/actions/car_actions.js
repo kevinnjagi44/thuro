@@ -54,7 +54,7 @@ export const editCar = (car) => dispatch => (
 );
 
 export const deleteCar = (id) => dispatch => (
-  APIUtil.deleteCar(id).then(car (
+  APIUtil.deleteCar(id).then(car => (
     dispatch(removeCar(car))
   ))
 );
