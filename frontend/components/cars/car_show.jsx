@@ -8,6 +8,7 @@ class CarShow extends React.Component {
     this.handleDelete = this.handleDelete.bind(this);
   }
 
+
   componentDidMount() {
     this.props.fetchCar(this.props.match.params.id);
   }
@@ -20,21 +21,20 @@ class CarShow extends React.Component {
     e.preventDefault();
     this.props.deleteCar(this.props.car.id);
     this.navigateToIdx();
-
   }
 
     render() {
-      debugger
+      
       // if (this.props.car.owner_id === this.props.currentUserId) {
-      if (!this.props.car) {
-        return null;
-      }
+        if (!this.props.car) {
+          return null;
+        }
+        
+        if (!this.props.car.photoUrls) {
+          return null;
+        }
 
-      if (!this.props.car.photoUrls) {
-        return null;
-      }
-
-      return (
+        return (
 
         <div className="car-show-container">
 
@@ -109,21 +109,21 @@ class CarShow extends React.Component {
                 <div className="item-8">
                   <div className="car-show-left-content">
 
-                    {this.props.car.awd}
-                    {this.props.car.audioInput}
-                    {this.props.car.bikeRack}
-                    {this.props.car.bluetooth}
-                    {this.props.car.childSeat}
-                    {this.props.car.convertible}
-                    {this.props.car.gps}
-                    {this.props.car.heatedSeats}
-                    {this.props.car.longtermCar}
-                    {this.props.car.petFriendly}
-                    {this.props.car.skiRack}
-                    {this.props.car.snowTiresChains}
-                    {this.props.car.sunroof}
-                    {this.props.car.tollPass}
-                    {this.props.car.usbInput}
+                    {`${this.props.car.awd}` === 'true' ? <h1>All-wheel-drive</h1> : null }
+                    {`${this.props.car.audio_input}` === 'true' ? <h1>Audio input</h1> : null }
+                    {`${this.props.car.bike_rack}` === 'true' ? <h1>Bike rack</h1> : null }
+                    {`${this.props.car.bluetooth}` === 'true' ? <h1>Bluetooth</h1> : null }
+                    {`${this.props.car.child_seat}` === 'true' ? <h1>Child seat</h1> : null }
+                    {`${this.props.car.convertible}` === 'true' ? <h1>Convertible</h1> : null }
+                    {`${this.props.car.gps}` === 'true' ? <h1>GPS</h1> : null }
+                    {`${this.props.car.heated_seats}` === 'true' ? <h1>Heated seats</h1> : null }
+                    {`${this.props.car.longterm_car}` === 'true' ? <h1>Longterm car</h1> : null }
+                    {`${this.props.car.pet_friendly}` === 'true' ? <h1>Pet friendly</h1> : null }
+                    {`${this.props.car.ski_rack}` === 'true' ? <h1>Ski rack</h1> : null }
+                    {`${this.props.car.snow_tires_chains}` === 'true' ? <h1>Snow tires/chains</h1> : null }
+                    {`${this.props.car.sunroof}` === 'true' ? <h1>Sunroof</h1> : null }
+                    {`${this.props.car.tollpass}` === 'true' ? <h1>Toll pass</h1> : null }
+                    {`${this.props.car.usbinput}` === 'true' ? <h1>USB input</h1> : null }
 
                   </div>
                 </div>
@@ -198,7 +198,6 @@ class CarShow extends React.Component {
               <br/>
             </div> 
           
-                
           </div>
           <br/>
         </div>

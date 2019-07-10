@@ -37,9 +37,7 @@ pop = User.create!(
 
 # Seed Cars
 car1 = Car.create!(
-  # owner_id: frankie.id,
-  # owner_id: 17,
-  owner_id: 3,
+  owner_id: frankie.id,
   rate: '110',
   make: 'Ford',
   model: 'Mustang', 
@@ -59,9 +57,7 @@ car1 = Car.create!(
 )
 
 car2 = Car.create!(
-  # owner_id: steve.id,
-  # owner_id: 18,
-  owner_id: 4,
+  owner_id: steve.id,
   rate: '160',
   make: 'Lexus',
   model: 'IS350', 
@@ -81,9 +77,7 @@ car2 = Car.create!(
 )
 
 car3 = Car.create!(
-  # owner_id: pop.id,
-  # owner_id: 19,
-  owner_id: 5,
+  owner_id: pop.id,
   rate: '130',
   make: 'Fiat',
   model: 'Spyder', 
@@ -101,7 +95,3 @@ car3 = Car.create!(
   lat: 37.759995, 
   lng: -122.388470
 )
-
-
-
- 

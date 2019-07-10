@@ -6,16 +6,18 @@ class CarUpdate extends React.Component {
     super(props);
     this.state = this.props.car;
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.carId = this.props.match.params.id;
   }
 
   componentDidMount() {
-    this.props.fetchCar(this.props.match.params.id);
+    this.props.fetchCar(this.carId);
     window.scrollTo(0, 0);
   }
 
   navigateToShow() {
-    // this.props.history.push(`/cars/${car.id}`);
-    this.props.history.push('/cars/');
+    this.props.history.push(`/cars/${this.carId}`);
+    window.scrollTo(0, 0);
+    // this.props.history.push('/cars/');
   }
 
   update(field) {
@@ -34,11 +36,11 @@ class CarUpdate extends React.Component {
     //   formData.append('car[photos][]', this.state.photos[i]);
     // }
 
-    if (this.state.photos) {
-      for (let i = 0; i < this.state.photos.length; i++) {
-        formData.append('car[photos][]', this.state.photos[i]);
-      }
-    }
+    // if (this.state.photos) {
+    //   for (let i = 0; i < this.state.photos.length; i++) {
+    //     formData.append('car[photos][]', this.state.photos[i]);
+    //   }
+    // }
 
     this.props.editCar(this.state, this.state.id);
     this.navigateToShow();

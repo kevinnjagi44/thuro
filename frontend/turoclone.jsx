@@ -31,8 +31,12 @@ document.addEventListener('DOMContentLoaded', () => {
 	window.editCar = editCar;
 	window.createCar = createCar;
 	window.deleteCar = deleteCar;
-	//TESTING END
 
+	//TESTING END
+	// :)
+	// console.log("LinkedIn: https://linkedin.com/in/fsiino/");
+	// console.log("GitHub: https://github.com/fsiino/");
+	
 	const root = document.getElementById('root');
 	ReactDOM.render(<Root store={store} />, root);
 });
