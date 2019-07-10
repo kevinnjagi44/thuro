@@ -50,15 +50,15 @@
 
   .item-1 {
     grid-area: g-car-l;
-    padding: 3px;    
+    padding: 6px;    
   }
   .item-2 {
     grid-area: g-car-c;
-    padding: 3px;
+    padding: 9px;
   }
   .item-3 {
     grid-area: g-host-l;
-    padding: 3px;    
+    padding: 6px;    
   }
   .item-4 {
     grid-area: g-host-c;
@@ -66,7 +66,7 @@
   }
   .item-5 {
     grid-area: g-desc-l;
-    padding: 3px;    
+    padding: 6px;    
   }
   .item-6 {
     grid-area: g-desc-c;
@@ -74,7 +74,7 @@
   }
   .item-7 {
     grid-area: g-feat-l;
-    padding: 3px;    
+    padding: 6px;    
   }
   .item-8 {
     grid-area: g-feat-c;
@@ -160,8 +160,7 @@
     font-size: 13px;
     color: #231f20;
     font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
-    font-weight: normal;
-    font-size: 16px;
+    font-weight: 500;
     line-height: 1.5;
   }
 
@@ -173,6 +172,15 @@
     font-weight: 500;
     line-height: 1.5;
   }
+
+  .car-show-host-wrapper {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  // .car-show-host-avatar {
+  //   background-image: url('')
+  // }
 
   .car-features-wrapper {
     display: flex;

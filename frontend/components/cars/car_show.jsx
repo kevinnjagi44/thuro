@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import RentalForm from '../rentals/rental_form';
+import RentalForm from '../rentals/rental_form';
 
 class CarShow extends React.Component {
   constructor(props) {
@@ -45,9 +45,17 @@ class CarShow extends React.Component {
         </>
       }
 
-    function randomNumber(min, max) {
+    // function randomNumber(min, max) {
+    //   return Math.floor(Math.random() * (max - min) + min);
+    // }  
+
+    const randomNumber = (min, max) => {
       return Math.floor(Math.random() * (max - min) + min);
     }  
+
+    const capitalizeName = (fname) => {
+      return fname.charAt(0).toUpperCase() + fname.slice(1).toLowerCase();
+    }
 
       return (
 
@@ -90,6 +98,11 @@ class CarShow extends React.Component {
                     <div className="car-show-left-full-star"/>
                   </div>
                 </div>
+
+
+              Standard info like MPG, Gas, Doors, Seats will go here.
+
+                
               </div>
 
               <div className="item-3">
@@ -98,14 +111,19 @@ class CarShow extends React.Component {
                 </div>
               </div>
               <div className="item-4">
-                <div className="car-show-left-content">
-                  {`${this.props.car.fName}`}
-                </div>
-                <div className="car-show-left-content-trips">
-                  {randomNumber(100,200)} trips - Joined May 2019
-                </div>
-                <div className="car-show-left-content-response">
-                    Typically responds in {randomNumber(2,35)} minutes
+                <div className="car-show-host-wrapper">
+                  <div className="car-show-host-avatar">
+                    
+                  </div>
+                  <div className="car-show-left-content">
+                    {capitalizeName(`${this.props.car.fName}`)}
+                  </div>
+                  <div className="car-show-left-content-trips">
+                    {randomNumber(100,200)} trips - Joined May 2019
+                  </div>
+                  <div className="car-show-left-content-response">
+                      Typically responds in {randomNumber(2,35)} minutes
+                  </div>
                 </div>
               </div>
 
@@ -171,7 +189,7 @@ class CarShow extends React.Component {
 
                 <div className="car-show-rental">
                   
-                  <h1>WHAT</h1>
+                {/* <RentalForm/> */}
 
                 </div>
 
