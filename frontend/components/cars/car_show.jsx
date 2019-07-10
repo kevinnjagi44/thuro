@@ -33,7 +33,7 @@ class CarShow extends React.Component {
         if (!this.props.car.photoUrls) {
           return null;
         }
-
+// debugger
         return (
 
         <div className="car-show-container">
@@ -108,24 +108,23 @@ class CarShow extends React.Component {
 
                 <div className="item-8">
                   <div className="car-show-left-content">
-                    {/* <div className="car-features-wrapper"> */}
 
-                        {`${this.props.car.awd}` === 'true' ? <span title="AWD" className="feature-awd"/> : null}
-                        {`${this.props.car.audio_input}` === 'true' ? <span title="Audio input" className="feature-audioInput" /> : null }
-                      {`${this.props.car.bike_rack}` === 'true' ? <span title="Bike rack" className="feature-bike-rack" /> : null }
-                      {`${this.props.car.bluetooth}` === 'true' ? <span title="Bluetooth" className="feature-bluetooth" /> : null }
-                      {`${this.props.car.child_seat}` === 'true' ? <span title="Child seat" className="feature-child-seat" /> : null }
-                        {`${this.props.car.convertible}` === 'true' ? <span title="Convertible" className="feature-convertible" /> : null }
-                      {`${this.props.car.gps}` === 'true' ? <span title="GPS" className="feature-gps" /> : null }
-                      {`${this.props.car.heated_seats}` === 'true' ? <span title="Heated seats" className="feature-heated-seats" /> : null }
-                      {`${this.props.car.longterm_car}` === 'true' ? <span title="Longterm car" className="feature-longterm-car" /> : null }
-                        {`${this.props.car.pet_friendly}` === 'true' ? <span title="Pet friendly" className="feature-pet-friendly" /> : null }
-                      {`${this.props.car.ski_rack}` === 'true' ? <span title="Ski rack" className="feature-ski-rack" /> : null }
-                      {`${this.props.car.snow_tires_chains}` === 'true' ? <span title="Snow tires/chains" className="feature-snow-tires-chains" /> : null }
-                      {`${this.props.car.sunroof}` === 'true' ? <span title="Sunroof" className="feature-sunroof" /> : null }
-                      {`${this.props.car.tollpass}` === 'true' ? <span title="Tollpass" className="feature-tollpass" /> : null }
-                      {`${this.props.car.usbinput}` === 'true' ? <span title="USB input" className="feature-usbinput" /> : null }
-                    {/* </div> */}
+                    {`${this.props.car.awd}` === 'true' ? <span title="AWD" className="feature-awd"/> : null}
+                    {`${this.props.car.audio_input}` === 'true' ? <span title="Audio input" className="feature-audioInput" /> : null }
+                    {`${this.props.car.bike_rack}` === 'true' ? <span title="Bike rack" className="feature-bike-rack" /> : null }
+                    {`${this.props.car.bluetooth}` === 'true' ? <span title="Bluetooth" className="feature-bluetooth" /> : null }
+                    {`${this.props.car.child_seat}` === 'true' ? <span title="Child seat" className="feature-child-seat" /> : null }
+                    {`${this.props.car.convertible}` === 'true' ? <span title="Convertible" className="feature-convertible" /> : null }
+                    {`${this.props.car.gps}` === 'true' ? <span title="GPS" className="feature-gps" /> : null }
+                    {`${this.props.car.heated_seats}` === 'true' ? <span title="Heated seats" className="feature-heated-seats" /> : null }
+                    {`${this.props.car.longterm_car}` === 'true' ? <span title="Longterm car" className="feature-longterm-car" /> : null }
+                    {`${this.props.car.pet_friendly}` === 'true' ? <span title="Pet friendly" className="feature-pet-friendly" /> : null }
+                    {`${this.props.car.ski_rack}` === 'true' ? <span title="Ski rack" className="feature-ski-rack" /> : null }
+                    {`${this.props.car.snow_tires_chains}` === 'true' ? <span title="Snow tires/chains" className="feature-snow-tires-chains" /> : null }
+                    {`${this.props.car.sunroof}` === 'true' ? <span title="Sunroof" className="feature-sunroof" /> : null }
+                    {`${this.props.car.tollpass}` === 'true' ? <span title="Tollpass" className="feature-tollpass" /> : null }
+                    {`${this.props.car.usbinput}` === 'true' ? <span title="USB input" className="feature-usbinput" /> : null }
+
                   </div>
                 </div>
               </div>

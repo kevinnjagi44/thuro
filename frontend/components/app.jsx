@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBarContainer from './navbar/navbar_container';
-import { Route, Redirect } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import LogInFormContainer from './session_form/login_form_container';
 import SignUpFormContainer from './session_form/signup_form_container';
