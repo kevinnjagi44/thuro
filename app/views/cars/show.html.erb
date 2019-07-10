@@ -3,6 +3,6 @@
 
 <% if @car.photos.attachments %>
 
-  <img src="<%= link_to(@car.photos) %>">
+  <img src="<%= link_to(@car.photos[0]) %>">
 
 <% end %>

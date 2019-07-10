@@ -2,5 +2,5 @@ json.extract! car, :id, :owner_id, :rate, :make, :model, :year, :color,:transmis
 
 if car.photos.attachments
   # json.photoUrl url_for(car.photo)
-  json.photoUrls car.photos.map { |file| url_for(file) }
+  json.photoUrls car.photos.map { |photo| url_for(photo) }
 end 

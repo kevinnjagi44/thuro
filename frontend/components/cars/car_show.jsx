@@ -51,8 +51,8 @@ class CarShow extends React.Component {
       {/* IMAGE BANNER */}
 
         <div className="car-show-banner">
-          {/* {/* <img className="car-show-img-banner" src={this.props.car.id.photoUrl} /> */}
-          {/* <img className="car-show-img-banner" alt="car photo" src={this.props.car.photoUrls[0]} />  */}
+          {/* <img className="car-show-img-banner" src={this.props.car.photoUrl} /> */}
+          <img className="car-show-img-banner" alt="car photo" src={this.props.car.photoUrls[0]} /> 
         </div>
 
         <br/><br/><br/>
