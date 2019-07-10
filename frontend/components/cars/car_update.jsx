@@ -23,7 +23,14 @@ class CarUpdate extends React.Component {
   update(field) {
     return e => {
       this.setState({
-        [field]: e.currentTarget.value,
+        [field]: e.currentTarget.value
+      });
+    };
+  }
+
+  updateCheckbox(field) {
+    return e => {
+      this.setState({
         [field]: e.target.checked
       });
     };
@@ -117,9 +124,9 @@ class CarUpdate extends React.Component {
           </label>
           <label>Transmission
             <br />
-            <input type="radio" checked={`${this.state.transmission}` === 'autoamtic'} name="transmission" onChange={this.update("transmission")} />Automatic&nbsp;
-            <input type="radio" checked={`${this.state.transmission}` === 'manual'} name="transmission" onChange={this.update("transmission")} />Manual&nbsp;
-            <input type="radio" checked={`${this.state.transmission}` === 'none'} name="transmission" onChange={this.update("transmission")} />N/A&nbsp;
+            <input type="radio" name="transmission" onChange={this.update("transmission")} />Automatic&nbsp;
+            <input type="radio" name="transmission" onChange={this.update("transmission")} />Manual&nbsp;
+            <input type="radio" name="transmission" onChange={this.update("transmission")} />N/A&nbsp;
           </label>
 
           <br /><br /><br />
@@ -141,43 +148,43 @@ class CarUpdate extends React.Component {
           <h3>Features</h3>
             <div className="features-wrapper">
               <div>
-                <label><input type="checkbox" checked={this.state.awd} onChange={this.update('awd')} /> All-wheel-drive</label>
+                <label><input type="checkbox" checked={this.state.awd} onChange={this.updateCheckbox('awd')} /> All-wheel-drive</label>
                 <br/>
-                <label><input type="checkbox" checked={this.state.audioInput} onChange={this.update('audioInput')} /> Audio input</label>
+                <label><input type="checkbox" checked={this.state.audioInput} onChange={this.updateCheckbox('audioInput')} /> Audio input</label>
                 <br />
-                <label><input type="checkbox" checked={this.state.bikeRack} onChange={this.update('bikeRack')} /> Bike rack</label>
-                <br />
-              </div>
-              <div>
-                <label><input type="checkbox" checked={this.state.bluetooth} onChange={this.update('bluetooth')} /> Bluetooth</label>
-                <br />
-                <label><input type="checkbox" checked={this.state.childSeat} onChange={this.update('childSeat')} /> Child seat</label>
-                <br />
-                <label><input type="checkbox" checked={this.state.convertible} onChange={this.update('convertible')} /> Convertible</label>
+                <label><input type="checkbox" checked={this.state.bikeRack} onChange={this.updateCheckbox('bikeRack')} /> Bike rack</label>
                 <br />
               </div>
               <div>
-                <label><input type="checkbox" checked={this.state.gps} onChange={this.update('gps')} /> GPS</label>
+                <label><input type="checkbox" checked={this.state.bluetooth} onChange={this.updateCheckbox('bluetooth')} /> Bluetooth</label>
+                <br />
+                <label><input type="checkbox" checked={this.state.childSeat} onChange={this.updateCheckbox('childSeat')} /> Child seat</label>
+                <br />
+                <label><input type="checkbox" checked={this.state.convertible} onChange={this.updateCheckbox('convertible')} /> Convertible</label>
+                <br />
+              </div>
+              <div>
+                <label><input type="checkbox" checked={this.state.gps} onChange={this.updateCheckbox('gps')} /> GPS</label>
                   <br />
-                <label><input type="checkbox" checked={this.state.heatedSeats} onChange={this.update('heatedSeats')} /> Heated seats</label>
+                <label><input type="checkbox" checked={this.state.heatedSeats} onChange={this.updateCheckbox('heatedSeats')} /> Heated seats</label>
                   <br/>
-                <label><input type="checkbox" checked={this.state.longtermCar} onChange={this.update('longtermCar')} /> Longterm car</label>
+                <label><input type="checkbox" checked={this.state.longtermCar} onChange={this.updateCheckbox('longtermCar')} /> Longterm car</label>
                   <br />
               </div>
               <div>
-                <label><input type="checkbox" checked={this.state.petFriendly} onChange={this.update('petFriendly')} /> Pet friendly</label>
+                <label><input type="checkbox" checked={this.state.petFriendly} onChange={this.updateCheckbox('petFriendly')} /> Pet friendly</label>
                   <br />
-                <label><input type="checkbox" checked={this.state.skiRack} onChange={this.update('skiRack')} /> Ski rack</label>
+                <label><input type="checkbox" checked={this.state.skiRack} onChange={this.updateCheckbox('skiRack')} /> Ski rack</label>
                   <br/>
-                <label><input type="checkbox" checked={this.state.snowTiresChains} onChange={this.update('snowTiresChains')} /> Snow tires/Chains</label>
+                <label><input type="checkbox" checked={this.state.snowTiresChains} onChange={this.updateCheckbox('snowTiresChains')} /> Snow tires/Chains</label>
                   <br />
               </div>
               <div>
-                <label><input type="checkbox" checked={this.state.sunroof} onChange={this.update('sunroof')} /> Sunroof</label>
+                <label><input type="checkbox" checked={this.state.sunroof} onChange={this.updateCheckbox('sunroof')} /> Sunroof</label>
                   <br />
-                <label><input type="checkbox" checked={this.state.tollpass} onChange={this.update('tollpass')} /> Toll pass</label>
+                <label><input type="checkbox" checked={this.state.tollpass} onChange={this.updateCheckbox('tollpass')} /> Toll pass</label>
                   <br />
-                <label><input type="checkbox" checked={this.state.usbInput} onChange={this.update('usbInput')} /> USB input</label>
+                <label><input type="checkbox" checked={this.state.usbInput} onChange={this.updateCheckbox('usbInput')} /> USB input</label>
                   <br />
               </div>
             </div>
