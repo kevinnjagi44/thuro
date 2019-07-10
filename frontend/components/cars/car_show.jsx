@@ -108,23 +108,24 @@ class CarShow extends React.Component {
 
                 <div className="item-8">
                   <div className="car-show-left-content">
+                    <div className="car-features-wrapper">
 
-                    {`${this.props.car.awd}` === 'true' ? <h1>All-wheel-drive</h1> : null }
-                    {`${this.props.car.audio_input}` === 'true' ? <h1>Audio input</h1> : null }
-                    {`${this.props.car.bike_rack}` === 'true' ? <h1>Bike rack</h1> : null }
-                    {`${this.props.car.bluetooth}` === 'true' ? <h1>Bluetooth</h1> : null }
-                    {`${this.props.car.child_seat}` === 'true' ? <h1>Child seat</h1> : null }
-                    {`${this.props.car.convertible}` === 'true' ? <h1>Convertible</h1> : null }
-                    {`${this.props.car.gps}` === 'true' ? <h1>GPS</h1> : null }
-                    {`${this.props.car.heated_seats}` === 'true' ? <h1>Heated seats</h1> : null }
-                    {`${this.props.car.longterm_car}` === 'true' ? <h1>Longterm car</h1> : null }
-                    {`${this.props.car.pet_friendly}` === 'true' ? <h1>Pet friendly</h1> : null }
-                    {`${this.props.car.ski_rack}` === 'true' ? <h1>Ski rack</h1> : null }
-                    {`${this.props.car.snow_tires_chains}` === 'true' ? <h1>Snow tires/chains</h1> : null }
-                    {`${this.props.car.sunroof}` === 'true' ? <h1>Sunroof</h1> : null }
-                    {`${this.props.car.tollpass}` === 'true' ? <h1>Toll pass</h1> : null }
-                    {`${this.props.car.usbinput}` === 'true' ? <h1>USB input</h1> : null }
-
+                        {`${this.props.car.awd}` === 'true' ? <span className="feature-awd"/> : null}
+                        {`${this.props.car.audio_input}` === 'true' ? <span className="feature-audioInput" /> : null }
+                        {`${this.props.car.bike_rack}` === 'true' ? <span className="feature-bike-rack" /> : null }
+                        {`${this.props.car.bluetooth}` === 'true' ? <span className="feature-bluetooth" /> : null }
+                        {`${this.props.car.child_seat}` === 'true' ? <span className="feature-child-seat" /> : null }
+                        {`${this.props.car.convertible}` === 'true' ? <span className="feature-convertible" /> : null }
+                        {`${this.props.car.gps}` === 'true' ? <span className="feature-gps" /> : null }
+                        {`${this.props.car.heated_seats}` === 'true' ? <span className="feature-heated-seats" /> : null }
+                        {`${this.props.car.longterm_car}` === 'true' ? <span className="feature-longterm-car" /> : null }
+                        {`${this.props.car.pet_friendly}` === 'true' ? <span className="feature-pet-friendly" /> : null }
+                        {`${this.props.car.ski_rack}` === 'true' ? <span className="feature-ski-rack" /> : null }
+                        {`${this.props.car.snow_tires_chains}` === 'true' ? <span className="feature-snow-tires-chains" /> : null }
+                        {`${this.props.car.sunroof}` === 'true' ? <span className="feature-sunroof" /> : null }
+                        {`${this.props.car.tollpass}` === 'true' ? <span className="feature-tollpass" /> : null }
+                        {`${this.props.car.usbinput}` === 'true' ? <span className="feature-usbinput" /> : null }
+                    </div>
                   </div>
                 </div>
               </div>
@@ -154,6 +155,7 @@ class CarShow extends React.Component {
                 </div>
 
                 <div>
+                  
                   <Link to={`/cars/${this.props.car.id}/edit`}>
                     <button>Edit this car</button>
                   </Link>

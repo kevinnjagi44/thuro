@@ -32,7 +32,6 @@ const App = () => (
       <Route exact path="/cars/:id" component={CarShowContainer} />
       <ProtectedRoute exact path="/cars/:id/edit" component={CarUpdateContainer} />
       <Route path="/" component={Main} />
-      <Redirect to="/" />
     </Switch>
 
 

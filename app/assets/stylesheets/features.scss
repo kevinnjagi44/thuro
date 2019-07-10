@@ -1,45 +1,70 @@
-.car-show-awd {
-  
+.feature-awd {
+  background-position: -60px -60px;
 }
-.car-show-audioInput {
-
+.feature-audioinput {
+  background-position: -61px -30px;
 }
-.car-show-bikeRack {
-
+.feature-bike-rack {
+  background-position: 0 -60px;
 }
-.car-show-bluetooth {
-
+.feature-bluetooth {
+  background-position: -91px -30px;
 }
-.car-show-childSeat {
-
+.feature-child-seat {
+  background-position: -31px 0;
 }
-.car-show-convertible {
-
+.feature-convertible {
+  background-position: -30px -60px;
 }
-.car-show-gps {
-
+.feature-gps {
+  background-position: -61px 0;
 }
-.car-show-heatedSeats {
-
+.feature-heated-seats {
+  background-position: -121px 0;
 }
-.car-show-longtermCar {
-
+.feature-longterm-car {
+  background-position: -91px 0;
 }
-.car-show-petFriendly {
-
+.feature-pet-friendly {
+  background-position: -91px -60px;
 }
-.car-show-skiRack {
-
+.feature-ski-rack {
+  background-position: -121px -60px;
 }
-.car-show-snowTiresChains {
-
+.feature-snow-tires-chains {
+  background-position: -31px 0;
 }
-.car-show-sunroof {
-
+.feature-sunroof {
+  background-position: -121px -30px;
 }
-.car-show-tollPass {
-
+.feature-tollpass {
+  background-position: -60px -90px;
 }
-.car-show-usbInput {
+.feature-usbinput {
+  background-position: -30px -90px;
+}
+.feature-mpg {
+  background-position: -30px -30px;
+}
+.feature-seats {
+  background-position: -121px -90px;
+}
+.feature-doors {
+  background-position: 0 -90px;
+}
+.feature-auto {
+  background-position: 0 -120px;
+}
+.feature-other {
+  background-position: 0 0;
+}
 
+[class*="feature-"] {
+  background-image: url('https://github.com/fsiino/torino/blob/master/app/assets/images/feature-icons.png?raw=true');
+  background-size: 151px 150px;
+  width: 30px;
+  height: 30px;
+  margin-left: 0;
+  margin-right: 10px;
+  display: inline-block;
 }
