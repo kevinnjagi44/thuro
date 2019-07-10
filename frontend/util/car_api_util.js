@@ -35,7 +35,9 @@ export const editCar = (car, carId) => {
       method: 'PATCH',
       // url: `/api/cars/${car.id}`,
       url: `/api/cars/${carId}`,
-      data: {car}
+      data: {car},
+      contentType: false,
+      processData: false   
     })
   );
 };

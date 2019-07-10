@@ -39,16 +39,16 @@ class CarUpdate extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
 
-    // const formData = new FormData();
+    const formData = new FormData();
     // for (let i = 0; i < this.state.photos.length; i++) {
     //   formData.append('car[photos][]', this.state.photos[i]);
     // }
 
-    // if (this.state.photos) {
-    //   for (let i = 0; i < this.state.photos.length; i++) {
-    //     formData.append('car[photos][]', this.state.photos[i]);
-    //   }
-    // }
+    if (this.state.photos) {
+      for (let i = 0; i < this.state.photos.length; i++) {
+        formData.append('car[photos][]', this.state.photos[i]);
+      }
+    }
 
     this.props.editCar(this.state, this.state.id);
     this.navigateToShow();
@@ -189,12 +189,10 @@ class CarUpdate extends React.Component {
               </div>
             </div>
           <br/><br/>
-
-          {/* <h3>Photos</h3> */}
+{/* 
+          <h3>Photos</h3> */}
 
           {/* <input type="file" onChange={this.handleFile.bind(this)} /> */}
-
-
 
           <input type="file" onChange={e => this.setState({ photos: e.target.files })} multiple />
 
@@ -207,7 +205,7 @@ class CarUpdate extends React.Component {
             <input type="text" placeholder="Lon" value={this.state.lng} onChange={this.update("lng")} />
           </label> */}
 
-          <input className="car-create-submit-btn" type="submit" value="Finish" />
+          {/* <input className="car-create-submit-btn" type="submit" value="Finish" /> */}
 
         </form>
 
