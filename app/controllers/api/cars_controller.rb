@@ -78,8 +78,7 @@ class Api::CarsController < ApplicationController
       :sunroof, 
       :toll_pass, 
       :usb_input,
-      # :photo
-      photos: []
+       photos: []
     )
   end
 

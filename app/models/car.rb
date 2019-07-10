@@ -60,6 +60,8 @@ class Car < ApplicationRecord
   #   source: :feature
 
   has_many_attached :photos
+  
+  # has_one_attached :photo
 
   # def self.in_bounds(bounds)
   #   self.where("lat < ?", bounds[:northEast][:lat])
