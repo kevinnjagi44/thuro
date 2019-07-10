@@ -1,4 +1,5 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 
 class CarUpdate extends React.Component {
   constructor(props) {
@@ -45,6 +46,13 @@ class CarUpdate extends React.Component {
   }
 
   render() {
+    if (!this.state) {
+      // return null;
+      return (
+        <Redirect to="/cars" />
+      )
+    }
+
     return (
       <div className="car-create-container">
         <div className="car-create-banner">
