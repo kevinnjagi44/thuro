@@ -46,56 +46,63 @@
 
 .car-show-left-container {
 
-
   // begin grid
 
-.item-1 {
-  grid-area: g-car-l;
-}
-.item-2 {
-  grid-area: g-car-c;
-}
-.item-3 {
-  grid-area: g-host-l;
-}
-.item-4 {
-  grid-area: g-host-c;
-}
-.item-5 {
-  grid-area: g-desc-l;
-}
-.item-6 {
-  grid-area: g-desc-c;
-}
-.item-7 {
-  grid-area: g-feat-l;
-}
-.item-8 {
-  grid-area: g-feat-c;
-}
+  .item-1 {
+    grid-area: g-car-l;
+    padding: 3px;    
+  }
+  .item-2 {
+    grid-area: g-car-c;
+    padding: 3px;
+  }
+  .item-3 {
+    grid-area: g-host-l;
+    padding: 3px;    
+  }
+  .item-4 {
+    grid-area: g-host-c;
+    padding: 3px;
+  }
+  .item-5 {
+    grid-area: g-desc-l;
+    padding: 3px;    
+  }
+  .item-6 {
+    grid-area: g-desc-c;
+    padding: 3px;
+  }
+  .item-7 {
+    grid-area: g-feat-l;
+    padding: 3px;    
+  }
+  .item-8 {
+    grid-area: g-feat-c;
+    padding: 3px;
+  }
 
-.car-show-grid-container {
-  justify-content: left;
-  display: grid;
-  grid-template-columns: 118px 100%;
-  grid-template-areas: 
-  "g-car-l g-car-c"
-  "g-host-l g-host-c"
-  "g-desc-l g-desc-c"
-  "g-feat-l g-feat-c";
-}
+  .car-show-grid-container {
+    justify-content: left;
+    display: grid;
+    grid-template-columns: 118px 100%;
+    grid-template-areas: 
+    "g-car-l g-car-c"
+    "g-host-l g-host-c"
+    "g-desc-l g-desc-c"
+    "g-feat-l g-feat-c";
+  }
 
-// end grid
+  // end grid
 
-.car-show-left-sec {
-  font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
-  font-weight: bold;
-  color: #5d5d5d;
-  font-size: 13px;
-  margin-bottom: 15px;
-  text-align: left;
-  text-transform: uppercase;
-}
+  .car-show-left-sec {
+    font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #5d5d5d;
+    font-size: 13px;
+    margin-bottom: 15px;
+    text-align: left;
+    text-transform: uppercase;
+  }
 
   .car-show-title {
     flex: 0 1 auto;
@@ -114,20 +121,20 @@
   }
 
   .car-show-left-full-star {
-      background-image: url('https://github.com/fsiino/torino/blob/master/app/assets/images/review-full-star.png?raw=true');
-      background-size: 20px 20px;
-      height: 20px;
-      width: 20px;
-      margin-right: 4px;
-      float: left;
+    background-image: url('https://github.com/fsiino/torino/blob/master/app/assets/images/review-full-star.png?raw=true');
+    background-size: 20px 20px;
+    height: 20px;
+    width: 20px;
+    margin-right: 4px;
+    float: left;
   }
 
   .car-show-left-half-star {
-      background-image: url('https://github.com/fsiino/torino/blob/master/app/assets/images/review-full-star.png?raw=true');
-      background-size: 20px 20px;
-      height: 20px;
-      width: 20px;
-      margin-right: 4px;
+    background-image: url('https://github.com/fsiino/torino/blob/master/app/assets/images/review-full-star.png?raw=true');
+    background-size: 20px 20px;
+    height: 20px;
+    width: 20px;
+    margin-right: 4px;
   }
 
   .car-show-star-inner {
@@ -146,14 +153,32 @@
     font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
     font-weight: 500;
     font-size: 16px;
+    line-height: 1.5;
   }
-  
+
+  .car-show-left-content-trips {
+    font-size: 13px;
+    color: #231f20;
+    font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .car-show-left-content-response {
+    color: #949494;
+    margin-top: 2px;
+    font-size: 13px;
+    font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
   .car-features-wrapper {
     display: flex;
     justify-content: space-around;
   }
 }
-
 
 // right panel
 
@@ -163,6 +188,7 @@
 
   .car-show-rental {
     padding: 10px 10px;
+    color: black;
   }  
 
   .car-show-price {

@@ -3,9 +3,9 @@ import { fetchCar, deleteCar } from '../../actions/car_actions';
 import CarShow from './car_show';
 
 const mSTP = (state, ownProps) => {
-  const carId = ownProps.match.params.id;
+  const car_id = ownProps.match.params.id;
   return ({
-    car: state.entities.cars[carId],
+    car: state.entities.cars[car_id],
     currentUserId: state.session.id,
   });
 };

@@ -1,5 +1,3 @@
-require 'open-uri'
-
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -61,7 +59,7 @@ ActiveRecord::Base.transaction do
     mpg: 24,
     zip: 94111,
     lat: 37.799017,
-    lng: -122.401116,
+    lng: -122.401116
   )
 
   car2 = Car.create!(
@@ -81,7 +79,7 @@ ActiveRecord::Base.transaction do
     mpg: 28,
     zip: 94122,
     lat: 37.763562, 
-    lng: -122.498625,
+    lng: -122.498625
   )
 
   car3 = Car.create!(
@@ -101,7 +99,6 @@ ActiveRecord::Base.transaction do
     mpg: 28,
     zip: 94107,
     lat: 37.759995, 
-    lng: -122.388470,
-    photos: []
+    lng: -122.388470
   )
 end

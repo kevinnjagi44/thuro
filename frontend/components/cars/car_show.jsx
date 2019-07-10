@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// import RentalForm from '../rentals/rental_form';
 
 class CarShow extends React.Component {
   constructor(props) {
@@ -44,6 +45,10 @@ class CarShow extends React.Component {
         </>
       }
 
+    function randomNumber(min, max) {
+      return Math.floor(Math.random() * (max - min) + min);
+    }  
+
       return (
 
       <div className="car-show-container">
@@ -87,16 +92,22 @@ class CarShow extends React.Component {
                 </div>
               </div>
 
-              {/* <div className="item-3">
+              <div className="item-3">
                 <div className="car-show-left-sec">
                   Hosted by
                 </div>
               </div>
               <div className="item-4">
                 <div className="car-show-left-content">
-                  {this.props.car.ownerId}
+                  {`${this.props.car.fName}`}
                 </div>
-              </div> */}
+                <div className="car-show-left-content-trips">
+                  {randomNumber(100,200)} trips - Joined May 2019
+                </div>
+                <div className="car-show-left-content-response">
+                    Typically responds in {randomNumber(2,35)} minutes
+                </div>
+              </div>
 
               <div className="item-5">
                 <div className="car-show-left-sec">
@@ -120,7 +131,7 @@ class CarShow extends React.Component {
                 <div className="car-show-left-content">
 
                   {`${this.props.car.awd}` === 'true' ? <span title="AWD" className="feature-awd"/> : null}
-                  {`${this.props.car.audio_input}` === 'true' ? <span title="Audio input" className="feature-audioInput" /> : null }
+                  {`${this.props.car.audio_input}` === 'true' ? <span title="Audio input" className="feature-audio-input" /> : null }
                   {`${this.props.car.bike_rack}` === 'true' ? <span title="Bike rack" className="feature-bike-rack" /> : null }
                   {`${this.props.car.bluetooth}` === 'true' ? <span title="Bluetooth" className="feature-bluetooth" /> : null }
                   {`${this.props.car.child_seat}` === 'true' ? <span title="Child seat" className="feature-child-seat" /> : null }
@@ -132,8 +143,10 @@ class CarShow extends React.Component {
                   {`${this.props.car.ski_rack}` === 'true' ? <span title="Ski rack" className="feature-ski-rack" /> : null }
                   {`${this.props.car.snow_tires_chains}` === 'true' ? <span title="Snow tires/chains" className="feature-snow-tires-chains" /> : null }
                   {`${this.props.car.sunroof}` === 'true' ? <span title="Sunroof" className="feature-sunroof" /> : null }
-                  {`${this.props.car.tollpass}` === 'true' ? <span title="Tollpass" className="feature-tollpass" /> : null }
-                  {`${this.props.car.usbinput}` === 'true' ? <span title="USB input" className="feature-usbinput" /> : null }
+                  {`${this.props.car.toll_pass}` === 'true' ? <span title="Toll pass" className="feature-toll_pass" /> : null }
+                  {`${this.props.car.usb_input}` === 'true' ? <span title="USB input" className="feature-usb-input" /> : null }
+                  {`${this.props.car.transmission}` === 'manual' ? <span title="Manual transmission" className="feature-manual-trans" /> : null }
+                  {`${this.props.car.transmission}` === 'automatic' ? <span title="Automatic transmission" className="feature-auto-trans" /> : null}
 
                 </div>
               </div>
@@ -158,7 +171,7 @@ class CarShow extends React.Component {
 
                 <div className="car-show-rental">
                   
-                  {/* Rentals will go here. */}
+                  <h1>WHAT</h1>
 
                 </div>
 

@@ -12,7 +12,7 @@ const carsReducer = (state = {}, action) => {
       return Object.assign({}, state, { [action.car.id]: action.car });
     case DELETE_CAR:
       newState = Object.assign({}, state)
-      delete newState[action.carId];
+      delete newState[action.car_id];
       return newState;
     default:
       return state;

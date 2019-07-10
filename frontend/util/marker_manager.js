@@ -14,8 +14,8 @@ class MarkerManager {
       .forEach(newCar => this.createMarkerFromCar(newCar, this.handleClick))
 
     Object.keys(this.markers)
-      .filter(carId => !carsObj[carId])
-      .forEach((carId) => this.removeMarker(this.markers[carId]));
+      .filter(car_id => !carsObj[car_id])
+      .forEach((car_id) => this.removeMarker(this.markers[car_id]));
   }
 
   createMarkerFromCar(car) {
@@ -23,16 +23,16 @@ class MarkerManager {
     const marker = new google.maps.Marker({
       position,
       map: this.map,
-      carId: car.id
+      car_id: car.id
     });
 
     marker.addListener('click', () => this.handleClick(car));
-    this.markers[marker.carId] = marker;
+    this.markers[marker.car_id] = marker;
   }
 
   removeMarker(marker) {
-    this.markers[marker.carId].setMap(null);
-    delete this.markers[marker.carId];
+    this.markers[marker.car_id].setMap(null);
+    delete this.markers[marker.car_id];
   }
 }
 

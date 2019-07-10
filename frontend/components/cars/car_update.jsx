@@ -6,16 +6,17 @@ class CarUpdate extends React.Component {
     super(props);
     this.state = this.props.car;
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.carId = this.props.match.params.id;
+    this.car_id = this.props.match.params.id;
+    
   }
 
   componentDidMount() {
-    this.props.fetchCar(this.carId);
+    this.props.fetchCar(this.car_id);
     window.scrollTo(0, 0);
   }
 
   navigateToShow() {
-    this.props.history.push(`/cars/${this.carId}`);
+    this.props.history.push(`/cars/${this.car_id}`);
     window.scrollTo(0, 0);
     // this.props.history.push('/cars/');
   }
@@ -58,14 +59,14 @@ class CarUpdate extends React.Component {
   render() {
 
     if (!this.state || this.props.currentUserId !== this.props.car.owner_id) {
-      // return null;
+      
       return (
         <Redirect to="/cars" />
-      )
-    }
+        )
+      }
 
-    return (
-      <div className="car-create-container">
+      return (
+        <div className="car-create-container">
         <div className="car-create-banner">
           <h3 className="car-create-banner-text">
             Update your car
@@ -150,15 +151,15 @@ class CarUpdate extends React.Component {
               <div>
                 <label><input type="checkbox" checked={this.state.awd} onChange={this.updateCheckbox('awd')} /> All-wheel-drive</label>
                 <br/>
-                <label><input type="checkbox" checked={this.state.audioInput} onChange={this.updateCheckbox('audioInput')} /> Audio input</label>
+                <label><input type="checkbox" checked={this.state.audio_input} onChange={this.updateCheckbox('audio_input')} /> Audio input</label>
                 <br />
-                <label><input type="checkbox" checked={this.state.bikeRack} onChange={this.updateCheckbox('bikeRack')} /> Bike rack</label>
+                <label><input type="checkbox" checked={this.state.bike_rack} onChange={this.updateCheckbox('bike_rack')} /> Bike rack</label>
                 <br />
               </div>
               <div>
                 <label><input type="checkbox" checked={this.state.bluetooth} onChange={this.updateCheckbox('bluetooth')} /> Bluetooth</label>
                 <br />
-                <label><input type="checkbox" checked={this.state.childSeat} onChange={this.updateCheckbox('childSeat')} /> Child seat</label>
+                <label><input type="checkbox" checked={this.state.child_seat} onChange={this.updateCheckbox('child_seat')} /> Child seat</label>
                 <br />
                 <label><input type="checkbox" checked={this.state.convertible} onChange={this.updateCheckbox('convertible')} /> Convertible</label>
                 <br />
@@ -166,25 +167,25 @@ class CarUpdate extends React.Component {
               <div>
                 <label><input type="checkbox" checked={this.state.gps} onChange={this.updateCheckbox('gps')} /> GPS</label>
                   <br />
-                <label><input type="checkbox" checked={this.state.heatedSeats} onChange={this.updateCheckbox('heatedSeats')} /> Heated seats</label>
+                <label><input type="checkbox" checked={this.state.heated_seats} onChange={this.updateCheckbox('heated_seats')} /> Heated seats</label>
                   <br/>
-                <label><input type="checkbox" checked={this.state.longtermCar} onChange={this.updateCheckbox('longtermCar')} /> Longterm car</label>
+                <label><input type="checkbox" checked={this.state.longterm_car} onChange={this.updateCheckbox('longterm_car')} /> Longterm car</label>
                   <br />
               </div>
               <div>
-                <label><input type="checkbox" checked={this.state.petFriendly} onChange={this.updateCheckbox('petFriendly')} /> Pet friendly</label>
+                <label><input type="checkbox" checked={this.state.pet_friendly} onChange={this.updateCheckbox('pet_friendly')} /> Pet friendly</label>
                   <br />
-                <label><input type="checkbox" checked={this.state.skiRack} onChange={this.updateCheckbox('skiRack')} /> Ski rack</label>
+                <label><input type="checkbox" checked={this.state.ski_rack} onChange={this.updateCheckbox('ski_rack')} /> Ski rack</label>
                   <br/>
-                <label><input type="checkbox" checked={this.state.snowTiresChains} onChange={this.updateCheckbox('snowTiresChains')} /> Snow tires/Chains</label>
+                <label><input type="checkbox" checked={this.state.snow_tires_chains} onChange={this.updateCheckbox('snow_tires_chains')} /> Snow tires/Chains</label>
                   <br />
               </div>
               <div>
                 <label><input type="checkbox" checked={this.state.sunroof} onChange={this.updateCheckbox('sunroof')} /> Sunroof</label>
                   <br />
-                <label><input type="checkbox" checked={this.state.tollpass} onChange={this.updateCheckbox('tollpass')} /> Toll pass</label>
+                <label><input type="checkbox" checked={this.state.toll_pass} onChange={this.updateCheckbox('toll_pass')} /> Toll pass</label>
                   <br />
-                <label><input type="checkbox" checked={this.state.usbInput} onChange={this.updateCheckbox('usbInput')} /> USB input</label>
+                <label><input type="checkbox" checked={this.state.usb_input} onChange={this.updateCheckbox('usb_input')} /> USB input</label>
                   <br />
               </div>
             </div>
@@ -205,7 +206,7 @@ class CarUpdate extends React.Component {
             <input type="text" placeholder="Lon" value={this.state.lng} onChange={this.update("lng")} />
           </label> */}
 
-          {/* <input className="car-create-submit-btn" type="submit" value="Finish" /> */}
+          <input className="car-create-submit-btn" type="submit" value="Finish" />
 
         </form>
 

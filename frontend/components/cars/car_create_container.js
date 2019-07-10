@@ -4,7 +4,7 @@ import CarCreate from './car_create';
 
 const mapStateToProps = state => ({
   formfields: {
-    ownerId: state.session.id,
+    owner_id: state.session.id,
     rate: '',
     make: '',
     model: '',
@@ -22,20 +22,20 @@ const mapStateToProps = state => ({
     lat: 0,
     lng: 0,
     awd: false,
-    audioInput: false,
-    bikeRack: false,
+    audio_input: false,
+    bike_rack: false,
     bluetooth: false,
-    childSeat: false,
+    child_seat: false,
     convertible: false,
     gps: false,
-    heatedSeats: false,
-    longtermCar: false,
-    petFriendly: false,
-    skiRack: false,
-    snowTiresChains: false,
+    heated_seats: false,
+    longterm_car: false,
+    pet_friendly: false,
+    ski_rack: false,
+    snow_tires_chains: false,
     sunroof: false,
-    tollPass: false,
-    usbInput: false,
+    toll_pass: false,
+    usb_input: false,
     // photo: null
     // photoFile: null
     photos: []
@@ -45,8 +45,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  createCar: (car) => dispatch(createCar(car)),
-  fetchCar: car => dispatch(fetchCar(car))
+  createCar: (car) => dispatch(createCar(car))
 });
 
 export default connect(

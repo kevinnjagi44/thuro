@@ -24,7 +24,7 @@ class CarMap extends React.Component {
     this.map = new google.maps.Map(map, mapOptions);
     this.MarkerManager = new MarkerManager(this.map, this.handleMarkerClick.bind(this));
     // if (this.props.singleCar) {
-    //   this.props.fetchCar(this.props.carId);
+    //   this.props.fetchCar(this.props.car_id);
     // } else {
       // this.registerListeners();
       this.MarkerManager.updateMarkers(this.props.cars);
