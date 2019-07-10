@@ -47,6 +47,8 @@ class Car < ApplicationRecord
 
   validates :rate, :make, :model, :year, :color, :transmission, :seats, :description, :plate, :address, :city, :state, :zip, :mpg, presence: true
 
+  validates :awd, :audio_input, :bike_rack, :bluetooth, :child_seat, :convertible, :gps, :heated_seats, :longterm_car, :pet_friendly, :ski_rack, :snow_tires_chains, :sunroof, :toll_pass, :usb_input, inclusion: [true, false]
+
   validates :transmission, inclusion: TRANSMISSION_TYPE, unless: -> { color.blank? }
 
   belongs_to :user,
@@ -67,3 +69,4 @@ class Car < ApplicationRecord
   # end
 
 end
+

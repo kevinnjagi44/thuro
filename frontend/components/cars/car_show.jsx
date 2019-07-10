@@ -24,6 +24,7 @@ class CarShow extends React.Component {
   }
 
     render() {
+      debugger
       // if (this.props.car.owner_id === this.props.currentUserId) {
       if (!this.props.car) {
         return null;
@@ -41,7 +42,7 @@ class CarShow extends React.Component {
 
           <div className="car-show-banner">
             {/* {/* <img className="car-show-img-banner" src={this.props.car.id.photoUrl} /> */}
-            <img className="car-show-img-banner" alt="car photo" src={this.props.car.photoUrls[0]} /> }
+            <img className="car-show-img-banner" alt="car photo" src={this.props.car.photoUrls[0]} /> 
           </div>
 
           <br/><br/><br/>
@@ -107,7 +108,23 @@ class CarShow extends React.Component {
 
                 <div className="item-8">
                   <div className="car-show-left-content">
-                    Features here
+
+                    {this.props.car.awd}
+                    {this.props.car.audioInput}
+                    {this.props.car.bikeRack}
+                    {this.props.car.bluetooth}
+                    {this.props.car.childSeat}
+                    {this.props.car.convertible}
+                    {this.props.car.gps}
+                    {this.props.car.heatedSeats}
+                    {this.props.car.longtermCar}
+                    {this.props.car.petFriendly}
+                    {this.props.car.skiRack}
+                    {this.props.car.snowTiresChains}
+                    {this.props.car.sunroof}
+                    {this.props.car.tollPass}
+                    {this.props.car.usbInput}
+
                   </div>
                 </div>
               </div>

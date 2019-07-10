@@ -42,7 +42,8 @@ class Main extends React.Component {
               </div>
 
               <Link to="/cars">
-                <input type="submit"/>
+                {/* <input type="submit"/> */}
+                <button></button>
               </Link>
 
             </form>
