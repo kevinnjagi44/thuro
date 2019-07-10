@@ -24,6 +24,7 @@ class CarUpdate extends React.Component {
     return e => {
       this.setState({
         [field]: e.currentTarget.value,
+        [field]: e.target.checked
       });
     };
   }
@@ -48,7 +49,8 @@ class CarUpdate extends React.Component {
   }
 
   render() {
-    if (!this.state) {
+
+    if (!this.state || this.props.currentUserId !== this.props.car.owner_id) {
       // return null;
       return (
         <Redirect to="/cars" />
