@@ -9,8 +9,7 @@ class CarShow extends React.Component {
   }
 
   componentDidMount() {
-    const id = this.props.match.params.id;
-    this.props.fetchCar(id);
+    this.props.fetchCar(this.props.match.params.id);
   }
 
   navigateToIdx() {
@@ -30,6 +29,10 @@ class CarShow extends React.Component {
         return null;
       }
 
+      if (!this.props.car.photoUrls) {
+        return null;
+      }
+
       return (
 
         <div className="car-show-container">
@@ -37,8 +40,8 @@ class CarShow extends React.Component {
         {/* IMAGE BANNER */}
 
           <div className="car-show-banner">
-            {/* <img className="car-show-img-banner" src={this.props.car.id.photoUrl} /> */}
-            <img className="car-show-img-banner" alt="car photo" src={this.props.car.photoUrls[0]} />
+            {/* {/* <img className="car-show-img-banner" src={this.props.car.id.photoUrl} /> */}
+            <img className="car-show-img-banner" alt="car photo" src={this.props.car.photoUrls[0]} /> }
           </div>
 
           <br/><br/><br/>
@@ -80,7 +83,7 @@ class CarShow extends React.Component {
                 </div>
                 <div className="item-4">
                   <div className="car-show-left-content">
-                    Host stuff here
+                    {/* {this.props.car.ownerId} */}
                   </div>
                 </div>
 
@@ -129,7 +132,7 @@ class CarShow extends React.Component {
 
                 <div className="car-show-rental">
                   
-                  Rentals will go here.
+                  {/* Rentals will go here. */}
 
                 </div>
 

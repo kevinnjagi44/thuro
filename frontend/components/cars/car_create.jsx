@@ -18,7 +18,6 @@ class CarCreate extends React.Component {
   }
 
   update(field) {
-    // debugger
     return e => {
       this.setState({
         [field]: e.currentTarget.value,
@@ -45,6 +44,22 @@ class CarCreate extends React.Component {
     formData.append('car[city]', this.state.city);
     formData.append('car[state]', this.state.state);
     formData.append('car[zip]', this.state.zip);
+    // add features to car form from late migration
+    formData.append('car[awd]', this.state.awd);
+    formData.append('car[audioInput]', this.state.audioInput);
+    formData.append('car[bikeRack]', this.state.bikeRack);
+    formData.append('car[bluetooth]', this.state.bluetooth);
+    formData.append('car[childSeat]', this.state.childSeat);
+    formData.append('car[convertible]', this.state.convertible);
+    formData.append('car[gps]', this.state.gps);
+    formData.append('car[heatedSeats]', this.state.heatedSeats);
+    formData.append('car[longtermCar]', this.state.longtermCar);
+    formData.append('car[petFriendly]', this.state.petFriendly);
+    formData.append('car[skiRack]', this.state.skiRack);
+    formData.append('car[snowTiresChains]', this.state.snowTiresChains);
+    formData.append('car[sunroof]', this.state.sunroof);
+    formData.append('car[tollPass]', this.state.tollPass);
+    formData.append('car[usbInput]', this.state.usbInput);
     // add our coordinates
     formData.append('car[lat]', this.state.lat);
     formData.append('car[lng]', this.state.lng);
@@ -52,7 +67,6 @@ class CarCreate extends React.Component {
     
     // formData.append('car[photo]', this.state.photo);
 
-    // debugger
 
     if (this.state.photos) {
       for(let i = 0; i < this.state.photos.length; i++) {
@@ -86,7 +100,6 @@ class CarCreate extends React.Component {
   // }
 
   render() {
-    // debugger
     return (
       <div className="car-create-container">
         <div className="car-create-banner">

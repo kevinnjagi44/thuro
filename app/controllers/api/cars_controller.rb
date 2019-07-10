@@ -63,6 +63,21 @@ class Api::CarsController < ApplicationController
       :zip,
       :lat,
       :lng,
+      :awd, 
+      :audio_input, 
+      :bike_rack, 
+      :bluetooth, 
+      :child_seat, 
+      :convertible, 
+      :gps, 
+      :heated_seats, 
+      :longterm_car, 
+      :pet_friendly, 
+      :ski_rack, 
+      :snow_tires_chains, 
+      :sunroof, 
+      :toll_pass, 
+      :usb_input,
       # :photo
       photos: []
     )
