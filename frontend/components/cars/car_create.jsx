@@ -68,15 +68,15 @@ class CarCreate extends React.Component {
     // formData.append('car[photo]', this.state.photo);
 
 
-    // if (this.state.photos) {
-    //   for(let i = 0; i < this.state.photos.length; i++) {
-    //   formData.append('car[photos][]', this.state.photos[i]);
-    //   }
-    // }
-
+    if (this.state.photos) {
       for(let i = 0; i < this.state.photos.length; i++) {
-        formData.append('car[photos][]', this.state.photos[i]);
+      formData.append('car[photos][]', this.state.photos[i]);
       }
+    }
+
+      // for(let i = 0; i < this.state.photos.length; i++) {
+      //   formData.append('car[photos][]', this.state.photos[i]);
+      // }
 
 
     // this.props.createCar(formData).then((car) => this.props.history.push(`/cars/${car.id}`));
