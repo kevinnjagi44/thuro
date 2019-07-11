@@ -103,11 +103,18 @@ class CarShow extends React.Component {
                   </div>
                 </div>
 
-
               {/* Standard info like MPG, Gas, Doors, Seats may move here */}
+                {/* <div className="car-show-feature-standard-container"> */}
+                  {`${this.props.car.transmission}` === 'manual' ? <div title="Manual transmission" className="feature-manual-trans" /> : null}
+                  {`${this.props.car.transmission}` === 'automatic' ? <div title="Automatic transmission" className="feature-auto-trans" /> : null}
+                  {`${this.props.car.transmission}` === 'none' ? <div title="Electric vehicle" className="feature-electric-trans" /> : null} 
 
+                  <div title="Electric vehicle" className="feature-seats" />  <span className="car-show-features-standard-text">{this.props.car.seats} seats</span>&nbsp;
+
+                  <div title="Electric vehicle" className="feature-doors" /> <span className="car-show-features-standard-text">X doors</span>
+                </div>
                 
-              </div>
+              {/* </div> */}
 
               <div className="item-3">
                 <div className="car-show-left-sec">
@@ -169,25 +176,6 @@ class CarShow extends React.Component {
                   {`${this.props.car.usb_input}` === 'true' ? <span title="USB input" className="feature-usb-input" /> : null }
                   {`${this.props.car.transmission}` === 'manual' ? <span title="Manual transmission" className="feature-manual-trans" /> : null }
                   {`${this.props.car.transmission}` === 'automatic' ? <span title="Automatic transmission" className="feature-auto-trans" /> : null}
-
-                  {/* {`${this.props.car.awd}` === 'true' ? <span title="AWD" className="feature-awd" /> : null}
-                  {`${this.props.car.audioInput}` === 'true' ? <span title="Audio input" className="feature-audio-input" /> : null}
-                  {`${this.props.car.bikeRack}` === 'true' ? <span title="Bike rack" className="feature-bike-rack" /> : null}
-                  {`${this.props.car.bluetooth}` === 'true' ? <span title="Bluetooth" className="feature-bluetooth" /> : null}
-                  {`${this.props.car.childSeat}` === 'true' ? <span title="Child seat" className="feature-child-seat" /> : null}
-                  {`${this.props.car.convertible}` === 'true' ? <span title="Convertible" className="feature-convertible" /> : null}
-                  {`${this.props.car.gps}` === 'true' ? <span title="GPS" className="feature-gps" /> : null}
-                  {`${this.props.car.heatedSeats}` === 'true' ? <span title="Heated seats" className="feature-heated-seats" /> : null}
-                  {`${this.props.car.longtermCar}` === 'true' ? <span title="Longterm car" className="feature-longterm-car" /> : null}
-                  {`${this.props.car.petFriendly}` === 'true' ? <span title="Pet friendly" className="feature-pet-friendly" /> : null}
-                  {`${this.props.car.skiRack}` === 'true' ? <span title="Ski rack" className="feature-ski-rack" /> : null}
-                  {`${this.props.car.snowTiresChains}` === 'true' ? <span title="Snow tires/chains" className="feature-snow-tires-chains" /> : null}
-                  {`${this.props.car.sunroof}` === 'true' ? <span title="Sunroof" className="feature-sunroof" /> : null}
-                  {`${this.props.car.tollPass}` === 'true' ? <span title="Toll pass" className="feature-toll_pass" /> : null}
-                  {`${this.props.car.usbInput}` === 'true' ? <span title="USB input" className="feature-usb-input" /> : null}
-                  {`${this.props.car.transmission}` === 'manual' ? <span title="Manual transmission" className="feature-manual-trans" /> : null}
-                  {`${this.props.car.transmission}` === 'automatic' ? <span title="Automatic transmission" className="feature-auto-trans" /> : null}                   */}
-
                 </div>
               </div>
             </div>

@@ -48,15 +48,28 @@
 }
 .feature-seats {
   background-position: -121px -90px;
+  color: #231f20;
+  font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
 }
 .feature-doors {
   background-position: 0 -90px;
+  color: #231f20;
+  font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
 }
 .feature-auto-trans {
   background-position: 0 -120px;
 }
 .feature-manual-trans {
   background-position: -30px -120px;
+}
+.feature-electric-trans {
+  background-image: url('https://github.com/fsiino/torino/blob/master/app/assets/images/feature-electric.png?raw=true');
 }
 .feature-other {
   background-position: 0 0;
@@ -70,4 +83,17 @@
   margin-left: 0;
   margin-right: 10px;
   display: inline-block;
+}
+
+.car-show-feature-standard-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.car-show-features-standard-text {
+  color: #231f20;
+  font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
 }

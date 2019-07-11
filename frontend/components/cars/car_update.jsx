@@ -133,11 +133,10 @@ class CarUpdate extends React.Component {
           </label>
           <label>Transmission
             <br />
-            <input type="radio" name="transmission" checked={this.state.transmission === 'automatic'} onChange={this.updateRadio("transmission")} />Automatic&nbsp;
-            <input type="radio" name="transmission" checked={this.state.transmission === 'manual'} onChange={this.updateRadio("transmission")} />Manual&nbsp;
-            <input type="radio" name="transmission" checked={this.state.transmission === 'none'} onChange={this.updateRadio("transmission")} />N/A&nbsp;
+            <input type="radio" name="transmission" value="automatic"  onChange={this.update("transmission")} />Automatic&nbsp;
+            <input type="radio" name="transmission" value="manual" onChange={this.update("transmission")} />Manual&nbsp;
+            <input type="radio" name="transmission" value="none" onChange={this.update("transmission")} />N/A&nbsp;
           </label>
-
           <br /><br /><br />
 
           <h2>Car Details</h2>

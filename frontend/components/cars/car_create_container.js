@@ -37,7 +37,6 @@ const mapStateToProps = state => ({
     // sunroof: false,
     // toll_pass: false,
     // usb_input: false,
-
     awd: false,
     audioInput: false,
     bikeRack: false,
