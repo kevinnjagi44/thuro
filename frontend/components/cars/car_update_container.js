@@ -14,7 +14,7 @@ const mSTP = (state, ownProps) => {
 };
 
 const mDTP = (dispatch) => ({
-  editCar: (car, car_id) => dispatch(editCar(car, car_id)),
+  editCar: (car, carId) => dispatch(editCar(car, carId)),
   fetchCar: (id) => dispatch(fetchCar(id))
 });
 

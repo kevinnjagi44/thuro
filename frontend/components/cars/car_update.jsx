@@ -6,17 +6,17 @@ class CarUpdate extends React.Component {
     super(props);
     this.state = this.props.car;
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.car_id = this.props.match.params.id;
+    this.carId = this.props.match.params.id;
     
   }
 
   componentDidMount() {
-    this.props.fetchCar(this.car_id);
+    this.props.fetchCar(this.carId);
     window.scrollTo(0, 0);
   }
 
   navigateToShow() {
-    this.props.history.push(`/cars/${this.car_id}`);
+    this.props.history.push(`/cars/${this.carId}`);
     window.scrollTo(0, 0);
     // this.props.history.push('/cars/');
   }
@@ -57,7 +57,7 @@ class CarUpdate extends React.Component {
   }
 
   render() {
-
+    // debugger
     if (!this.state || this.props.currentUserId !== this.props.car.owner_id) {
       
       return (
@@ -125,9 +125,9 @@ class CarUpdate extends React.Component {
           </label>
           <label>Transmission
             <br />
-            <input type="radio" name="transmission" onChange={this.update("transmission")} />Automatic&nbsp;
-            <input type="radio" name="transmission" onChange={this.update("transmission")} />Manual&nbsp;
-            <input type="radio" name="transmission" onChange={this.update("transmission")} />N/A&nbsp;
+            <input type="radio" name="transmission" checked={this.state.transmission === 'automatic'} onChange={this.update("transmission")} />Automatic&nbsp;
+            <input type="radio" name="transmission" checked={this.state.transmission === 'manual'} onChange={this.update("transmission")} />Manual&nbsp;
+            <input type="radio" name="transmission" checked={this.state.transmission === 'none'} onChange={this.update("transmission")} />N/A&nbsp;
           </label>
 
           <br /><br /><br />
@@ -146,7 +146,7 @@ class CarUpdate extends React.Component {
             </textarea>
           </label>
 
-          <h3>Features</h3>
+          {/* <h3>Features</h3>
             <div className="features-wrapper">
               <div>
                 <label><input type="checkbox" checked={this.state.awd} onChange={this.updateCheckbox('awd')} /> All-wheel-drive</label>
@@ -186,6 +186,53 @@ class CarUpdate extends React.Component {
                 <label><input type="checkbox" checked={this.state.toll_pass} onChange={this.updateCheckbox('toll_pass')} /> Toll pass</label>
                   <br />
                 <label><input type="checkbox" checked={this.state.usb_input} onChange={this.updateCheckbox('usb_input')} /> USB input</label>
+                  <br />
+              </div>
+            </div>
+          <br/><br/> */}
+
+          <h3>Features</h3>
+            <div className="features-wrapper">
+              <div>
+                <label><input type="checkbox" checked={this.state.awd} onChange={this.updateCheckbox("awd")} /> All-wheel-drive</label>
+                <br/>
+                <label><input type="checkbox" checked={this.state.audioInput} onChange={this.updateCheckbox("audioInput")} /> Audio input</label>
+                <br />
+                <label><input type="checkbox" checked={this.state.bikeRack} onChange={this.updateCheckbox("bikeRack")} /> Bike rack</label>
+                <br />
+              </div>
+              <div>
+                <label><input type="checkbox" checked={this.state.bluetooth} onChange={this.updateCheckbox("bluetooth")} /> Bluetooth</label>
+                <br />
+                <label><input type="checkbox" checked={this.state.childSeat} onChange={this.updateCheckbox("childSeat")} /> Child seat</label>
+                <br />
+                <label><input type="checkbox" checked={this.state.convertible} onChange={this.updateCheckbox("convertible")} /> Convertible</label>
+                <br />
+              </div>
+              <div>
+                <label><input type="checkbox" checked={this.state.gps} onChange={this.updateCheckbox("gps")} /> GPS</label>
+                  <br />
+                <label>
+                  <input type="checkbox" checked={this.state.heatedSeats} onChange={this.updateCheckbox("heatedSeats")} /> Heated seats
+                  </label>
+                  <br/>
+                <label><input type="checkbox" checked={this.state.longtermCar} onChange={this.updateCheckbox("longtermCar")} /> Longterm car</label>
+                  <br />
+              </div>
+              <div>
+                <label><input type="checkbox" checked={this.state.petFriendly} onChange={this.updateCheckbox("petFriendly")} /> Pet friendly</label>
+                  <br />
+                <label><input type="checkbox" checked={this.state.skiRack} onChange={this.updateCheckbox("skiRack")} /> Ski rack</label>
+                  <br/>
+                <label><input type="checkbox" checked={this.state.snowTiresChains} onChange={this.updateCheckbox("snowTiresChains")} /> Snow tires/Chains</label>
+                  <br />
+              </div>
+              <div>
+                <label><input type="checkbox" checked={this.state.sunroof} onChange={this.updateCheckbox("sunroof")} /> Sunroof</label>
+                  <br />
+                <label><input type="checkbox" checked={this.state.tollPass} onChange={this.updateCheckbox("tollPass")} /> Toll pass</label>
+                  <br />
+                <label><input type="checkbox" checked={this.state.usbInput} onChange={this.updateCheckbox("usbInput")} /> USB input</label>
                   <br />
               </div>
             </div>

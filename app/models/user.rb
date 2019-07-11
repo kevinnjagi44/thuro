@@ -23,6 +23,10 @@ class User < ApplicationRecord
         foreign_key: :owner_id,
         class_name: :Car
 
+    has_many :rentals,
+        foreign_key: :renter_id,
+        class_name: :Rental
+
     after_initialize :ensure_session_token
 
     attr_reader :password

@@ -13,4 +13,18 @@
 #
 
 class Rental < ApplicationRecord
+
+  STATUSES = %w(approved, denied, pending)
+
+  validates :renter_id, :car_id, :start_date, :end_date, :status, presence: true
+  validates :status, inclusion: STATUSES
+
+  belongs_to :user,
+    foreign_key: :renter_id,
+    class_name: :User
+
+  belongs_to :car,
+    foreign_key: :car_id,
+    class_name: :Car
+
 end

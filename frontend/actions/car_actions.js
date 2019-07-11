@@ -17,9 +17,9 @@ export const receiveCar = (car) => ({
   // reviews
 });
 
-export const removeCar = (car_id) => ({
+export const removeCar = (carId) => ({
   type: DELETE_CAR,
-  car_id: car_id
+  carId: carId
 });
 
 export const receiveErrors = (errors) => ({
@@ -47,8 +47,8 @@ export const createCar = (car) => dispatch => (
   ))
 );
 
-export const editCar = (car, car_id) => dispatch => (
-  APIUtil.editCar(car, car_id).then(car => (
+export const editCar = (car, carId) => dispatch => (
+  APIUtil.editCar(car, carId).then(car => (
     dispatch(receiveCar(car))
   ))
 );

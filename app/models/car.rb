@@ -55,6 +55,10 @@ class Car < ApplicationRecord
     foreign_key: :owner_id, 
     class_name: :User
 
+  has_many :rentals,
+    foreign_key: :car_id,
+    class_name: :Rental
+
   # has_many :features,
   #   through: :car_features,
   #   source: :feature

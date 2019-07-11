@@ -7,12 +7,13 @@ const carsReducer = (state = {}, action) => {
   let newState;
   switch (action.type) {
     case RECEIVE_CARS:
+      // debugger
       return action.cars;
     case RECEIVE_CAR:
       return Object.assign({}, state, { [action.car.id]: action.car });
     case DELETE_CAR:
       newState = Object.assign({}, state)
-      delete newState[action.car_id];
+      delete newState[action.carId];
       return newState;
     default:
       return state;
