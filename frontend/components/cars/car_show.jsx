@@ -122,20 +122,24 @@ class CarShow extends React.Component {
                 </div>
               </div>
               <div className="item-4">
-                {/* <div className="car-show-host-wrapper">
+                <div className="car-show-host-wrapper">
                   <div className="car-show-host-avatar">
-                    
-                  </div> */}
-                  <div className="car-show-left-content">
-                    {capitalizeName(`${this.props.car.fName}`)}
+                  </div> 
+                  <div className="car-show-right-of-avatar">
+                    <div className="car-show-left-content">
+                      {capitalizeName(`${this.props.car.fName}`)}
+                    </div>
+                    <br/>
+                    <div className="car-show-left-content-trips">
+                      {randomNumber(100,200)} trips - Joined May 2019
+                    </div>
+                    <br />
+                    <div className="car-show-left-content-response">
+                        Typically responds in {randomNumber(2,35)} minutes
+                    </div>
                   </div>
-                  <div className="car-show-left-content-trips">
-                    {randomNumber(100,200)} trips - Joined May 2019
-                  </div>
-                  <div className="car-show-left-content-response">
-                      Typically responds in {randomNumber(2,35)} minutes
-                  </div>
-                {/* </div> */}
+                </div>
+                
               </div>
 
               <div className="item-5">

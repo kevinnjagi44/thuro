@@ -176,14 +176,19 @@
 
   .car-show-host-wrapper {
     display: flex;
-    justify-content: space-around;
+    justify-content: left;
+    padding-right: 10px;
+  }
+
+  .car-show-host-right-of-avatar {
+    line-height: 0px;
   }
 
   .car-show-host-avatar {
     background-image: url('https://github.com/fsiino/torino/blob/master/app/assets/images/host-avatar-happy.jpg?raw=true');
-    background-size: 20px 20px;
-    height: 20px;
-    width: 20px;
+    background-size: 60px 60px;
+    height: 60px;
+    width: 60px;
     margin-right: 4px;
     float: left;
   }
