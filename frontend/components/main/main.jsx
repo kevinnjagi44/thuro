@@ -24,20 +24,20 @@ class Main extends React.Component {
           <div className="search-container">
             <form action="" >
               <div>
-              <label htmlFor="">Where<br/>
+              <label className="search-header">Where<br/>
                 <input type="text"/>
               </label>
               </div>
 
               <div>
-                <label htmlFor="">From<br />
-                <input type="text"/>
+                <label className="search-header">From<br />
+                
               </label>
               </div>
 
               <div>
-                <label htmlFor="">Until<br />
-                <input type="text"/>
+                <label className="search-header">Until<br />
+                
               </label>
               </div>
 
