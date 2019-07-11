@@ -78,7 +78,7 @@ class CarShow extends React.Component {
         result = 
         <> 
           <div title="Electric vehicle" className="electric-trans" /> 
-          <span className="car-show-features-standard-text">Electric vehicle</span> 
+          <span className="car-show-features-standard-text">&nbsp;Electric vehicle</span> 
         </>
       }
       return result;
@@ -125,11 +125,6 @@ class CarShow extends React.Component {
                     <div className="car-show-left-full-star"/>
                   </div>
                 </div>
-
-                {/* <div className="car-show-feature-standard-container">
-                  {`${this.props.car.transmission}` === 'manual' ? <div title="Manual transmission" className="feature-manual-trans" /> : null}
-                  {`${this.props.car.transmission}` === 'automatic' ? <div title="Automatic transmission" className="feature-auto-trans" /> : null}
-                  {`${this.props.car.transmission}` === 'none' ? <div title="Electric vehicle" className="feature-electric-trans" /> : null}  */}
 
                   <ShowTransmission/>
 
