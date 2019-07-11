@@ -47,10 +47,6 @@ class CarShow extends React.Component {
         </>
       }
 
-    // function randomNumber(min, max) {
-    //   return Math.floor(Math.random() * (max - min) + min);
-    // }  
-
     const randomNumber = (min, max) => {
       return Math.floor(Math.random() * (max - min) + min);
     }  
@@ -66,29 +62,28 @@ class CarShow extends React.Component {
     const ShowTransmission = () => {
       let trans = this.props.car.transmission;
       let result;
-      if (trans === 'manual') {
+      if (this.props.car.transmission === 'manual') {
         result = 
         <> 
           <div title="Manual transmission" className="feature-manual-trans" /> 
           <span className="car-show-features-standard-text">Manual transmission</span>
-        </> // jsx fragment
-      } else if (trans === 'auto') {
+        </> 
+      } else if (this.props.car.transmission === 'automatic') {
         result = 
         <> 
           <div title="Automatic transmission" className="feature-auto-trans" /> 
           <span className="car-show-features-standard-text">Automatic transmission</span> 
         </>
-      } else {
+      } else if (this.props.car.transmission === 'none') {
         result = 
         <> 
-          <div title="Electric vehicle" className="feature-auto-trans" /> 
+          <div title="Electric vehicle" className="electric-trans" /> 
           <span className="car-show-features-standard-text">Electric vehicle</span> 
         </>
       }
       return result;
     }
     
-// debugger
       return (
 
       <div className="car-show-container">
@@ -157,7 +152,7 @@ class CarShow extends React.Component {
                   </div> 
                   <div className="car-show-right-of-avatar">
                     <div className="car-show-left-content">
-                      {capitalizeName(`${this.props.car.fName}`)}
+                      {capitalizeName(this.props.car.fName)}
                     </div>
                     <br/>
                     <div className="car-show-left-content-trips">
@@ -208,8 +203,7 @@ class CarShow extends React.Component {
                   {`${this.props.car.sunroof}` === 'true' ? <span title="Sunroof" className="feature-sunroof" /> : null }
                   {`${this.props.car.toll_pass}` === 'true' ? <span title="Toll pass" className="feature-toll_pass" /> : null }
                   {`${this.props.car.usb_input}` === 'true' ? <span title="USB input" className="feature-usb-input" /> : null }
-                  {/* {`${this.props.car.transmission}` === 'manual' ? <span title="Manual transmission" className="feature-manual-trans" /> : null }
-                  {`${this.props.car.transmission}` === 'automatic' ? <span title="Automatic transmission" className="feature-auto-trans" /> : null} */}
+
                 </div>
               </div>
             </div>

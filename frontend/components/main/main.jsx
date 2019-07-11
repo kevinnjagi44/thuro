@@ -24,36 +24,31 @@ class Main extends React.Component {
 
       {/* Search */}
 
-           <div className="search-container">
-             <div className="search-subcontainer">
-              <form action="" >
-                <div>
-                <label className="search-header">Where<br/>
-                  <input type="text"/>
-                </label>
+            {/* <div>
+              <form className="search-form">
+                <div className="search-subcontainer">
+                  <label className="search-header">
+                    Where<br/>
+                  </label>
+                  <input type="text" placeholder="loc here"/>
                 </div>
 
-                <div>
-                  <label className="search-header">From<br />
-                </label>
+                <div className="search-where-div">
+                  <div className="search-where-div">
+                    <label htmlFor="">
+                      From
+                    </label>
+                  </div>
                 </div>
 
-                <div>
-                  <label className="search-header">Until<br />
-                  
-                </label>
-                </div>
 
                 <Link to="/cars">
                   <button className="search-button"/>
                 </Link>
-
-              </form>
-            </div>
-          </div> 
-          
-        </div> 
-
+                </form>
+            </div> */}
+              
+          </div>
 
       {/* Middle */} 
 
