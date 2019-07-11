@@ -25,7 +25,6 @@ class CarShow extends React.Component {
   }
 
   render() {
-    let showEditDel;
     
       if (!this.props.car) {
         return null;
@@ -34,6 +33,8 @@ class CarShow extends React.Component {
       if (!this.props.car.photoUrls) {
         return null;
       }
+      
+      let showEditDel;
 
       if (this.props.car.owner_id === this.props.currentUserId) {
         showEditDel = 
@@ -62,6 +63,32 @@ class CarShow extends React.Component {
       cursor: not-allowed;
     }
 
+    const ShowTransmission = () => {
+      let trans = this.props.car.transmission;
+      let result;
+      if (trans === 'manual') {
+        result = 
+        <> 
+          <div title="Manual transmission" className="feature-manual-trans" /> 
+          <span className="car-show-features-standard-text">Manual transmission</span>
+        </> // jsx fragment
+      } else if (trans === 'auto') {
+        result = 
+        <> 
+          <div title="Automatic transmission" className="feature-auto-trans" /> 
+          <span className="car-show-features-standard-text">Automatic transmission</span> 
+        </>
+      } else {
+        result = 
+        <> 
+          <div title="Electric vehicle" className="feature-auto-trans" /> 
+          <span className="car-show-features-standard-text">Electric vehicle</span> 
+        </>
+      }
+      return result;
+    }
+    
+// debugger
       return (
 
       <div className="car-show-container">
@@ -104,11 +131,13 @@ class CarShow extends React.Component {
                   </div>
                 </div>
 
-              {/* Standard info like MPG, Gas, Doors, Seats may move here */}
-                {/* <div className="car-show-feature-standard-container"> */}
+                {/* <div className="car-show-feature-standard-container">
                   {`${this.props.car.transmission}` === 'manual' ? <div title="Manual transmission" className="feature-manual-trans" /> : null}
                   {`${this.props.car.transmission}` === 'automatic' ? <div title="Automatic transmission" className="feature-auto-trans" /> : null}
-                  {`${this.props.car.transmission}` === 'none' ? <div title="Electric vehicle" className="feature-electric-trans" /> : null} 
+                  {`${this.props.car.transmission}` === 'none' ? <div title="Electric vehicle" className="feature-electric-trans" /> : null}  */}
+
+                  <ShowTransmission/>
+
 
                   <div title="Electric vehicle" className="feature-seats" /> <span className="car-show-features-standard-text">{this.props.car.seats} seats</span>&nbsp;
 
@@ -179,8 +208,8 @@ class CarShow extends React.Component {
                   {`${this.props.car.sunroof}` === 'true' ? <span title="Sunroof" className="feature-sunroof" /> : null }
                   {`${this.props.car.toll_pass}` === 'true' ? <span title="Toll pass" className="feature-toll_pass" /> : null }
                   {`${this.props.car.usb_input}` === 'true' ? <span title="USB input" className="feature-usb-input" /> : null }
-                  {`${this.props.car.transmission}` === 'manual' ? <span title="Manual transmission" className="feature-manual-trans" /> : null }
-                  {`${this.props.car.transmission}` === 'automatic' ? <span title="Automatic transmission" className="feature-auto-trans" /> : null}
+                  {/* {`${this.props.car.transmission}` === 'manual' ? <span title="Manual transmission" className="feature-manual-trans" /> : null }
+                  {`${this.props.car.transmission}` === 'automatic' ? <span title="Automatic transmission" className="feature-auto-trans" /> : null} */}
                 </div>
               </div>
             </div>
