@@ -62,20 +62,20 @@ class CarCreate extends React.Component {
     // formData.append('car[usb_input]', this.state.usb_input);
     //camelCased
     formData.append('car[awd]', this.state.awd);
-    formData.append('car[audioInput]', this.state.audio_input);
-    formData.append('car[bikeRack]', this.state.bike_rack);
+    formData.append('car[audio_input]', this.state.audioInput);
+    formData.append('car[bike_rack]', this.state.bikeRack);
     formData.append('car[bluetooth]', this.state.bluetooth);
-    formData.append('car[childSeat]', this.state.child_seat);
+    formData.append('car[child_seat]', this.state.childSeat);
     formData.append('car[convertible]', this.state.convertible);
     formData.append('car[gps]', this.state.gps);
-    formData.append('car[heatedSeats]', this.state.heatedSeats);
-    formData.append('car[longtermCar]', this.state.longtermCar);
-    formData.append('car[petFriendly]', this.state.petFriendly);
-    formData.append('car[skiRack]', this.state.skiRack);
-    formData.append('car[snowTiresChains]', this.state.snowTiresChains);
+    formData.append('car[heated_seats]', this.state.heatedSeats);
+    formData.append('car[longterm_car]', this.state.longtermCar);
+    formData.append('car[pet_friendly]', this.state.petFriendly);
+    formData.append('car[ski_rack]', this.state.skiRack);
+    formData.append('car[snow_tires_chains]', this.state.snowTiresChains);
     formData.append('car[sunroof]', this.state.sunroof);
-    formData.append('car[tollPass]', this.state.tollPass);
-    formData.append('car[usbInput]', this.state.usbInput);
+    formData.append('car[toll_pass]', this.state.tollPass);
+    formData.append('car[usb_input]', this.state.usbInput);
     // add our coordinates
     formData.append('car[lat]', this.state.lat);
     formData.append('car[lng]', this.state.lng);
