@@ -1,52 +1,50 @@
-.search-container {
-  text-align: center;
-  color: #231f20;
-  display: flex;
-  justify-content: center;
-  padding-top: 30px;
-  font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
+// .search-container {
+//   text-align: center;
+//   color: #231f20;
+//   display: flex;
+//   justify-content: center;
+//   padding-top: 30px;
+//   font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
+// }
+//   .search-subcontainer {
+//     align-content: center;
+//   }
 
-  .search-header {
-    font-size: 11px;
-    font-weight: bold;
-    margin-bottom: 0;
-    color: #231f20;
-    font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
-    font-weight: normal;
-    font-size: 11px;
-    line-height: 1.5;
-  }
+//   .search-header {
+//     font-size: 11px;
+//     font-weight: bold;
+//     margin-bottom: 0;
+//     color: #231f20;
+//     font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
+//     font-weight: normal;
+//     font-size: 11px;
+//     line-height: 1.5;
+//   }
 
+//   form {
+//     display: flex;
+//     align-items: center;
+//     background-color: white;
+//     border-radius: 100px;
+//     width: 100%;
 
-  form {
-    display: flex;
-    align-items: center;
-    background-color: white;
-    border-radius: 100px;
-    padding: 0px 8px;
-    width: 800px;
+//     label {
+//       margin-left: 20px;
+//     } 
 
-    
-    label {
-      margin-left: 20px;
-    }
+//     input[type="text"] {
+//       width: 100%;
+//     }
 
-    input[type="text"] {
-      width: 100%;
-    }
-
-    button {
-      background-image: url('https://github.com/fsiino/torino/blob/master/app/assets/images/search-glass.png?raw=true');
-      background-position: center;
-      background-size: 40px 40px;
-      outline: none !important;
-      border-radius: 999em;
-      align-self: center;
-      width: 40px;
-      height: 40px;
-      background-color: #59d389;
-    }
-  }
-}
-
-  
+//     .search-button {
+//       background-image: url('https://github.com/fsiino/torino/blob/master/app/assets/images/search-glass.png?raw=true');
+//       background-position: center;
+//       background-size: 40px 40px;
+//       outline: none !important;
+//       border-radius: 999em;
+//       align-self: center;
+//       width: 40px;
+//       height: 40px;
+//       background-color: #59d389;
+//     }
+//   }

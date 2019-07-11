@@ -4,7 +4,45 @@ import { withRouter } from 'react-router-dom';
 class CarCreate extends React.Component {
   constructor(props) {
     super(props);
-    this.state = this.props.formFields;
+    // this.state =  this.props.formFields;
+    this.state = {
+      // owner_id: state.session.id,
+      // ownerId: state.session.id,
+      rate: '',
+      make: '',
+      model: '',
+      year: '',
+      color: '',
+      transmission: '',
+      seats: '',
+      mpg: '',
+      description: '',
+      plate: '',
+      address: '',
+      city: '',
+      state: '',
+      zip: '',
+      lat: 0,
+      lng: 0,
+      awd: false,
+      audioInput: false,
+      bikeRack: false,
+      bluetooth: false,
+      childSeat: false,
+      convertible: false,
+      gps: false,
+      heatedSeats: false,
+      longtermCar: false,
+      petFriendly: false,
+      skiRack: false,
+      snowTiresChains: false,
+      sunroof: false,
+      tollPass: false,
+      usbInput: false,
+      // photo: null
+      // photoFile: null
+      photos: []
+    };
     this.handleSubmit = this.handleSubmit.bind(this);
     // this.handleFile = this.handleFile.bind(this);
   }
@@ -17,7 +55,16 @@ class CarCreate extends React.Component {
     this.props.history.push('/cars/');
   }
 
+  updateCheckbox(field) {
+    return e => {
+      this.setState({
+        [field]: e.target.checked
+      });
+    };
+  }
+
   update(field) {
+    // debugger
     return e => {
       this.setState({
         [field]: e.currentTarget.value,
@@ -25,17 +72,17 @@ class CarCreate extends React.Component {
     };
   }
 
-  renderErrors() {
-    return (
-      <ul className="error-messages">
-        {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
-            {error}
-          </li>
-        ))}
-      </ul>
-    );
-  }
+  // renderErrors() {
+  //   return (
+  //     <ul className="error-messages">
+  //       {this.props.errors.map((error, i) => (
+  //         <li key={`error-${i}`}>
+  //           {error}
+  //         </li>
+  //       ))}
+  //     </ul>
+  //   );
+  // }
 
 
   handleSubmit(e) {
@@ -58,22 +105,6 @@ class CarCreate extends React.Component {
     formData.append('car[state]', this.state.state);
     formData.append('car[zip]', this.state.zip);
     // add features to car form from late migration
-    // formData.append('car[awd]', this.state.awd);
-    // formData.append('car[audio_input]', this.state.audio_input);
-    // formData.append('car[bike_rack]', this.state.bike_rack);
-    // formData.append('car[bluetooth]', this.state.bluetooth);
-    // formData.append('car[child_seat]', this.state.child_seat);
-    // formData.append('car[convertible]', this.state.convertible);
-    // formData.append('car[gps]', this.state.gps);
-    // formData.append('car[heated_seats]', this.state.heated_seats);
-    // formData.append('car[longterm_car]', this.state.longterm_car);
-    // formData.append('car[pet_friendly]', this.state.pet_friendly);
-    // formData.append('car[ski_rack]', this.state.ski_rack);
-    // formData.append('car[snow_tires_chains]', this.state.snow_tires_chains);
-    // formData.append('car[sunroof]', this.state.sunroof);
-    // formData.append('car[toll_pass]', this.state.toll_pass);
-    // formData.append('car[usb_input]', this.state.usb_input);
-    //camelCased
     formData.append('car[awd]', this.state.awd);
     formData.append('car[audio_input]', this.state.audioInput);
     formData.append('car[bike_rack]', this.state.bikeRack);
@@ -89,23 +120,15 @@ class CarCreate extends React.Component {
     formData.append('car[sunroof]', this.state.sunroof);
     formData.append('car[toll_pass]', this.state.tollPass);
     formData.append('car[usb_input]', this.state.usbInput);
-    // add our coordinates
+    // add coordinates
     formData.append('car[lat]', this.state.lat);
     formData.append('car[lng]', this.state.lng);
     // add photos
-    
-    // formData.append('car[photo]', this.state.photo);
-
     if (this.state.photos) {
       for(let i = 0; i < this.state.photos.length; i++) {
       formData.append('car[photos][]', this.state.photos[i]);
       }
     }
-
-      // for(let i = 0; i < this.state.photos.length; i++) {
-      //   formData.append('car[photos][]', this.state.photos[i]);
-      // }
-
     // this.props.createCar(formData).then((car) => this.props.history.push(`/cars/${car.id}`));
 
     // this.props.createCar(formData).then((data) => this.props.history.push(`/cars/${data.car.id}`));
@@ -115,18 +138,24 @@ class CarCreate extends React.Component {
     // this.props.createCar(formData,this.state.id);
     // this.navigateToIdx();
 
-    // this.props.createCar(formData).then(() => this.props.history.push('/cars/'));
+    this.props.createCar(formData).then(() => this.props.history.push('/cars/'));
 
-    this.props.createCar(formData);
-    this.navigateToIdx();
+    // this.props.createCar(formData);
+    // this.navigateToIdx();
 
   }
+
 
   // handlefile(e) {
   //   this.setState({photoFile: e.currentTarget.files[0]});
   // }
 
   render() {
+    // if (!this.props.formFields) {
+    //   return null;
+    // }
+
+    // debugger
     return (
       <div className="car-create-container">
         <div className="car-create-banner">
@@ -141,7 +170,7 @@ class CarCreate extends React.Component {
 
           <br/><br/>
           
-          {this.renderErrors()}
+          {/* {this.renderErrors()} */}
             
           <h3>Where is your car located?</h3>
 
@@ -210,91 +239,46 @@ class CarCreate extends React.Component {
             </textarea>
           </label>
 
-          {/* <h3>Features</h3>
-            <div className="features-wrapper">
-              <div>
-                <label><input type="checkbox" value="true" onChange={this.update('awd')} /> All-wheel-drive</label>
-                <br/>
-                <label><input type="checkbox" value="true" onChange={this.update('audio_input')} /> Audio input</label>
-                <br />
-                <label><input type="checkbox" value="true" onChange={this.update('bike_rack')} /> Bike rack</label>
-                <br />
-              </div>
-              <div>              
-                <label><input type="checkbox" value="true" onChange={this.update('bluetooth')} /> Bluetooth</label>
-                <br />
-                <label><input type="checkbox" value="true" onChange={this.update('child_seat')} /> Child seat</label>
-                <br />
-                <label><input type="checkbox" value="true" onChange={this.update('convertible')} /> Convertible</label>
-                <br />
-              </div>
-              <div>            
-                <label><input type="checkbox" value="true" onChange={this.update('gps')} /> GPS</label>
-                <br />
-                <label><input type="checkbox" value="true" onChange={this.update('heated_seats')} /> Heated seats</label>
-                <br/>
-                <label><input type="checkbox" value="true" onChange={this.update('longterm_car')} /> Longterm car</label>
-                <br />
-              </div>
-              <div>            
-                <label><input type="checkbox" value="true" onChange={this.update('pet_friendly')} /> Pet friendly</label>
-                <br />
-                <label><input type="checkbox" value="true" onChange={this.update('ski_rack')} /> Ski rack</label>
-                <br/>
-                <label><input type="checkbox" value="true" onChange={this.update('snow_tires_chains')} /> Snow tires/Chains</label>
-                <br />
-              </div>
-              <div>            
-                <label><input type="checkbox" value="true" onChange={this.update('sunroof')} /> Sunroof</label>
-                <br />
-                <label><input type="checkbox" value="true" onChange={this.update('toll_pass')} /> Toll pass</label>
-                <br />
-                <label><input type="checkbox" value="true" onChange={this.update('usb_input')} /> USB input</label>
-                <br />
-              </div>
-            </div>
-          <br/><br/> */}
-
           <h3>Features</h3>
             <div className="features-wrapper">
               <div>
-                <label><input type="checkbox" value="true" onChange={this.update("awd")} /> All-wheel-drive</label>
+              <label><input type="checkbox" value={this.state.awd} onChange={this.updateCheckbox("awd")} /> All-wheel-drive</label>
                 <br/>
-                <label><input type="checkbox" value="true" onChange={this.update("audioInput")} /> Audio input</label>
+                <label><input type="checkbox" value={this.state.audioInput} onChange={this.updateCheckbox("audioInput")} /> Audio input</label>
                 <br />
-                <label><input type="checkbox" value="true" onChange={this.update("bikeRack")} /> Bike rack</label>
+                <label><input type="checkbox" value={this.state.bikeRack} onChange={this.updateCheckbox("bikeRack")} /> Bike rack</label>
                 <br />
               </div>
               <div>              
-                <label><input type="checkbox" value="true" onChange={this.update("bluetooth")} /> Bluetooth</label>
+                <label><input type="checkbox" value={this.state.bluetooth} onChange={this.updateCheckbox("bluetooth")} /> Bluetooth</label>
                 <br />
-                <label><input type="checkbox" value="true" onChange={this.update("childSeat")} /> Child seat</label>
+                <label><input type="checkbox" value={this.state.childSeat} onChange={this.updateCheckbox("childSeat")} /> Child seat</label>
                 <br />
-                <label><input type="checkbox" value="true" onChange={this.update("convertible")} /> Convertible</label>
+                <label><input type="checkbox" value={this.state.convertible} onChange={this.updateCheckbox("convertible")} /> Convertible</label>
                 <br />
               </div>
               <div>            
-                <label><input type="checkbox" value="true" onChange={this.update("gps")} /> GPS</label>
+                <label><input type="checkbox" value={this.state.gps} onChange={this.updateCheckbox("gps")} /> GPS</label>
                 <br />
-                <label><input type="checkbox" value="true" onChange={this.update("heatedSeats")} /> Heated seats</label>
+                <label><input type="checkbox" value={this.state.heatedSeats} onChange={this.updateCheckbox("heatedSeats")} /> Heated seats</label>
                 <br/>
-                <label><input type="checkbox" value="true" onChange={this.update("longtermCar")} /> Longterm car</label>
+                <label><input type="checkbox" value={this.state.longtermCar} onChange={this.updateCheckbox("longtermCar")} /> Longterm car</label>
                 <br />
               </div>
               <div>            
-                <label><input type="checkbox" value="true" onChange={this.update("petFriendly")} /> Pet friendly</label>
+                <label><input type="checkbox" value={this.state.petFriendly} onChange={this.updateCheckbox("petFriendly")} /> Pet friendly</label>
                 <br />
-                <label><input type="checkbox" value="true" onChange={this.update("skiRack")} /> Ski rack</label>
+                <label><input type="checkbox" value={this.state.skiRack} onChange={this.updateCheckbox("skiRack")} /> Ski rack</label>
                 <br/>
-                <label><input type="checkbox" value="true" onChange={this.update("snowTiresChains")} /> Snow tires/Chains</label>
+                <label><input type="checkbox" value={this.state.snowTiresChains} onChange={this.updateCheckbox("snowTiresChains")} /> Snow tires/Chains</label>
                 <br />
               </div>
               <div>            
-                <label><input type="checkbox" value="true" onChange={this.update("sunroof")} /> Sunroof</label>
+                <label><input type="checkbox" value={this.state.sunroof} onChange={this.updateCheckbox("sunroof")} /> Sunroof</label>
                 <br />
-                <label><input type="checkbox" value="true" onChange={this.update("tollPass")} /> Toll pass</label>
+                <label><input type="checkbox" value={this.state.tollPass} onChange={this.updateCheckbox("tollPass")} /> Toll pass</label>
                 <br />
-                <label><input type="checkbox" value="true" onChange={this.update("usbInput")} /> USB input</label>
+                <label><input type="checkbox" value={this.state.usbInput} onChange={this.updateCheckbox("usbInput")} /> USB input</label>
                 <br />
               </div>
             </div>
@@ -306,13 +290,6 @@ class CarCreate extends React.Component {
           <input type="file" onChange={e => this.setState({ photos: e.target.files })} multiple />
 
           <br/>
-
-          {/* <label htmlFor="">Lat
-            <input type="text" placeholder="Lat" value={this.props.lat} onChange={this.update("lat")} />
-          </label>
-          <label htmlFor="">Lon
-            <input type="text" placeholder="Lon" value={this.props.lng} onChange={this.update("lng")} />
-          </label> */}
 
           <input className="car-create-submit-btn" type="submit" value="Finish"/>
 

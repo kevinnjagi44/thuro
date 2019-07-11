@@ -53,8 +53,6 @@ const mapStateToProps = state => ({
     sunroof: false,
     tollPass: false,
     usbInput: false,
-
-
     // photo: null
     // photoFile: null
     photos: []

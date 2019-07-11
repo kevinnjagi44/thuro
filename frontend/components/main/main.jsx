@@ -24,40 +24,33 @@ class Main extends React.Component {
 
       {/* Search */}
 
-          {/* <div className="search-container">
-            <form action="" >
-              <div>
-              <label className="search-header">Where<br/>
-                <input type="text"/>
-              </label>
-              </div>
+           <div className="search-container">
+             <div className="search-subcontainer">
+              <form action="" >
+                <div>
+                <label className="search-header">Where<br/>
+                  <input type="text"/>
+                </label>
+                </div>
 
-              <div>
-                <label className="search-header">From<br />
-                  <DayPickerRangeController
-                    startDate={this.state.startDate} // momentPropTypes.momentObj or null,
-                    endDate={this.state.endDate} // momentPropTypes.momentObj or null,
-                    onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })} // PropTypes.func.isRequired,
-                    focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
-                    onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
-                    initialVisibleMonth={() => moment().add(2, "M")} // PropTypes.func or null,
-                  />
-              </label>
-              </div>
+                <div>
+                  <label className="search-header">From<br />
+                </label>
+                </div>
 
-              <div>
-                <label className="search-header">Until<br />
-                
-              </label>
-              </div>
+                <div>
+                  <label className="search-header">Until<br />
+                  
+                </label>
+                </div>
 
-              <Link to="/cars">
-                  <input type="submit"/> 
-                <button></button>
-              </Link>
+                <Link to="/cars">
+                  <button className="search-button"/>
+                </Link>
 
-            </form>
-          </div>*/}
+              </form>
+            </div>
+          </div> 
           
         </div> 
 

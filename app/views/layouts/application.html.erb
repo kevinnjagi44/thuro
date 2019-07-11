@@ -6,7 +6,11 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyA7YgPzZkbJT-6Zh8Gm1wvj4xRlCpDynYA" %>
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyA7YgPzZkbJT-6Zh8Gm1wvj4xRlCpDynYA" %> 
+
+    <script type="text/javascript">
+      window.googleAPIKey = "<%= Rails.application.credentials.google[:api_key] %>"
+    </script>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
