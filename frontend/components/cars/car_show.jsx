@@ -148,7 +148,7 @@ class CarShow extends React.Component {
               <div className="item-8">
                 <div className="car-show-left-content">
 
-                  {/* {`${this.props.car.awd}` === 'true' ? <span title="AWD" className="feature-awd"/> : null}
+                  {`${this.props.car.awd}` === 'true' ? <span title="AWD" className="feature-awd"/> : null}
                   {`${this.props.car.audio_input}` === 'true' ? <span title="Audio input" className="feature-audio-input" /> : null }
                   {`${this.props.car.bike_rack}` === 'true' ? <span title="Bike rack" className="feature-bike-rack" /> : null }
                   {`${this.props.car.bluetooth}` === 'true' ? <span title="Bluetooth" className="feature-bluetooth" /> : null }
@@ -164,9 +164,9 @@ class CarShow extends React.Component {
                   {`${this.props.car.toll_pass}` === 'true' ? <span title="Toll pass" className="feature-toll_pass" /> : null }
                   {`${this.props.car.usb_input}` === 'true' ? <span title="USB input" className="feature-usb-input" /> : null }
                   {`${this.props.car.transmission}` === 'manual' ? <span title="Manual transmission" className="feature-manual-trans" /> : null }
-                  {`${this.props.car.transmission}` === 'automatic' ? <span title="Automatic transmission" className="feature-auto-trans" /> : null} */}
+                  {`${this.props.car.transmission}` === 'automatic' ? <span title="Automatic transmission" className="feature-auto-trans" /> : null}
 
-                    {`${this.props.car.awd}` === 'true' ? <span title="AWD" className="feature-awd" /> : null}
+                    {/* {`${this.props.car.awd}` === 'true' ? <span title="AWD" className="feature-awd" /> : null}
                     {`${this.props.car.audioInput}` === 'true' ? <span title="Audio input" className="feature-audio-input" /> : null}
                     {`${this.props.car.bikeRack}` === 'true' ? <span title="Bike rack" className="feature-bike-rack" /> : null}
                     {`${this.props.car.bluetooth}` === 'true' ? <span title="Bluetooth" className="feature-bluetooth" /> : null}
@@ -182,7 +182,7 @@ class CarShow extends React.Component {
                     {`${this.props.car.tollPass}` === 'true' ? <span title="Toll pass" className="feature-toll_pass" /> : null}
                     {`${this.props.car.usbInput}` === 'true' ? <span title="USB input" className="feature-usb-input" /> : null}
                     {`${this.props.car.transmission}` === 'manual' ? <span title="Manual transmission" className="feature-manual-trans" /> : null}
-                    {`${this.props.car.transmission}` === 'automatic' ? <span title="Automatic transmission" className="feature-auto-trans" /> : null}                  
+                    {`${this.props.car.transmission}` === 'automatic' ? <span title="Automatic transmission" className="feature-auto-trans" /> : null}                   */}
 
                 </div>
               </div>

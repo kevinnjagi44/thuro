@@ -29,6 +29,14 @@ class CarUpdate extends React.Component {
     };
   }
 
+  updateRadio(field) {
+    return e => {
+      this.setState({
+        [field]: e.currentTarget.checked
+      });
+    };
+  }
+
   updateCheckbox(field) {
     return e => {
       this.setState({
@@ -125,9 +133,9 @@ class CarUpdate extends React.Component {
           </label>
           <label>Transmission
             <br />
-            <input type="radio" name="transmission" checked={this.state.transmission === 'automatic'} onChange={this.update("transmission")} />Automatic&nbsp;
-            <input type="radio" name="transmission" checked={this.state.transmission === 'manual'} onChange={this.update("transmission")} />Manual&nbsp;
-            <input type="radio" name="transmission" checked={this.state.transmission === 'none'} onChange={this.update("transmission")} />N/A&nbsp;
+            <input type="radio" name="transmission" checked={this.state.transmission === 'automatic'} onChange={this.updateRadio("transmission")} />Automatic&nbsp;
+            <input type="radio" name="transmission" checked={this.state.transmission === 'manual'} onChange={this.updateRadio("transmission")} />Manual&nbsp;
+            <input type="radio" name="transmission" checked={this.state.transmission === 'none'} onChange={this.updateRadio("transmission")} />N/A&nbsp;
           </label>
 
           <br /><br /><br />
@@ -146,7 +154,7 @@ class CarUpdate extends React.Component {
             </textarea>
           </label>
 
-          {/* <h3>Features</h3>
+          <h3>Features</h3>
             <div className="features-wrapper">
               <div>
                 <label><input type="checkbox" checked={this.state.awd} onChange={this.updateCheckbox('awd')} /> All-wheel-drive</label>
@@ -189,9 +197,9 @@ class CarUpdate extends React.Component {
                   <br />
               </div>
             </div>
-          <br/><br/> */}
+          <br/><br/>
 
-          <h3>Features</h3>
+          {/* <h3>Features</h3>
             <div className="features-wrapper">
               <div>
                 <label><input type="checkbox" checked={this.state.awd} onChange={this.updateCheckbox("awd")} /> All-wheel-drive</label>
@@ -236,7 +244,7 @@ class CarUpdate extends React.Component {
                   <br />
               </div>
             </div>
-          <br/><br/>
+          <br/><br/> */}
 {/* 
           <h3>Photos</h3> */}
 

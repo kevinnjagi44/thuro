@@ -62,10 +62,10 @@ class CarCreate extends React.Component {
     // formData.append('car[usb_input]', this.state.usb_input);
     //camelCased
     formData.append('car[awd]', this.state.awd);
-    formData.append('car[audioInput]', this.state.audioInput);
-    formData.append('car[bikeRack]', this.state.bikeRack);
+    formData.append('car[audioInput]', this.state.audio_input);
+    formData.append('car[bikeRack]', this.state.bike_rack);
     formData.append('car[bluetooth]', this.state.bluetooth);
-    formData.append('car[childSeat]', this.state.childSeat);
+    formData.append('car[childSeat]', this.state.child_seat);
     formData.append('car[convertible]', this.state.convertible);
     formData.append('car[gps]', this.state.gps);
     formData.append('car[heatedSeats]', this.state.heatedSeats);
