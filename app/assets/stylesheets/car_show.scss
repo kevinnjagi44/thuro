@@ -54,7 +54,7 @@
   }
   .item-2 {
     grid-area: g-car-c;
-    padding: 9px;
+    padding: 6px;
   }
   .item-3 {
     grid-area: g-host-l;
@@ -62,7 +62,7 @@
   }
   .item-4 {
     grid-area: g-host-c;
-    padding: 3px;
+    padding: 6px;
   }
   .item-5 {
     grid-area: g-desc-l;
@@ -70,7 +70,7 @@
   }
   .item-6 {
     grid-area: g-desc-c;
-    padding: 3px;
+    padding: 6px;
   }
   .item-7 {
     grid-area: g-feat-l;
@@ -78,7 +78,7 @@
   }
   .item-8 {
     grid-area: g-feat-c;
-    padding: 3px;
+    padding: 6px;
   }
 
   .car-show-grid-container {
@@ -178,9 +178,14 @@
     justify-content: space-around;
   }
 
-  // .car-show-host-avatar {
-  //   background-image: url('')
-  // }
+  .car-show-host-avatar {
+    background-image: url('https://github.com/fsiino/torino/blob/master/app/assets/images/host-avatar-happy.jpg?raw=true');
+    background-size: 20px 20px;
+    height: 20px;
+    width: 20px;
+    margin-right: 4px;
+    float: left;
+  }
 
   .car-features-wrapper {
     display: flex;

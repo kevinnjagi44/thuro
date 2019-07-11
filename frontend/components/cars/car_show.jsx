@@ -111,10 +111,10 @@ class CarShow extends React.Component {
                 </div>
               </div>
               <div className="item-4">
-                <div className="car-show-host-wrapper">
+                {/* <div className="car-show-host-wrapper">
                   <div className="car-show-host-avatar">
                     
-                  </div>
+                  </div> */}
                   <div className="car-show-left-content">
                     {capitalizeName(`${this.props.car.fName}`)}
                   </div>
@@ -124,7 +124,7 @@ class CarShow extends React.Component {
                   <div className="car-show-left-content-response">
                       Typically responds in {randomNumber(2,35)} minutes
                   </div>
-                </div>
+                {/* </div> */}
               </div>
 
               <div className="item-5">
