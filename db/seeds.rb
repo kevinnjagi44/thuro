@@ -1,3 +1,5 @@
+require 'open-uri'
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -62,7 +64,7 @@ ActiveRecord::Base.transaction do
     lat: 37.799017,
     lng: -122.401116
   )
-  car1.photos.attach(io: '/Users/frankie/Desktop/full-stack/seed/stang.jpg', filename: 'car1_stang.jpg')
+  car1.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/stang.jpg'), filename: 'car1_stang.jpg')
 
   car2 = Car.create!(
     owner_id: steve.id,
@@ -84,7 +86,7 @@ ActiveRecord::Base.transaction do
     lat: 37.763562, 
     lng: -122.498625
   )
-  car2.photos.attach(io: '/Users/frankie/Desktop/full-stack/seed/is350.jpg', filename: 'car2_is350.jpg')
+  car2.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/is350.jpg'), filename: 'car2_is350.jpg')
 
   car3 = Car.create!(
     owner_id: pop.id,
@@ -106,7 +108,7 @@ ActiveRecord::Base.transaction do
     lat: 37.759995, 
     lng: -122.388470
   )
-  car3.photos.attach(io: '/Users/frankie/Desktop/full-stack/seed/fiat.jpg', filename: 'car3_fiat.jpg')
+  car3.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/fiat.jpg'), filename: 'car3_fiat.jpg')
 
 end
 

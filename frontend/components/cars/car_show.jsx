@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import RentalForm from '../rentals/rental_form';
+import CarMap from '../car_map/car_map';
 
 class CarShow extends React.Component {
   constructor(props) {
@@ -139,7 +140,7 @@ class CarShow extends React.Component {
                     </div>
                   </div>
                 </div>
-                
+
               </div>
 
               <div className="item-5">
@@ -246,6 +247,11 @@ class CarShow extends React.Component {
                 <img className="car-show-add-fav-icon" src="https://github.com/fsiino/torino/blob/master/app/assets/images/add-fav-transp.png?raw=true"/>&nbsp;Add to favorites
               </button>
               <br/>
+
+            {/* <div className="car-show-zoomed-map">
+                <CarMap cars={this.props.cars} />
+            </div> */}
+
             </div> 
           
           </div>

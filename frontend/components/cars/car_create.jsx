@@ -7,7 +7,7 @@ class CarCreate extends React.Component {
     // this.state =  this.props.formFields;
     this.state = {
       // owner_id: state.session.id,
-      // ownerId: state.session.id,
+      // ownerId: state.session.id, being passed in from rails
       rate: '',
       make: '',
       model: '',
