@@ -57,6 +57,10 @@ class CarShow extends React.Component {
       return fname.charAt(0).toUpperCase() + fname.slice(1).toLowerCase();
     }
 
+    const notAllowedCursor = () => {
+      cursor: not-allowed;
+    }
+
       return (
 
       <div className="car-show-container">
@@ -246,7 +250,7 @@ class CarShow extends React.Component {
                 </div>
               </div>
 
-              <button className="car-show-add-fav-btn">
+              <button style={{notAllowedCursor}} className="car-show-add-fav-btn">
                 <img className="car-show-add-fav-icon" src="https://github.com/fsiino/torino/blob/master/app/assets/images/add-fav-transp.png?raw=true"/>&nbsp;Add to favorites
               </button>
               <br/>

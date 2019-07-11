@@ -1,5 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+// import 'react-dates/initialize';
+// import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
+// import 'react-dates/lib/css/_datepicker.css';
 
 class Main extends React.Component {
   constructor(props) {
@@ -21,7 +24,7 @@ class Main extends React.Component {
 
       {/* Search */}
 
-          <div className="search-container">
+          {/* <div className="search-container">
             <form action="" >
               <div>
               <label className="search-header">Where<br/>
@@ -31,7 +34,14 @@ class Main extends React.Component {
 
               <div>
                 <label className="search-header">From<br />
-                
+                  <DayPickerRangeController
+                    startDate={this.state.startDate} // momentPropTypes.momentObj or null,
+                    endDate={this.state.endDate} // momentPropTypes.momentObj or null,
+                    onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })} // PropTypes.func.isRequired,
+                    focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
+                    onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
+                    initialVisibleMonth={() => moment().add(2, "M")} // PropTypes.func or null,
+                  />
               </label>
               </div>
 
@@ -42,13 +52,14 @@ class Main extends React.Component {
               </div>
 
               <Link to="/cars">
-                {/* <input type="submit"/> */}
+                  <input type="submit"/> 
                 <button></button>
               </Link>
 
             </form>
-          </div>
-        </div>
+          </div>*/}
+          
+        </div> 
 
 
       {/* Middle */} 

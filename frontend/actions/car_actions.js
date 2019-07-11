@@ -3,8 +3,7 @@ import * as APIUtil from '../util/car_api_util';
 export const RECEIVE_CARS = 'RECEIVE_CARS';
 export const RECEIVE_CAR = 'RECEIVE_CAR';
 export const DELETE_CAR = 'DELETE_CAR';
-// export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
-export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
+export const RECEIVE_CAR_ERRORS = 'RECEIVE_CAR_ERRORS';
 
 export const receiveCars = (cars) => ({
   type: RECEIVE_CARS,
@@ -14,7 +13,6 @@ export const receiveCars = (cars) => ({
 export const receiveCar = (car) => ({
   type: RECEIVE_CAR,
   car
-  // reviews
 });
 
 export const removeCar = (carId) => ({
@@ -23,7 +21,7 @@ export const removeCar = (carId) => ({
 });
 
 export const receiveErrors = (errors) => ({
-  type: RECEIVE_ERRORS,
+  type: RECEIVE_CAR_ERRORS,
   errors
 });
 

@@ -25,10 +25,23 @@ class CarCreate extends React.Component {
     };
   }
 
+  renderErrors() {
+    return (
+      <ul className="error-messages">
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
+
   handleSubmit(e) {
     e.preventDefault();
     const formData = new FormData();
-    formData.append('car[owner_id]', this.state.ownerId);
+    // formData.append('car[owner_id]', this.state.ownerId);
     formData.append('car[address]', this.state.address);
     formData.append('car[rate]', this.state.rate);
     formData.append('car[make]', this.state.make);
@@ -127,6 +140,8 @@ class CarCreate extends React.Component {
           <h2>Your Car</h2>
 
           <br/><br/>
+          
+          {this.renderErrors()}
             
           <h3>Where is your car located?</h3>
 
