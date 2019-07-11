@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_10_190926) do
+ActiveRecord::Schema.define(version: 2019_07_11_192042) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -80,6 +80,7 @@ ActiveRecord::Schema.define(version: 2019_07_10_190926) do
     t.boolean "sunroof", default: false, null: false
     t.boolean "toll_pass", default: false, null: false
     t.boolean "usb_input", default: false, null: false
+    t.integer "doors"
     t.index ["owner_id"], name: "index_cars_on_owner_id"
   end
 

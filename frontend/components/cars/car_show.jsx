@@ -109,9 +109,9 @@ class CarShow extends React.Component {
                   {`${this.props.car.transmission}` === 'automatic' ? <div title="Automatic transmission" className="feature-auto-trans" /> : null}
                   {`${this.props.car.transmission}` === 'none' ? <div title="Electric vehicle" className="feature-electric-trans" /> : null} 
 
-                  <div title="Electric vehicle" className="feature-seats" />  <span className="car-show-features-standard-text">{this.props.car.seats} seats</span>&nbsp;
+                  <div title="Electric vehicle" className="feature-seats" /> <span className="car-show-features-standard-text">{this.props.car.seats} seats</span>&nbsp;
 
-                  <div title="Electric vehicle" className="feature-doors" /> <span className="car-show-features-standard-text">X doors</span>
+                  <div title="Electric vehicle" className="feature-doors" /> <span className="car-show-features-standard-text">{this.props.car.doors} doors</span>
                 </div>
                 
               {/* </div> */}

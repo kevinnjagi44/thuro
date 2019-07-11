@@ -15,6 +15,7 @@ class CarCreate extends React.Component {
       color: '',
       transmission: '',
       seats: '',
+      doors: '',
       mpg: '',
       description: '',
       plate: '',
@@ -97,6 +98,7 @@ class CarCreate extends React.Component {
     formData.append('car[color]', this.state.color);
     formData.append('car[transmission]', this.state.transmission);
     formData.append('car[seats]', this.state.seats);
+    formData.append('car[doors]', this.state.doors);
     formData.append('car[mpg]', this.state.mpg);
     formData.append('car[description]', this.state.description);
     formData.append('car[plate]', this.state.plate);
@@ -212,6 +214,9 @@ class CarCreate extends React.Component {
           </label>
           <label htmlFor="">Seats
             <input type="text" placeholder="Seats" value={this.props.seats} onChange={this.update("seats")}/>
+          </label>
+          <label htmlFor="">Doors
+            <input type="text" placeholder="Doors" value={this.props.doors} onChange={this.update("doors")}/>
           </label>
           <label htmlFor="">License plate
             <input type="text" placeholder="License plate" value={this.props.plate} onChange={this.update("plate")}/>

@@ -44,13 +44,14 @@ ActiveRecord::Base.transaction do
   # Seed Cars
   car1 = Car.create!(
     owner_id: frankie.id,
-    rate: '110',
+    rate: 110,
     make: 'Ford',
     model: 'Mustang', 
     year: 2012,
     color: 'black',
     transmission: 'manual',
-    seats: '4',
+    seats: 4,
+    doors: 2,
     description: 'Fun ride. Ignore the stains in the back.',
     plate: '9DJ28H',
     address: '825 Battery St',
@@ -61,16 +62,18 @@ ActiveRecord::Base.transaction do
     lat: 37.799017,
     lng: -122.401116
   )
+  car1.photos.attach(io: '/Users/frankie/Desktop/full-stack/seed/stang.jpg', filename: 'car1_stang.jpg')
 
   car2 = Car.create!(
     owner_id: steve.id,
-    rate: '160',
+    rate: 160,
     make: 'Lexus',
     model: 'IS350', 
-    year: '1990',
+    year: 1990,
     color: 'gray',
     transmission: 'automatic',
-    seats: '5',
+    seats: 5,
+    doors: 4,
     description: 'Clean ride. Good fun.',
     plate: '6D8SA6S',
     address: '1200 39th Ave',
@@ -81,16 +84,18 @@ ActiveRecord::Base.transaction do
     lat: 37.763562, 
     lng: -122.498625
   )
+  car2.photos.attach(io: '/Users/frankie/Desktop/full-stack/seed/is350.jpg', filename: 'car2_is350.jpg')
 
   car3 = Car.create!(
     owner_id: pop.id,
-    rate: '130',
+    rate: 130,
     make: 'Fiat',
     model: 'Spyder', 
-    year: '1975',
+    year: 1975,
     color: 'blue',
     transmission: 'manual',
-    seats: '4',
+    seats: 4,
+    doors: 2,
     description: 'A classic.',
     plate: '3DH3JD8',
     address: '2300 3rd St',
@@ -101,4 +106,7 @@ ActiveRecord::Base.transaction do
     lat: 37.759995, 
     lng: -122.388470
   )
+  car3.photos.attach(io: '/Users/frankie/Desktop/full-stack/seed/fiat.jpg', filename: 'car3_fiat.jpg')
+
 end
+

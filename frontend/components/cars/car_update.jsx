@@ -128,6 +128,9 @@ class CarUpdate extends React.Component {
           <label htmlFor="">Seats
             <input type="text" placeholder="Seats" value={this.state.seats} onChange={this.update("seats")} />
           </label>
+          <label htmlFor="">Doors
+            <input type="text" placeholder="Doors" value={this.state.doors} onChange={this.update("doors")} />
+          </label>
           <label htmlFor="">License plate
             <input type="text" placeholder="License plate" value={this.state.plate} onChange={this.update("plate")} />
           </label>

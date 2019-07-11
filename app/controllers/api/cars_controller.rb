@@ -55,6 +55,7 @@ class Api::CarsController < ApplicationController
       :color, 
       :transmission, 
       :seats, 
+      :doors,
       :mpg,
       :description, 
       :plate, 

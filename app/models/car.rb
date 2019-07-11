@@ -45,7 +45,7 @@ class Car < ApplicationRecord
 
   COLORS = %w(black brown gray silver white red orange yellow gold purple blue green).freeze
 
-  validates :rate, :make, :model, :year, :color, :transmission, :seats, :description, :plate, :address, :city, :state, :zip, :mpg, presence: true
+  validates :rate, :make, :model, :year, :color, :transmission, :seats, :description, :plate, :address, :city, :state, :zip, :mpg, :doors, presence: true
 
   validates :awd, :audio_input, :bike_rack, :bluetooth, :child_seat, :convertible, :gps, :heated_seats, :longterm_car, :pet_friendly, :ski_rack, :snow_tires_chains, :sunroof, :toll_pass, :usb_input, inclusion: [true, false]
 
