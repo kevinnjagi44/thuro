@@ -6,7 +6,7 @@
 }
 
 .car-map-container {
-  width: 35%;
+  width: 40%;
   height: 100%;
   position: sticky;
   top: 0.1vh;
@@ -63,11 +63,13 @@
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
+    width: 100%;
 }
 .car-idx-photo {
   width: 319px;
   height: 200px;
-  padding: 15px;
+  // padding: 15px;
+  border-radius: 10px;
   overflow: hidden;
 }
 
@@ -76,13 +78,15 @@
   padding-bottom: 24.5px;
   position: relative;
   max-height: 350px;
+  // width: 100%;
+  max-width: 320px;
 }
 
 .car-price {
   color: black;
   position: absolute;
-  bottom: 92px;
-  right: 48px;
+  bottom: 74px;
+  right: 39px;
   font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
   border-radius: 3px;
   background: #ffffff;
@@ -100,7 +104,7 @@
 
 .car-make-model {
   color: black;
-  padding-left: 12px;
+  // padding-left: 12px;
   justify-content: left;
   font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
   border-radius: 3px;
