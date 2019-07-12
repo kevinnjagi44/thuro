@@ -80,8 +80,6 @@ TRANSMISSION_TYPE = %w(automatic manual none).freeze
 
   validates :transmission, inclusion: TRANSMISSION_TYPE, unless: -> { transmission.blank? }
 
-  # validates :color, inclusion: COLORS 
-
   belongs_to :user,
     foreign_key: :owner_id, 
     class_name: :User
@@ -89,10 +87,6 @@ TRANSMISSION_TYPE = %w(automatic manual none).freeze
   has_many :rentals,
     foreign_key: :car_id,
     class_name: :Rental
-
-  # has_many :features,
-  #   through: :car_features,
-  #   source: :feature
 
   has_many_attached :photos
   ```
