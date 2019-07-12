@@ -288,3 +288,4 @@ ActiveRecord::Base.transaction do
 
 end
 
+#rails db:reset
