@@ -62,7 +62,11 @@ ActiveRecord::Base.transaction do
     mpg: 24,
     zip: 94111,
     lat: 37.799017,
-    lng: -122.401116
+    lng: -122.401116,
+    gps: true,
+    audio_input: true,
+    toll_pass: true,
+    longterm_car: true
   )
   car1.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/stang.jpg'), filename: 'car1_stang.jpg')
 
@@ -84,7 +88,9 @@ ActiveRecord::Base.transaction do
     mpg: 18,
     zip: 94107,
     lat: rand(37.714118..37.787958),
-    lng: rand(-122.504908..-122.390212)
+    lng: rand(-122.504908..-122.390212),
+    gps: true,
+    convertible: true
   )
   car10.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/ferrari.jpg'), filename: 'car10_ferrari.jpg')
 
@@ -106,7 +112,11 @@ ActiveRecord::Base.transaction do
     mpg: 28,
     zip: 94122,
     lat: 37.763562, 
-    lng: -122.498625
+    lng: -122.498625, 
+    heated_seats: true,
+    gps: true,
+    bluetooth: true,
+    usb_input: true
   )
   car2.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/is350.jpg'), filename: 'car2_is350.jpg')
 
@@ -128,7 +138,8 @@ ActiveRecord::Base.transaction do
     mpg: 28,
     zip: 94107,
     lat: 37.759995, 
-    lng: -122.388470
+    lng: -122.388470,
+    convertible: true
   )
   car3.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/fiat.jpg'), filename: 'car3_fiat.jpg')
 
@@ -150,7 +161,10 @@ ActiveRecord::Base.transaction do
     mpg: 28,
     zip: 94107,
     lat: 37.759995, 
-    lng: -122.388470
+    lng: -122.388470, 
+    pet_friendly: true,
+    child_seat: true,
+    snow_tires_chains: true
   )
   car4.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/fox.jpg'), filename: 'car4_fox.jpg')
 
@@ -172,7 +186,11 @@ ActiveRecord::Base.transaction do
     mpg: 28,
     zip: 94107,
     lat: rand(37.714118..37.787958),
-    lng: rand(-122.504908..-122.390212)
+    lng: rand(-122.504908..-122.390212),
+    audio_input: true,  
+    gps: true,
+    sunroof: true,
+    ski_rack: true
   )
   car5.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/falcon.jpg'), filename: 'car5_falcon.jpg')
 
@@ -194,7 +212,9 @@ ActiveRecord::Base.transaction do
     mpg: 28,
     zip: 94122,
     lat: rand(37.714118..37.787958),
-    lng: rand(-122.504908..-122.390212)
+    lng: rand(-122.504908..-122.390212),
+    child_seat: true,
+    toll_pass: true
   )
   car6.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/mercedes.jpg'), filename: 'car6_mercedes.jpg')
 
@@ -216,7 +236,11 @@ ActiveRecord::Base.transaction do
     mpg: 19,
     zip: 94109,
     lat: rand(37.714118..37.787958),
-    lng: rand(-122.504908..-122.390212)
+    lng: rand(-122.504908..-122.390212),
+    awd: true,
+    gps: true,
+    audio_input: true,
+    blueooth: true
   )
   car11.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/lambo.jpg'), filename: 'car10_lambo.jpg')
 
@@ -238,7 +262,9 @@ ActiveRecord::Base.transaction do
     mpg: 28,
     zip: 94111,
     lat: rand(37.714118..37.787958),
-    lng: rand(-122.504908..-122.390212)
+    lng: rand(-122.504908..-122.390212),
+    toll_pass: true,
+    longterm_car: true
   )
   car7.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/gran-torino.jpg'), filename: 'car7_gran-torino.jpg')
 
@@ -260,7 +286,13 @@ ActiveRecord::Base.transaction do
     # mpg: 
     zip: 94814,
     lat: rand(37.714118..37.787958),
-    lng: rand(-122.504908..-122.390212)
+    lng: rand(-122.504908..-122.390212),
+    heated_seats: true,
+    gps: true,
+    bluetooth: true,
+    sunroof: true,
+    usb_input: true,
+    audio_input: true
   )
   car8.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/model3.jpg'), filename: 'car8_model3.jpg')
 
@@ -282,7 +314,12 @@ ActiveRecord::Base.transaction do
     mpg: 25,
     zip: 94184,
     lat: rand(37.714118..37.787958),
-    lng: rand(-122.504908..-122.390212)
+    lng: rand(-122.504908..-122.390212),
+    gps: true,
+    convertible: true,
+    usb_input: true,
+    pet_friendly: true,
+    bluetooth: true
   )
   car9.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/fiat-new.jpg'), filename: 'car9_fiat-new.jpg')
 
