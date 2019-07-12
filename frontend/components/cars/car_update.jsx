@@ -252,7 +252,7 @@ class CarUpdate extends React.Component {
 
           {/* <input type="file" onChange={this.handleFile.bind(this)} /> */}
 
-          <input type="file" onChange={e => this.setState({ photos: e.target.files })} multiple />
+          {/* <input type="file" onChange={e => this.setState({ photos: e.target.files })} multiple /> */}
 
           <br />
 

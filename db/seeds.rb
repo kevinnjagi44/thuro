@@ -46,7 +46,7 @@ ActiveRecord::Base.transaction do
   # Seed Cars
   car1 = Car.create!(
     owner_id: frankie.id,
-    rate: 110,
+    rate: rand(85..165),
     make: 'Ford',
     model: 'Mustang', 
     year: 2012,
@@ -66,9 +66,31 @@ ActiveRecord::Base.transaction do
   )
   car1.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/stang.jpg'), filename: 'car1_stang.jpg')
 
+  car10 = Car.create!(
+    owner_id: frankie.id,
+    rate: rand(400..500),
+    make: 'Ferrari',
+    model: 'F50', 
+    year: 1995,
+    color: 'red',
+    transmission: 'manual',
+    seats: 2,
+    doors: 2,
+    description: 'Great fun.',
+    plate: '3DH3JD8',
+    address: '2300 3rd St',
+    city: 'San Francisco',
+    state: 'CA',
+    mpg: 18,
+    zip: 94107,
+    lat: rand(37.714118..37.787958),
+    lng: rand(-122.504908..-122.390212)
+  )
+  car10.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/ferrari.jpg'), filename: 'car10_ferrari.jpg')
+
   car2 = Car.create!(
     owner_id: steve.id,
-    rate: 160,
+    rate: rand(85..165),
     make: 'Lexus',
     model: 'IS350', 
     year: 1990,
@@ -90,7 +112,7 @@ ActiveRecord::Base.transaction do
 
   car3 = Car.create!(
     owner_id: pop.id,
-    rate: 130,
+    rate: rand(85..165),
     make: 'Fiat',
     model: 'Spyder', 
     year: 1975,
@@ -109,6 +131,160 @@ ActiveRecord::Base.transaction do
     lng: -122.388470
   )
   car3.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/fiat.jpg'), filename: 'car3_fiat.jpg')
+
+  car4 = Car.create!(
+    owner_id: frankie.id,
+    rate: rand(85..165),
+    make: 'Ford',
+    model: 'Mustang FOX body', 
+    year: 1991,
+    color: 'black',
+    transmission: 'manual',
+    seats: 4,
+    doors: 2,
+    description: 'Sure to annoy your neighbors.',
+    plate: '3DH3JD8',
+    address: '9120 8th St',
+    city: 'San Francisco',
+    state: 'CA',
+    mpg: 28,
+    zip: 94107,
+    lat: 37.759995, 
+    lng: -122.388470
+  )
+  car4.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/fox.jpg'), filename: 'car4_fox.jpg')
+
+  car5 = Car.create!(
+    owner_id: frankie.id,
+    rate: rand(85..165),
+    make: 'Ford',
+    model: 'Falcon', 
+    year: 1990,
+    color: 'green',
+    transmission: 'manual',
+    seats: 2,
+    doors: 4,
+    description: 'The Australian dream car.',
+    plate: '824JDUUX',
+    address: '2300 3rd St',
+    city: 'San Francisco',
+    state: 'CA',
+    mpg: 28,
+    zip: 94107,
+    lat: rand(37.714118..37.787958),
+    lng: rand(-122.504908..-122.390212)
+  )
+  car5.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/falcon.jpg'), filename: 'car5_falcon.jpg')
+
+  car6 = Car.create!(
+    owner_id: frankie.id,
+    rate: rand(85..165),
+    make: 'Mercedes-Benz',
+    model: 'S Turbo Diesel', 
+    year: 1980,
+    color: 'gold',
+    transmission: 'automatic',
+    seats: 5,
+    doors: 4,
+    description: 'Purrs like a kitten.',
+    plate: '412SJSD',
+    address: '4261 17th Ave',
+    city: 'San Francisco',
+    state: 'CA',
+    mpg: 28,
+    zip: 94122,
+    lat: rand(37.714118..37.787958),
+    lng: rand(-122.504908..-122.390212)
+  )
+  car6.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/mercedes.jpg'), filename: 'car6_mercedes.jpg')
+
+  car11 = Car.create!(
+    owner_id: frankie.id,
+    rate: rand(400..500),
+    make: 'Lamborghini',
+    model: 'Aventador', 
+    year: 2018,
+    color: 'white',
+    transmission: 'manual',
+    seats: 2,
+    doors: 2,
+    description: 'SO fast. So loud. I drive it to and from work each day and my ears won\'t stop ringing.',
+    plate: '3DH3JD8',
+    address: '42 Main St.',
+    city: 'San Francisco',
+    state: 'CA',
+    mpg: 19,
+    zip: 94109,
+    lat: rand(37.714118..37.787958),
+    lng: rand(-122.504908..-122.390212)
+  )
+  car11.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/lambo.jpg'), filename: 'car10_lambo.jpg')
+
+  car7 = Car.create!(
+    owner_id: frankie.id,
+    rate: 600,
+    make: 'Ford',
+    model: 'Gran Torino', 
+    year: 1972,
+    color: 'green',
+    transmission: 'automatic',
+    seats: 4,
+    doors: 2,
+    description: 'The exact one from the Clint Eastwood movie!',
+    plate: '3DH3JD8',
+    address: '612 8th St',
+    city: 'San Francisco',
+    state: 'CA',
+    mpg: 28,
+    zip: 94111,
+    lat: rand(37.714118..37.787958),
+    lng: rand(-122.504908..-122.390212)
+  )
+  car7.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/gran-torino.jpg'), filename: 'car7_gran-torino.jpg')
+
+  car8 = Car.create!(
+    owner_id: frankie.id,
+    rate: rand(85..165),
+    make: 'Tesla',
+    model: 'Model 3', 
+    year: 1975,
+    color: 'red',
+    transmission: 'none',
+    seats: 5,
+    doors: 4,
+    description: 'Instant torque. Fun and comfy ride',
+    plate: '82JD2JA',
+    address: '2 18th St',
+    city: 'San Francisco',
+    state: 'CA',
+    # mpg: 
+    zip: 94814,
+    lat: rand(37.714118..37.787958),
+    lng: rand(-122.504908..-122.390212)
+  )
+  car8.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/model3.jpg'), filename: 'car8_model3.jpg')
+
+  car9 = Car.create!(
+    owner_id: frankie.id,
+    rate: rand(85..165),
+    make: 'Fiat',
+    model: 'Spyder', 
+    year: 2018,
+    color: 'black',
+    transmission: 'manual',
+    seats: 2,
+    doors: 2,
+    description: 'Great for a sunny day.',
+    plate: '3DH3JD8',
+    address: '1457 Market St.',
+    city: 'San Francisco',
+    state: 'CA',
+    mpg: 25,
+    zip: 94184,
+    lat: rand(37.714118..37.787958),
+    lng: rand(-122.504908..-122.390212)
+  )
+  car9.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/fiat-new.jpg'), filename: 'car9_fiat-new.jpg')
 
 end
 

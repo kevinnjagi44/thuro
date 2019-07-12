@@ -128,10 +128,11 @@ class CarShow extends React.Component {
 
                   <ShowTransmission/>
 
-
                   <div title="Electric vehicle" className="feature-seats" /> <span className="car-show-features-standard-text">{this.props.car.seats} seats</span>&nbsp;
 
                   <div title="Electric vehicle" className="feature-doors" /> <span className="car-show-features-standard-text">{this.props.car.doors} doors</span>
+
+                  <div title="Electric vehicle" className="feature-mpg" /> <span className="car-show-features-standard-text">{this.props.car.mpg} MPG</span>
                 </div>
                 
               {/* </div> */}
@@ -196,7 +197,7 @@ class CarShow extends React.Component {
                   {`${this.props.car.ski_rack}` === 'true' ? <span title="Ski rack" className="feature-ski-rack" /> : null }
                   {`${this.props.car.snow_tires_chains}` === 'true' ? <span title="Snow tires/chains" className="feature-snow-tires-chains" /> : null }
                   {`${this.props.car.sunroof}` === 'true' ? <span title="Sunroof" className="feature-sunroof" /> : null }
-                  {`${this.props.car.toll_pass}` === 'true' ? <span title="Toll pass" className="feature-toll_pass" /> : null }
+                  {`${this.props.car.toll_pass}` === 'true' ? <span title="Toll pass" className="feature-toll-pass" /> : null }
                   {`${this.props.car.usb_input}` === 'true' ? <span title="USB input" className="feature-usb-input" /> : null }
 
                 </div>
