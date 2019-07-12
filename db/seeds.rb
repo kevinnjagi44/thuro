@@ -240,7 +240,7 @@ ActiveRecord::Base.transaction do
     awd: true,
     gps: true,
     audio_input: true,
-    blueooth: true
+    bluetooth: true
   )
   car11.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/lambo.jpg'), filename: 'car10_lambo.jpg')
 
