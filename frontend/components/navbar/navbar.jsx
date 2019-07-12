@@ -10,9 +10,10 @@ const NavBar = ({ currentUser, logout, openModal }) => {
         <button className="navbutton">Search for cars</button>
       </Link>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <Link to="/cars/new">
-        <button className="navbutton">List your car</button>
-      </Link>
+      {/* <Link to="/cars/new"> */}
+        {/* <button className="navbutton">List your car</button> */}
+        <button className="navbutton" onClick={() => openModal('login')}>List your car</button>
+      {/* </Link> */}
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <button className="navbutton" onClick={() => openModal('login')}>Login</button>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
