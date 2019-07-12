@@ -171,7 +171,7 @@ class CarShow extends React.Component {
 
               <div className="item-6">
                 <div className="car-show-left-content">
-                  <p>{this.props.car.description}</p>
+                  {this.props.car.description}
                 </div>
               </div>
 

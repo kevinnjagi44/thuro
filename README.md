@@ -62,5 +62,6 @@ Car owners can post their cars for rent, make edits, and delete their listings. 
 ## Future Releases:
 * Car rentals and reviews
 * Car search
+* Car image carousels
 * User profiles
 * Improve device responsiveness
