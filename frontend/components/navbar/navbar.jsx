@@ -9,6 +9,7 @@ const NavBar = ({ currentUser, logout, openModal }) => {
       <Link to="/cars/">
         <button className="navbutton">Search for cars</button>
       </Link>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <Link to="/cars/new">
         <button className="navbutton">List your car</button>
       </Link>
@@ -25,6 +26,7 @@ const NavBar = ({ currentUser, logout, openModal }) => {
         <Link to="/cars/">
           <button className="navbutton">Search for cars</button>
         </Link>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <Link to="/cars/new">
           <button className="navbutton">List your car</button>
         </Link>
