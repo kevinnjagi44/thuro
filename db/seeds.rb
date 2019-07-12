@@ -54,7 +54,7 @@ ActiveRecord::Base.transaction do
     transmission: 'manual',
     seats: 4,
     doors: 2,
-    description: 'Fun ride. Ignore the stains in the back.',
+    description: 'Fun ride. VERY loud. Ignore the stains in the back.',
     plate: '9DJ28H',
     address: '825 Battery St',
     city: 'San Francisco',
@@ -80,7 +80,7 @@ ActiveRecord::Base.transaction do
     transmission: 'manual',
     seats: 2,
     doors: 2,
-    description: 'Great fun.',
+    description: 'Great fun. I\'ve definitely put myself in debt as a result of purchasing this car, but no regrets.'
     plate: '3DH3JD8',
     address: '2300 3rd St',
     city: 'San Francisco',
@@ -99,12 +99,12 @@ ActiveRecord::Base.transaction do
     rate: rand(85..165),
     make: 'Lexus',
     model: 'IS350', 
-    year: 1990,
+    year: 2018,
     color: 'gray',
     transmission: 'automatic',
     seats: 5,
     doors: 4,
-    description: 'Clean ride. Good fun.',
+    description: 'Purchased brand new in 2017 with a ton of features. This car is my baby... Please take good care of it!'
     plate: '6D8SA6S',
     address: '1200 39th Ave',
     city: 'San Francisco',
@@ -130,7 +130,7 @@ ActiveRecord::Base.transaction do
     transmission: 'manual',
     seats: 4,
     doors: 2,
-    description: 'A classic.',
+    description: 'A classic. This is actually my dad\'s car, who is currently on vacation. I figured I\'d rent it out for some extra cash while he\'s gone ;)'
     plate: '3DH3JD8',
     address: '2300 3rd St',
     city: 'San Francisco',
@@ -228,7 +228,7 @@ ActiveRecord::Base.transaction do
     transmission: 'manual',
     seats: 2,
     doors: 2,
-    description: 'SO fast. So loud. I drive it to and from work each day and my ears won\'t stop ringing.',
+    description: 'SO fast. So loud. I drive it to and from work each day and my ears won\'t stop ringing. It hurts so good.',
     plate: '3DH3JD8',
     address: '42 Main St.',
     city: 'San Francisco',
@@ -254,7 +254,7 @@ ActiveRecord::Base.transaction do
     transmission: 'automatic',
     seats: 4,
     doors: 2,
-    description: 'The exact one from the Clint Eastwood movie!',
+    description: 'The exact car from the Clint Eastwood movie! If you check the glove box, you will find the exact pack of cigarettes he smoked.',
     plate: '3DH3JD8',
     address: '612 8th St',
     city: 'San Francisco',
@@ -278,12 +278,12 @@ ActiveRecord::Base.transaction do
     transmission: 'none',
     seats: 5,
     doors: 4,
-    description: 'Instant torque. Fun and comfy ride',
+    description: 'Instant torque. Fun and comfy ride. ',
     plate: '82JD2JA',
     address: '2 18th St',
     city: 'San Francisco',
     state: 'CA',
-    # mpg: 
+    mpg: 0,
     zip: 94814,
     lat: rand(37.714118..37.787958),
     lng: rand(-122.504908..-122.390212),
@@ -306,7 +306,7 @@ ActiveRecord::Base.transaction do
     transmission: 'manual',
     seats: 2,
     doors: 2,
-    description: 'Great for a sunny day.',
+    description: 'Great for a drive along the coast. The convertible top doesn\'t function, but who needs it?',
     plate: '3DH3JD8',
     address: '1457 Market St.',
     city: 'San Francisco',
@@ -324,5 +324,3 @@ ActiveRecord::Base.transaction do
   car9.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/fiat-new.jpg'), filename: 'car9_fiat-new.jpg')
 
 end
-
-#rails db:reset

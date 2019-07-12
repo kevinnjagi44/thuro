@@ -19,6 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
 	} else {
 			store = configureStore();
 	}
+
+	let http = require("http");
+	setInterval(function () {
+		http.get("http://torino-fsp.herokuapp.com");
+	}, 300000); // every 5 minutes (300000)
 	
 	//TESTING START
 	window.getState = store.getState;
