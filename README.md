@@ -67,28 +67,45 @@ Car owners can post their cars for rent, selecting optional features such as hea
 
 ### Update & Deletion
 
-In addition to creation, owners can make edits and delete their listings. Edit and delete options are displayed on the car show page <b>if</b> the current user is recognized as an owner. As an added security measure, any attempt to access another owner's car edit page URL forcefully redirects to the index.
+In addition to creation, owners can make edits and delete their listings. Edit and delete options are displayed on the car show page <b>if</b> the current user is recognized as an owner. As an added security measure, any attempt to access another owner's car edit page URL forcefully redirects to the index:
+
+```
+render() {
+
+...  
+
+    if (this.props.car.owner_id === this.props.currentUserId) {
+      showEditDel = 
+      <>
+        <Link to={`/cars/${this.props.car.id}/edit`}>
+          <button>Edit this car</button>
+        </Link>
+        <br />
+        <button onClick={this.handleDelete}>Delete this car</button>
+      </>
+    }
+```
 
 ```
 TRANSMISSION_TYPE = %w(automatic manual none).freeze
 
-  COLORS = %w(black brown gray silver white red orange yellow gold purple blue green).freeze
+COLORS = %w(black brown gray silver white red orange yellow gold purple blue green).freeze
 
-  validates :rate, :make, :model, :year, :color, :transmission, :seats, :description, :plate, :address, :city, :state, :zip, :doors, presence: true
+validates :rate, :make, :model, :year, :color, :transmission, :seats, :description, :plate, :address, :city, :state, :zip, :doors, presence: true
 
-  validates :awd, :audio_input, :bike_rack, :bluetooth, :child_seat, :convertible, :gps, :heated_seats, :longterm_car, :pet_friendly, :ski_rack, :snow_tires_chains, :sunroof, :toll_pass, :usb_input, inclusion: [true, false]
+validates :awd, :audio_input, :bike_rack, :bluetooth, :child_seat, :convertible, :gps, :heated_seats, :longterm_car, :pet_friendly, :ski_rack, :snow_tires_chains, :sunroof, :toll_pass, :usb_input, inclusion: [true, false]
 
-  validates :transmission, inclusion: TRANSMISSION_TYPE, unless: -> { transmission.blank? }
+validates :transmission, inclusion: TRANSMISSION_TYPE, unless: -> { transmission.blank? }
 
-  belongs_to :user,
-    foreign_key: :owner_id, 
-    class_name: :User
+belongs_to :user,
+  foreign_key: :owner_id, 
+  class_name: :User
 
-  has_many :rentals,
-    foreign_key: :car_id,
-    class_name: :Rental
+has_many :rentals,
+  foreign_key: :car_id,
+  class_name: :Rental
 
-  has_many_attached :photos
+has_many_attached :photos
   ```
 
 
