@@ -20,11 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
 			store = configureStore();
 	}
 
-	let http = require("http");
-	
-	setInterval(function () {
-		http.get("http://torino-fsp.herokuapp.com");
-	}, 300000); // every 5 minutes (300000)
+	// let http = require("http");
+	// setInterval(function () {
+	// 	http.get("http://torino-fsp.herokuapp.com");
+	// }, 300000); // every 5 minutes (300000)
 	
 	//TESTING START
 	window.getState = store.getState;
@@ -37,11 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	window.editCar = editCar;
 	window.createCar = createCar;
 	window.deleteCar = deleteCar;
-
 	//TESTING END
-	// :)
-	// console.log("LinkedIn: https://linkedin.com/in/fsiino/");
-	// console.log("GitHub: https://github.com/fsiino/");
 	
 	const root = document.getElementById('root');
 	ReactDOM.render(<Root store={store} />, root);
