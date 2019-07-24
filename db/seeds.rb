@@ -273,7 +273,7 @@ ActiveRecord::Base.transaction do
     rate: rand(85..165),
     make: 'Tesla',
     model: 'Model 3', 
-    year: 1975,
+    year: 2019,
     color: 'red',
     transmission: 'none',
     seats: 5,

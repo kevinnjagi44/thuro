@@ -1,62 +1,79 @@
 .search-container {
   color: #231f20;
+  display: flex;
   justify-content: center;
   flex-direction: row;
-  padding-top: 30px;
+  // padding: 3px 0 3px 0;
   background: #ffffff;
   font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
-
   border-radius: 100px;
+  margin: 40px 15% 0 15%;
 }
-  .search-subcontainer {
-    align-content: center;
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 100px;
+  padding: 7px 0 7px 0;
+
+  label {
+    font-size: 12px;
+    font-weight: 600px;
   }
 
-  .search-header {
-    font-size: 11px;
-    font-weight: bold;
-    margin-bottom: 0;
-    color: #231f20;
+}
+
+.search-where, .search-from, .search-until {
+  display: flex;
+  flex-direction: column;
+  font-family: BasisGrotesque, Avenir, 
+  Helvetica Neue, Helvetica, sans-serif;
+  padding-left: 20px;
+
+  input[type="text"] {
+    font-size: 18px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    width: 300px;
+  }
+
+  input[type="datetime-local"] {
+    // padding-right: 10px;
+    font-size: 18px;
+    background-color: #ffffff;
+    border-radius: 5px;
     font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
-    font-weight: normal;
-    font-size: 11px;
-    line-height: 1.5;
+    border: 1px solid #ffffff;
+    width: 300px;    
   }
 
-  .search-form {
-    align-items: center;
-    background-color: white;
-    // width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    
-    label {
-      margin-left: 20px;
-    } 
-
-    input[type="text"] {
-      width: 100%;
-    }
-
-    .search-button {
-      background-image: url('https://github.com/fsiino/torino/blob/master/app/assets/images/search-glass.png?raw=true');
-      background-position: center;
-      background-size: 40px 40px;
-      outline: none !important;
-      border-radius: 999em;
-      align-self: center;
-      width: 40px;
-      height: 40px;
-      background-color: #59d389;
-    }
+  input:focus {
+    border: 1px solid #ffffff;
+    outline: none;
   }
 
-  .search-where-div {
-    display: flex;
-    flex-direction: column;
-  }
+}
 
-  .search-where-input {
-    display: flex;
-    flex-direction: column;
-  }
+.search-dates {
+  padding-right: 10px;
+  padding-left: 15px;
+  border-left: 1px solid #c7c7c7;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+.search-button {
+  background-image: url('https://github.com/fsiino/torino/blob/master/app/assets/images/search-glass.png?raw=true');
+  background-position: center;
+  background-size: 40px 40px;
+  outline: none !important;
+  border-radius: 999em;
+  align-self: center;
+  width: 40px;
+  height: 40px;
+  background-color: #59d389;
+  margin-right: 7px;
+}

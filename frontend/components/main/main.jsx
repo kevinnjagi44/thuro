@@ -16,38 +16,44 @@ class Main extends React.Component {
       {/* Main */}
 
         <div className="main-container">
-            <div className="spacer">
-              &nbsp;
-            </div>
+          <div className="spacer"/>
             <h2 className="banner">Way better than a rental car</h2>
             <h2 className="caption">Book unforgettable cars from local hosts around the world</h2>
 
       {/* Search */}
 
-            {/* <div>
+            <div className="search-container">
               <form className="search-form">
-                <div className="search-subcontainer">
-                  <label className="search-header">
-                    Where<br/>
-                  </label>
-                  <input type="text" placeholder="loc here"/>
+
+                <div className="search-where">
+
+                  <label>Where</label>
+                  <input type="text" placeholder="City, airport, address, or hotel"/>
+
                 </div>
 
-                <div className="search-where-div">
-                  <div className="search-where-div">
-                    <label htmlFor="">
-                      From
-                    </label>
-                  </div>
+                <div className="search-from">
+      
+                  <label>From</label>
+                  <input type="datetime-local"/>
+
                 </div>
 
+                <div className="search-until">
 
-                <Link to="/cars">
-                  <button className="search-button"/>
-                </Link>
-                </form>
-            </div> */}
+                  <label>Until</label>
+                    <input type="datetime-local"/>  
+                </div>
+
+              <Link to={"/cars"}>
+                <button className="search-button"/>
+              </Link>
               
+              </form>
+
+            </div>
+
+          
           </div>
 
       {/* Middle */} 
