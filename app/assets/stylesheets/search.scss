@@ -24,12 +24,45 @@
 
 }
 
-.search-where, .search-from, .search-until {
+.search-where {
   display: flex;
   flex-direction: column;
   font-family: BasisGrotesque, Avenir, 
   Helvetica Neue, Helvetica, sans-serif;
   padding-left: 20px;
+
+    input[type="text"] {
+    font-size: 18px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    width: 300px;
+  }
+
+  input[type="datetime-local"] {
+    // padding-right: 10px;
+    font-size: 18px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
+    border: 1px solid #ffffff;
+    width: 300px;    
+  }
+
+  input:focus {
+    border: 1px solid #ffffff;
+    outline: none;
+  }
+  
+}
+
+.search-from, .search-until {
+  display: flex;
+  flex-direction: column;
+  font-family: BasisGrotesque, Avenir, 
+  Helvetica Neue, Helvetica, sans-serif;
+  padding-left: 20px;
+  border-left: 1px solid #c7c7c7;
 
   input[type="text"] {
     font-size: 18px;

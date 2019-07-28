@@ -10,6 +10,7 @@ class Main extends React.Component {
   }
 
   render () {
+
     return (
       <div> 
 
@@ -42,7 +43,7 @@ class Main extends React.Component {
                 <div className="search-until">
 
                   <label>Until</label>
-                    <input type="datetime-local"/>  
+                    <input type="datetime-local" />  
                 </div>
 
               <Link to={"/cars"}>
