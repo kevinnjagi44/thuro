@@ -54,9 +54,9 @@ class Main extends React.Component {
             </div>
 
             <div className="main-social">
-              <a href="https://www.github.com/fsiino">GitHub</a>
+            <a href="https://www.github.com/fsiino"><img className="main-social-icon" src="https://github.com/fsiino/torino/blob/master/app/assets/images/github-icon.jpg?raw=true"/>GitHub</a>
               <br/>
-              <a href="https://www.linkedin.com/in/fsiino"><img className="main-social-icon" src="https://fsiino.github.io/ascending-paper-plane/assets/github-icon.png"/>LinkedIn</a>
+            <a href="https://www.linkedin.com/in/fsiino"><img className="main-social-icon" src="https://github.com/fsiino/torino/blob/master/app/assets/images/linkedin-icon.jpg?raw=true"/>LinkedIn</a>
             </div>
           </div>
 
