@@ -131,16 +131,16 @@ class CarShow extends React.Component {
                   <ShowTransmission/>
                   <br/>
       
-                  <div title="Electric vehicle" className="feature-seats" /> <span className="car-show-features-standard-text">{this.props.car.seats} seats</span>&nbsp;
+                  <div className="feature-seats" /> <span className="car-show-features-standard-text">{this.props.car.seats} seats</span>&nbsp;
                   </div>
                   <br/>
 
                   <div>
-                  <div title="Electric vehicle" className="feature-doors" /> <span className="car-show-features-standard-text">{this.props.car.doors} doors</span>
+                  <div className="feature-doors" /> <span className="car-show-features-standard-text">{this.props.car.doors} doors</span>
 
                   <br/>
 
-                  <div title="Electric vehicle" className="feature-mpg" /> <span className="car-show-features-standard-text">{this.props.car.mpg} MPG</span>
+                  <div className="feature-mpg" /> <span className="car-show-features-standard-text">{this.props.car.mpg} MPG</span>
                 </div>
               </div>
                 

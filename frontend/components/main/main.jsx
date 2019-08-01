@@ -51,10 +51,13 @@ class Main extends React.Component {
               </Link>
               
               </form>
-
             </div>
 
-          
+            <div className="main-social">
+              <a href="https://www.github.com/fsiino">GitHub</a>
+              <br/>
+              <a href="https://www.linkedin.com/in/fsiino"><img className="main-social-icon" src="https://fsiino.github.io/ascending-paper-plane/assets/github-icon.png"/>LinkedIn</a>
+            </div>
           </div>
 
       {/* Middle */} 
