@@ -12,6 +12,7 @@ class CarShow extends React.Component {
 
   componentDidMount() {
     this.props.fetchCar(this.props.match.params.id);
+    
   }
 
   navigateToIdx() {
