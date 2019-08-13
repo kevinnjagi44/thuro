@@ -46,6 +46,8 @@ class Api::CarsController < ApplicationController
     end
   end
 
+  private
+
   def car_params
     params.require(:car).permit(
       :rate, 

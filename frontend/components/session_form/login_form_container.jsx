@@ -5,7 +5,7 @@ import { login, clearErrors } from '../../actions/session_actions';
 import SessionForm from './session_form';
 import { openModal, closeModal } from '../../actions/modal_actions';
 
-const mapStateToProps = ({ errors }) => {
+const mSTP = ({ errors }) => {
   return ({
     errors: errors.session,
     formType: 'login',
@@ -17,7 +17,7 @@ const mapStateToProps = ({ errors }) => {
   });
 };
 
-const mapDispatchToProps = dispatch => {
+const mDTP = dispatch => {
   return {
     processForm: (user) => dispatch(login(user)),
     clearErrors: () => dispatch(clearErrors()),
@@ -30,4 +30,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapStateToProps,mapDispatchToProps)(SessionForm);
+export default connect(mSTP, mDTP)(SessionForm);

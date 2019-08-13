@@ -21,14 +21,22 @@ class Api::RentalsController < ApplicationController
   end
 
   def destroy
-    @rental = Rental
+    @rental = Rental.find(params[:id])
+    if @rental.delete
+      @rentals = Rental.all
+      render "api/rentals/show"
+    else
+      render json: @rental.errors.full_messages, status: 422
+    end
   end
+
+  private
 
   def rental_params
     params.require(:rental).permit(
       :start_date,
-      :end_date,
-      :status
+      :end_date
+      # :status
     )
   end
 

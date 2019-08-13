@@ -2,7 +2,7 @@ import {connect} from 'react-redux';
 import {createCar} from '../../actions/car_actions';
 import CarCreate from './car_create';
 
-const mapStateToProps = state => ({
+const mSTP = state => ({
   formfields: {
     // owner_id: state.session.id,
     // ownerId: state.session.id,
@@ -43,11 +43,11 @@ const mapStateToProps = state => ({
   errors: state.errors.session
 });
 
-const mapDispatchToProps = dispatch => ({
+const mDTP = dispatch => ({
   createCar: (car) => dispatch(createCar(car))
 });
 
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+  mSTP,
+  mDTP
 )(CarCreate);

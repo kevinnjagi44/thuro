@@ -1,0 +1,1 @@
+json.extract! rental, :start_date, :end_date

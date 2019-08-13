@@ -4,18 +4,18 @@ import { logout } from '../../actions/session_actions';
 import NavBar from './navbar';
 import { openModal } from '../../actions/modal_actions';
 
-const mapStateToProps = ({ session, entities: { users } }) => {
+const mSTP = ({ session, entities: { users } }) => {
   return {
     currentUser: users[session.id]
   };
 };
 
-const mapDispatchToProps = dispatch => ({
+const mDTP = dispatch => ({
   logout: () => dispatch(logout()),
   openModal: (modal) => dispatch(openModal(modal))
 });
 
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+  mSTP,
+  mDTP
 )(NavBar);

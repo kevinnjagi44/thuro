@@ -18,7 +18,6 @@ export const fetchCar = (id) => {
 };
 
 export const createCar = (car) => {
-  // debugger
   return (
     $.ajax({
       method: 'POST',
