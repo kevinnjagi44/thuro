@@ -12,7 +12,7 @@ class CarShow extends React.Component {
 
   componentDidMount() {
     this.props.fetchCar(this.props.match.params.id);
-    
+
   }
 
   navigateToIdx() {
@@ -56,7 +56,7 @@ class CarShow extends React.Component {
       return fname.charAt(0).toUpperCase() + fname.slice(1).toLowerCase();
     }
 
-    const notAllowedCursor = () => {
+    const notAllowedCursor = () => {  
       cursor: not-allowed;
     }
 
@@ -127,22 +127,29 @@ class CarShow extends React.Component {
                   </div>
                 </div>
 
-                <div className="car-show-standard">
-                  <div>
-                  <ShowTransmission/>
-                  <br/>
-      
-                  <div className="feature-seats" /> <span className="car-show-features-standard-text">{this.props.car.seats} seats</span>&nbsp;
+              <div className="car-show-std-feat-container">
+                <div className="car-show-std-feat-grid">
+                  <div className="item-1">
+                    <ShowTransmission/>
                   </div>
-                  <br/>
 
-                  <div>
-                  <div className="feature-doors" /> <span className="car-show-features-standard-text">{this.props.car.doors} doors</span>
+                  <div className="item-2">
+                    <div className="feature-doors"/>
+                    <span className="car-show-features-standard-text">{this.props.car.doors} doors</span>
+                  </div>
 
-                  <br/>
+                  <div className="item-3">
+                    <div className="feature-seats"/>
+                    <span className="car-show-features-standard-text">{this.props.car.seats} seats</span>
+                  </div>
 
-                  <div className="feature-mpg" /> <span className="car-show-features-standard-text">{this.props.car.mpg} MPG</span>
+                  <div className="item-4">
+                    <div className="feature-mpg"/>
+                    <span className="car-show-features-standard-text">{this.props.car.mpg} MPG</span>
+                  </div>
+
                 </div>
+
               </div>
                 
               </div>

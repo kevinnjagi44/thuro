@@ -104,3 +104,33 @@
   font-size: 16px;
   line-height: 1.5;
 }
+
+.car-show-std-feat-container {
+
+  .item-1 {
+    grid-area: f-trans;
+    padding: 6px;    
+  }
+  .item-2 {
+    grid-area: f-doors;
+    padding: 6px;
+  }
+  .item-3 {
+    grid-area: f-seats;
+    padding: 6px;    
+  }
+  .item-4 {
+    grid-area: f-mpg;
+    padding: 6px;
+  }
+}
+
+  .car-show-std-feat-grid {
+    justify-content: left;
+    width: 75%;
+    display: grid;
+    grid-template-columns: 21vw 20vw;
+    grid-template-areas: 
+    "f-trans f-doors"
+    "f-seats f-mpg";
+  }
