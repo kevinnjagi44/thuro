@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   context: __dirname,
-  entry: './frontend/turoclone.jsx',
+  entry: './frontend/torino.jsx',
   output: {
     path: path.resolve(__dirname, 'app', 'assets', 'javascripts'),
     filename: 'bundle.js'

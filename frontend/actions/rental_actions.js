@@ -2,7 +2,7 @@ import * as APIUtil from '../util/rental_api_util';
 
 export const RECEIVE_RENTALS = 'RECEIVE_RENTALS';
 export const RECEIVE_RENTAL = 'RECEIVE_RENTAL';
-export const DELETE_CAR = 'DELETE_CAR';
+export const DELETE_RENTAL = 'DELETE_RENTAL';
 export const RECEIVE_RENTAL_ERRORS = 'RECIEVE_RENTAL_ERRORS';
 
 /* Actions */
@@ -55,6 +55,6 @@ export const editRental = (rental) => {
 
 export const deleteRental = (rentalId) => {
   APIUtil.deleteRental(rentalId).then(rental => (
-    dispatch(removeCar(rentalId))
+    dispatch(removeRental(rentalId))
   ));
 };
