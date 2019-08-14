@@ -11,10 +11,10 @@ const rentalsReducer = (state = {}, action) => {
   let newState;
 
   switch(action.type){
-    case RECEIVE_CAR:
-      return merge({}, state, action.rentals);
+    // case RECEIVE_CAR:
+    //   return merge({}, state, action.rentals);
     case RECEIVE_RENTALS:
-      return action.cars;
+      return action.rentals;
     case RECEIVE_RENTAL:
       return merge({}, state, action.rental);
     case DELETE_RENTAL:

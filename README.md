@@ -110,8 +110,10 @@ has_many_attached :photos
 
 
 ## Future Releases:
-* Car rentals and reviews
-* Car image carousels
+* Rentals
+* Reviews
+* Image Carousels
 * Search
-* User profiles
-* Improve device responsiveness
+* User Dashboards
+* Add to Favorites
+* Improve cross-device responsiveness

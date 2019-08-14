@@ -1,9 +1,9 @@
-export const fetchRentals = (userId) => {
+export const fetchRentals = (renterId) => {
   return (
     $.ajax({
       method: 'GET',
       url: 'api/rentals',
-      data: { userId }
+      data: { renterId }
     })
   );
 };

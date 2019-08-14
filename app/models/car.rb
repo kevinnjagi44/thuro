@@ -37,7 +37,6 @@
 #  sunroof           :boolean          default(FALSE), not null
 #  toll_pass         :boolean          default(FALSE), not null
 #  usb_input         :boolean          default(FALSE), not null
-#
 
 class Car < ApplicationRecord
 

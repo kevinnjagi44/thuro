@@ -19,7 +19,7 @@ class Rental < ApplicationRecord
   validates :renter_id, :car_id, :start_date, :end_date, :status, presence: true
   validates :status, inclusion: STATUSES
 
-  belongs_to :user,
+  belongs_to :renter,
     foreign_key: :renter_id,
     class_name: :User
 

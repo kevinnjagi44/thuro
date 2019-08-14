@@ -3,7 +3,7 @@ import * as APIUtil from '../util/rental_api_util';
 export const RECEIVE_RENTALS = 'RECEIVE_RENTALS';
 export const RECEIVE_RENTAL = 'RECEIVE_RENTAL';
 export const DELETE_RENTAL = 'DELETE_RENTAL';
-export const RECEIVE_RENTAL_ERRORS = 'RECIEVE_RENTAL_ERRORS';
+export const RECEIVE_RENTAL_ERRORS = 'RECEIVE_RENTAL_ERRORS';
 
 /* Actions */
 
@@ -29,8 +29,8 @@ export const receiveErrors = (errors) => ({
 
 /* Thunk Action Creators */
 
-export const fetchRentals = (userId) => {
-  APIUtil.fetchRentals(userId).then(rentals => (
+export const fetchRentals = (renterId) => {
+  APIUtil.fetchRentals(renterId).then(rentals => (
     dispatch(receiveRentals(rentals))
   ));
 }; 
