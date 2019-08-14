@@ -7,11 +7,11 @@ export const fetchRentals = () => {
   );
 };
 
-export const fetchRental = (id) => {
+export const fetchRental = (rentalId) => {
   return (
     $.ajax({
       method: 'GET',
-      url: `api/rentals/${id}`
+      url: `api/rentals/${rentalId}`
     })
   );
 };
@@ -20,7 +20,7 @@ export const createRental = (rental) => {
   return (
     $.ajax({
       method: 'POST',
-      url: `api/rentals`,
+      url: `/api/cars/${rental.id}/rentals`,
       data: { rental }
     })
   );
@@ -36,11 +36,11 @@ export const editRental = (rental) => {
   );
 };
 
-export const deleteRental = (id) => {
+export const deleteRental = (rentalId) => {
   return (
     $.ajax({
       method: 'DELETE',
-      url: `api/rentals/${id}`
+      url: `api/rentals/${rentalId}`
     })
   );
 };

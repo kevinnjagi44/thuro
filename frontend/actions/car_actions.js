@@ -1,4 +1,4 @@
-import * as APIUtil from '../util/car_api_util';
+import * as CarAPIUtil from '../util/car_api_util';
 
 export const RECEIVE_CARS = 'RECEIVE_CARS';
 export const RECEIVE_CAR = 'RECEIVE_CAR';
@@ -30,31 +30,31 @@ export const receiveErrors = (errors) => ({
 // ******************************* //
 
 export const fetchCars = () => dispatch => (
-  APIUtil.fetchCars().then(cars => (
+  CarAPIUtil.fetchCars().then(cars => (
     dispatch(receiveCars(cars))
   ))
 );
 
 export const fetchCar = (id) => dispatch => (
-  APIUtil.fetchCar(id).then(car => (
+  CarAPIUtil.fetchCar(id).then(car => (
     dispatch(receiveCar(car))
   ))
 );
 
 export const createCar = (car) => dispatch => (
-  APIUtil.createCar(car).then(car => (
+  CarAPIUtil.createCar(car).then(car => (
     dispatch(receiveCar(car)), errors => dispatch(receiveErrors(errors))
   ))
 );
 
 export const editCar = (car, carId) => dispatch => (
-  APIUtil.editCar(car, carId).then(car => (
+  CarAPIUtil.editCar(car, carId).then(car => (
     dispatch(receiveCar(car))
   ))
 );
 
 export const deleteCar = (id) => dispatch => (
-  APIUtil.deleteCar(id).then(car => (
+  CarAPIUtil.deleteCar(id).then(car => (
     dispatch(removeCar(car))
   ))
 );

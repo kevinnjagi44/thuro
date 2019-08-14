@@ -4,7 +4,7 @@ import configureStore from './store/store';
 import Root from './components/root';
 import {login, signup, logout} from './actions/session_actions';
 import {fetchCars, fetchCar, editCar, createCar, deleteCar} from './actions/car_actions';
-// import {fetchRentals, fetchRental, editRental, createRental, deleteRental} from './actions/rental_actions';
+import {fetchRentals, fetchRental, editRental, createRental, deleteRental} from './actions/rental_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
 	let store;
@@ -39,11 +39,11 @@ document.addEventListener('DOMContentLoaded', () => {
 	window.createCar = createCar;
 	window.deleteCar = deleteCar;
 	//*rentals*//
-	// window.fetchRentals = fetchRentals;
-	// window.fetchRental = fetchRental;
-	// window.editRental = editRental;
-	// window.createRental = createRental;
-	// window.deleteRental = deleteRental;
+	window.fetchRentals = fetchRentals;
+	window.fetchRental = fetchRental;
+	window.editRental = editRental;
+	window.createRental = createRental;
+	window.deleteRental = deleteRental;
 	//TESTING END
 	
 	const root = document.getElementById('root');

@@ -7,65 +7,42 @@ class RentalForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      carId: this.props.carId,
-      startDate: null,
-      endDate: null
+      start_date: null,
+      end_date: null,
+      focusedInput: null,
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleStartDate = this.handleStartDate.bind(this);
-    this.handleEndDate = this.handleEndDate.bind(this);
   }
 
   handleSubmit (e) {
     e.preventDefault();
     const newRental = {
-      start_date: this.state.startDate,
-      end_date: this.state.endDate
+      renter_id: this.props.currentUserId,
+      car_id: parseInt(this.props.match.params.carId),
+      start_date: this.state.start_date._d,
+      end_date: this.state.end_date._d
     };
-    
-    // const formData = new FormData();
-    // formData.append('rental[start_date]', this.state.startDate);
-    // formData.append('rental[end_date]', this.state.endDate);
-
-    // this.props.createRental(formData).then(() => this.props.history.push(`/rentals/`));
-    this.props.createRental(newRental).then(() => this.setState({
-      startDate: null,
-      endDate: null,
-      focusedInput: null,
-      rental: newRental
-    })).then(alert("Booking Requested!"));
-  }
-
-  handleStartDate(date) {
-    this.setState({ startDate: date })
-  }
-
-  handleEndDate(date) {
-    this.setState({ endDate: date })
+    this.props.processForm(newRental)
+      .then(alert("Booking Requested!"));
   }
 
   render() {
     // debugger
     return (
       <div className="rental-form-container">
-        {/* <form onSubmit={this.handleSubmit}> */}
-          <DateRangePicker
-            startDate={this.state.startDate} // momentPropTypes.momentObj or null,
-            startDateId="startDate" // PropTypes.string.isRequired,
-            endDate={this.state.endDate} // momentPropTypes.momentObj or null,
-            endDateId="endDate" // PropTypes.string.isRequired,
-            onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })} // PropTypes.func.isRequired,
-            focusedInput={this.state.focusedInput} // PropTypes.oneOf([startDate, endDate]) or null,
-            onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
-          />
-          {/* <input type="submit" value="Book!" /> */}
-          <button onClick={this.handleSubmit}>Book</button>
-        {/* </form> */}
+        <DateRangePicker
+          startDate={this.state.start_date} 
+          startDateId="start_date" 
+          endDate={this.state.end_date} 
+          endDateId="end_date" 
+          onDatesChange={({ startDate, endDate }) => this.setState({ start_date: startDate, end_date: endDate })} 
+          focusedInput={this.state.focusedInput} 
+          onFocusChange={focusedInput => this.setState({ focusedInput })}
+        />
+        <button onClick={this.handleSubmit}>Book</button>
       </div>
     )
   }
-
-
 
 }
 

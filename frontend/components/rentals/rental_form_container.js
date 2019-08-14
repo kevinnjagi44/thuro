@@ -1,25 +1,17 @@
 import { connect } from 'react-redux';
-// import React from 'react';
-// import { Link } from 'react-router-dom';
-import { createRental } from '../../actions/rental_actions';
+import { createRental, clearRentalErrors } from '../../actions/rental_actions';
 import RentalForm from './rental_form';
-import { withRouter } from 'react-router-dom';
+// import { openModal } from '../../actions/modal_actions';
 
-const mSTP = (state, ownProps) => {
-  return ({
-    rentals: state.entities.rentals,
-    car: state.entities.cars[ownProps.match.params.carId],
-    currentUser: state.entities.users[state.session.id]
-  });
-};
+const mSTP = (state) => ({
+  currentUserId: state.session.id,
+  // errors: Object.values(state.errors.rentals)
+});
 
-const mDTP = (dispatch) => {
-  return ({
-    createRental: (rental) => dispatch(createRental(rental))
-  });
-};
+const mDTP = dispatch => ({
+  processForm: rental => dispatch(createRental(rental)),
+  // openModal: modal => dispatch(openModal(modal)),
+  // clearRentalErrors: () => dispatch(clearRentalErrors())
+});
 
-export default withRouter(connect(
-  mSTP,
-  mDTP
-)(RentalForm));
+export default connect(mSTP, mDTP)(RentalForm);

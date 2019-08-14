@@ -84,6 +84,14 @@ class CarShow extends React.Component {
       }
       return result;
     }
+
+    const ShowRentalForm = () => {
+      if (this.props.currentUserId) {
+        return <RentalFormContainer/>
+      } else {
+        return <>Please Log In to Rent!</>
+      }
+    }
     
       return (
 
@@ -236,13 +244,12 @@ class CarShow extends React.Component {
                 per day
               </span>
 
-              <RentalFormContainer/>
-
               <div className="car-show-distance-container">
 
                 <div className="car-show-rental">
                   
-                {/* <RentalForm/> */}
+                  {/* <RentalFormContainer/> */}
+                  <ShowRentalForm/>
 
                 </div>
 
