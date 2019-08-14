@@ -65,7 +65,6 @@ class CarCreate extends React.Component {
   }
 
   update(field) {
-    // debugger
     return e => {
       this.setState({
         [field]: e.currentTarget.value,
@@ -158,7 +157,6 @@ class CarCreate extends React.Component {
     //   return null;
     // }
 
-    // debugger
     return (
       <div className="car-create-container">
         <div className="car-create-banner">

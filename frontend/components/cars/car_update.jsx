@@ -65,7 +65,6 @@ class CarUpdate extends React.Component {
   }
 
   render() {
-    // debugger
     if (!this.state || this.props.currentUserId !== this.props.car.owner_id) {
       
       return (

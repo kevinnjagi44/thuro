@@ -1,9 +1,9 @@
-import * as APIUtil from '../util/rental_api_util';
+import * as RentalAPIUtil from '../util/rental_api_util';
 
 export const RECEIVE_RENTALS = 'RECEIVE_RENTALS';
 export const RECEIVE_RENTAL = 'RECEIVE_RENTAL';
 export const DELETE_RENTAL = 'DELETE_RENTAL';
-export const RECEIVE_RENTAL_ERRORS = 'RECEIVE_RENTAL_ERRORS';
+// export const RECEIVE_RENTAL_ERRORS = 'RECEIVE_RENTAL_ERRORS';
 
 /* Actions */
 
@@ -12,49 +12,49 @@ export const receiveRentals = (rentals) => ({
   rentals
 });
 
-export const receiveRental = (rental) => ({
+export const receiveRental = (payload) => ({
   type: RECEIVE_RENTAL,
-  rental
+  payload
 });
 
-export const removeRental = (rentalId) => ({
+export const removeRental = (rental) => ({
   type: DELETE_RENTAL,
-  rentalId: rentalId
+  rentalId: rental.id
 });
 
-export const receiveErrors = (errors) => ({
-  type: RECEIVE_RENTAL_ERRORS,
-  errors
-});
+// export const receiveErrors = (errors) => ({
+//   type: RECEIVE_RENTAL_ERRORS,
+//   errors
+// });
 
 /* Thunk Action Creators */
 
-export const fetchRentals = (renterId) => {
-  APIUtil.fetchRentals(renterId).then(rentals => (
-    dispatch(receiveRentals(rentals))
+export const fetchRentals = () => {
+  RentalAPIUtil.fetchRentals().then(car => (
+    dispatch(receiveRentals(car))
   ));
 }; 
 
-export const fetchRental = (rentalId) => {
-  APIUtil.fetchRental(rentalId).then(rental => (
-    dispatch(receiveRental(rental))
+export const fetchRental = (id) => {
+  RentalAPIUtil.fetchRental(id).then(car => (
+    dispatch(receiveRental(car))
   ));
 };
 
 export const createRental = (rental) => {
-  APIUtil.createRental(rental).then(rental => (
-    dispatch(receiveRental(rental)), errors => dispatch(receiveErrors(errors))
-  ));
-};
-
-export const editRental = (rental) => {
-  APIUtil.editRental(rental).then(rental => (
+  RentalAPIUtil.createRental(rental).then(rental => (
     dispatch(receiveRental(rental))
   ));
 };
 
-export const deleteRental = (rentalId) => {
-  APIUtil.deleteRental(rentalId).then(rental => (
-    dispatch(removeRental(rentalId))
+export const editRental = (rental) => {
+  RentalAPIUtil.editRental(rental).then(rental => (
+    dispatch(receiveRental(rental))
+  ));
+};
+
+export const deleteRental = (id) => {
+  RentalAPIUtil.deleteRental(id).then(rental => (
+    dispatch(removeRental(rental))
   ));
 };

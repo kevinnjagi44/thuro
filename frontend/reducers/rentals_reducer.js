@@ -4,19 +4,17 @@ import {
   RECEIVE_RENTAL, 
   DELETE_RENTAL 
 } from '../actions/rental_actions';
-import { RECEIVE_CAR } from '../actions/car_actions';
 
 const rentalsReducer = (state = {}, action) => {
   Object.freeze(state);
   let newState;
 
   switch(action.type){
-    // case RECEIVE_CAR:
-    //   return merge({}, state, action.rentals);
     case RECEIVE_RENTALS:
-      return action.rentals;
+      return merge({}, state, action.rentals);
     case RECEIVE_RENTAL:
-      return merge({}, state, action.rental);
+      // return merge({}, state, action.rental);
+      return merge({}, state, { [action.rental.id]: action.rental })
     case DELETE_RENTAL:
       newState = Object.assign({}, state);
       delete newState[action.rentalId];

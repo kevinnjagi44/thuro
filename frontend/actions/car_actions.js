@@ -10,9 +10,11 @@ export const receiveCars = (cars) => ({
   cars
 });
 
+// export const receiveCar = ({car, rentals}) => ({
 export const receiveCar = (car) => ({
   type: RECEIVE_CAR,
-  car
+  car,
+  // rentals
 });
 
 export const removeCar = (carId) => ({

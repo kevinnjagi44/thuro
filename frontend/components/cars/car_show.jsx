@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import RentalForm from '../rentals/rental_form';
 import CarMap from '../car_map/car_map';
+import RentalFormContainer from '../rentals/rental_form_container';
 
 class CarShow extends React.Component {
   constructor(props) {
@@ -235,6 +235,8 @@ class CarShow extends React.Component {
               <span className="car-show-per-day">
                 per day
               </span>
+
+              <RentalFormContainer/>
 
               <div className="car-show-distance-container">
 

@@ -9,7 +9,6 @@ class Api::CarsController < ApplicationController
   end
 
   def create
-    # debugger
     @car = Car.new(car_params)
     @car.owner_id = current_user.id
     if @car.save
