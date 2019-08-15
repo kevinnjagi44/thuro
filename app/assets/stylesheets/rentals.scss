@@ -22,3 +22,25 @@
 
 }
 
+.rental-form-login {
+  font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
+
+    button {
+    border: none;
+    color: white;
+    background-color: #59d389;
+    font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 30px;
+    opacity: 0.8;
+    transition: 0.7s;   
+  }
+
+  button:hover {
+    opacity: 1;
+    background-color: #59d389;
+  }
+  
+}

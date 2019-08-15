@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 // import 'react-dates/initialize';
 // import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
 // import 'react-dates/lib/css/_datepicker.css';
+import { openModal } from '../../actions/modal_actions';
 
 class Main extends React.Component {
   constructor(props) {
@@ -10,11 +11,6 @@ class Main extends React.Component {
   }
 
   render () {
-
-    const scrollUp = () => {
-      
-    };
-
     return (
       <div> 
 
@@ -179,8 +175,8 @@ class Main extends React.Component {
             <br/><br/>  
             <p className="wires-text">You’re covered with up to $1 million in liability insurance, and your car is contractually protected against theft and physical damage. Or bring your own commercial rental insurance and take a bigger piece of the pie.*</p>
 
-            {/* <Link to="#"> */}
-              <button onClick={window.scrollTo(0, 0)} type="submit">List your car</button>
+            {/* <Link to="/cars/new"> */}
+              {/* <button type="submit">List your car</button> */}
             {/* </Link> */}
 
           </div>

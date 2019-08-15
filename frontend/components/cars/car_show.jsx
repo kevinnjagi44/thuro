@@ -8,6 +8,8 @@ class CarShow extends React.Component {
     super(props);
     this.state = this.props.car;
     this.handleDelete = this.handleDelete.bind(this);
+
+
   }
 
   componentDidMount() {
@@ -90,7 +92,12 @@ class CarShow extends React.Component {
       if (this.props.currentUserId) {
         return <RentalFormContainer/>
       } else {
-        return <>Please Log In to Rent!</>
+        return (
+        <div className="rental-form-login">
+          {/* Please Log In to Rent! */}
+            <button onClick={() => {this.props.openModal('login')}}>Please Login to Rent!</button>
+        </div>
+        )
       }
     }
     
