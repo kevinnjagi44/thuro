@@ -44,7 +44,7 @@ class CarShow extends React.Component {
             <button>Edit this car</button>
           </Link>
           <br />
-          <button onClick={this.handleDelete}>Delete this car</button>
+          <button onClick={(e) => { if (window.confirm('Are you sure you wish to delete this item?')) {this.handleDelete(e)} } }>Delete this car</button>
           {/* <button onClick={this.handleDelete}>Delete this car</button> */}
         </>
       }

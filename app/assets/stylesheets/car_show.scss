@@ -3,6 +3,7 @@
 .car-show-container {
   color: black;
   width: 100%;
+  min-height: 170vh;
 
     button {
       width: 100%;
@@ -209,7 +210,6 @@
 // right panel
 
 .car-show-right-container {
-  border-bottom: 1px solid #e6e6e6;
   width: 18%;
 
   position: absolute;
