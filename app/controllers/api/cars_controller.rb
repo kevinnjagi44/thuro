@@ -38,7 +38,6 @@ class Api::CarsController < ApplicationController
   def destroy
     @car = Car.find(params[:id])
     if @car.delete
-      @cars = Car.all
       render "api/cars/show"
     else
       render json: @car.errors.full_messages, status: 422

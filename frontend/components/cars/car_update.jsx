@@ -200,54 +200,8 @@ class CarUpdate extends React.Component {
             </div>
           <br/><br/>
 
-          {/* <h3>Features</h3>
-            <div className="features-wrapper">
-              <div>
-                <label><input type="checkbox" checked={this.state.awd} onChange={this.updateCheckbox("awd")} /> All-wheel-drive</label>
-                <br/>
-                <label><input type="checkbox" checked={this.state.audioInput} onChange={this.updateCheckbox("audioInput")} /> Audio input</label>
-                <br />
-                <label><input type="checkbox" checked={this.state.bikeRack} onChange={this.updateCheckbox("bikeRack")} /> Bike rack</label>
-                <br />
-              </div>
-              <div>
-                <label><input type="checkbox" checked={this.state.bluetooth} onChange={this.updateCheckbox("bluetooth")} /> Bluetooth</label>
-                <br />
-                <label><input type="checkbox" checked={this.state.childSeat} onChange={this.updateCheckbox("childSeat")} /> Child seat</label>
-                <br />
-                <label><input type="checkbox" checked={this.state.convertible} onChange={this.updateCheckbox("convertible")} /> Convertible</label>
-                <br />
-              </div>
-              <div>
-                <label><input type="checkbox" checked={this.state.gps} onChange={this.updateCheckbox("gps")} /> GPS</label>
-                  <br />
-                <label>
-                  <input type="checkbox" checked={this.state.heatedSeats} onChange={this.updateCheckbox("heatedSeats")} /> Heated seats
-                  </label>
-                  <br/>
-                <label><input type="checkbox" checked={this.state.longtermCar} onChange={this.updateCheckbox("longtermCar")} /> Longterm car</label>
-                  <br />
-              </div>
-              <div>
-                <label><input type="checkbox" checked={this.state.petFriendly} onChange={this.updateCheckbox("petFriendly")} /> Pet friendly</label>
-                  <br />
-                <label><input type="checkbox" checked={this.state.skiRack} onChange={this.updateCheckbox("skiRack")} /> Ski rack</label>
-                  <br/>
-                <label><input type="checkbox" checked={this.state.snowTiresChains} onChange={this.updateCheckbox("snowTiresChains")} /> Snow tires/Chains</label>
-                  <br />
-              </div>
-              <div>
-                <label><input type="checkbox" checked={this.state.sunroof} onChange={this.updateCheckbox("sunroof")} /> Sunroof</label>
-                  <br />
-                <label><input type="checkbox" checked={this.state.tollPass} onChange={this.updateCheckbox("tollPass")} /> Toll pass</label>
-                  <br />
-                <label><input type="checkbox" checked={this.state.usbInput} onChange={this.updateCheckbox("usbInput")} /> USB input</label>
-                  <br />
-              </div>
-            </div>
-          <br/><br/> */}
-{/* 
-          <h3>Photos</h3> */}
+
+          {/* <h3>Photos</h3> */}
 
           {/* <input type="file" onChange={this.handleFile.bind(this)} /> */}
 

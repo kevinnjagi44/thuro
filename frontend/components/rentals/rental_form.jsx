@@ -9,6 +9,7 @@ class RentalForm extends React.Component {
     this.state = {
       start_date: null,
       end_date: null,
+      status: null,
       focusedInput: null,
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -18,9 +19,10 @@ class RentalForm extends React.Component {
     e.preventDefault();
     const newRental = {
       renter_id: this.props.currentUserId,
-      car_id: parseInt(this.props.match.params.carId),
+      car_id: parseInt(this.props.match.params.id),
       start_date: this.state.start_date._d,
-      end_date: this.state.end_date._d
+      end_date: this.state.end_date._d,
+      status: 'pending'
     };
     this.props.processForm(newRental)
       .then(alert("Booking Requested!"));
@@ -31,7 +33,7 @@ class RentalForm extends React.Component {
     return (
       <div className="rental-form-container">
         <DateRangePicker
-          startDate={this.state.start_date} 
+          startDate={this.state.start_date}  
           startDateId="start_date" 
           endDate={this.state.end_date} 
           endDateId="end_date" 
@@ -39,11 +41,11 @@ class RentalForm extends React.Component {
           focusedInput={this.state.focusedInput} 
           onFocusChange={focusedInput => this.setState({ focusedInput })}
         />
-        <button onClick={this.handleSubmit}>Book</button>
+
+        <button onClick={this.handleSubmit}>Book Now</button>
       </div>
     )
   }
-
 }
 
 export default withRouter(RentalForm);
