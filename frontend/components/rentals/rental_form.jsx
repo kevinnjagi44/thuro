@@ -22,7 +22,7 @@ class RentalForm extends React.Component {
       car_id: parseInt(this.props.match.params.id),
       start_date: this.state.start_date._d,
       end_date: this.state.end_date._d,
-      status: 'pending'
+      status: 'approved'
     };
     this.props.processForm(newRental)
       .then(alert("Booking Requested!"));
