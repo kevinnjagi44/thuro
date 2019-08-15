@@ -4,11 +4,12 @@ import {Link} from 'react-router-dom';
 // import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
 // import 'react-dates/lib/css/_datepicker.css';
 import { openModal } from '../../actions/modal_actions';
+import { connect } from 'react-redux';
 
 class Main extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+   constructor(props) {
+     super(props);
+   }
 
   render () {
     return (
@@ -175,9 +176,9 @@ class Main extends React.Component {
             <br/><br/>  
             <p className="wires-text">You’re covered with up to $1 million in liability insurance, and your car is contractually protected against theft and physical damage. Or bring your own commercial rental insurance and take a bigger piece of the pie.*</p>
 
-            {/* <Link to="/cars/new"> */}
-              {/* <button type="submit">List your car</button> */}
-            {/* </Link> */}
+            <Link to="/cars/new">
+              <button onClick={ !this.props.currentUserId ? () => {this.props.openModal('login')} : null } type="submit">List your car</button>
+            </Link>
 
           </div>
 
@@ -188,4 +189,15 @@ class Main extends React.Component {
   }
 }
 
-export default Main;
+const mSTP = state => ({
+  currentUserId: state.session.id
+})
+
+const mDTP = dispatch => ({
+  openModal: (modal) => dispatch(openModal(modal))
+});
+
+export default connect(
+  mSTP,
+  mDTP
+)(Main);
