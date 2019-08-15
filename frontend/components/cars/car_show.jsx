@@ -45,6 +45,7 @@ class CarShow extends React.Component {
           </Link>
           <br />
           <button onClick={this.handleDelete}>Delete this car</button>
+          {/* <button onClick={this.handleDelete}>Delete this car</button> */}
         </>
       }
 
@@ -253,7 +254,7 @@ class CarShow extends React.Component {
 
                 </div>
 
-                <div>
+                <div className="car-show-edit-del">
                   {showEditDel}
                 </div>
 
