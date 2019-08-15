@@ -29,9 +29,9 @@ class RentalForm extends React.Component {
   }
 
   render() {
-    // debugger
     return (
-      <div className="rental-form-container">
+      <div className="rental-form-wrapper">
+        <div className="rental-date-time-wrapper">
         <DateRangePicker
           startDate={this.state.start_date}  
           startDateId="start_date" 
@@ -42,7 +42,11 @@ class RentalForm extends React.Component {
           onFocusChange={focusedInput => this.setState({ focusedInput })}
         />
 
+
+        </div>
+
         <button onClick={this.handleSubmit}>Book Now</button>
+        
       </div>
     )
   }

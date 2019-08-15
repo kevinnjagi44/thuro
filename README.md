@@ -86,6 +86,8 @@ render() {
     }
 ```
 
+<!-- ### Rentals -->
+
 ```
 TRANSMISSION_TYPE = %w(automatic manual none).freeze
 
@@ -110,7 +112,6 @@ has_many_attached :photos
 
 
 ## Future Releases:
-* Rentals
 * Reviews
 * Image Carousels
 * Search

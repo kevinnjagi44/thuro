@@ -5,7 +5,7 @@ import CarShow from './car_show';
 import { openModal, closeModal } from '../../actions/modal_actions';
 
 const mSTP = (state, ownProps) => {
-  const carId = ownProps.match.params.id;
+  const carId = ownProps.match.params.id; 
   return ({
     car: state.entities.cars[carId],
     currentUserId: state.session.id,
