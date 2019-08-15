@@ -25,13 +25,16 @@ class RentalForm extends React.Component {
       status: 'approved'
     };
     this.props.processForm(newRental)
-      .then(alert("Booking Requested!"));
+    .then(document.getElementById("pre-rental").innerHTML = ("<h2>Rental Booked!</h2>"))
+    .then(document.getElementById("pre-rental").setAttribute("id", "rental-requested"))
+    .then(document.getElementById("rental-book-btn").style.display = "none");
+      // .then(alert("Booking Requested!"));
   }
 
   render() {
     return (
       <div className="rental-form-wrapper">
-        <div className="rental-date-time-wrapper">
+        <div className="rental-date-time-wrapper" id="pre-rental">
         <DateRangePicker
           startDate={this.state.start_date}  
           startDateId="start_date" 
@@ -42,10 +45,9 @@ class RentalForm extends React.Component {
           onFocusChange={focusedInput => this.setState({ focusedInput })}
         />
 
-
         </div>
 
-        <button onClick={this.handleSubmit}>Book Now</button>
+        <button id="rental-book-btn" onClick={this.handleSubmit}>Book Now</button>
         
       </div>
     )
