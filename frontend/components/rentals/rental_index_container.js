@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import RentalIndex from './rental_index';
-import { fetchRentals, editRental, deleteRental } from '../../util/rental_api_util';
+import { fetchRentals, deleteRental } from '../../actions/rental_actions';
 
 const mSTP = (state) => {
   return {
@@ -12,7 +12,8 @@ const mDTP = (dispatch) => {
   return {
     fetchRentals: () => dispatch(fetchRentals()),
     editRental: (rental) => dispatch(editRental(rental)),
-    deleteRental: (rentalId) => dispatch(deleteRental(rentalId))
+    deleteRental: (rentalId) => dispatch(deleteRental(rentalId)),
+    fetchCar: (id) => dispatch(fetchCar(id)),
   };
 };
 

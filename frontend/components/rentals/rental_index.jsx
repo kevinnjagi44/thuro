@@ -8,17 +8,19 @@ class RentalIndex extends React.Component {
     super(props);
   }
 
+  componentDidMount() {
+    this.props.fetchRentals();
+  }
+
   render() {
 
-    const rentals = this.props;
-
-    if (!rentals) return <h1>'Loading'</h1>;
-
     return (
-      <div>
-        { this.props.rentals.map(rental => {
-          rental.start_date
-        }) 
+      <div className="rental-index-container">
+        { this.props.rentals.map((rental, i )=> 
+        <div key={i} className="rental-index-tile">
+          {rental.start_date}
+        </div>
+        ) 
       
       }
     </div>

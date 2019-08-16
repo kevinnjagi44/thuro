@@ -33,8 +33,8 @@ class CarIndex extends React.Component {
             <div key={car.id}>
               <div className="car-tile-container">
                 <Link to={`/cars/${car.id}`}>
-                  <div className="car-idx-photo-wrapper">
-                    <img className="car-idx-photo" src={car.photoUrl} />
+                  <div className="car-index-photo-wrapper">
+                    <img className="car-index-photo" src={car.photoUrl} />
                   </div>
                 </Link>
                 <div className="car-price">

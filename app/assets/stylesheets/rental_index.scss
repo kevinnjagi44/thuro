@@ -1,0 +1,13 @@
+.rental-index-container {
+  background: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+.rental-index-tile {
+  box-shadow: 10px 10px 8px #888888;
+  height: 10vh;
+  width: 10vw;
+  flex-wrap: wrap;
+}

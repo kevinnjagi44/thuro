@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 import 'react-dates/initialize';
 import { DateRangePicker } from 'react-dates';
 import RentalShow from './rental_show';
+import { Link } from 'react-router-dom';
 
 class RentalForm extends React.Component {
   constructor(props) {
@@ -29,6 +30,7 @@ class RentalForm extends React.Component {
     .then(document.getElementById("pre-rental").innerHTML = ("<h2>Rental Booked!</h2>"))
     .then(document.getElementById("pre-rental").setAttribute("id", "rental-requested"))
     .then(document.getElementById("rental-book-btn").style.display = "none")
+    .then(document.getElementById("rentals-idx-btn").style.display = "unset");
   }
 
   render() {
@@ -52,6 +54,10 @@ class RentalForm extends React.Component {
 
       <RentalShow 
       />
+
+      <Link to="/rentals">
+        <button id="rentals-idx-btn">Check out your rentals</button>
+      </Link>
 
       </div>
     )
