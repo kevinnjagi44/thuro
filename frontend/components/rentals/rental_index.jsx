@@ -17,6 +17,7 @@ class RentalIndex extends React.Component {
 
     return (
       <div className="rental-index-container">
+      <h1>Your Rentals</h1>
         { this.props.rentals.map((rental, i )=> 
         <div key={i} className="rental-index-tile">
           {rental.start_date}
