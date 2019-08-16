@@ -2,6 +2,8 @@ import React from 'react';
 import CarMap from '../car_map/car_map';
 import { Link } from 'react-router-dom';
 
+import CarIndexItem from './car_index_item';
+
 class CarIndex extends React.Component {
   constructor(props) {
     super(props);
@@ -13,6 +15,17 @@ class CarIndex extends React.Component {
   }
 
   render() {
+
+    const { cars } = this.props;
+
+    // const carItems = {this.props.cars.map(car => {
+      const carItems = cars.map(car => {
+      return (
+        <div key={car.id}>
+          <CarIndexItem car={car} />
+        </div>
+      )
+    })
  
     return (
 
@@ -29,9 +42,13 @@ class CarIndex extends React.Component {
 
         <div className="car-index-container">
           <div className="car-listings-container">
-          {this.props.cars.map(car=>
-            <div key={car.id}>
-              <div className="car-tile-container">
+          {/* {this.props.cars.map(car=>
+            <div key={car.id}> */}
+
+
+              {carItems}
+
+              {/* <div className="car-tile-container">
                 <Link to={`/cars/${car.id}`}>
                   <div className="car-index-photo-wrapper">
                     <img className="car-index-photo" src={car.photoUrl} />
@@ -48,9 +65,11 @@ class CarIndex extends React.Component {
                     &nbsp;{car.year}<br />
                   </span>
                 </div>
-              </div>
-            </div>
-            )}
+              </div> */}
+
+
+            {/* </div>
+            )} */}
           </div>
             
             <div className="car-map-container">
