@@ -10,6 +10,7 @@ class RentalIndex extends React.Component {
 
   componentDidMount() {
     this.props.fetchRentals();
+    window.scrollTo(0, 0);
   }
 
   render() {
