@@ -1,11 +1,11 @@
 import * as RentalAPIUtil from '../util/rental_api_util';
 
+/*  actions */
+
 export const RECEIVE_RENTALS = 'RECEIVE_RENTALS';
 export const RECEIVE_RENTAL = 'RECEIVE_RENTAL';
 export const DELETE_RENTAL = 'DELETE_RENTAL';
 // export const RECEIVE_RENTAL_ERRORS = 'RECEIVE_RENTAL_ERRORS';
-
-/*  */
 
 export const receiveRentals = (rentals) => ({
   type: RECEIVE_RENTALS,
@@ -27,7 +27,7 @@ export const removeRental = (rental) => ({
 //   errors
 // });
 
-/*  */
+/*  action creators */
 
 export const fetchRentals = () => dispatch => (
   RentalAPIUtil.fetchRentals().then(rentals => (

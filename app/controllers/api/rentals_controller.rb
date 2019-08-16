@@ -5,7 +5,7 @@ class Api::RentalsController < ApplicationController
   # before_action :require_logged_in
 
   def index
-    @rentals = Rental.all
+    @rentals = Rental.where(renter_id: current_user.id).order(start_date: :asc)
     render :index
   end
 
@@ -21,7 +21,7 @@ class Api::RentalsController < ApplicationController
     if @rental.save
       render :show
     else
-      render json: @rental.errors.full_messages
+      render json: @rental.errors.full_messages, status: 422
     end
   end
 

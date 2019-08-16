@@ -11,7 +11,8 @@ const rentalsReducer = (state = {}, action) => {
 
   switch(action.type){
     case RECEIVE_RENTALS:
-      return merge({}, state, action.rentals);
+      // return merge({}, state, action.rentals); // caused "Object(...) is not a function" error
+      return Object.assign({}, state, action.rentals);
     case RECEIVE_RENTAL:
       return Object.assign({}, state, { [action.rental.id]: action.rental });
     case DELETE_RENTAL:

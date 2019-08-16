@@ -50,7 +50,9 @@ class RentalForm extends React.Component {
         <button id="rental-book-btn" onClick={this.handleSubmit}>Book Now</button>
         
 
-      <RentalShow/>
+      <RentalShow 
+      />
+
       </div>
     )
   }

@@ -7,7 +7,7 @@
   #   json.partial! 'api/users/user', user: rental.car.owner
   # end
 
-  json.car do 
-    json.partial! 'api/cars/car', car: rental.car
-  end
+#   json.car do 
+#     json.partial! 'api/cars/car', car: rental.car
+#   end
 end
