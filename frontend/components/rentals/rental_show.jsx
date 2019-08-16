@@ -3,10 +3,8 @@ import React from 'react';
 const RentalShow = ( {rental, car}) => {
 
 
-  return (
-    <h1>test</h1>
-  )
+  return null;
 
-}
+};
 
 export default RentalShow;

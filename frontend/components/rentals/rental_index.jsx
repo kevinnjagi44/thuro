@@ -15,17 +15,25 @@ class RentalIndex extends React.Component {
 
   render() {
 
+    const { rentals } = this.props;
+
+    const rentalItems = rentals.map(rental => {
+      return (
+      <div key={rental.id}>
+        <RentalIndexItem 
+          rental={rental} 
+          fetchRentals={this.props.fetchRentals} 
+          editRental={this.props.editRental} 
+          deleteRental={this.props.deleteRental} 
+        />
+      </div>
+      )
+    })
+
     return (
-      <div className="rental-index-container">
-      <h1>Your Rentals</h1>
-        { this.props.rentals.map((rental, i )=> 
-        <div key={i} className="rental-index-tile">
-          {rental.start_date}
-        </div>
-        ) 
-      
-      }
-    </div>
+      <div>
+        {rentalItems}
+      </div>
     )
   }
 
