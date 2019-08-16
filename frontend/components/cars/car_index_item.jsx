@@ -12,7 +12,7 @@ class CarIndexItem extends React.Component {
 
     const { id, photoUrl, rate, make, model, year } = this.props.car;
 
-    return (
+    return ( 
       <div className="car-tile-container">
         {/* <Link to={`/cars/${car.id}`}> */}
         <Link to={`/cars/${id}`}>

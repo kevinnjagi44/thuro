@@ -45,7 +45,6 @@ class CarIndex extends React.Component {
           {/* {this.props.cars.map(car=>
             <div key={car.id}> */}
 
-
               {carItems}
 
               {/* <div className="car-tile-container">
@@ -66,7 +65,6 @@ class CarIndex extends React.Component {
                   </span>
                 </div>
               </div> */}
-
 
             {/* </div>
             )} */}
