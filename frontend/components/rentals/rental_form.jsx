@@ -1,7 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import 'react-dates/initialize';
-import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
+import { DateRangePicker } from 'react-dates';
+import RentalShow from './rental_show';
 
 class RentalForm extends React.Component {
   constructor(props) {
@@ -27,8 +28,7 @@ class RentalForm extends React.Component {
     this.props.processForm(newRental)
     .then(document.getElementById("pre-rental").innerHTML = ("<h2>Rental Booked!</h2>"))
     .then(document.getElementById("pre-rental").setAttribute("id", "rental-requested"))
-    .then(document.getElementById("rental-book-btn").style.display = "none");
-      // .then(alert("Booking Requested!"));
+    .then(document.getElementById("rental-book-btn").style.display = "none")
   }
 
   render() {
@@ -49,6 +49,8 @@ class RentalForm extends React.Component {
 
         <button id="rental-book-btn" onClick={this.handleSubmit}>Book Now</button>
         
+
+      <RentalShow/>
       </div>
     )
   }

@@ -2,19 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import CarMap from '../car_map/car_map';
 import RentalFormContainer from '../rentals/rental_form_container';
+import RentalShow from '../rentals/rental_show';
 
 class CarShow extends React.Component {
   constructor(props) {
     super(props);
     this.state = this.props.car;
     this.handleDelete = this.handleDelete.bind(this);
-
-
   }
 
   componentDidMount() {
     this.props.fetchCar(this.props.match.params.id);
-
   }
 
   navigateToIdx() {

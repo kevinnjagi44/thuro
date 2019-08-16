@@ -1,7 +1,6 @@
 import { connect} from 'react-redux';
 import { fetchCar, deleteCar } from '../../actions/car_actions';
 import CarShow from './car_show';
-
 import { openModal, closeModal } from '../../actions/modal_actions';
 
 const mSTP = (state, ownProps) => {
