@@ -13,7 +13,6 @@ const mDTP = (dispatch) => {
     fetchRentals: () => dispatch(fetchRentals()),
     editRental: (rental) => dispatch(editRental(rental)),
     deleteRental: (rentalId) => dispatch(deleteRental(rentalId)),
-    fetchCar: (id) => dispatch(fetchCar(id))
   };
 };
 

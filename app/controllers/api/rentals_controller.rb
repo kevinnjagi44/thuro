@@ -19,6 +19,7 @@ class Api::RentalsController < ApplicationController
     @rental.renter_id = current_user.id
 
     if @rental.save
+      @renter = @rental.renter
       render :show
     else
       render json: @rental.errors.full_messages, status: 422
