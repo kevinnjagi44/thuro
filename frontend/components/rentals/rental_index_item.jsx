@@ -8,19 +8,19 @@ class RentalIndexItem extends React.Component {
   }
 
   render() {
-
     const { rental } = this.props;
 
     const { car } = this.props;
+// debugger
 
     return (
 
-    <div>
-      <CarIndexItem 
-        car={rental.car}
-      />
+    <div className="rental-index-container">
+        <CarIndexItem 
+          car={rental.car}
+        />
     </div>
-    
+
     )
   }
 

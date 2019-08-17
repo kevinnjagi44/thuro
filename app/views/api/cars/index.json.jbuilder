@@ -4,7 +4,6 @@
 
     if car.photos.attachments
       json.photoUrl url_for(car.photos.first) 
-      # json.photoUrl url_for(car.photos[0]) 
     end 
 
   end

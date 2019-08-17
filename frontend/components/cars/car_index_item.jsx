@@ -10,7 +10,7 @@ class CarIndexItem extends React.Component {
 
   render() {
 
-    const { id, photoUrl, rate, make, model, year } = this.props.car;
+    const { id, rate, make, model, year } = this.props.car;
 
     return ( 
       <div className="car-tile-container">
@@ -18,7 +18,7 @@ class CarIndexItem extends React.Component {
         <Link to={`/cars/${id}`}>
           <div className="car-index-photo-wrapper">
             {/* <img className="car-index-photo" src={car.photoUrl} /> */}
-            <img className="car-index-photo" src={photoUrl} />
+            <img className="car-index-photo" src={this.props.car.photoUrl || this.props.car.photoUrls[0]} />
           </div>
         </Link>
         <div className="car-price">

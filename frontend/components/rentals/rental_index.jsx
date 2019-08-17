@@ -15,7 +15,11 @@ class RentalIndex extends React.Component {
 
   render() {
 
-    const { rentals } = this.props;
+      const { rentals } = this.props;
+    
+      if (!rentals) {
+        return <h1>Loading</h1>
+      }
 
     const rentalItems = rentals.map(rental => {
       return (
