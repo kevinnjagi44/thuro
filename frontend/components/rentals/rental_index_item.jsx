@@ -18,9 +18,9 @@ class RentalIndexItem extends React.Component {
 
     const { car } = this.props.rental;
 
-    const GetDate = (date) => {
+    const ConvertDate = (date) => {
       let newDate = new Date(date);
-      return `${newDate.getMonth()}/${newDate.getDay()}/${newDate.getYear()}`;
+      return `${1 + newDate.getMonth()}/${newDate.getDate()}/${1900 + newDate.getYear()}`;
     };
 
     const CalcDays = (end, start) => {
@@ -37,7 +37,7 @@ class RentalIndexItem extends React.Component {
         <div className="rental-index-tile-details">
           {rental.status.slice(0, 1).toUpperCase() + rental.status.slice(1)}
           <br/>
-          {GetDate(rental.start_date)} - {GetDate(rental.end_date)}
+          {ConvertDate(rental.start_date)} - {ConvertDate(rental.end_date)}
           <br/>
           {(() => {
             let days = CalcDays(rental.end_date, rental.start_date);
