@@ -58,6 +58,7 @@ class RentalIndex extends React.Component {
 
     return (
       <div className="rental-index-container">
+        <h2>Your Rentals</h2>
         <DisplayRentals/>
       </div>
     )
