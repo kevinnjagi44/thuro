@@ -31,8 +31,8 @@ const App = () => (
       <Route exact path="/cars" component={CarIndexContainer} />
       <Route exact path="/cars/new" component={CarCreateContainer} />
       <Route exact path="/cars/:id" component={CarShowContainer} />
-      <ProtectedRoute exact path="/cars/:id/edit" component={CarUpdateContainer} />
-      <ProtectedRoute exact path="/rentals" component={RentalIndexContainer} />
+      <Route exact path="/cars/:id/edit" component={CarUpdateContainer} />
+      <Route exact path="/rentals" component={RentalIndexContainer} />
       <Route path="/" component={Main} />
     </Switch>
 

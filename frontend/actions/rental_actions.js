@@ -35,8 +35,8 @@ export const fetchRentals = () => dispatch => (
   ))
 ); 
 
-export const fetchRental = (bookingId) => dispatch => (
-  RentalAPIUtil.fetchRental(bookingId).then(rental => (
+export const fetchRental = (rentalId) => dispatch => (
+  RentalAPIUtil.fetchRental(rentalId).then(rental => (
     dispatch(receiveRental(rental))
   ))
 );

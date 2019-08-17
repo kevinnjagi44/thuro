@@ -19,7 +19,7 @@ class RentalIndex extends React.Component {
       <Redirect to="/" />
       )
     }
-
+    
     const { rentals } = this.props;
   
     if (!rentals) {
