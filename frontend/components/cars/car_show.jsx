@@ -42,14 +42,14 @@ class CarShow extends React.Component {
 
       if (this.props.car.owner_id === this.props.currentUserId) {
         showEditDel = 
-        <>
+        <div className="car-show-edit-del">
           <Link to={`/cars/${this.props.car.id}/edit`}>
             <button>Edit this car</button>
           </Link>
           <br />
           <button onClick={(e) => { if (window.confirm('Are you sure you wish to delete this item?')) {this.handleDelete(e)} } }>Delete this car</button>
           {/* <button onClick={this.handleDelete}>Delete this car</button> */}
-        </>
+        </div>
       }
 
     const randomNumber = (min, max) => {
@@ -262,9 +262,9 @@ class CarShow extends React.Component {
 
                 </div>
 
-                <div className="car-show-edit-del">
+                {/* <div className="car-show-edit-del"> */}
                   {showEditDel}
-                </div>
+                {/* </div> */}
 
                 <div className="car-show-distance-header">
                   Distance included

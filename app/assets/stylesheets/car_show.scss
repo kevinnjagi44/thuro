@@ -222,7 +222,7 @@
   border-radius: 30px 30px 0 0;
 
   .car-show-rental {
-    padding: 15px 0 10px 0;
+    padding: 15px 0 25px 0;
     color: black;
   }  
 
@@ -326,5 +326,7 @@
 }
 
 .car-show-edit-del {
+  padding-top: 10px;  
   padding-bottom: 10px;
+  border-top: 1px solid #e6e6e6;
 }
