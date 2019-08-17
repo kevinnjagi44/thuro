@@ -1,5 +1,3 @@
-//TODO: Use this component for the user show page to track rentals.
-
 import React from 'react';
 import RentalIndexItem from './rental_index_item';
 
@@ -11,6 +9,10 @@ class RentalIndex extends React.Component {
   componentDidMount() {
     this.props.fetchRentals();
     window.scrollTo(0, 0);
+  }
+
+  handleDelete(rentalId) {
+    this.props.deleteRental(rentalId);
   }
 
   render() {
