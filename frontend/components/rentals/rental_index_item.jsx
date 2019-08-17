@@ -24,7 +24,7 @@ class RentalIndexItem extends React.Component {
           car={rental.car}
         />
         <div className="rental-index-tile-details">
-          <button onClick={() => this.handleDelete(rental.id)}>Cancel Booking</button>
+          <button onClick={() => { if (window.confirm('Are you sure you wish to cancel this rental?')) {this.handleDelete(rental.id)} } }>Cancel Rental</button>
         </div>
       </>
 
