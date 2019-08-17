@@ -3,11 +3,14 @@
   color: black;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2vw;
 }
 
 .rental-index-tile {
   box-shadow: 10px 10px 8px #888888;
-  height: 10vh;
-  width: 10vw;
-  flex-wrap: wrap;
+  margin: 15px 0 0 0;
+  width: 80vw;
+  background: #fafafa;
 }

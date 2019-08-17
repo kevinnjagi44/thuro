@@ -21,9 +21,10 @@ class RentalIndex extends React.Component {
         return <h1>Loading</h1>
       }
 
+      
     const rentalItems = rentals.map(rental => {
       return (
-      <div key={rental.id}>
+      <div className="rental-index-tile" key={rental.id}>
         <RentalIndexItem 
           rental={rental} 
           fetchRentals={this.props.fetchRentals} 
@@ -35,7 +36,7 @@ class RentalIndex extends React.Component {
     })
 
     return (
-      <div>
+      <div className="rental-index-container">
         {rentalItems}
       </div>
     )

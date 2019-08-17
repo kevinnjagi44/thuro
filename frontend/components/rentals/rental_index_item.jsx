@@ -15,11 +15,11 @@ class RentalIndexItem extends React.Component {
 
     return (
 
-    <div className="rental-index-container">
+      <>
         <CarIndexItem 
           car={rental.car}
         />
-    </div>
+      </>
 
     )
   }
