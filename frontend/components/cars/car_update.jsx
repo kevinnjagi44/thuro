@@ -207,7 +207,7 @@ class CarUpdate extends React.Component {
 
           {/* <input type="file" onChange={e => this.setState({ photos: e.target.files })} multiple /> */}
 
-          //TODO: Get image upload to work on update page.
+          {/* TODO: Get image upload to work on update page. */}
 
           <br />
 

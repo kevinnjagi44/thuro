@@ -64,6 +64,6 @@ class RentalIndex extends React.Component {
   }
 }
 
-//TODO: Fix logout modal placement and protected routes.
+// TODO: Fix logout modal placement and protected routes.
 
 export default RentalIndex;
