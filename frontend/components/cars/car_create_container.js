@@ -40,7 +40,8 @@ const mSTP = state => ({
     photos: []
   },
   formType: 'create',
-  errors: state.errors.session
+  errors: state.errors.session,
+  currentUserId: state.session.id
 });
 
 const mDTP = dispatch => ({

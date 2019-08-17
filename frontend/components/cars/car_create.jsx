@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Redirect } from 'react-router-dom';
 
 class CarCreate extends React.Component {
   constructor(props) {
@@ -157,6 +157,12 @@ class CarCreate extends React.Component {
     // if (!this.props.formFields) {
     //   return null;
     // }
+
+    if (!this.props.currentUserId) {
+      return (
+      <Redirect to="/cars" />
+      )
+    }
 
     return (
       <div className="car-create-container">
