@@ -26,7 +26,8 @@ const mDTP = dispatch => {
         Sign Up
       </button>
     ),
-    closeModal: () => dispatch(closeModal())
+    closeModal: () => dispatch(closeModal()),
+    fetchRentals: () => dispatch(fetchRentals())
   };
 };
 

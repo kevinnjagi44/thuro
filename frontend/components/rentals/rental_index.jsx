@@ -1,6 +1,6 @@
 import React from 'react';
 import RentalIndexItem from './rental_index_item';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 class RentalIndex extends React.Component {
   constructor(props) {
@@ -12,11 +12,13 @@ class RentalIndex extends React.Component {
     window.scrollTo(0, 0);
   }
 
-  handleDelete(rentalId) {
-    this.props.deleteRental(rentalId);
-  }
-
   render() {
+
+    if (!this.props.currentUserId) {
+      return (
+      <Redirect to="/" />
+      )
+    }
 
     const { rentals } = this.props;
   
@@ -60,7 +62,6 @@ class RentalIndex extends React.Component {
       </div>
     )
   }
-//TODO: NEED TO FIX: User2 can see User1's rentals unless they refresh Rental index.
 }
 
 export default RentalIndex;

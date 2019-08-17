@@ -4,7 +4,8 @@ import { fetchRentals, deleteRental } from '../../actions/rental_actions';
 
 const mSTP = (state) => {
   return {
-    rentals: Object.values(state.entities.rentals)
+    rentals: Object.values(state.entities.rentals),
+    currentUserId: state.session.id
   };
 };
 

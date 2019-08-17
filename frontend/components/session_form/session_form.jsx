@@ -14,7 +14,7 @@ class SessionForm extends React.Component {
     // this.handleDemoUser = this.handleDemoUser.bind(this);
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     this.props.clearErrors();
   }
 
@@ -68,7 +68,8 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user)
-      .then(this.props.closeModal);
+      .then(this.props.closeModal)
+      .then(this.props.fetchRentals);
   }
 
 
