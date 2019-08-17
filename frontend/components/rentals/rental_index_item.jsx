@@ -24,6 +24,17 @@ class RentalIndexItem extends React.Component {
           car={rental.car}
         />
         <div className="rental-index-tile-details">
+          status
+          <br/>
+          startdate - end date
+          <br/>
+          X days
+          <br/>
+          price per day x # of days
+          <br/>
+          total
+        </div>
+        <div className="rental-index-tile-details">
           <button onClick={() => { if (window.confirm('Are you sure you wish to cancel this rental?')) {this.handleDelete(rental.id)} } }>Cancel Rental</button>
         </div>
       </>

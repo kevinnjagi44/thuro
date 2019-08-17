@@ -9,18 +9,46 @@
 }
 
 .rental-index-tile {
-  box-shadow: 10px 10px 8px #888888;
+  // box-shadow: 10px 10px 8px #888888;
+  box-shadow: 1px 2px 4px 4px #888888;
   margin: 15px 0 0 0;
   width: 80vw;
   background: #fafafa;
-  padding: 5px;
+  padding: 10px;
   display: flex;
-  justify-content: space-around;  
+  justify-content: space-between;  
+
+  .car-price {
+    display: none;
+  }
+
+  .car-tile-container {
+    padding: 0 0 0 0;
+  }
+
 }
 
 .rental-index-tile-details {
   color: #231F20;
   font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
+
+  button {
+    border: none;
+    color: white;
+    background-color: #e92727;
+    font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    opacity: 0.8;
+    transition: 0.7s;  
+    height: 28px; 
+  }
+
+  button:hover {
+    opacity: 1;
+    background-color: #e92727;
+  }
 }
 
 .rental-index-no-rentals {
