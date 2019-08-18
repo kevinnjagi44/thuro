@@ -5,7 +5,7 @@ import Root from './components/root';
 import {login, signup, logout} from './actions/session_actions';
 import {fetchCars, fetchCar, editCar, createCar, deleteCar} from './actions/car_actions';
 import {fetchRentals, fetchRental, editRental, createRental, deleteRental} from './actions/rental_actions';
-import {fetchReviews, fetchReview, editReview, createReview, deleteReview} from './review_actions';
+import {fetchReviews, fetchReview, editReview, createReview, deleteReview} from './actions/review_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
 	let store;

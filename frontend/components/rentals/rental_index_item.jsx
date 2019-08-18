@@ -48,7 +48,7 @@ class RentalIndexItem extends React.Component {
             <li>
               Daily Rate: 
             </li>
-            <li style={{"font-weight": "700"}}>
+            <li style={{"fontWeight": "700"}}>
               Total: 
             </li>
           </ul>
@@ -69,7 +69,7 @@ class RentalIndexItem extends React.Component {
             <li>
               ${car.rate} per day
             </li>
-            <li style={{"font-weight": "700"}}>
+            <li style={{"fontWeight": "700"}}>
               ${car.rate * CalcDays(rental.end_date, rental.start_date)}
             </li>
           </ul>
