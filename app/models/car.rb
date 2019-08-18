@@ -37,6 +37,8 @@
 #  sunroof           :boolean          default(FALSE), not null
 #  toll_pass         :boolean          default(FALSE), not null
 #  usb_input         :boolean          default(FALSE), not null
+#  doors             :integer
+#
 
 class Car < ApplicationRecord
 
@@ -59,6 +61,10 @@ class Car < ApplicationRecord
   has_many :rentals,
     foreign_key: :car_id,
     class_name: :Rental
+
+  has_many :reviews,
+    foreign_key: :car_id,
+    class_name: :Review
 
   # has_many :features,
   #   through: :car_features,
