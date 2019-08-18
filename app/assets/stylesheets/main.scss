@@ -60,3 +60,30 @@ a {
     height:20px;
     padding-right: 5px;
 }
+
+.mid-insurance-container {
+    position: relative;
+    border-radius: 25px 25px 0 0;
+    background-color: #fff;
+    display: block;
+    width: 287px;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 24px;
+    text-align: center;
+
+    .mid-insurance {
+        align-content: center;
+    }
+
+    .mid-ins-header {
+        font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        color: #949494;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+}

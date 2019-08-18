@@ -66,6 +66,15 @@ class Main extends React.Component {
       {/* Middle */} 
 
         <div className="mid-container">
+
+          <div className="mid-insurance-container">
+            <div className="mid-insurance">
+              <span className="mid-ins-header">
+                Insurance Provider
+              </span>
+            </div>
+          </div>
+
           <h3 className="mid-h2">Skip The Rental Counter</h3>
           <br/>
           <h2 className="mid-h3">Discover the world’s largest car sharing marketplace</h2>
