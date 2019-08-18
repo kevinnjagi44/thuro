@@ -5,6 +5,7 @@ import Root from './components/root';
 import {login, signup, logout} from './actions/session_actions';
 import {fetchCars, fetchCar, editCar, createCar, deleteCar} from './actions/car_actions';
 import {fetchRentals, fetchRental, editRental, createRental, deleteRental} from './actions/rental_actions';
+import {fetchReviews, fetchReview, editReview, createReview, deleteReview} from './review_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
 	let store;
@@ -29,21 +30,28 @@ document.addEventListener('DOMContentLoaded', () => {
 	//TESTING START
 	window.getState = store.getState;
 	window.dispatch = store.dispatch;
+	/* users */
 	window.login = login;
 	window.signup = signup;
 	window.logout = logout;
-	//*cars*//
+	/* cars */
 	window.fetchCars = fetchCars;
 	window.fetchCar = fetchCar;
 	window.editCar = editCar;
 	window.createCar = createCar;
 	window.deleteCar = deleteCar;
-	//*rentals*//
+	/* rentals */
 	window.fetchRentals = fetchRentals;
 	window.fetchRental = fetchRental;
 	window.editRental = editRental;
 	window.createRental = createRental;
 	window.deleteRental = deleteRental;
+	/* reviews */
+	window.fetchReviews = fetchReviews;
+	window.fetchReview = fetchReview;
+	window.editReview = editReview;
+	window.createReview = createReview;
+	window.deleteReview = deleteReview;
 	//TESTING END
 	
 	const root = document.getElementById('root');
