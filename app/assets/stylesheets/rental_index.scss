@@ -38,6 +38,8 @@
 .rental-index-tile-details {
   color: #231F20;
   font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
+  display: flex;
+  justify-content: space-between;
 
   button {
     border: none;
@@ -49,7 +51,7 @@
     font-size: 16px;
     opacity: 0.8;
     transition: 0.7s;  
-    height: auto; 
+    height: 20%; 
     padding: 5px;
   }
 
@@ -57,6 +59,11 @@
     opacity: 1;
     background-color: #e92727;
   }
+}
+
+.rental-index-ul {
+  line-height: 2;
+  margin: 20px 12px 0 12px;
 }
 
 .rental-index-no-rentals {

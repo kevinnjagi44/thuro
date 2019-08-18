@@ -35,18 +35,44 @@ class RentalIndexItem extends React.Component {
           car={rental.car}
         />
         <div className="rental-index-tile-details">
-          {rental.status.slice(0, 1).toUpperCase() + rental.status.slice(1)}
-          <br/>
-          {ConvertDate(rental.start_date)} - {ConvertDate(rental.end_date)}
-          <br/>
-          {(() => {
-            let days = CalcDays(rental.end_date, rental.start_date);
-            return days > 1 ? `${days} days` : `${days} day`;
-          })()}
-          <br/>
-          ${car.rate} per day
-          <br/>
-          Total: ${car.rate * CalcDays(rental.end_date, rental.start_date)}
+          <ul className="rental-index-ul">
+            <li>
+              Status: 
+            </li>
+            <li>
+              Start to End: 
+            </li>
+            <li>
+              # of Days: 
+            </li>
+            <li>
+              Daily Rate: 
+            </li>
+            <li style={{"font-weight": "700"}}>
+              Total: 
+            </li>
+          </ul>
+
+          <ul className="rental-index-ul">
+            <li>
+              {rental.status.slice(0, 1).toUpperCase() + rental.status.slice(1)}
+            </li>
+            <li>
+              {ConvertDate(rental.start_date)} - {ConvertDate(rental.end_date)}
+            </li>
+            <li>
+              {(() => {
+                let days = CalcDays(rental.end_date, rental.start_date);
+                return days > 1 ? `${days} days` : `${days} day`;
+              })()}
+            </li>
+            <li>
+              ${car.rate} per day
+            </li>
+            <li style={{"font-weight": "700"}}>
+              ${car.rate * CalcDays(rental.end_date, rental.start_date)}
+            </li>
+          </ul>
         </div>
         <div className="rental-index-tile-details">
           <button onClick={() => { if (window.confirm('Are you sure you wish to cancel this rental?')) {this.handleDelete(rental.id)} } }>Cancel Rental</button>
