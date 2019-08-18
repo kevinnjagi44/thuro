@@ -43,7 +43,7 @@ Torino is a full stack web application inspired by Turo, a peer-to-peer carshari
 
 ### APIs
 * Google Maps
-* React Dates (coming soon)
+* React Dates
 
 ## Features:
 
@@ -59,13 +59,8 @@ Users are required to sign up in order to post. An automated demo login button c
 
 <img src="https://github.com/fsiino/torino/blob/master/app/assets/images/readme/readme-login.png?raw=true" alt="Login Modal" width=50%>
 
-### Car Creation
+### Car Create, Update, & Delete
 Car owners can post their cars for rent, selecting optional features such as heated seats, GPS, or bluetooth. Mandatory fields such as transmission are also included for potential renter decision-making.
-
-###
-
-
-### Update & Deletion
 
 In addition to creation, owners can make edits and delete their listings. Edit and delete options are displayed on the car show page <b>if</b> the current user is recognized as an owner. As an added security measure, any attempt to access another owner's car edit page URL forcefully redirects to the index:
 
@@ -86,7 +81,10 @@ render() {
     }
 ```
 
-<!-- ### Rentals -->
+### Rentals
+Once a potential customer finds a car they like, a rental can be booked on the right side of the car show page. After accepting the confirmation dialog, a new div will appear in the same pane giving the user the option to navigate to their rentals page for review.
+
+![User Rentals Page](https://github.com/fsiino/torino/blob/master/app/assets/images/readme/readme-rentals.png?raw=true)
 
 ```
 TRANSMISSION_TYPE = %w(automatic manual none).freeze
@@ -107,9 +105,12 @@ has_many :rentals,
   foreign_key: :car_id,
   class_name: :Rental
 
+has many :reviews,
+  foreign_key: :car_id,
+  class_name: :Review
+
 has_many_attached :photos
   ```
-
 
 ## Future Releases:
 * Reviews
@@ -117,4 +118,4 @@ has_many_attached :photos
 * Search
 * User Dashboards
 * Add to Favorites
-* Improve cross-device responsiveness
+* Mobile device responsiveness
