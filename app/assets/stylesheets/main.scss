@@ -69,7 +69,7 @@ a {
     width: 287px;
     margin-left: auto;
     margin-right: auto;
-    bottom: 24px;
+    bottom: 31px;
     text-align: center;
 
     .mid-insurance {
@@ -84,6 +84,11 @@ a {
         text-transform: uppercase;
         text-align: center;
         margin: 10px 0;
+    }
+
+    .mid-ins-img {
+        width: 67%;
+        padding: 10px;
     }
 
 }

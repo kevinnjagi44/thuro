@@ -67,13 +67,13 @@ class Main extends React.Component {
 
         <div className="mid-container">
 
-          <div className="mid-insurance-container">
+          {/* <div className="mid-insurance-container">
             <div className="mid-insurance">
               <span className="mid-ins-header">
-                Insurance Provider
+                <img className="mid-ins-img" src="https://github.com/fsiino/torino/blob/master/app/assets/images/insurance-fr.png?raw=true" alt="Freedom Reciprocal" />
               </span>
             </div>
-          </div>
+          </div> */}
 
           <h3 className="mid-h2">Skip The Rental Counter</h3>
           <br/>
