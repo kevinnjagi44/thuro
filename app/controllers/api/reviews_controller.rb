@@ -45,7 +45,7 @@ class Api::ReviewsController < ApplicationController
     params.require(:review).permit(
       :author_id,
       :car_id,
-      :rating
+      :rating,
       :title,
       :body
     )
