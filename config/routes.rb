@@ -7,10 +7,11 @@ Rails.application.routes.draw do
     
     resources :cars, only: [:create, :index, :show, :update, :destroy] do 
       resources :rentals, only: [:create]
+      resources :reviews, only: [:create, :index]
     end
 
     resources :rentals, only: [:index, :show, :update, :destroy]
-
+    resources :reviews, only: [:show, :update, :destroy]
   end
 
   # resources :cars, only: [:show] # Test photo display
