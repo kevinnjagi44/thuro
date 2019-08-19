@@ -46,10 +46,10 @@ ActiveRecord::Base.transaction do
   # Seed Cars
   car1 = Car.create!(
     owner_id: frankie.id,
-    rate: rand(85..165),
+    rate: 168,
     make: 'Ford',
     model: 'Mustang', 
-    year: 2012,
+    year: 2017,
     color: 'black',
     transmission: 'manual',
     seats: 4,
@@ -70,9 +70,9 @@ ActiveRecord::Base.transaction do
   )
   car1.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/stang.jpg'), filename: 'car1_stang.jpg')
 
-  car10 = Car.create!(
+  car2 = Car.create!(
     owner_id: frankie.id,
-    rate: rand(400..500),
+    rate: 490,
     make: 'Ferrari',
     model: 'F50', 
     year: 1995,
@@ -92,11 +92,11 @@ ActiveRecord::Base.transaction do
     gps: true,
     convertible: true
   )
-  car10.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/ferrari.jpg'), filename: 'car10_ferrari.jpg')
+  car2.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/ferrari.jpg'), filename: 'car2_ferrari.jpg')
 
-  car2 = Car.create!(
+  car3 = Car.create!(
     owner_id: steve.id,
-    rate: rand(85..165),
+    rate: 180,
     make: 'Lexus',
     model: 'IS350', 
     year: 2018,
@@ -118,11 +118,11 @@ ActiveRecord::Base.transaction do
     bluetooth: true,
     usb_input: true
   )
-  car2.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/is350.jpg'), filename: 'car2_is350.jpg')
+  car3.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/is350.jpg'), filename: 'car3_is350.jpg')
 
-  car3 = Car.create!(
+  car4 = Car.create!(
     owner_id: pop.id,
-    rate: rand(85..165),
+    rate: 150,
     make: 'Fiat',
     model: 'Spyder', 
     year: 1975,
@@ -141,11 +141,11 @@ ActiveRecord::Base.transaction do
     lng: -122.388470,
     convertible: true
   )
-  car3.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/fiat.jpg'), filename: 'car3_fiat.jpg')
+  car4.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/fiat.jpg'), filename: 'car4_fiat.jpg')
 
-  car4 = Car.create!(
+  car5 = Car.create!(
     owner_id: frankie.id,
-    rate: rand(85..165),
+    rate: 105,
     make: 'Ford',
     model: 'Mustang FOX body', 
     year: 1991,
@@ -166,11 +166,11 @@ ActiveRecord::Base.transaction do
     child_seat: true,
     snow_tires_chains: true
   )
-  car4.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/fox.jpg'), filename: 'car4_fox.jpg')
+  car5.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/fox.jpg'), filename: 'car5_fox.jpg')
 
-  car5 = Car.create!(
+  car6 = Car.create!(
     owner_id: frankie.id,
-    rate: rand(85..165),
+    rate: 140,
     make: 'Ford',
     model: 'Falcon', 
     year: 1990,
@@ -192,11 +192,11 @@ ActiveRecord::Base.transaction do
     sunroof: true,
     ski_rack: true
   )
-  car5.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/falcon.jpg'), filename: 'car5_falcon.jpg')
+  car6.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/falcon.jpg'), filename: 'car6_falcon.jpg')
 
-  car6 = Car.create!(
+  car7 = Car.create!(
     owner_id: frankie.id,
-    rate: rand(85..165),
+    rate: 120,
     make: 'Mercedes-Benz',
     model: 'S Turbo Diesel', 
     year: 1980,
@@ -216,11 +216,11 @@ ActiveRecord::Base.transaction do
     child_seat: true,
     toll_pass: true
   )
-  car6.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/mercedes.jpg'), filename: 'car6_mercedes.jpg')
+  car7.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/mercedes.jpg'), filename: 'car7_mercedes.jpg')
 
-  car11 = Car.create!(
+  car8 = Car.create!(
     owner_id: frankie.id,
-    rate: rand(400..500),
+    rate: 520,
     make: 'Lamborghini',
     model: 'Aventador', 
     year: 2018,
@@ -242,9 +242,9 @@ ActiveRecord::Base.transaction do
     audio_input: true,
     bluetooth: true
   )
-  car11.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/lambo.jpg'), filename: 'car10_lambo.jpg')
+  car8.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/lambo.jpg'), filename: 'car8_lambo.jpg')
 
-  car7 = Car.create!(
+  car9 = Car.create!(
     owner_id: frankie.id,
     rate: 600,
     make: 'Ford',
@@ -266,11 +266,11 @@ ActiveRecord::Base.transaction do
     toll_pass: true,
     longterm_car: true
   )
-  car7.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/gran-torino.jpg'), filename: 'car7_gran-torino.jpg')
+  car9.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/gran-torino.jpg'), filename: 'car9_gran-torino.jpg')
 
-  car8 = Car.create!(
+  car10 = Car.create!(
     owner_id: frankie.id,
-    rate: rand(85..165),
+    rate: 175,
     make: 'Tesla',
     model: 'Model 3', 
     year: 2019,
@@ -294,11 +294,11 @@ ActiveRecord::Base.transaction do
     usb_input: true,
     audio_input: true
   )
-  car8.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/model3.jpg'), filename: 'car8_model3.jpg')
+  car10.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/model3.jpg'), filename: 'car10_model3.jpg')
 
-  car9 = Car.create!(
+  car11 = Car.create!(
     owner_id: frankie.id,
-    rate: rand(85..165),
+    rate: 160,
     make: 'Fiat',
     model: 'Spyder', 
     year: 2018,
@@ -321,6 +321,34 @@ ActiveRecord::Base.transaction do
     pet_friendly: true,
     bluetooth: true
   )
-  car9.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/fiat-new.jpg'), filename: 'car9_fiat-new.jpg')
+  car11.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/fiat-new.jpg'), filename: 'car11_fiat-new.jpg')
+
+  car12 = Car.create!(
+    owner_id: pop.id,
+    rate: 200,
+    make: 'Jeep',
+    model: 'Wrangler Rubicon', 
+    year: 2018,
+    color: 'green',
+    transmission: 'automatic',
+    seats: 5,
+    doors: 4,
+    description: 'Very rugged car. Drive with the top down and purposely swerve into mud puddles. Feel free to get it as dirty as you want.',
+    plate: '47DJR2K',
+    address: '1776 24th Ave.',
+    city: 'San Francisco',
+    state: 'CA',
+    mpg: 23,
+    zip: 94121,
+    lat: rand(37.714118..37.787958),
+    lng: rand(-122.504908..-122.390212),
+    gps: true,
+    convertible: true,
+    usb_input: true,
+    snow_tires_chains: true,
+    bluetooth: true,
+    audio_input: true
+)
+car12.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/jeep.jpg'), filename: 'car12_jeep.jpg')
 
 end
