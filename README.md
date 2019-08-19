@@ -55,8 +55,6 @@ Torino is a full stack web application inspired by Turo, a peer-to-peer carshari
 
 Users are required to sign up in order to post. An automated demo login button can be found on the login modal for quicker access to the UX.
 
-<!-- ![Torino Login Modal](https://github.com/fsiino/torino/blob/master/app/assets/images/readme/readme-login.png?raw=true  -->
-
 <img src="https://github.com/fsiino/torino/blob/master/app/assets/images/readme/readme-login.png?raw=true" alt="Login Modal" width=50%>
 
 ### Car Create, Update, & Delete
@@ -82,7 +80,7 @@ render() {
 ```
 
 ### Rentals
-Once a potential customer finds a car they like, a rental can be booked on the right side of the car show page. After accepting the confirmation dialog, a new div will appear in the same pane giving the user the option to navigate to their rentals page for review.
+Once a potential customer finds a car they like, a rental can be booked on the right side of the car show page. After accepting the confirmation dialog, a new ```<div>``` will appear in the same pane giving the user the option to navigate to their rentals page for review.
 
 ![User Rentals Page](https://github.com/fsiino/torino/blob/master/app/assets/images/readme/readme-rentals.png?raw=true)
 
