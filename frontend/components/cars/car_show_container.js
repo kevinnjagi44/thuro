@@ -7,10 +7,10 @@ import { fetchRentals } from '../../actions/rental_actions';
 
 const mSTP = (state, ownProps) => {
   const carId = ownProps.match.params.id; 
-  return ({
+  return {
     car: state.entities.cars[carId],
     currentUserId: state.session.id,
-  });
+  };
 };
 
 const mDTP = (dispatch) => ({

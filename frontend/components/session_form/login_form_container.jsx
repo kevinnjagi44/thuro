@@ -6,7 +6,7 @@ import SessionForm from './session_form';
 import { openModal, closeModal } from '../../actions/modal_actions';
 
 const mSTP = ({ errors }) => {
-  return ({
+  return {
     errors: errors.session,
     formType: 'login',
     formFields: {
@@ -14,7 +14,7 @@ const mSTP = ({ errors }) => {
       password: ''
     },
     navLink: <Link to="/signup">Sign Up Instead</Link>
-  });
+  };
 };
 
 const mDTP = dispatch => {

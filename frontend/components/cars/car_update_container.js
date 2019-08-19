@@ -4,13 +4,13 @@ import CarUpdate from './car_update';
 import {withRouter} from 'react-router-dom';
 
 const mSTP = (state, ownProps) => {
-  return ({
+  return {
     car: state.entities.cars[ownProps.match.params.id],
     currentUserId: state.session.id,
     errors: state.errors.session,
     formType: 'update',
     photos: []
-  });
+  };
 };
 
 const mDTP = (dispatch) => ({

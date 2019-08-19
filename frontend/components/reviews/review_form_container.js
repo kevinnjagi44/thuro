@@ -1,17 +1,18 @@
 import { connect } from 'react-redux';
 import { createReview } from '../../actions/review_actions';
-import ReviewForm from '/reviews_form';
+import ReviewForm from './review_form';
 import { closeModal } from '../../actions/modal_actions';
 
-const mSTP = (state) => {
+const mSTP = (state, ownProps) => {
   return {
-    currentUserId: state.session.id
+    currentUserId: state.session.id,
+    carId: ownProps.carId
   };
 };
 
 const mDTP = dispatch => {
   return {
-    processForm: review => dispatch(createReview(review)),
+    action: review => dispatch(createReview(review)),
     closeModal: () => dispatch(closeModal())
   };
 };

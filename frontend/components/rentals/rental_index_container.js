@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import RentalIndex from './rental_index';
 import { fetchRentals, deleteRental } from '../../actions/rental_actions';
+import { openReviewModal } from '../../actions/modal_actions';
 
 const mSTP = (state) => {
   return {
@@ -14,6 +15,7 @@ const mDTP = (dispatch) => {
     fetchRentals: () => dispatch(fetchRentals()),
     editRental: (rental) => dispatch(editRental(rental)),
     deleteRental: (rentalId) => dispatch(deleteRental(rentalId)),
+    openReviewModal: (modal, carId) => dispatch(openReviewModal(modal, carId))
   };
 };
 

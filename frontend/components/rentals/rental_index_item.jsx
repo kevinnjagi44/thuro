@@ -1,15 +1,21 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import CarIndexItem from '../cars/car_index_item';
+import { openReviewModal } from '../../actions/modal_actions';
 
 class RentalIndexItem extends React.Component {
   constructor(props) {
     super(props);
     this.handleDelete = this.handleDelete.bind(this);
+    this.handleCreateReview = this.handleCreateReview.bind(this);
   }
 
   handleDelete(rentalId) {
     this.props.deleteRental(rentalId);
+  }
+
+  handleCreateReview(modal, carId) {
+    this.props.openReviewModal(modal, carId);
   }
 
   render() {
@@ -76,6 +82,9 @@ class RentalIndexItem extends React.Component {
         </div>
         <div className="rental-index-tile-details">
           <button onClick={() => { if (window.confirm('Are you sure you wish to cancel this rental?')) {this.handleDelete(rental.id)} } }>Cancel Rental</button>
+          <br/> <br/>
+          {/* <button onClick={this.handleCreateReview('create-review', car.id)}>Write A Review</button> */}
+          {/* <button onClick={() => dispatch(openReviewModal('create-review', rental.car.id)) }>Write A Review</button> */}
         </div>
       </>
 
