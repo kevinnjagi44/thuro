@@ -24,7 +24,9 @@ Things you may want to cover:
 * ... -->
 
 
-# Torino
+<!-- # Torino -->
+![Torino](https://github.com/fsiino/torino/blob/master/app/assets/images/torino-logo.png?raw=true)
+
 Torino is a full stack web application inspired by Turo, a peer-to-peer carsharing company.
 
 [Live Link](https://torino-fsp.herokuapp.com/#/)
@@ -40,10 +42,10 @@ Torino is a full stack web application inspired by Turo, a peer-to-peer carshari
 * React
 * Redux
 * Javascript
+* React Dates
 
 ### APIs
 * Google Maps
-* React Dates
 
 ## Features:
 
@@ -53,7 +55,49 @@ Torino is a full stack web application inspired by Turo, a peer-to-peer carshari
 
 ### User Authentication
 
-Users are required to sign up in order to post. An automated demo login button can be found on the login modal for quicker access to the UX.
+Users are required to sign up in order to create cars and book rentals. User credentials are stored as a password digest after being hashed and salted:
+
+ ```
+ class User < ApplicationRecord
+    validates :fname, :lname, presence: true
+    validates :email, :password_digest, :session_token, presence: true
+    validates :email, uniqueness: true
+    validates :password, length: { minimum: 6 }, allow_nil: true
+
+    ...
+
+    after_initialize :ensure_session_token
+
+    attr_reader :password
+
+    def self.find_by_credentials(email, password)
+        user = User.find_by(email: email)
+        return nil unless user && user.is_password?(password)
+        user
+    end
+
+    def password=(password)
+        @password = password
+        self.password_digest = BCrypt::Password.create(password)
+    end
+
+    def is_password?(password)
+        BCrypt::Password.new(self.password_digest).is_password?(password)
+    end
+
+    def reset_session_token
+        self.session_token = SecureRandom.urlsafe_base64
+        self.save!
+        self.session_token
+    end
+
+    def ensure_session_token
+        self.session_token ||= SecureRandom.urlsafe_base64
+    end
+end
+```
+ 
+ An automated demo login button can be found on the login modal for quicker access to the UX.
 
 <img src="https://github.com/fsiino/torino/blob/master/app/assets/images/readme/readme-login.png?raw=true" alt="Login Modal" width=30%>
 
