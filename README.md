@@ -25,7 +25,13 @@ Things you may want to cover:
 
 
 <!-- # Torino -->
-![Torino](https://github.com/fsiino/torino/blob/master/app/assets/images/readme/torino-logo.png?raw=true)
+<div style="width:100%; background: black;">
+<p align="center">
+<img src="https://github.com/fsiino/torino/blob/master/app/assets/images/readme/torino-logo.png?raw=true" alt="Torino Logo"/>
+</p>
+</div>
+
+![Torino Splash Page](https://github.com/fsiino/torino/blob/master/app/assets/images/readme/readme-mbp.png?raw=true)
 
 Torino is a full stack web application inspired by Turo, a peer-to-peer carsharing company.
 
@@ -50,10 +56,6 @@ Torino is a full stack web application inspired by Turo, a peer-to-peer carshari
 * React Dates
 
 ## Features:
-
-### Splash Page
-
-![Torino Splash Page](https://github.com/fsiino/torino/blob/master/app/assets/images/readme/readme-mbp.png?raw=true)
 
 ### User Authentication
 
