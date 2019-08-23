@@ -7,12 +7,13 @@ body {
 }
 
 .main-container {
-    background-image: url('https://github.com/fsiino/turo-clone/blob/master/app/assets/images/mustang_joshua_tree_cropped.jpg?raw=true');
+    // background-image: url('https://github.com/fsiino/turo-clone/blob/master/app/assets/images/mustang_joshua_tree_cropped.jpg?raw=true');
+    background-image: url('https://github.com/fsiino/turo-clone/blob/master/app/assets/images/mustang_joshua_tree_cropped2.jpg?raw=true');
     background-size: cover;
     background-repeat: no-repeat;
     display: block;
     height: 615px;
-    background-position: center;
+    background-position: bottom;
     position: relative;
     // z-index: 2;
 }
