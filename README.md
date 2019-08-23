@@ -25,7 +25,7 @@ Things you may want to cover:
 
 
 <!-- # Torino -->
-![Torino](https://github.com/fsiino/torino/blob/master/app/assets/images/torino-logo.png?raw=true)
+![Torino](https://github.com/fsiino/torino/blob/master/app/assets/images/readme/torino-logo.png?raw=true)
 
 Torino is a full stack web application inspired by Turo, a peer-to-peer carsharing company.
 
