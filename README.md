@@ -42,10 +42,12 @@ Torino is a full stack web application inspired by Turo, a peer-to-peer carshari
 * React
 * Redux
 * Javascript
-* React Dates
 
 ### APIs
 * Google Maps
+
+### Libraries
+* React Dates
 
 ## Features:
 
@@ -57,7 +59,7 @@ Torino is a full stack web application inspired by Turo, a peer-to-peer carshari
 
 Users are required to sign up in order to create cars and book rentals. User credentials are stored as a password digest after being hashed and salted:
 
- ```
+ ```ruby
  class User < ApplicationRecord
     validates :fname, :lname, presence: true
     validates :email, :password_digest, :session_token, presence: true
@@ -106,7 +108,7 @@ Car owners can post their cars for rent, selecting optional features such as hea
 
 In addition to creation, owners can make edits and delete their listings. Edit and delete options are displayed on the car show page <b>if</b> the current user is recognized as an owner. As an added security measure, any attempt to access another owner's car edit page URL forcefully redirects to the index:
 
-```
+```js
 render() {
 
 ...  
@@ -122,6 +124,7 @@ render() {
       </>
     }
 ```
+<img src="https://github.com/fsiino/torino/blob/master/app/assets/images/readme/readme-car-edit.gif?raw=true" alt="Torino car edit demo"/>
 
 ### Rentals
 Once a potential customer finds a car they like, a rental can be booked on the right side of the car show page. After accepting the confirmation dialog, a new ```<div>``` will appear in the same pane giving the user the option to navigate to their rentals page for review.
@@ -129,7 +132,7 @@ Once a potential customer finds a car they like, a rental can be booked on the r
 <!-- ![User Rentals Page](https://github.com/fsiino/torino/blob/master/app/assets/images/readme/readme-rentals.png?raw=true) -->
 <img src="https://github.com/fsiino/torino/blob/master/app/assets/images/readme/readme-booking-demo-gif.gif?raw=true" alt="Torino booking demo"/>
 
-```
+```ruby
 TRANSMISSION_TYPE = %w(automatic manual none).freeze
 
 COLORS = %w(black brown gray silver white red orange yellow gold purple blue green).freeze
