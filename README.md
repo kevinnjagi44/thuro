@@ -103,7 +103,7 @@ end
  
  An automated demo login button can be found on the login modal for quicker access to the UX.
 
-<img src="https://github.com/fsiino/torino/blob/master/app/assets/images/readme/readme-login.png?raw=true" alt="Login Modal" width=30%>
+<!-- <img src="https://github.com/fsiino/torino/blob/master/app/assets/images/readme/readme-login.png?raw=true" alt="Login Modal" width=30%> -->
 
 ### Car Create, Update, & Delete
 Car owners can post their cars for rent, selecting optional features such as heated seats, GPS, or bluetooth. Mandatory fields such as transmission are also included for potential renter decision-making.
