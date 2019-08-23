@@ -49,7 +49,7 @@ Torino is a full stack web application inspired by Turo, a peer-to-peer carshari
 
 ### Splash Page
 
-![Torino Splash Page](https://github.com/fsiino/torino/blob/master/app/assets/images/readme/readme-splash.png?raw=true)
+![Torino Splash Page](https://github.com/fsiino/torino/blob/master/app/assets/images/readme/readme-mbp.png?raw=true)
 
 ### User Authentication
 
