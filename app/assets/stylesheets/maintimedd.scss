@@ -19,11 +19,29 @@
     border-radius: 5px;
     font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
     border: 1px solid #ffffff;
-    width: 162px;
+    width: 130px;
 }
 
 .main-datetime-wrapper {
   display: flex;
   justify-content: space-around;
   margin: 0 2px 0 2px;
+
+    /* Removes the clear button from date inputs */
+  input[type="date"]::-webkit-clear-button {
+      display: none;
+  }
+
+  /* Removes the spin button */
+  input[type="date"]::-webkit-inner-spin-button { 
+      display: none;
+  }
+
+  /* Always display the drop down caret */
+  input[type="date"]::-webkit-calendar-picker-indicator {
+      color: #2c3e50;
+  }
+
 }
+
+

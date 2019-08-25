@@ -5,18 +5,32 @@ import 'react-dates/initialize';
 import { openModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import MainTimeDropdown from './main_time_dropdown';
+import moment from 'moment';
 
 class Main extends React.Component {
    constructor(props) {
      super(props);
      this.state = {
        search_start_date: null,
-       search_end_date: null,
-       todays_date: new Date()
+       search_end_date: null
      };
    }
 
   render () {
+
+    // const getDate = () => {
+    //   const date = new Date();
+    //   let year = date.getFullYear();
+    //   let month = date.getMonth() + 1;
+    //   let day = date.getDate();
+
+    //   month < 10 ? `0${month}` : month;
+    //   day < 10 ? `0${day}` : day;
+
+    //   return `${year}-${month}-${day}`
+
+    // };
+
     return (
       <div> 
 
@@ -43,7 +57,7 @@ class Main extends React.Component {
       
                   <label>From</label>
                   <div className="main-datetime-wrapper">
-                    <input className="main-date" type="date"/>
+                  <input className="main-date" type="date" defaultValue={moment().format('YYYY-MM-DD')}/>
                     {/* <SingleDatePicker
                       date={this.state.search_start_date} // momentPropTypes.momentObj or null
                       onDateChange={date => this.setState({ search_start_date: date })} // PropTypes.func.isRequired
@@ -61,7 +75,7 @@ class Main extends React.Component {
 
                   <label>Until</label>
                   <div className="main-datetime-wrapper">
-                    <input className="main-date" type="date" />  
+                  <input className="main-date" type="date" defaultValue={moment().add(7, "days").format('YYYY-MM-DD')}/>  
                     {/* <SingleDatePicker
                       date={this.state.search_start_date} // momentPropTypes.momentObj or null
                       onDateChange={date => this.setState({ search_start_date: date })} // PropTypes.func.isRequired
