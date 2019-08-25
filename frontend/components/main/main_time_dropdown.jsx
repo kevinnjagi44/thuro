@@ -5,7 +5,7 @@ const MainTimeDropdown = () => {
 
   return (
 
-  <select className="maintimedd">
+  <select className="maintimedd" defaultValue="10:00 AM">
     <option>midnight</option>
     <option>12:30 AM</option>
     <option>1:00 AM</option>

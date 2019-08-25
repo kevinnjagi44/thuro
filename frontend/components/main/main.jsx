@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import 'react-dates/initialize';
-import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
+// import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
 import { openModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import MainTimeDropdown from './main_time_dropdown';
@@ -11,7 +11,8 @@ class Main extends React.Component {
      super(props);
      this.state = {
        search_start_date: null,
-       search_end_date: null
+       search_end_date: null,
+       todays_date: new Date()
      };
    }
 
