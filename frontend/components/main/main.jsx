@@ -1,14 +1,18 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-// import 'react-dates/initialize';
-// import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
-// import 'react-dates/lib/css/_datepicker.css';
+import 'react-dates/initialize';
+import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
 import { openModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
+import MainTimeDropdown from './main_time_dropdown';
 
 class Main extends React.Component {
    constructor(props) {
      super(props);
+     this.state = {
+       search_start_date: null,
+       search_end_date: null
+     };
    }
 
   render () {
@@ -37,14 +41,37 @@ class Main extends React.Component {
                 <div className="search-from">
       
                   <label>From</label>
-                  <input type="datetime-local"/>
+                  <div className="main-datetime-wrapper">
+                    <input className="main-date" type="date"/>
+                    {/* <SingleDatePicker
+                      date={this.state.search_start_date} // momentPropTypes.momentObj or null
+                      onDateChange={date => this.setState({ search_start_date: date })} // PropTypes.func.isRequired
+                      focused={this.state.focused} // PropTypes.bool
+                      onFocusChange={({ focused }) => this.setState({ focused })} // PropTypes.func.isRequired
+                      id="1" // PropTypes.string.isRequired,
+                    /> */}
 
+                    <MainTimeDropdown/>
+                  </div>
+  
                 </div>
 
                 <div className="search-until">
 
                   <label>Until</label>
-                    <input type="datetime-local" />  
+                  <div className="main-datetime-wrapper">
+                    <input className="main-date" type="date" />  
+                    {/* <SingleDatePicker
+                      date={this.state.search_start_date} // momentPropTypes.momentObj or null
+                      onDateChange={date => this.setState({ search_start_date: date })} // PropTypes.func.isRequired
+                      focused={this.state.focused} // PropTypes.bool
+                      onFocusChange={({ focused }) => this.setState({ focused })} // PropTypes.func.isRequired
+                      id="1" // PropTypes.string.isRequired,
+                    /> */}
+
+                    <MainTimeDropdown />
+                  </div>
+
                 </div>
 
               <Link to={"/cars"}>
