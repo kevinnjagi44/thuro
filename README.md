@@ -31,8 +31,9 @@ Things you may want to cover:
 </p>
 </div>
 
-![Torino Splash Page](https://github.com/fsiino/torino/blob/master/app/assets/images/readme/readme-mbp.png?raw=true)
-
+<p align="center">
+  <img src="https://github.com/fsiino/torino/blob/master/app/assets/images/readme/readme-mbp.png?raw=true" alt="Torino Splash"/>
+</p>
 Torino is a full stack web application inspired by Turo, a peer-to-peer carsharing company.
 
 [Live Link](https://torino-fsp.herokuapp.com/#/)
@@ -126,13 +127,17 @@ render() {
       </>
     }
 ```
-<img src="https://github.com/fsiino/torino/blob/master/app/assets/images/readme/readme-car-edit.gif?raw=true" alt="Torino car edit demo"/>
+<p align="center">
+  <img src="https://github.com/fsiino/torino/blob/master/app/assets/images/readme/readme-car-edit.gif?raw=true" alt="Torino car edit demo"/>
+</p>
 
 ### Rentals
 Once a potential customer finds a car they like, a rental can be booked on the right side of the car show page. After accepting the confirmation dialog, a new ```<div>``` will appear in the same pane giving the user the option to navigate to their rentals page for review.
 
 <!-- ![User Rentals Page](https://github.com/fsiino/torino/blob/master/app/assets/images/readme/readme-rentals.png?raw=true) -->
-<img src="https://github.com/fsiino/torino/blob/master/app/assets/images/readme/readme-booking-demo-gif.gif?raw=true" alt="Torino booking demo"/>
+<p align="center">
+  <img src="https://github.com/fsiino/torino/blob/master/app/assets/images/readme/readme-booking-demo-gif.gif?raw=true" alt="Torino booking demo"/>
+</p>
 
 ```ruby
 TRANSMISSION_TYPE = %w(automatic manual none).freeze
