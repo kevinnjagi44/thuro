@@ -1,7 +1,7 @@
 json.partial! "api/cars/car", car: @car
 
-json.fName "#{@car.user.fname}"
-json.ownerId "#{@car.user.id}"
+json.fName "#{@car.owner.fname}"
+json.ownerId "#{@car.owner.id}"
 
 # json.awd "#{@car.awd}"
 # json.audioInput "#{@car.audio_input}"

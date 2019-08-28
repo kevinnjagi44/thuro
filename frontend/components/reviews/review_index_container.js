@@ -4,7 +4,7 @@ import ReviewIndex from './review_index';
 
 const mSTP = (state) => {
   return {
-    reviews: state.entities.reviews
+    reviews: Object.values(state.entities.reviews)
   }
 }
 

@@ -144,6 +144,7 @@ class CarShow extends React.Component {
                     <div className="car-show-left-full-star"/>
                     <div className="car-show-left-full-star"/>
                     <div className="car-show-left-full-star"/>
+                    ∙ 50 trips
                   </div>
                 </div>
 
@@ -239,10 +240,20 @@ class CarShow extends React.Component {
 
                 </div>
               </div>
+
+              <div className="item-9">
+                <div className="car-show-left-sec">
+                  Reviews
+                </div>
+              </div>
+
+              <div className="item-10">
+                <div className="car-show-left-content">
+                  <ReviewIndexContainer/>
+                </div>
+              </div>
+
             </div>
-
-          <ReviewIndexContainer/>
-
           </div>
           
           {/* RIGHT PANEL */}

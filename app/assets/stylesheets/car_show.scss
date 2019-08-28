@@ -88,6 +88,14 @@
     grid-area: g-feat-c;
     padding: 6px;
   }
+  .item-9 {
+    grid-area: g-rev-l;
+    padding: 6px;
+  }
+  .item-10 {
+    grid-area: g-rev-c;
+    padding: 6px;
+  }
 
   .car-show-grid-container {
     justify-content: left;
@@ -98,7 +106,8 @@
     "g-car-l g-car-c"
     "g-host-l g-host-c"
     "g-desc-l g-desc-c"
-    "g-feat-l g-feat-c";
+    "g-feat-l g-feat-c"
+    "g-rev-l g-rev-c"
   }
 
   // end grid
@@ -153,7 +162,8 @@
   
   .car-show-star-wrapper {
     overflow: hidden;
-    width: 200px;
+    // width: 200px;
+    width: 100%;
     padding-bottom: 20px;
   }
 
@@ -285,6 +295,7 @@
         font-weight: 500;
         font-size: 16px;
         line-height: 1.5;
+        text-align: right;
       }
 
     }
