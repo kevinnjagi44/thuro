@@ -15,7 +15,7 @@ class CarShow extends React.Component {
   componentDidMount() {
     this.props.fetchCar(this.props.match.params.id);
 
-    this.props.fetchRentals();
+    // this.props.fetchRentals();
 
     this.props.fetchReviews(this.props.match.params.id);
 
@@ -144,7 +144,9 @@ class CarShow extends React.Component {
                     <div className="car-show-left-full-star"/>
                     <div className="car-show-left-full-star"/>
                     <div className="car-show-left-full-star"/>
-                    ∙ 50 trips
+                    <span className="car-show-top-trips">
+                      ∙ {randomNumber(100, 200)} trips
+                    </span>
                   </div>
                 </div>
 

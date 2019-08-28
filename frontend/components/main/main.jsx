@@ -49,7 +49,7 @@ class Main extends React.Component {
                 <div className="search-where">
 
                   <label>Where</label>
-                  <input type="text" placeholder="City, airport, address, or hotel"/>
+                  <input type="text" placeholder="City, airport, address, or hotel" defaultValue={`San Francisco, CA`}/>
 
                 </div>
 

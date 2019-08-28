@@ -1,6 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
+import moment from 'moment';
+
 class ReviewIndex extends React.Component {
   constructor(props) {
     super(props);
@@ -42,7 +44,8 @@ class ReviewIndex extends React.Component {
                   </div>
                   <br />
                   <div className="review-index-auth-date">
-                    <span className="review-index-auth-name">{capitalizeName(review.fName)}</span> - {review.created_at}
+                    <span className="review-index-auth-name">{capitalizeName(review.fName)}</span> - {moment(review.created_at).format('ll')} 
+                    {/* Aug 28, 2019 */}
                   </div>
                 </div>
               </div>

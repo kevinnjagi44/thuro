@@ -23,7 +23,7 @@ const mDTP = (dispatch) => ({
 
   openModal: (modal) => dispatch(openModal(modal)),
 
-  fetchRentals: () => dispatch(fetchRentals()),
+  // fetchRentals: () => dispatch(fetchRentals()),
 
   fetchReviews: (id) => dispatch(fetchReviews(id))
 
