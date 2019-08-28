@@ -2,7 +2,7 @@ export const fetchReviews = (carId) => {
   return (
     $.ajax({
       method: 'GET',
-      url: `api/${carId}/reviews`,
+      url: `api/cars/${carId}/reviews`,
     })
   );
 };

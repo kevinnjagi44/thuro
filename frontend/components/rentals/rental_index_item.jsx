@@ -80,9 +80,9 @@ class RentalIndexItem extends React.Component {
             </li>
           </ul>
         </div>
-        <div className="rental-index-tile-details">
+        <div className="rental-index-tile-btns">
           <button onClick={() => { if (window.confirm('Are you sure you wish to cancel this rental?')) {this.handleDelete(rental.id)} } }>Cancel Rental</button>
-          <br/> <br/>
+          <br/>
           {/* <button onClick={this.handleCreateReview('create-review', car.id)}>Write A Review</button> */}
           {/* <button onClick={() => dispatch(openReviewModal('create-review', rental.car.id)) }>Write A Review</button> */}
         </div>

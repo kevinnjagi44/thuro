@@ -172,3 +172,4 @@ has_many_attached :photos
 * User Dashboards
 * Add to Favorites
 * Mobile device responsiveness
+* Add Car to Favorites 

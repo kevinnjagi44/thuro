@@ -3,6 +3,7 @@ class Api::ReviewsController < ApplicationController
   # before_action :require_logged_in
 
   def index
+    # @reviews = Review.where(car_id: params[:car_id])
     @reviews = Review.where(car_id: params[:car_id])
     render :index
   end

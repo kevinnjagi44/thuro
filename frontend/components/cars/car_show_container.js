@@ -5,11 +5,15 @@ import { openModal, closeModal } from '../../actions/modal_actions';
 
 import { fetchRentals } from '../../actions/rental_actions';
 
+import { fetchReviews } from '../../actions/review_actions';
+
 const mSTP = (state, ownProps) => {
+  // debugger
   const carId = ownProps.match.params.id; 
   return {
     car: state.entities.cars[carId],
     currentUserId: state.session.id,
+    // reviews: state.entities.
   };
 };
 
@@ -19,7 +23,9 @@ const mDTP = (dispatch) => ({
 
   openModal: (modal) => dispatch(openModal(modal)),
 
-  fetchRentals: () => dispatch(fetchRentals())
+  fetchRentals: () => dispatch(fetchRentals()),
+
+  fetchReviews: (id) => dispatch(fetchReviews(id))
 
 });
 

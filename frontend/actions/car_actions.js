@@ -14,6 +14,8 @@ export const receiveCars = (cars) => ({
 export const receiveCar = (car) => ({
   type: RECEIVE_CAR,
   car,
+  // car: payload.car,
+  // reviews: payload.reviews,
   // rentals
 });
 

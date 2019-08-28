@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import CarMap from '../car_map/car_map';
 import RentalFormContainer from '../rentals/rental_form_container';
 import RentalShow from '../rentals/rental_show';
+import ReviewIndexContainer from '../reviews/review_index_container';
 
 class CarShow extends React.Component {
   constructor(props) {
@@ -15,6 +16,8 @@ class CarShow extends React.Component {
     this.props.fetchCar(this.props.match.params.id);
 
     this.props.fetchRentals();
+
+    this.props.fetchReviews(this.props.match.params.id);
 
     }
 
@@ -237,6 +240,9 @@ class CarShow extends React.Component {
                 </div>
               </div>
             </div>
+
+          <ReviewIndexContainer/>
+
           </div>
           
           {/* RIGHT PANEL */}
