@@ -33,18 +33,7 @@ class ReviewIndex extends React.Component {
           <div key={review.id}>
             <div className="review-index-itm-container">
 
-              <div className="car-show-star-wrapper">
-                <div className="car-show-star-inner">
-                  <div className="car-show-left-full-star" />
-                  <div className="car-show-left-full-star" />
-                  <div className="car-show-left-full-star" />
-                  <div className="car-show-left-full-star" />
-                  <div className="car-show-left-full-star" />
-                    ∙ {`${reviews.length}`} {`${reviews.length > 1 ? 'reviews' : 'review'}`} 
-                </div>
-              </div>
-
-              <div className="review-index-wrapper">
+              <div className="review-index-itm-wrapper">
                 <div className="review-index-avatar">
                 </div>
                 <div className="review-index-right-of-avatar">
@@ -53,7 +42,7 @@ class ReviewIndex extends React.Component {
                   </div>
                   <br />
                   <div className="review-index-auth-date">
-                    <span className="review-index-auth-name">{review.fName}</span> - Date
+                    <span className="review-index-auth-name">{capitalizeName(review.fName)}</span> - {review.created_at}
                   </div>
                 </div>
               </div>
@@ -65,7 +54,22 @@ class ReviewIndex extends React.Component {
       }
     }
 
-    return <DisplayReviews/> 
+    return (
+      <>
+        <div className="car-show-star-wrapper">
+          <div className="car-show-star-inner">
+            <div className="car-show-left-full-star" />
+            <div className="car-show-left-full-star" />
+            <div className="car-show-left-full-star" />
+            <div className="car-show-left-full-star" />
+            <div className="car-show-left-full-star" />
+            ∙ {`${reviews.length}`} {`${reviews.length > 1 ? 'reviews' : 'review'}`}
+          </div>
+        </div>
+
+        <DisplayReviews /> 
+      </>
+    )
   }
 }
 
