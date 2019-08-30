@@ -8,6 +8,9 @@ class RentalIndexItem extends React.Component {
     super(props);
     this.handleDelete = this.handleDelete.bind(this);
     this.handleCreateReview = this.handleCreateReview.bind(this);
+    this.state = {
+      todaysDate: new Date()
+    };
   }
 
   handleDelete(rentalId) {
@@ -31,9 +34,20 @@ class RentalIndexItem extends React.Component {
 
     const CalcDays = (end, start) => {
       let numDays = Math.abs((new Date(end) - new Date(start)) / 3600000) / 24;
-
       return numDays;
     };
+
+    const ShowButton = (todaysDate, endDate) => {
+      if (endDate > todaysDate) {
+        return (
+          <button className="rental-create-review-btn" onClick={() => dispatch(openReviewModal('create-review', rental.car.id)) }>Write A Review</button> 
+        )
+      } else {
+        return (
+          <button className="rental-cancel-btn" onClick={() => { if (window.confirm('Are you sure you wish to cancel this rental?')) { this.handleDelete(rental.id) } }}>Cancel Rental</button>
+        )
+      }
+    }
 
     return (
       <>
@@ -46,7 +60,10 @@ class RentalIndexItem extends React.Component {
               Status: 
             </li>
             <li>
-              Start to End: 
+              Pickup: 
+            </li>
+            <li>
+              Dropoff: 
             </li>
             <li>
               # of Days: 
@@ -64,7 +81,10 @@ class RentalIndexItem extends React.Component {
               {rental.status.slice(0, 1).toUpperCase() + rental.status.slice(1)}
             </li>
             <li>
-              {ConvertDate(rental.start_date)} - {ConvertDate(rental.end_date)}
+              {ConvertDate(rental.start_date)}
+            </li>
+            <li>
+              {ConvertDate(rental.end_date)}
             </li>
             <li>
               {(() => {
@@ -81,8 +101,9 @@ class RentalIndexItem extends React.Component {
           </ul>
         </div>
         <div className="rental-index-tile-btns">
-          <button onClick={() => { if (window.confirm('Are you sure you wish to cancel this rental?')) {this.handleDelete(rental.id)} } }>Cancel Rental</button>
+          {/* <button onClick={() => { if (window.confirm('Are you sure you wish to cancel this rental?')) {this.handleDelete(rental.id)} } }>Cancel Rental</button> */}
           <br/>
+          {ShowButton(ConvertDate(this.state.todaysDate), ConvertDate(rental.end_date))}
           {/* <button onClick={this.handleCreateReview('create-review', car.id)}>Write A Review</button> */}
           {/* <button onClick={() => dispatch(openReviewModal('create-review', rental.car.id)) }>Write A Review</button> */}
         </div>

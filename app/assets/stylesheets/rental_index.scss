@@ -42,31 +42,50 @@
   display: flex;
   justify-content: space-between;
 
-  button {
-    border: none;
-    color: white;
-    background-color: #e92727;
-    font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 16px;
-    opacity: 0.8;
-    transition: 0.7s;  
-    height: 20%; 
-    padding: 5px;
-  }
+  // button {
+  //   border: none;
+  //   color: white;
+  //   background-color: #e92727;
+  //   font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
+  //   cursor: pointer;
+  //   font-weight: 700;
+  //   font-size: 16px;
+  //   opacity: 0.8;
+  //   transition: 0.7s;  
+  //   height: 20%; 
+  //   padding: 5px;
+  // }
 
-  button:hover {
-    opacity: 1;
-    background-color: #e92727;
-  }
+  // button:hover {
+  //   opacity: 1;
+  //   background-color: #e92727;
+  // }
 }
 
 .rental-index-tile-btns {
   display: flex;
   flex-direction: column;
 
-  button {
+  .rental-create-review-btn {
+    border: none;
+    color: white;
+    background-color: green;
+    font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    opacity: 0.8;
+    transition: 0.7s;  
+    height: 20%; 
+    padding: 5px;
+  }
+
+  .rental-create-review-btn:hover {
+    opacity: 1;
+    background-color: green;
+  }
+
+  .rental-cancel-btn {
     border: none;
     color: white;
     background-color: #e92727;
@@ -80,10 +99,11 @@
     padding: 5px;
   }
 
-  button:hover {
+  .rental-cancel-btn:hover {
     opacity: 1;
     background-color: #e92727;
   }
+
 }
 
 .rental-index-ul {
