@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import RentalIndex from './rental_index';
+import TripIndex from './trip_index';
 import { fetchRentals, deleteRental } from '../../actions/rental_actions';
 import { openReviewModal } from '../../actions/modal_actions';
 
@@ -23,4 +23,4 @@ const mDTP = (dispatch) => {
 export default connect(
   mSTP,
   mDTP
-)(RentalIndex);
+)(TripIndex);

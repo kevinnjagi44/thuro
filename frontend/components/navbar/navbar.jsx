@@ -30,6 +30,9 @@ const NavBar = ({ currentUser, logout, openModal }) => {
             <Link to="/rentals">
               Your Rentals
             </Link>
+            <Link to="/trips">
+              Past Trips
+            </Link>
             <a onClick={logout}>Log out</a>
           </div>
         </div>

@@ -13,6 +13,7 @@ import CarCreateContainer from './cars/car_create_container';
 import CarShowContainer from './cars/car_show_container';
 import CarUpdateContainer from './cars/car_update_container';
 import RentalIndexContainer from './rentals/rental_index_container';
+import TripIndexContainer from './trips/trip_index_container';
 
 const App = () => (
   <div>
@@ -33,6 +34,7 @@ const App = () => (
       <Route exact path="/cars/:id" component={CarShowContainer} />
       <Route exact path="/cars/:id/edit" component={CarUpdateContainer} />
       <Route exact path="/rentals" component={RentalIndexContainer} />
+      <Route exact path="/trips" component={TripIndexContainer} />
       <Route path="/" component={Main} />
     </Switch>
 
