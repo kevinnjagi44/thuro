@@ -9,6 +9,13 @@ class ReviewForm extends React.Component {
       title: null,
       body: null
     };
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    this.props.action(review)
+      .then(this.props.closeModal);
   }
 
   render() {
@@ -17,6 +24,21 @@ class ReviewForm extends React.Component {
         <h1>
           this will be the review form
         </h1>
+        <form onSubmit={this.handleSubmit}>
+          <label>Rating
+            
+          </label>
+          <br/>
+          <label>Title
+
+          </label>
+          <br/>
+          <label>Body
+
+          </label>
+          <br/>
+          <input type="submit" value="Write Review"/>
+        </form>
       </div>
     )
   }
