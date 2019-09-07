@@ -82,7 +82,7 @@ class TripIndex extends React.Component {
 
     return (
       <div className="rental-index-container">
-        <h2>Your Rentals</h2>
+        <h2>Your Past Trips</h2>
         <DisplayRentals />
       </div>
     )

@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import CarIndexItem from '../cars/car_index_item';
 import { openReviewModal } from '../../actions/modal_actions';
+import moment from 'moment';
 
 class RentalIndexItem extends React.Component {
   constructor(props) {
@@ -9,8 +10,7 @@ class RentalIndexItem extends React.Component {
     this.handleDelete = this.handleDelete.bind(this);
     this.handleCreateReview = this.handleCreateReview.bind(this);
     this.state = {
-      todaysDate: new Date(),
-      past: this.startDate >= this.todaysDate ? true : false
+      todaysDate: new Date()
     };
   }
 
@@ -23,7 +23,7 @@ class RentalIndexItem extends React.Component {
   }
 
   render() {
-
+// debugger
     const { rental } = this.props;
 
     const { car } = this.props.rental;
@@ -38,8 +38,8 @@ class RentalIndexItem extends React.Component {
       return numDays;
     };
 
-    const ShowButton = (todaysDate, startDate) => {
-      if (startDate <= todaysDate) {
+    const ShowButton = (todaysDate, start_date) => {
+      if (start_date < todaysDate) {
         return (
           <button className="rental-create-review-btn" onClick={() => dispatch(openReviewModal('create-review', rental.car.id)) }>Write A Review</button> 
         )
@@ -104,7 +104,7 @@ class RentalIndexItem extends React.Component {
         <div className="rental-index-tile-btns">
           {/* <button onClick={() => { if (window.confirm('Are you sure you wish to cancel this rental?')) {this.handleDelete(rental.id)} } }>Cancel Rental</button> */}
           <br/>
-          {ShowButton(ConvertDate(this.state.todaysDate), ConvertDate(rental.start_date))}
+          {ShowButton(moment(this.state.todaysDate), moment(rental.start_date))}
           {/* <button onClick={this.handleCreateReview('create-review', car.id)}>Write A Review</button> */}
           {/* <button onClick={() => dispatch(openReviewModal('create-review', rental.car.id)) }>Write A Review</button> */}
         </div>
