@@ -7,15 +7,24 @@ class ReviewForm extends React.Component {
     this.state = {
       rating: null,
       title: null,
-      body: null
+      body: null,
+      car_id: props.carId
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.action(review)
-      .then(this.props.closeModal);
+    this.props.action(this.state)
+      .then(() => this.props.closeModal);
+  }
+
+  update(field) {
+    return e => {
+      this.setState({
+        [field]: e.currentTarget.value
+      });
+    };
   }
 
   render() {
@@ -28,25 +37,31 @@ class ReviewForm extends React.Component {
             <br />
             <label>{`Rating (1-5)`}
             <br/>
-              <input type="text">
-
-              </input>
+              <input type="text" 
+                value={this.state.rating} 
+                onChange={this.update("rating")} 
+                placeholder="1-5"
+              />
             </label>
             <br />
 
             <label>Title
             <br/>
-              <input type="text">
-
-              </input>
+              <input type="text" 
+                value={this.state.title} 
+                onChange={this.update("title")} 
+                placeholder="Add a Title for your Review" 
+              />
             </label>
             <br />
             <label>Body
             <br/>
 
-              <textarea className="review-modal-textarea">
-
-              </textarea>
+              <textarea className="review-modal-textarea" 
+                value={this.state.body} 
+                onChange={this.update("body")} 
+                placeholder="How was your experience driving this car?"
+              />
             </label>
             <br />
             <br />

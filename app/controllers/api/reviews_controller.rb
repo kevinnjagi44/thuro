@@ -2,6 +2,8 @@ class Api::ReviewsController < ApplicationController
 
   # before_action :require_logged_in
 
+  skip_before_action :verify_authenticity_token
+
   def index
     # @reviews = Review.where(car_id: params[:car_id])
     @reviews = Review.where(car_id: params[:car_id])
@@ -44,7 +46,7 @@ class Api::ReviewsController < ApplicationController
 
   def review_params
     params.require(:review).permit(
-      :author_id,
+      # :author_id,
       :car_id,
       :rating,
       :title,

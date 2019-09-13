@@ -61,12 +61,13 @@ class ReviewIndex extends React.Component {
       <>
         <div className="car-show-star-wrapper">
           <div className="car-show-star-inner">
-            <div className="car-show-left-full-star" />
-            <div className="car-show-left-full-star" />
-            <div className="car-show-left-full-star" />
-            <div className="car-show-left-full-star" />
-            <div className="car-show-left-full-star" />
-            ∙ {`${reviews.length}`} {`${reviews.length > 1 ? 'reviews' : 'review'}`}
+            {reviews.length === 0 ? null : <div className="car-show-left-full-star" />}
+            {reviews.length === 0 ? null : <div className="car-show-left-full-star" />}
+            {reviews.length === 0 ? null : <div className="car-show-left-full-star" />}
+            {reviews.length === 0 ? null : <div className="car-show-left-full-star" />}
+            {reviews.length === 0 ? null : <div className="car-show-left-full-star" />}
+            {reviews.length === 0 ? null : <>∙&nbsp;</>} 
+            {reviews.length} {reviews.length > 1 ? 'ratings' : reviews.length === 0 ? 'ratings' : 'rating'}
           </div>
         </div>
 

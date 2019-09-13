@@ -4,6 +4,7 @@ import ReviewForm from './review_form';
 import { closeModal } from '../../actions/modal_actions';
 
 const mSTP = (state, ownProps) => {
+  debugger
   return {
     currentUserId: state.session.id,
     carId: ownProps.carId
