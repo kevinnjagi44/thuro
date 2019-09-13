@@ -20,26 +20,46 @@ class ReviewForm extends React.Component {
 
   render() {
     return (
-      <div className="review-form-container">
-        <h1>
-          this will be the review form
-        </h1>
-        <form onSubmit={this.handleSubmit}>
-          <label>Rating
-            
-          </label>
-          <br/>
-          <label>Title
+      <div className="review-modal-container">
+        <form className="review-modal-form" onSubmit={this.handleSubmit}>
+          <h3 className="modal-form-header">Create A Review</h3>
+          <br />
+          <div className="modal-container">
+            <br />
+            <label>{`Rating (1-5)`}
+            <br/>
+              <input type="text">
 
-          </label>
-          <br/>
-          <label>Body
+              </input>
+            </label>
+            <br />
 
-          </label>
-          <br/>
-          <input type="submit" value="Write Review"/>
+            <label>Title
+            <br/>
+              <input type="text">
+
+              </input>
+            </label>
+            <br />
+            <label>Body
+            <br/>
+
+              <textarea className="review-modal-textarea">
+
+              </textarea>
+            </label>
+            <br />
+            <br />
+            <input type="submit" onClick={this.handleSubmit} value="Write Review" />
+          </div>
+          <div className="modal-bottom">
+            <br />
+          </div>
+          <div className="modal-x" onClick={this.props.closeModal}>X</div>
         </form>
       </div>
+
+
     )
   }
 }
