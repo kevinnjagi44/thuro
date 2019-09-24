@@ -66,10 +66,10 @@ class RentalIndex extends React.Component {
     // })
 
     const DisplayRentals = () => {
-      if (!rentals.length) {
+      if (!rentalItems.length) {
         return (
           <div className="rental-index-no-rentals">
-            <h1>You currently have no rentals.</h1>
+            <h1>You currently have no upcoming rentals.</h1>
             <br/>
             <h2><Link to="/cars">Check out our cars</Link> and book your next joy ride!</h2>
             

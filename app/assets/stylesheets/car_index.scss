@@ -18,8 +18,10 @@
   justify-content: space-between;
   padding-top: 50px;
   padding-left: 1%;
-  overflow: scroll;
+  // overflow: scroll;
   height: calc(100vh - 120px);
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 .search-filter-btns {
@@ -55,7 +57,9 @@
   width: 60%;
   // height: 100%;
   box-sizing: border-box;
-  overflow: scroll;
+  // overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .car-index-photo-wrapper {

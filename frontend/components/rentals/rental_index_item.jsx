@@ -23,7 +23,7 @@ class RentalIndexItem extends React.Component {
   }
 
   render() {
-// debugger
+
     const { rental } = this.props;
 
     const { car } = this.props.rental;
@@ -40,9 +40,9 @@ class RentalIndexItem extends React.Component {
 
     const ShowButton = (todaysDate, start_date) => {
       if (start_date < todaysDate) {
-        return (
-          <button className="rental-create-review-btn" onClick={() => dispatch(openReviewModal('create-review', rental.car.id)) }>Write A Review</button> 
-        )
+        // return (
+        //   <button className="rental-create-review-btn" onClick={() => dispatch(openReviewModal('create-review', rental.car.id)) }>Write A Review</button> 
+        // )
       } else {
         return (
           <button className="rental-cancel-btn" onClick={() => { if (window.confirm('Are you sure you wish to cancel this rental?')) { this.handleDelete(rental.id) } }}>Cancel Rental</button>

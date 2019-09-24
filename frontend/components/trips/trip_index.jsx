@@ -67,7 +67,7 @@ class TripIndex extends React.Component {
       if (!rentals.length) {
         return (
           <div className="rental-index-no-rentals">
-            <h1>You currently have no rentals.</h1>
+            <h1>You have no past trips.</h1>
             <br />
             <h2><Link to="/cars">Check out our cars</Link> and book your next joy ride!</h2>
 
