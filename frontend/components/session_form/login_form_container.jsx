@@ -27,7 +27,8 @@ const mDTP = dispatch => {
       </button>
     ),
     closeModal: () => dispatch(closeModal()),
-    fetchRentals: () => dispatch(fetchRentals())
+    fetchRentals: () => dispatch(fetchRentals()),
+    fetchCars: () => dispatch(fetchCars())
   };
 };
 

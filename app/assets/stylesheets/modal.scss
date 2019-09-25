@@ -1,0 +1,57 @@
+.modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+.transparent-modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: transparent;
+  z-index: 7;
+}
+
+.fixed-modal-child {
+  z-index: 8;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.relative-modal-child {
+  z-index: 8;
+  position: absolute;
+
+}
+
+.notifications, .post-menu, .comment-menu, .search-results {
+  position: absolute; 
+  background: white; 
+  font-size: 13px;
+
+  border: 1px solid #bbbbbb;
+  box-shadow: 0 0 5px #b2b2b2;
+
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #626871;
+
+    li {
+      width: 100%;
+      padding: 5px 0px;
+      cursor: pointer;
+    }
+  }
+
+}

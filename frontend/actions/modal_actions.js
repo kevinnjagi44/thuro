@@ -3,10 +3,11 @@ export const CLOSE_MODAL = 'CLOSE_MODAL';
 
 export const OPEN_REVIEW_MODAL = 'OPEN_REVIEW_MODAL';
 
-export const openModal = modal => {
+export const openModal = ( modal, modalArgs ) => {
   return {
     type: OPEN_MODAL,
-    modal
+    modal,
+    // modalArgs
   };
 };
 

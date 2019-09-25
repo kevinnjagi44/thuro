@@ -45,6 +45,7 @@ class RentalForm extends React.Component {
           onDatesChange={({ startDate, endDate }) => this.setState({ start_date: startDate, end_date: endDate })} 
           focusedInput={this.state.focusedInput} 
           onFocusChange={focusedInput => this.setState({ focusedInput })}
+          hideKeyboardShortcutsPanel={true}
         />
 
         </div>

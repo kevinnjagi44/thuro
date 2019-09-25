@@ -9,7 +9,8 @@ const mSTP = (state) => {
 };
 
 const mDTP = dispatch => ({
-  fetchCars: () => dispatch(fetchCars())
+  fetchCars: () => dispatch(fetchCars()),
+  fetchReviews: () => dispatch(fetchReviews())
 });
 
 

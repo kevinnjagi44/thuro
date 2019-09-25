@@ -233,6 +233,18 @@
   padding-top:60px;
 }
 
-.book-button > .post-grid {
+.post-grid-lm {
+  border: none;
+  color: white;
+  background-color: #59d389;
+  font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
   cursor: not-allowed;
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 30px;
+  padding: 11px 18px ;
+  opacity: 0.75;
+  transition: 0.7s;   
 }
+
+.post-grid-lm:hover {opacity: 1}

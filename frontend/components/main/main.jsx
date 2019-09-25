@@ -109,13 +109,16 @@ class Main extends React.Component {
 
         <div className="mid-container">
 
-          {/* <div className="mid-insurance-container">
+          <div className="mid-insurance-container">
             <div className="mid-insurance">
-              <span className="mid-ins-header">
+              <div className="mid-ins-header">
+              Insurance Provider
+              </div>
+              <div>
                 <img className="mid-ins-img" src="https://github.com/fsiino/torino/blob/master/app/assets/images/insurance-fr.png?raw=true" alt="Freedom Reciprocal" />
-              </span>
+              </div>
             </div>
-          </div> */}
+          </div>
 
           <h3 className="mid-h2">Skip The Rental Counter</h3>
           <br/>
@@ -198,7 +201,7 @@ class Main extends React.Component {
               <br/>
             <p className="book-desc">Unlock the next level of car sharing convenience with Torino Go — find, book, and unlock cars on demand, right from the Torino app.</p>
             <form align="center" action="">
-              <button className="post-grid" type="submit">Learn more</button>
+              <button className="post-grid-lm" type="submit">Learn more</button>
             </form>    
           </div>
           

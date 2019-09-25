@@ -2,7 +2,7 @@ export const fetchRentals = () => {
   return (
     $.ajax({
       method: 'GET',
-      url: 'api/rentals'
+      url: 'api/rentals',
     })
   );
 };

@@ -6,11 +6,13 @@ class Api::RentalsController < ApplicationController
 
   def index
       @rentals = Rental.where(renter_id: current_user.id).order(start_date: :desc)
+      # @rentals = Rental.all
       render :index
   end
 
   def show
     @rental = current_user.rentals.find_by_id(params[:id])
+    # @rental = Rental.find(params[:id])
     render :show
   end
 

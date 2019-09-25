@@ -69,7 +69,9 @@ class SessionForm extends React.Component {
     const user = Object.assign({}, this.state);
     this.props.processForm(user)
       .then(this.props.closeModal)
-      .then(this.props.fetchRentals);
+      .then(this.props.fetchRentals)
+      .then(this.props.fetchCars());
+      
   }
 
 

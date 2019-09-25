@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; 
 
+// import NavBarModal from '../modal/navbar_modal';
+// import RentalRequestsAlertContainer from '../notifications/rental_requests_alert_container';
+
 const NavBar = ({ currentUser, logout, openModal }) => {
   
   const loggedOut = () => {
@@ -17,8 +20,10 @@ const NavBar = ({ currentUser, logout, openModal }) => {
 
   const loggedIn = () => {   
     return (
-      <nav>
+      <div>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          {/* <RentalRequestsAlertContainer/>
+          <NavBarModal modalType="rentalRequests" />  */}
         <Link to="/cars/new">
           <button className="navbutton">List your car</button>
         </Link>
@@ -36,7 +41,7 @@ const NavBar = ({ currentUser, logout, openModal }) => {
             <a onClick={logout}>Log out</a>
           </div>
         </div>
-      </nav>
+      </div>
   )};
 
   if (currentUser) {
