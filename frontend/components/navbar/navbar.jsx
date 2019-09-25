@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; 
-
-// import NavBarModal from '../modal/navbar_modal';
-// import RentalRequestsAlertContainer from '../notifications/rental_requests_alert_container';
+import NotificationsContainer from '../notifications/notifications_container';
 
 const NavBar = ({ currentUser, logout, openModal }) => {
   
@@ -22,8 +20,7 @@ const NavBar = ({ currentUser, logout, openModal }) => {
     return (
       <div>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          {/* <RentalRequestsAlertContainer/>
-          <NavBarModal modalType="rentalRequests" />  */}
+        <NotificationsContainer/>
         <Link to="/cars/new">
           <button className="navbutton">List your car</button>
         </Link>
