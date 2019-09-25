@@ -5,9 +5,9 @@ class ReviewForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      rating: null,
-      title: null,
-      body: null,
+      rating: '',
+      title: '',
+      body: '',
       car_id: props.carId,
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -28,6 +28,7 @@ class ReviewForm extends React.Component {
   }
 
   render() {
+    // debugger
     return (
       <div className="review-modal-container">
         <form className="review-modal-form" onSubmit={this.handleSubmit}>

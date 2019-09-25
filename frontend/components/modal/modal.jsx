@@ -5,7 +5,23 @@ import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
 import ReviewFormContainer from '../reviews/review_form_container';
 
-function Modal({ modal, closeModal }) {
+// function Modal({ modal, closeModal }) {
+function Modal(props) {
+  const { closeModal } = props;
+  let carId;
+  let modal;
+
+  if (props.modal && typeof props.modal === 'object') {
+    modal = props.modal.modal;
+
+    if (props.modal.carId) {
+      carId = props.modal.carId;
+    }
+
+  } else {
+    modal = props.modal;
+  }
+
   if (!modal) {
     return null;
   }
@@ -18,7 +34,7 @@ function Modal({ modal, closeModal }) {
       component = <SignupFormContainer />;
       break;
     case 'create-review':
-      component = <ReviewFormContainer />;
+      component = <ReviewFormContainer carId={carId}/>;
       break;
     default:
       return null;

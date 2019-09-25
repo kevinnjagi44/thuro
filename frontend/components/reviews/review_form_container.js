@@ -7,8 +7,7 @@ const mSTP = (state, ownProps) => {
   // debugger
   return {
     currentUserId: state.session.id,
-    // carId: ownProps.car_id
-    carId: state.car.id
+    carId: ownProps.carId
   };
 };
 

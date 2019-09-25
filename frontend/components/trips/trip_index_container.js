@@ -16,7 +16,7 @@ const mDTP = (dispatch) => {
     fetchRentals: () => dispatch(fetchRentals()),
     editRental: (rental) => dispatch(editRental(rental)),
     deleteRental: (rentalId) => dispatch(deleteRental(rentalId)),
-    openReviewModal: (modal, carId) => dispatch(openReviewModal(modal, carId))
+    // openReviewModal: (modal, carId) => dispatch(openReviewModal(modal, carId))
   };
 };
 

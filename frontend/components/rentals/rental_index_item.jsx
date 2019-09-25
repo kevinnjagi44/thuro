@@ -8,7 +8,7 @@ class RentalIndexItem extends React.Component {
   constructor(props) {
     super(props);
     this.handleDelete = this.handleDelete.bind(this);
-    this.handleCreateReview = this.handleCreateReview.bind(this);
+    // this.handleCreateReview = this.handleCreateReview.bind(this);
     this.state = {
       todaysDate: new Date()
     };
@@ -18,9 +18,9 @@ class RentalIndexItem extends React.Component {
     this.props.deleteRental(rentalId);
   }
 
-  handleCreateReview(modal, carId) {
-    this.props.openReviewModal(modal, carId);
-  }
+  // handleCreateReview(modal, carId) {
+  //   this.props.openReviewModal(modal, carId);
+  // }
 
   render() {
 
@@ -39,15 +39,20 @@ class RentalIndexItem extends React.Component {
     };
 
     const ShowButton = (todaysDate, start_date) => {
-      if (start_date < todaysDate) {
-        // return (
-        //   <button className="rental-create-review-btn" onClick={() => dispatch(openReviewModal('create-review', rental.car.id)) }>Write A Review</button> 
-        // )
-      } else {
+      if (start_date >= todaysDate) {
         return (
           <button className="rental-cancel-btn" onClick={() => { if (window.confirm('Are you sure you wish to cancel this rental?')) { this.handleDelete(rental.id) } }}>Cancel Rental</button>
         )
       }
+      // if (start_date < todaysDate) {
+      //   return (
+      //     <button className="rental-create-review-btn" onClick={() => dispatch(openReviewModal('create-review', rental.car.id)) }>Write A Review</button> 
+      //   )
+      // } else {
+      //   return (
+      //     <button className="rental-cancel-btn" onClick={() => { if (window.confirm('Are you sure you wish to cancel this rental?')) { this.handleDelete(rental.id) } }}>Cancel Rental</button>
+      //   )
+      // }
     }
 
     return (
