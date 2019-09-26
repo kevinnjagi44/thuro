@@ -19,8 +19,8 @@ const NavBar = ({ currentUser, logout, openModal }) => {
   const loggedIn = () => {   
     return (
       <div>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <NotificationsContainer/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <Link to="/cars/new">
           <button className="navbutton">List your car</button>
         </Link>

@@ -24,13 +24,13 @@ class RentalForm extends React.Component {
       car_id: parseInt(this.props.match.params.id),
       start_date: this.state.start_date._d,
       end_date: this.state.end_date._d,
-      status: 'approved'
+      status: 'pending'
     };
     this.props.processForm(newRental)
-    .then(document.getElementById("pre-rental").innerHTML = ("<h2>Rental Booked!</h2>"))
-    .then(document.getElementById("pre-rental").setAttribute("id", "rental-requested"))
-    .then(document.getElementById("rental-book-btn").style.display = "none")
-    .then(document.getElementById("rentals-idx-btn").style.display = "unset");
+      .then(document.getElementById("pre-rental").innerHTML = ("<h2>Rental Booked!</h2>"))
+      .then(document.getElementById("pre-rental").setAttribute("id", "rental-requested"))
+      .then(document.getElementById("rental-book-btn").style.display = "none")
+      .then(document.getElementById("rentals-idx-btn").style.display = "unset");
   }
 
   render() {

@@ -12,15 +12,17 @@ json.reviews do
 end
 
 json.rentals do 
-  car.rentals.each do |rental|
-    json.set! rental.id do
+  # car.rentals.each do |rental|
+  json.array! car.rentals do |rental|
+    # json.set! rental.id do
       json.id rental.id
       json.renter_id rental.renter_id
       json.owner_id rental.car.owner_id
       json.fname rental.renter.fname
       json.start_date rental.start_date
       json.end_date rental.end_date
-    end
+      json.status rental.status
+    # end
   end
 end
 

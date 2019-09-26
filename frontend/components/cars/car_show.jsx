@@ -18,6 +18,7 @@ class CarShow extends React.Component {
     // this.props.fetchRentals();
 
     this.props.fetchReviews(this.props.match.params.id);
+    window.scrollTo(0,0);
 
     }
 

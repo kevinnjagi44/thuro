@@ -1,4 +1,6 @@
 import React from 'react';
+import Toast, { notify } from './toast';
+
 
 class Notifications extends React.Component {
   constructor(props) {
@@ -11,14 +13,18 @@ class Notifications extends React.Component {
 
   render() {  
 
-    const numRentals = () => {
-      return this.props.rentalsForMyCars.length
+    const NumRentals = () => {
+      let len = this.props.myPendingRentals.length;
+      return len ? len : null;
     };
 
     return (
-      <i>
-        {numRentals()}
-      </i>
+      <>
+        <i onClick={() => notify('this is a notification')}>
+          <Toast myPendingRentals={this.props.myPendingRentals.length}/>
+          <NumRentals/>
+        </i>
+      </>
     )
   }
 }
