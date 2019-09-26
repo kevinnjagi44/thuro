@@ -18,12 +18,16 @@ class Notifications extends React.Component {
       return len ? len : null;
     };
 
+    if (this.props.myPendingRentals.length) {
+      notify('this is a notification');
+    }
+
     return (
       <>
-        <i onClick={() => notify('this is a notification')}>
-          <Toast myPendingRentals={this.props.myPendingRentals.length}/>
+        {/* <i onClick={() => notify('this is a notification')}> */}
+          <Toast myPendingRentals={this.props.myPendingRentals}/>
           <NumRentals/>
-        </i>
+        {/* </i> */}
       </>
     )
   }

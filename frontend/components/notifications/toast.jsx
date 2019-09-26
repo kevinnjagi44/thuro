@@ -2,17 +2,30 @@ import React from 'react';
 import styled from 'styled-components';
 import ee from 'event-emitter';
 import NumRentals from './notifications';
+import { editRental } from '../../actions/rental_actions';
+import { connect } from 'react-redux';
 
 const Container = styled.div`
   background-color: #444;
   color: white;
-  padding: 16px;
+  padding: 8px;
   position: absolute;
   top: ${props => props.top}px;
-  right: 0px;
+  right: 60px;
   z-index: 999;
   transition: top 0.5s ease;
   font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
+  cursor: default;
+
+  > .toast-x {
+    position: absolute;
+    top: -33px;
+    right: 3px;
+    cursor: pointer;
+    font-size: 18px;
+
+  }
+
 `;
 
 const emitter = new ee();
@@ -21,7 +34,7 @@ export const notify = (msg) => {
   emitter.emit('notification', msg);
 }
 
-export default class Toast extends React.Component {
+class Toast extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -29,47 +42,82 @@ export default class Toast extends React.Component {
       msg: ''
     };
     this.showNotification = this.showNotification.bind(this);
-    this.onShow = this.onShow.bind(this);
+    // this.onShow = this.onShow.bind(this);
+    this.closeToast = this.closeToast.bind(this);
+    this.clearToast = this.clearToast.bind(this);
     this.timeout = null;
     emitter.on('notification', (msg) => {
-      this.onShow(msg);
+      this.showNotification(msg);
     });
   }
 
-  onShow (msg) {
-    if (this.timeout) {
-      clearTimeout(this.timeout);
-      this.setState({
-        top: -100,
-      }, () => {
-        this.timeout = setTimeout(() => {
-          this.showNotification(msg);
-        }, 500);
-      });
-    } else {
-      this.showNotification(msg);
-    }
-  }
+  // onShow (msg) {
+  //   if (this.timeout) {
+  //     clearTimeout(this.timeout);
+  //     this.setState({
+  //       top: -100,
+  //     }, () => {
+  //       this.timeout = setTimeout(() => {
+  //         this.showNotification(msg);
+  //       }, 500);
+  //     });
+  //   } else {
+  //     this.showNotification(msg);
+  //   }
+  // }
 
   showNotification (msg) {
     this.setState({
       top: 59
-    }, () => {
-      this.timeout = setTimeout(() => {
-        this.setState({
-          top: -100
-        });
-      }, 3000);
     });
   }
+
+  closeToast () {
+    this.setState({
+      top: -100
+    })
+  }
+
+  clearToast () {
+    for (let i = 0; i < this.props.myPendingRentals.length; i++) {
+      this.props.editRental({
+        status: "approved"
+      });
+    }
+  }
+
+  // showNotification (msg) {
+  //   this.setState({
+  //     top: 59
+  //   }, () => {
+  //     this.timeout = setTimeout(() => {
+  //       this.setState({
+  //         top: -100
+  //       });
+  //     }, 3000);
+  //   });
+  // }
   
 
   render() {
-    
+    // debugger
     return (
       <Container top={this.state.top}>
-        {this.props.myPendingRentals === 1 ? `You have ${this.props.myPendingRentals} new rental request!` : `You have ${this.props.myPendingRentals} new rental requests!`}
+        {this.props.myPendingRentals.length === 1 ? `You have ${this.props.myPendingRentals.length} new rental request!` : `You have ${this.props.myPendingRentals.length} new rental requests!`}
+        <div className="toast-x" onClick={this.closeToast}>X</div>
+        <div className="toast-clear" onClick={this.clearToast}>Click here to clear</div>
       </Container> 
     )
   }
 }
+
+const mDTP = dispatch => {
+  return {
+    editRental: rental => dispatch(editRental(rental))
+  }
+}
+
+export default connect(
+  null,
+  mDTP
+)(Toast)
