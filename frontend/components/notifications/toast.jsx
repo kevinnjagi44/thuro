@@ -80,11 +80,27 @@ class Toast extends React.Component {
 
   clearToast () {
     for (let i = 0; i < this.props.myPendingRentals.length; i++) {
+      let rental = this.props.myPendingRentals[i];
+      let rentalId = rental.id;
+      // debugger
       this.props.editRental({
-        status: "approved"
-      });
+        // id: rental.id,
+        start_date: rental.start_date,
+        end_date: rental.end_date,
+        renter_id: rental.renter_id,
+        car_id: rental.car_id,
+        status: 'approved'
+        // fname: rental.fname,
+        // owner_id:  rental.owner_id,
+      }, rentalId).then(this.closeToast);
     }
   }
+
+      //   : start_date,
+      // : end_date,
+      // : renter_id,
+      // : car_id,
+      // : status
 
   // showNotification (msg) {
   //   this.setState({
@@ -103,9 +119,12 @@ class Toast extends React.Component {
     // debugger
     return (
       <Container top={this.state.top}>
-        {this.props.myPendingRentals.length === 1 ? `You have ${this.props.myPendingRentals.length} new rental request!` : `You have ${this.props.myPendingRentals.length} new rental requests!`}
+        <div onClick={this.clearToast}>
+        {this.props.myPendingRentals.length === 1 ? `You have ${this.props.myPendingRentals.length} new rental request!` : `You have ${this.props.myPendingRentals.length} new rental requests!`}. Click to approve/clear.
+        </div>
         <div className="toast-x" onClick={this.closeToast}>X</div>
-        <div className="toast-clear" onClick={this.clearToast}>Click here to clear</div>
+        
+        {/* <div className="toast-clear" onClick={this.clearToast}>Click here to clear</div> */}
       </Container> 
     )
   }
@@ -113,7 +132,7 @@ class Toast extends React.Component {
 
 const mDTP = dispatch => {
   return {
-    editRental: rental => dispatch(editRental(rental))
+    editRental: (rental, rentalId) => dispatch(editRental(rental, rentalId))
   }
 }
 

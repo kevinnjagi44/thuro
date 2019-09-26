@@ -12,7 +12,7 @@ class Notifications extends React.Component {
   }
 
   render() {  
-
+// debugger
     const NumRentals = () => {
       let len = this.props.myPendingRentals.length;
       return len ? len : null;
@@ -26,7 +26,7 @@ class Notifications extends React.Component {
       <>
         {/* <i onClick={() => notify('this is a notification')}> */}
           <Toast myPendingRentals={this.props.myPendingRentals}/>
-          <NumRentals/>
+          {/* <NumRentals/> */}
         {/* </i> */}
       </>
     )

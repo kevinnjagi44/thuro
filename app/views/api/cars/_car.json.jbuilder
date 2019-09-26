@@ -22,6 +22,7 @@ json.rentals do
       json.start_date rental.start_date
       json.end_date rental.end_date
       json.status rental.status
+      json.car_id rental.car_id
     # end
   end
 end

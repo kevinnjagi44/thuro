@@ -30,6 +30,7 @@ class Api::RentalsController < ApplicationController
 
   def update
     @rental = Rental.find(params[:id])
+    # if @rental.update(rental_params)
     if @rental.update_attributes(rental_params)
       render :show
     else

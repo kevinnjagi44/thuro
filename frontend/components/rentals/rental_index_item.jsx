@@ -94,7 +94,7 @@ class RentalIndexItem extends React.Component {
             </li>
             <li>
               {(() => {
-                let days = CalcDays(rental.end_date, rental.start_date);
+                let days = Math.floor(CalcDays(rental.end_date, rental.start_date));
                 return days > 1 ? `${days} days` : `${days} day`;
               })()}
             </li>

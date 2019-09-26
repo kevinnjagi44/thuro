@@ -47,11 +47,11 @@ export const createRental = (rental) => dispatch => (
   ))
 );
 
-export const editRental = (rental) => dispatch => (
-  RentalAPIUtil.editRental(rental).then(rental => (
+export const editRental = (rental, rentalId) => dispatch => (
+  RentalAPIUtil.editRental(rental, rentalId).then(rental => (
     dispatch(receiveRental(rental))
   ))
-);
+);  
 
 export const deleteRental = (id) => dispatch => (
   RentalAPIUtil.deleteRental(id).then(rental => (

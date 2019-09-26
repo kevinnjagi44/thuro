@@ -26,11 +26,13 @@ export const createRental = (rental) => {
   );
 };
 
-export const editRental = (rental) => {
+export const editRental = (rental, rentalId) => {
   return (
     $.ajax({
       method: 'PATCH',
-      url: `api/rentals/${rental.id}`,
+      // url: `api/rentals/${id}`,
+      // url: `api/rentals/${rental.id}`,
+      url: `api/rentals/${rentalId}`,
       data: { rental }
     })
   );
