@@ -15,7 +15,6 @@
 class Rental < ApplicationRecord
 
   STATUSES = ['approved', 'denied', 'pending']
-  # STATUSES = %w(approved, denied, pending)
 
   validates :renter_id, :car_id, :start_date, :end_date, :status, presence: true
   validates :status, inclusion: STATUSES

@@ -8,7 +8,7 @@ import { fetchRentals } from '../../actions/rental_actions';
 import { fetchReviews } from '../../actions/review_actions';
 
 const mSTP = (state, ownProps) => {
-  // debugger
+
   const carId = ownProps.match.params.id; 
   return {
     car: state.entities.cars[carId],

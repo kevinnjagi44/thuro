@@ -4,7 +4,7 @@ import { fetchRentals, deleteRental } from '../../actions/rental_actions';
 import { openReviewModal } from '../../actions/modal_actions';
 
 const mSTP = (state) => {
-  // debugger
+
   return {
     rentals: Object.values(state.entities.rentals),
     currentUserId: state.session.id

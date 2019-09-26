@@ -3,8 +3,7 @@ import { connect } from 'react-redux';
 import Notifications from './notifications';
 
 const mSTP = (state) => {
-  // debugger
-  
+
   let myPendingRentals = Object.values(state.entities.cars).filter(c => c.rentals.length && c.owner_id === state.session.id).map(c => c.rentals).flat().filter(r => r.status === 'pending');
 
   return {
