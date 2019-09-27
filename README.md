@@ -186,37 +186,9 @@ const mSTP = (state) => {
 };
 ```
 
-```ruby
-TRANSMISSION_TYPE = %w(automatic manual none).freeze
-
-COLORS = %w(black brown gray silver white red orange yellow gold purple blue green).freeze
-
-validates :rate, :make, :model, :year, :color, :transmission, :seats, :description, :plate, :address, :city, :state, :zip, :doors, presence: true
-
-validates :awd, :audio_input, :bike_rack, :bluetooth, :child_seat, :convertible, :gps, :heated_seats, :longterm_car, :pet_friendly, :ski_rack, :snow_tires_chains, :sunroof, :toll_pass, :usb_input, inclusion: [true, false]
-
-validates :transmission, inclusion: TRANSMISSION_TYPE, unless: -> { transmission.blank? }
-
-belongs_to :user,
-  foreign_key: :owner_id, 
-  class_name: :User
-
-has_many :rentals,
-  foreign_key: :car_id,
-  class_name: :Rental
-
-has many :reviews,
-  foreign_key: :car_id,
-  class_name: :Review
-
-has_many_attached :photos
-  ```
-
 ## Future Releases:
 * Reviews
 * Image Carousels
 * Search
 * User Dashboards
 * Add to Favorites
-* Mobile device responsiveness
-* Add Car to Favorites 
