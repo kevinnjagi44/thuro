@@ -12,7 +12,7 @@ const Container = styled.div`
   padding: 8px;
   position: absolute;
   top: ${props => props.top}px;
-  right: 60px;
+  right: 160px;
   z-index: 999;
   transition: top 0.5s ease;
   font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;

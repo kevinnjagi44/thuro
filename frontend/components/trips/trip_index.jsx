@@ -36,7 +36,7 @@ class TripIndex extends React.Component {
     // rentals: key value pair {0: start_date: x, {car: id: x}, ...}
 
     const rentalItems = rentals.filter(rental => (
-      moment(rental.start_date) < moment(this.todaysDate) // get past trips only
+      moment(rental.start_date).startOf('day') < moment(this.todaysDate).startOf('day') // get past trips only
     )).map(rental => {
       return (
         <div className="rental-index-tile" key={rental.id}>
@@ -64,7 +64,7 @@ class TripIndex extends React.Component {
     // })
 
     const DisplayRentals = () => {
-      if (!rentals.length) {
+      if (!rentalItems.length) {
         return (
           <div className="rental-index-no-rentals">
             <h1>You have no past trips.</h1>
