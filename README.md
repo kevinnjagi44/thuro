@@ -63,42 +63,43 @@ Torino is a full stack web application inspired by Turo, a peer-to-peer carshari
 Users are required to sign up in order to create cars and book rentals. User credentials are stored as a password digest after being hashed and salted:
 
  ```ruby
- class User < ApplicationRecord
-    validates :fname, :lname, presence: true
-    validates :email, :password_digest, :session_token, presence: true
-    validates :email, uniqueness: true
-    validates :password, length: { minimum: 6 }, allow_nil: true
+# user.rb
+class User < ApplicationRecord
+  validates :fname, :lname, presence: true
+  validates :email, :password_digest, :session_token, presence: true
+  validates :email, uniqueness: true
+  validates :password, length: { minimum: 6 }, allow_nil: true
 
-    ...
+  ...
 
-    after_initialize :ensure_session_token
+  after_initialize :ensure_session_token
 
-    attr_reader :password
+  attr_reader :password
 
-    def self.find_by_credentials(email, password)
-        user = User.find_by(email: email)
-        return nil unless user && user.is_password?(password)
-        user
-    end
+  def self.find_by_credentials(email, password)
+      user = User.find_by(email: email)
+      return nil unless user && user.is_password?(password)
+      user
+  end
 
-    def password=(password)
-        @password = password
-        self.password_digest = BCrypt::Password.create(password)
-    end
+  def password=(password)
+      @password = password
+      self.password_digest = BCrypt::Password.create(password)
+  end
 
-    def is_password?(password)
-        BCrypt::Password.new(self.password_digest).is_password?(password)
-    end
+  def is_password?(password)
+      BCrypt::Password.new(self.password_digest).is_password?(password)
+  end
 
-    def reset_session_token
-        self.session_token = SecureRandom.urlsafe_base64
-        self.save!
-        self.session_token
-    end
+  def reset_session_token
+      self.session_token = SecureRandom.urlsafe_base64
+      self.save!
+      self.session_token
+  end
 
-    def ensure_session_token
-        self.session_token ||= SecureRandom.urlsafe_base64
-    end
+  def ensure_session_token
+      self.session_token ||= SecureRandom.urlsafe_base64
+  end
 end
 ```
  
@@ -112,20 +113,19 @@ Car owners can post their cars for rent, selecting optional features such as hea
 In addition to creation, owners can make edits and delete their listings. Edit and delete options are displayed on the car show page <b>if</b> the current user is recognized as an owner. As an added security measure, any attempt to access another owner's car edit page URL forcefully redirects to the index:
 
 ```js
+// car_show.jsx
 render() {
-
 ...  
-
-    if (this.props.car.owner_id === this.props.currentUserId) {
-      showEditDel = 
-      <>
-        <Link to={`/cars/${this.props.car.id}/edit`}>
-          <button>Edit this car</button>
-        </Link>
-        <br />
-        <button onClick={this.handleDelete}>Delete this car</button>
-      </>
-    }
+  if (this.props.car.owner_id === this.props.currentUserId) {
+    showEditDel = 
+    <>
+      <Link to={`/cars/${this.props.car.id}/edit`}>
+        <button>Edit this car</button>
+      </Link>
+      <br />
+      <button onClick={this.handleDelete}>Delete this car</button>
+    </>
+  }
 ```
 <p align="center">
   <img src="https://github.com/fsiino/torino/blob/master/app/assets/images/readme/readme-car-edit.gif?raw=true" alt="Torino car edit demo"/>
