@@ -36,7 +36,7 @@ class TripIndex extends React.Component {
     // rentals: key value pair {0: start_date: x, {car: id: x}, ...}
 
     const rentalItems = rentals.filter(rental => (
-      moment(rental.start_date) <= moment(this.todaysDate) // get upcoming rentals only
+      moment(rental.start_date) < moment(this.todaysDate) // get past trips only
     )).map(rental => {
       return (
         <div className="rental-index-tile" key={rental.id}>
