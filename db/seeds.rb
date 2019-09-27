@@ -195,7 +195,7 @@ ActiveRecord::Base.transaction do
   car6.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/falcon.jpg'), filename: 'car6_falcon.jpg')
 
   car7 = Car.create!(
-    owner_id: frankie.id,
+    owner_id: pop.id,
     rate: 120,
     make: 'Mercedes-Benz',
     model: 'S Turbo Diesel', 
@@ -297,7 +297,7 @@ ActiveRecord::Base.transaction do
   car10.photos.attach(io: open('https://torino-seeds.s3-us-west-1.amazonaws.com/model3.jpg'), filename: 'car10_model3.jpg')
 
   car11 = Car.create!(
-    owner_id: frankie.id,
+    owner_id: pop.id,
     rate: 160,
     make: 'Fiat',
     model: 'Spyder', 

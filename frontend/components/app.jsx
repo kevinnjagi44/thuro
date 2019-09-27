@@ -14,7 +14,7 @@ import CarShowContainer from './cars/car_show_container';
 import CarUpdateContainer from './cars/car_update_container';
 import RentalIndexContainer from './rentals/rental_index_container';
 import TripIndexContainer from './trips/trip_index_container';
-import Toast, { notify } from './notifications/toast';
+
 
 const App = () => (
   <div>
@@ -27,6 +27,7 @@ const App = () => (
       <AuthRoute path ="/login" component={LogInFormContainer} />
       <AuthRoute path ="/signup" component={SignUpFormContainer} />
     </header>
+
 
     <Switch>
       <Route exact path="/cars" component={CarIndexContainer} />

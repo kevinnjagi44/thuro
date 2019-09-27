@@ -136,8 +136,53 @@ Once a potential customer finds a car they like, a rental can be booked on the r
 
 <!-- ![User Rentals Page](https://github.com/fsiino/torino/blob/master/app/assets/images/readme/readme-rentals.png?raw=true) -->
 <p align="center">
-  <img src="https://github.com/fsiino/torino/blob/master/app/assets/images/readme/readme-booking-demo-gif.gif?raw=true" alt="Torino booking demo"/>
+  <img src="https://github.com/fsiino/torino/blob/master/app/assets/images/readme/readme-booking-demo.gif?raw=true" alt="Torino booking demo"/>
 </p>
+
+### Interactive Notifications
+Owners will see a toast-tyle notification on the upper right-hand corner of their screen, just below the navbar. The goal of this feature is to let cars owners know upon login that a customer has booked a rental for one of their vehicles. To enable a dynamic transition in the CSS, a styled-components module was used to update position properties based on state changes.
+
+<p align="center">
+  <img src ="https://github.com/fsiino/torino/blob/master/app/assets/images/readme/renter-owner-norif.gif?raw=true" alt="Torino booking notification"/>
+</p>
+
+```js
+// toast.jsx
+  clearToast() {
+    for (let i = 0; i < this.props.myPendingRentals.length; i++) {
+      let rental = this.props.myPendingRentals[i];
+      let rentalId = rental.id;
+      this.props.editRental({
+        start_date: rental.start_date,
+        end_date: rental.end_date,
+        renter_id: rental.renter_id,
+        car_id: rental.car_id,
+        status: 'approved'
+      }, rentalId)
+        .then(this.setState({
+          myPendingRentals: []
+        }))
+        .then(this.closeToast);
+        this.props.fetchCars();
+    }
+  }
+```
+
+Additionally, once the notification is consumed by the owner by clicking the notification, the notification will not show again when logging out/back in. 
+
+<p align="center">
+  <img src="https://github.com/fsiino/torino/blob/master/app/assets/images/readme/notif-gone-relog.gif?raw=true" alt="Torino booking demo"/>
+</p>
+
+```js
+// notifications_container.js
+const mSTP = (state) => {
+  let myPendingRentals = Object.values(state.entities.cars).filter(c => c.rentals.length && c.owner_id === state.session.id).map(c => c.rentals).flat().filter(r => r.status === 'pending');
+  return {
+    myPendingRentals
+  };
+};
+```
 
 ```ruby
 TRANSMISSION_TYPE = %w(automatic manual none).freeze

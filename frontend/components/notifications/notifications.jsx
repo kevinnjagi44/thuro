@@ -5,29 +5,27 @@ import Toast, { notify } from './toast';
 class Notifications extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      myPendingRentals: props.myPendingRentals
+    };
   }
 
   componentDidMount() {
     this.props.fetchCars();
+    this.setState({
+      myPendingRentals: this.props.myPendingRentals
+    });
   }
 
-  render() {  
 
-    const NumRentals = () => {
-      let len = this.props.myPendingRentals.length;
-      return len ? len : null;
-    };
-
-    if (this.props.myPendingRentals.length) {
+  render() {
+    if (this.props.myPendingRentals.length !== 0) {
       notify('this is a notification');
     }
 
     return (
       <>
-        {/* <i onClick={() => notify('this is a notification')}> */}
-          <Toast myPendingRentals={this.props.myPendingRentals}/>
-          {/* <NumRentals/> */}
-        {/* </i> */}
+        <Toast myPendingRentals={this.props.myPendingRentals} />
       </>
     )
   }
