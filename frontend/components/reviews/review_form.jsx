@@ -8,7 +8,7 @@ class ReviewForm extends React.Component {
       rating: '',
       title: '',
       body: '',
-      car_id: props.carId,
+      carId: props.carId
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }

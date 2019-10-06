@@ -55,6 +55,7 @@ Torino is a full stack web application inspired by Turo, a peer-to-peer carshari
 
 ### Libraries
 * React Dates
+* Moment.js
 
 ## Features:
 

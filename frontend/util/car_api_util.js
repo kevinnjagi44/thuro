@@ -2,8 +2,7 @@ export const fetchCars = () => {
   return (
     $.ajax({
       method: 'GET',
-      url: '/api/cars',
-      // data
+      url: '/api/cars'
     })
   );
 };
@@ -33,9 +32,8 @@ export const editCar = (car, carId) => {
   return (
     $.ajax({
       method: 'PATCH',
-      // url: `/api/cars/${car.id}`,
       url: `/api/cars/${carId}`,
-      data: {car}
+      data: {car},
       // contentType: false,
       // processData: false   
     })

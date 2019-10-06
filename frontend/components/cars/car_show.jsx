@@ -14,9 +14,6 @@ class CarShow extends React.Component {
 
   componentDidMount() {
     this.props.fetchCar(this.props.match.params.id);
-
-    // this.props.fetchRentals();
-
     this.props.fetchReviews(this.props.match.params.id);
     window.scrollTo(0,0);
 
@@ -52,7 +49,6 @@ class CarShow extends React.Component {
           </Link>
           <br />
           <button onClick={(e) => { if (window.confirm('Are you sure you wish to delete this item?')) {this.handleDelete(e)} } }>Delete this car</button>
-          {/* <button onClick={this.handleDelete}>Delete this car</button> */}
         </div>
       }
 
@@ -99,8 +95,7 @@ class CarShow extends React.Component {
       } else {
         return (
         <div className="rental-form-login">
-          {/* Please Log In to Rent! */}
-            <button onClick={() => {this.props.openModal('login')}}>Please Login to Rent!</button>
+          <button onClick={() => {this.props.openModal('login')}}>Please Login to Rent!</button>
         </div>
         )
       }
@@ -113,7 +108,6 @@ class CarShow extends React.Component {
       {/* IMAGE BANNER */}
 
         <div className="car-show-banner">
-          {/* <img className="car-show-img-banner" src={this.props.car.photoUrl} /> */}
           <img className="car-show-img-banner" alt="car photo" src={this.props.car.photoUrls[0]} /> 
         </div>
 
@@ -277,14 +271,11 @@ class CarShow extends React.Component {
 
                 <div className="car-show-rental">
                   
-                  {/* <RentalFormContainer/> */}
-                  <ShowRentalForm/>
+                <ShowRentalForm/>
 
                 </div>
 
-                {/* <div className="car-show-edit-del"> */}
-                  {showEditDel}
-                {/* </div> */}
+                {showEditDel}
 
                 <div className="car-show-distance-header">
                   Distance included

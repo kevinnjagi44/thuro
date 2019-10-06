@@ -154,9 +154,6 @@ class CarCreate extends React.Component {
   // }
 
   render() {
-    // if (!this.props.formFields) {
-    //   return null;
-    // }
 
     if (!this.props.currentUserId) {
       return (
@@ -295,8 +292,8 @@ class CarCreate extends React.Component {
             </div>
           <br/><br/>
       
-          {/* <h3>Photos</h3> */}
-
+          <h2>Add a Photo</h2>
+          <br/>
           {/* <input type="file" onChange={this.handleFile.bind(this)} /> */}
           <input type="file" onChange={e => this.setState({ photos: e.target.files })} multiple />
 

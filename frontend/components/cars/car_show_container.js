@@ -13,18 +13,13 @@ const mSTP = (state, ownProps) => {
   return {
     car: state.entities.cars[carId],
     currentUserId: state.session.id,
-    // reviews: state.entities.
   };
 };
 
 const mDTP = (dispatch) => ({
   fetchCar: (id) => dispatch(fetchCar(id)),
   deleteCar: (id) => dispatch(deleteCar(id)),
-
   openModal: (modal) => dispatch(openModal(modal)),
-
-  // fetchRentals: () => dispatch(fetchRentals()),
-
   fetchReviews: (id) => dispatch(fetchReviews(id))
 
 });

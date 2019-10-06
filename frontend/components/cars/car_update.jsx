@@ -7,7 +7,6 @@ class CarUpdate extends React.Component {
     this.state = this.props.car;
     this.handleSubmit = this.handleSubmit.bind(this);
     this.carId = this.props.match.params.id;
-    
   }
 
   componentDidMount() {
@@ -18,7 +17,6 @@ class CarUpdate extends React.Component {
   navigateToShow() {
     this.props.history.push(`/cars/${this.carId}`);
     window.scrollTo(0, 0);
-    // this.props.history.push('/cars/');
   }
 
   update(field) {
@@ -49,13 +47,10 @@ class CarUpdate extends React.Component {
     e.preventDefault();
 
     const formData = new FormData();
-    // for (let i = 0; i < this.state.photos.length; i++) {
-    //   formData.append('car[photos][]', this.state.photos[i]);
-    // }
 
     if (this.state.photos) {
       for (let i = 0; i < this.state.photos.length; i++) {
-        formData.append('car[photos][]', this.state.photos[i]);
+        formData.append('car[photos][]', this.state.photoUrls[i]);
       }
     }
 
@@ -203,20 +198,11 @@ class CarUpdate extends React.Component {
 
           {/* <h3>Photos</h3> */}
 
-          {/* <input type="file" onChange={this.handleFile.bind(this)} /> */}
-
           {/* <input type="file" onChange={e => this.setState({ photos: e.target.files })} multiple /> */}
 
           {/* TODO: Get image upload to work on update page. */}
 
           <br />
-
-          {/* <label htmlFor="">Lat
-            <input type="text" placeholder="Lat" value={this.state.lat} onChange={this.update("lat")} />
-          </label>
-          <label htmlFor="">Lon
-            <input type="text" placeholder="Lon" value={this.state.lng} onChange={this.update("lng")} />
-          </label> */}
 
           <input className="car-create-submit-btn" type="submit" value="Finish" />
 
