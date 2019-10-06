@@ -5,8 +5,6 @@ import CarCreate from './car_create';
 const mSTP = state => {
   return {
     formfields: {
-      // owner_id: state.session.id,
-      // ownerId: state.session.id,
       rate: '',
       make: '',
       model: '',

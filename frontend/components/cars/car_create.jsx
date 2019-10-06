@@ -4,10 +4,7 @@ import { withRouter, Redirect } from 'react-router-dom';
 class CarCreate extends React.Component {
   constructor(props) {
     super(props);
-    // this.state =  this.props.formFields;
     this.state = {
-      // owner_id: state.session.id,
-      // ownerId: state.session.id, being passed in from rails
       rate: '',
       make: '',
       model: '',
@@ -40,12 +37,9 @@ class CarCreate extends React.Component {
       sunroof: false,
       tollPass: false,
       usbInput: false,
-      // photo: null
-      // photoFile: null
       photos: []
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-    // this.handleFile = this.handleFile.bind(this);
   }
 
   componentDidMount() {
@@ -132,26 +126,9 @@ class CarCreate extends React.Component {
       formData.append('car[photos][]', this.state.photos[i]);
       }
     }
-    // this.props.createCar(formData).then((car) => this.props.history.push(`/cars/${car.id}`));
-
-    // this.props.createCar(formData).then((data) => this.props.history.push(`/cars/${data.car.id}`));
-
-    // this.props.createCar(formData).then((car) => this.props.history.push(`/cars/${car.id}`));
-    
-    // this.props.createCar(formData,this.state.id);
-    // this.navigateToIdx();
-
     this.props.createCar(formData).then(() => this.props.history.push('/cars/'));
 
-    // this.props.createCar(formData);
-    // this.navigateToIdx();
-
   }
-
-
-  // handlefile(e) {
-  //   this.setState({photoFile: e.currentTarget.files[0]});
-  // }
 
   render() {
 
@@ -294,7 +271,6 @@ class CarCreate extends React.Component {
       
           <h2>Add a Photo</h2>
           <br/>
-          {/* <input type="file" onChange={this.handleFile.bind(this)} /> */}
           <input type="file" onChange={e => this.setState({ photos: e.target.files })} multiple />
 
           <br/>
