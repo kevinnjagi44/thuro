@@ -5,7 +5,6 @@ class Api::ReviewsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def index
-    # @reviews = Review.where(car_id: params[:car_id])
     @reviews = Review.where(car_id: params[:car_id])
     render :index
   end
@@ -21,6 +20,7 @@ class Api::ReviewsController < ApplicationController
 
     if @review.save
       @author = @review.author
+      @user = @review.user
       render :show
     else
       render json: @review.errors.full_messages, status: 422

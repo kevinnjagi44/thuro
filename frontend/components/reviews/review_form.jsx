@@ -8,9 +8,11 @@ class ReviewForm extends React.Component {
       rating: '',
       title: '',
       body: '',
-      carId: props.carId
+      car_id: props.carId
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.updateRadio = this.updateRadio.bind(this);
+    this.update = this.update.bind(this);
   }
 
   handleSubmit(e) {
@@ -27,8 +29,14 @@ class ReviewForm extends React.Component {
     };
   }
 
-  render() {
+  updateRadio(e) {
+    this.setState({
+      rating: e.currentTarget.value
+    });
+  }
 
+  render() {
+// debugger
     return (
       <div className="review-modal-container">
         <form className="review-modal-form" onSubmit={this.handleSubmit}>
@@ -43,6 +51,22 @@ class ReviewForm extends React.Component {
                 onChange={this.update("rating")} 
                 placeholder="1-5"
               />
+                {/* 1 
+              <input type="radio" 
+                onChange={this.updateRadio}
+              /> 2  
+              <input type="radio" 
+                onChange={this.updateRadio}
+              /> 3 
+              <input type="radio" 
+                onChange={this.updateRadio}
+              /> 4 
+              <input type="radio" 
+                onChange={this.updateRadio}
+              /> 5 
+              <input type="radio" 
+                onChange={this.updateRadio}
+              */ }
             </label>
             <br />
 
