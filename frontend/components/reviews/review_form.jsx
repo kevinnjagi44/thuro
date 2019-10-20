@@ -32,9 +32,9 @@ class ReviewForm extends React.Component {
     return (
       <div className="review-modal-container">
         <form className="review-modal-form" onSubmit={this.handleSubmit}>
-          <h3 className="modal-form-header">Create A Review</h3>
+          <h3 className="review-modal-form-header">Create A Review</h3>
           <br />
-          <div className="modal-container">
+          <div className="review-modal-container">
             <br />
             <label>{`Rating (1-5)`}
             <br/>
@@ -68,10 +68,10 @@ class ReviewForm extends React.Component {
             <br />
             <input type="submit" onClick={this.handleSubmit} value="Write Review" />
           </div>
-          <div className="modal-bottom">
+          <div className="review-modal-bottom">
             <br />
           </div>
-          <div className="modal-x" onClick={this.props.closeModal}>X</div>
+          <div className="review-modal-x" onClick={this.props.closeModal}>X</div>
         </form>
       </div>
 

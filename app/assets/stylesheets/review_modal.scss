@@ -1,0 +1,166 @@
+.modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+.transparent-modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: transparent;
+  z-index: 7;
+}
+
+.fixed-modal-child {
+  z-index: 8;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.relative-modal-child {
+  z-index: 8;
+  position: absolute;
+
+}
+
+.notifications, .post-menu, .comment-menu, .search-results {
+  position: absolute; 
+  background: white; 
+  font-size: 13px;
+
+  border: 1px solid #bbbbbb;
+  box-shadow: 0 0 5px #b2b2b2;
+
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #626871;
+
+    li {
+      width: 100%;
+      padding: 5px 0px;
+      cursor: pointer;
+    }
+  }
+
+}
+
+/* */ 
+
+.review-modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 3;
+}
+
+.review-modal-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.review-modal-x {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.review-modal-form-header {
+  font-family: Freight,HoeflerText-Black,Times New Roman,serif;
+  font-size: 40px;
+  text-align: center;
+  line-height: 1.2;
+  margin: 30px 0 10px;
+  text-transform: none;
+  font-weight: 0;
+}
+
+.review-modal-container {
+  align-content: center;
+}
+
+.review-modal-bottom {
+  text-align: center;
+  align-content: center;
+  
+}
+
+.review-modal-textarea {
+  width: 391px;
+  height: 143px;
+  font-size: 13px;
+  font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
+  padding: 10px;
+}
+
+.modal-bottom button {
+  background: #231f20;
+  color: #ffffff;
+  border: none;
+  font-size: 16px;  
+  border: 1px solid #ffffff;
+  padding: 8px 14px;
+  background: transparent;
+  align-content: center;
+  cursor: pointer;
+}
+
+.review-modal-form {
+  width: 374px;
+  height: 534px;
+  background-image: url('https://github.com/fsiino/torino/blob/master/app/assets/images/review-modal-bg.png?raw=true');
+  border: 1px solid black;
+  font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
+  font-size: 13px;
+  color: #FFFFFF;
+  line-height: 1.5;
+  display: block;
+  border-radius: 8px;
+  padding: 20px;
+  align-content: center;
+}
+
+.review-modal-form input[type="text"], input[type="password"] {
+  font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
+  width: 100%;
+  height: 35px;
+  font-size: 13px;
+  color: #231F20;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 10px;
+  box-sizing: border-box;
+  box-shadow: inset 0 1px 3px #ddd;
+}
+
+.review-modal-form input[type="submit"] {
+  width: 100%;
+  height: 50px;
+  background: #59D389;
+  color: #FFFFFF;
+  font-weight: 100;
+  font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
+  font-size: 18px;
+  border: 0px;
+  cursor: pointer;
+}
