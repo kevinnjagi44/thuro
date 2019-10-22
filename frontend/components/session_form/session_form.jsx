@@ -4,14 +4,9 @@ import { withRouter } from 'react-router-dom';
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
-    // this.state = {
-    //   email: '',
-    //   password: ''
-    // };
     this.state = this.props.formFields;
     this.handleSubmit = this.handleSubmit.bind(this);
     this.prettyDemoUser = this.prettyDemoUser.bind(this);
-    // this.handleDemoUser = this.handleDemoUser.bind(this);
   }
 
   componentWillUnmount() {
@@ -71,9 +66,7 @@ class SessionForm extends React.Component {
       .then(this.props.closeModal)
       .then(this.props.fetchRentals)
       .then(this.props.fetchCars());
-      
   }
-
 
   renderErrors() {
     return (
@@ -186,7 +179,6 @@ class SessionForm extends React.Component {
             </div>
           </form>
         </div>
-    
       )
     }
   }

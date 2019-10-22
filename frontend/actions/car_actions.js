@@ -4,19 +4,16 @@ export const RECEIVE_CARS = 'RECEIVE_CARS';
 export const RECEIVE_CAR = 'RECEIVE_CAR';
 export const DELETE_CAR = 'DELETE_CAR';
 export const RECEIVE_CAR_ERRORS = 'RECEIVE_CAR_ERRORS';
+export const CLEAR_CAR_ERRORS = 'CLEAR_CAR_ERRORS';
 
 export const receiveCars = (cars) => ({
   type: RECEIVE_CARS,
   cars
 });
 
-// export const receiveCar = ({car, rentals}) => ({
 export const receiveCar = (car) => ({
   type: RECEIVE_CAR,
-  car,
-  // car: payload.car,
-  // reviews: payload.reviews,
-  // rentals
+  car
 });
 
 export const removeCar = (carId) => ({
@@ -27,6 +24,10 @@ export const removeCar = (carId) => ({
 export const receiveErrors = (errors) => ({
   type: RECEIVE_CAR_ERRORS,
   errors
+});
+
+export const clearCarErrors = () => ({
+  type: CLEAR_CAR_ERRORS
 });
 
 // ******************************* //
@@ -44,9 +45,8 @@ export const fetchCar = (id) => dispatch => (
 );
 
 export const createCar = (car) => dispatch => (
-  CarAPIUtil.createCar(car).then(car => (
-    dispatch(receiveCar(car)), errors => dispatch(receiveErrors(errors))
-  ))
+  CarAPIUtil.createCar(car).then(car => (dispatch(receiveCar(car))), 
+    err => (dispatch(receiveErrors(err.responseJSON))))
 );
 
 export const editCar = (car, carId) => dispatch => (

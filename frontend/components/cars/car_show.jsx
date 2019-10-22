@@ -221,7 +221,7 @@ class CarShow extends React.Component {
 
                   {`${this.props.car.awd}` === 'true' ? <><span title="AWD" className="feature-awd" /><span>All-wheel-drive</span><br/></> : null}
                   {`${this.props.car.audio_input}` === 'true' ? <><span title="Audio input" className="feature-audio-input" /><span>Audio input</span><br /></> : null}
-                  {`${this.props.car.bike_rack}` === 'true' ? <><span title="Bike rack" className="feature-bike-rack" /><span>Bike</span><br /></> : null}
+                  {`${this.props.car.bike_rack}` === 'true' ? <><span title="Bike rack" className="feature-bike-rack" /><span>Bike rack</span><br /></> : null}
                   {`${this.props.car.bluetooth}` === 'true' ? <><span title="Bluetooth" className="feature-bluetooth" /><span>Bluetooth</span><br /></> : null }
                   {`${this.props.car.child_seat}` === 'true' ? <><span title="Child seat" className="feature-child-seat" /><span>Child seat</span><br /></> : null}
                   {`${this.props.car.convertible}` === 'true' ? <><span title="Convertible" className="feature-convertible" /><span>Convertible</span><br /></> : null}

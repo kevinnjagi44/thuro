@@ -46,6 +46,10 @@ class CarCreate extends React.Component {
     window.scrollTo(0, 0);
   }
 
+  componentWillUnmount() {
+    this.props.clearCarErrors();
+  }
+
   navigateToIdx() {
     this.props.history.push('/cars/');
   }
@@ -66,20 +70,19 @@ class CarCreate extends React.Component {
     };
   }
 
-  // renderErrors() {
-  //   return (
-  //     <ul className="error-messages">
-  //       {this.props.errors.map((error, i) => (
-  //         <li key={`error-${i}`}>
-  //           {error}
-  //         </li>
-  //       ))}
-  //     </ul>
-  //   );
-  // }
+  renderErrors() {
+    return (
+      <ul className="error-messages">
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
 
   // TODO: Make an autocomplete car create for demoing.
-  // TODO: Render Errors for faulty submission
 
   handleSubmit(e) {
     e.preventDefault();
@@ -131,7 +134,7 @@ class CarCreate extends React.Component {
   }
 
   render() {
-
+// debugger
     if (!this.props.currentUserId) {
       return (
       <Redirect to="/cars" />
@@ -151,9 +154,7 @@ class CarCreate extends React.Component {
           <h2>Your Car</h2>
 
           <br/><br/>
-          
-          {/* {this.renderErrors()} */}
-            
+                      
           <h3>Where is your car located?</h3>
 
           <br/>
@@ -274,6 +275,10 @@ class CarCreate extends React.Component {
           <input type="file" onChange={e => this.setState({ photos: e.target.files })} multiple />
 
           <br/>
+
+          <div className="car-create-errors">
+            {this.renderErrors()}
+          </div>
 
           <input className="car-create-submit-btn" type="submit" value="Finish"/>
 

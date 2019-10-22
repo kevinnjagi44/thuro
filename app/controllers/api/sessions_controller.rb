@@ -8,8 +8,6 @@ class Api::SessionsController < ApplicationController
     if @user
       login(@user)
       render 'api/users/show'
-      # render json: @user
-      # render :index
     else
       render json: ['Invalid email/password combination'], status: 422
     end
