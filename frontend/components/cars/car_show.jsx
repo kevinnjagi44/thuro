@@ -16,17 +16,12 @@ class CarShow extends React.Component {
     this.props.fetchCar(this.props.match.params.id);
     this.props.fetchReviews(this.props.match.params.id);
     window.scrollTo(0,0);
-
-    }
-
-  navigateToIdx() {
-    this.props.history.push('/cars/');
   }
 
   handleDelete(e) {
     e.preventDefault();
     this.props.deleteCar(this.props.car.id);
-    this.navigateToIdx();
+    this.props.history.push('/cars/');
   }
 
   render() {

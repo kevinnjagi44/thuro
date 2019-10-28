@@ -50,10 +50,6 @@ class CarCreate extends React.Component {
     this.props.clearCarErrors();
   }
 
-  navigateToIdx() {
-    this.props.history.push('/cars/');
-  }
-
   updateCheckbox(field) {
     return e => {
       this.setState({

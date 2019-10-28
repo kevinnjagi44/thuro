@@ -14,11 +14,6 @@ class CarUpdate extends React.Component {
     window.scrollTo(0, 0);
   }
 
-  navigateToShow() {
-    this.props.history.push(`/cars/${this.carId}`);
-    window.scrollTo(0, 0);
-  }
-
   update(field) {
     return e => {
       this.setState({
@@ -55,7 +50,8 @@ class CarUpdate extends React.Component {
     }
 
     this.props.editCar(this.state, this.state.id);
-    this.navigateToShow();
+    this.props.history.push(`/cars/${this.carId}`);
+    window.scrollTo(0, 0);
 
   }
 

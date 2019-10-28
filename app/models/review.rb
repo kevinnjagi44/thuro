@@ -15,6 +15,7 @@
 class Review < ApplicationRecord
 
   validates :author_id, :car_id, :rating, :title, :body, presence: true
+  validates :rating, inclusion: 1..5
 
   belongs_to :author,
     foreign_key: :author_id,

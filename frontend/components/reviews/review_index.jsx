@@ -9,9 +9,8 @@ class ReviewIndex extends React.Component {
   }  
 
   componentDidMount() {
-    this.props.fetchReviews(this.props.match.params.id)
+    this.props.fetchReviews(this.props.match.params.id);
   }
-
 
   render() {
 
@@ -25,12 +24,15 @@ class ReviewIndex extends React.Component {
       if (!reviews.length) {
         return (
           <>
-            <span>No reviews yet. Rent this car today and be the first to review!</span>
+            <span>
+              No reviews yet. Rent this car today and be the first to review!
+            </span>
           </>
         )
       } else {
+        const sorted = reviews.sort((r1, r2) => moment(r2.created_at) - moment(r1.created_at));
         return (
-        reviews.map(review => {
+        sorted.map(review => {
           return (
           <div key={review.id}>
             <div className="review-index-itm-container">
