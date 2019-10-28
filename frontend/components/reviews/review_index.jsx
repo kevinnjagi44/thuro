@@ -59,18 +59,148 @@ class ReviewIndex extends React.Component {
       }
     }
 
+    const avgReviewScore = () => {
+      let revScores = reviews.map(review => review.rating)
+      let revScoreSum = revScores.reduce((acc, el) => acc + el)
+      return Math.round(revScoreSum / reviews.length - 0.5) + 0.5
+    }
+
     return (
       <>
         <div className="car-show-star-wrapper">
           <div className="car-show-star-inner">
-            {reviews.length === 0 ? null : <div className="car-show-left-full-star" />}
-            {reviews.length === 0 ? null : <div className="car-show-left-full-star" />}
-            {reviews.length === 0 ? null : <div className="car-show-left-full-star" />}
-            {reviews.length === 0 ? null : <div className="car-show-left-full-star" />}
-            {reviews.length === 0 ? null : <div className="car-show-left-full-star" />}
+
+            {(() => {
+              if (reviews.length !== 0) {
+                if (avgReviewScore() === 0) {
+                  return (
+                    <>
+                      <div className="car-show-left-empty-star" />
+                      <div className="car-show-left-empty-star" />
+                      <div className="car-show-left-empty-star" />
+                      <div className="car-show-left-empty-star" />
+                      <div className="car-show-left-empty-star" />
+                    </>
+                  )
+                }
+                if (avgReviewScore() === 0.5) {
+                  return (
+                    <>
+                      <div className="car-show-left-half-star" />
+                      <div className="car-show-left-empty-star" />
+                      <div className="car-show-left-empty-star" />
+                      <div className="car-show-left-empty-star" />
+                      <div className="car-show-left-empty-star" />
+                    </>
+                  )
+                }
+                if (avgReviewScore() === 1) {
+                  return (
+                    <>
+                      <div className="car-show-left-full-star" />
+                      <div className="car-show-left-empty-star" />
+                      <div className="car-show-left-empty-star" />
+                      <div className="car-show-left-empty-star" />
+                      <div className="car-show-left-empty-star" />
+                    </>
+                  )
+                }
+                if (avgReviewScore() === 1.5) {
+                  return (
+                    <>
+                      <div className="car-show-left-full-star" />
+                      <div className="car-show-left-half-star" />
+                      <div className="car-show-left-empty-star" />
+                      <div className="car-show-left-empty-star" />
+                      <div className="car-show-left-empty-star" />
+                    </>
+                  )
+                }
+                if (avgReviewScore() === 2) {
+                  return (
+                    <>
+                      <div className="car-show-left-full-star" />
+                      <div className="car-show-left-full-star" />
+                      <div className="car-show-left-empty-star" />
+                      <div className="car-show-left-empty-star" />
+                      <div className="car-show-left-empty-star" />
+                    </>
+                  )
+                }
+                if (avgReviewScore() === 2.5) {
+                  return (
+                    <>
+                      <div className="car-show-left-full-star" />
+                      <div className="car-show-left-full-star" />
+                      <div className="car-show-left-half-star" />
+                      <div className="car-show-left-empty-star" />
+                      <div className="car-show-left-empty-star" />
+                    </>
+                  )
+                }
+                if (avgReviewScore() === 3) {
+                  return (
+                    <>
+                      <div className="car-show-left-full-star" />
+                      <div className="car-show-left-full-star" />
+                      <div className="car-show-left-full-star" />
+                      <div className="car-show-left-empty-star" />
+                      <div className="car-show-left-empty-star" />
+                    </>
+                  )
+                }
+                if (avgReviewScore() === 3.5) {
+                  return (
+                    <>
+                      <div className="car-show-left-full-star" />
+                      <div className="car-show-left-full-star" />
+                      <div className="car-show-left-full-star" />
+                      <div className="car-show-left-half-star" />
+                      <div className="car-show-left-empty-star" />
+                    </>
+                  )
+                }
+                if (avgReviewScore() === 4) {
+                  return (
+                    <>
+                      <div className="car-show-left-full-star" />
+                      <div className="car-show-left-full-star" />
+                      <div className="car-show-left-full-star" />
+                      <div className="car-show-left-full-star" />
+                      <div className="car-show-left-empty-star" />
+                    </>
+                  )
+                }
+                if (avgReviewScore() === 4.5) {
+                  return (
+                    <>
+                      <div className="car-show-left-full-star" />
+                      <div className="car-show-left-full-star" />
+                      <div className="car-show-left-full-star" />
+                      <div className="car-show-left-full-star" />
+                      <div className="car-show-left-half-star" />
+                    </>
+                  )
+                }
+                if (avgReviewScore() === 5.0) {
+                  return (
+                    <>
+                      <div className="car-show-left-full-star" />
+                      <div className="car-show-left-full-star" />
+                      <div className="car-show-left-full-star" />
+                      <div className="car-show-left-full-star" />
+                      <div className="car-show-left-full-star" />
+                    </>
+                  )
+                }
+              } else {
+                return null;
+              }
+            })()}
             {reviews.length === 0 ? null : <>∙&nbsp;</>} 
             {reviews.length} {reviews.length > 1 ? 'ratings' : reviews.length === 0 ? 'ratings' : 'rating'}
           </div>
+
         </div>
 
         <DisplayReviews /> 

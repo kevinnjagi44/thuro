@@ -148,19 +148,21 @@
   }
 
   .car-show-left-half-star {
-    background-image: url('https://github.com/fsiino/torino/blob/master/app/assets/images/review-full-star.png?raw=true');
+    background-image: url('https://github.com/fsiino/torino/blob/master/app/assets/images/review-half-star.png?raw=true');
     background-size: 20px 20px;
     height: 20px;
     width: 20px;
     margin-right: 4px;
+    float: left;
   }
 
   .car-show-left-empty-star {
-    background-image: url('https://github.com/fsiino/torino/blob/master/app/assets/images/review-full-star.png?raw=true');
+    background-image: url('https://github.com/fsiino/torino/blob/master/app/assets/images/review-empty-star.png?raw=true');
     background-size: 20px 20px;
     height: 20px;
     width: 20px;
     margin-right: 4px;
+    float: left;
   }
 
   .car-show-star-inner {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const RentalShow = ( {rental, car}) => {
+const RentalShow = ( {rental, car} ) => {
 
 
   return null;
