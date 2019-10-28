@@ -20,7 +20,7 @@ class Api::ReviewsController < ApplicationController
 
     if @review.save
       @author = @review.author
-      @user = @review.user
+      # @user = @review.user
       render :show
     else
       render json: @review.errors.full_messages, status: 422
@@ -46,7 +46,7 @@ class Api::ReviewsController < ApplicationController
 
   def review_params
     params.require(:review).permit(
-      # :author_id,
+      :author_id,
       :car_id,
       :rating,
       :title,

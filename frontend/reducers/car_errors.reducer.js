@@ -13,7 +13,7 @@ export default (state = [], action) => {
         return action.errors;
       } else {
         return null;
-      }
+      };
     case RECEIVE_CAR:
       return [];
     case CLEAR_CAR_ERRORS:

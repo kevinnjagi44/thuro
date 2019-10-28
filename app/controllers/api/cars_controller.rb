@@ -20,8 +20,8 @@ class Api::CarsController < ApplicationController
 
   def update
     @car = Car.find(params[:id])
-    # if @car.update_attributes(car_params)
-    if @car.update(car_params)
+    if @car.update_attributes(car_params)
+    # if @car.update(car_params)
       render :show
     else
       render json: @car.errors.full_messages, status: 422

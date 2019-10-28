@@ -5,6 +5,7 @@ class ReviewForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      author_id: props.currentUserId,
       rating: '',
       title: '',
       body: '',
@@ -36,7 +37,7 @@ class ReviewForm extends React.Component {
   }
 
   render() {
-// debugger
+
     return (
       <div className="review-modal-container">
         <form className="review-modal-form" onSubmit={this.handleSubmit}>
