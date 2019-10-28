@@ -13,7 +13,7 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = dispatch => {
   return {
-    action: review => dispatch(createReview(review)),
+    createReview: review => dispatch(createReview(review)),
     closeModal: () => dispatch(closeModal())
   };
 };

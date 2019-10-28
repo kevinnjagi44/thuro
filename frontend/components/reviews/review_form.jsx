@@ -18,8 +18,12 @@ class ReviewForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.action(this.state)
-      .then(() => this.props.closeModal);
+    this.props.createReview(this.state)
+      .then(this.props.closeModal)
+      .then(this.props.history.push(`/cars/${this.props.carId}`))
+      .then(setTimeout(() => {
+        window.scrollTo(0, document.body.scrollHeight);
+      }, 500));
   }
 
   update(field) {
