@@ -47,7 +47,6 @@ class ReviewIndex extends React.Component {
                   <br />
                   <div className="review-index-auth-date">
                     <span className="review-index-auth-name">{capitalizeName(review.fName)}</span> - {moment(review.created_at).format('ll')} 
-                    {/* Aug 28, 2019 */}
                   </div>
                 </div>
               </div>
@@ -61,7 +60,7 @@ class ReviewIndex extends React.Component {
 
     const avgReviewScore = () => {
       let revScores = reviews.map(review => review.rating)
-      let revScoreSum = revScores.reduce((acc, el) => acc + el)
+      let revScoreSum = revScores.reduce((acc, el) => acc + el, 0)
       return Math.round(revScoreSum / reviews.length - 0.5) + 0.5
     }
 

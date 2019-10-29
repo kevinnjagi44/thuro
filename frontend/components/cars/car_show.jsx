@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import CarMap from '../car_map/car_map';
 import RentalFormContainer from '../rentals/rental_form_container';
-import RentalShow from '../rentals/rental_show';
 import ReviewIndexContainer from '../reviews/review_index_container';
 
 class CarShow extends React.Component {
@@ -25,27 +24,26 @@ class CarShow extends React.Component {
   }
 
   render() {
+    if (!this.props.car) {
+      return null;
+    }
     
-      if (!this.props.car) {
-        return null;
-      }
-      
-      if (!this.props.car.photoUrls) {
-        return null;
-      }
-      
-      let showEditDel;
+    if (!this.props.car.photoUrls) {
+      return null;
+    }
+    
+    let showEditDel;
 
-      if (this.props.car.owner_id === this.props.currentUserId) {
-        showEditDel = 
-        <div className="car-show-edit-del">
-          <Link to={`/cars/${this.props.car.id}/edit`}>
-            <button>Edit this car</button>
-          </Link>
-          <br />
-          <button onClick={(e) => { if (window.confirm('Are you sure you wish to delete this item?')) {this.handleDelete(e)} } }>Delete this car</button>
-        </div>
-      }
+    if (this.props.car.owner_id === this.props.currentUserId) {
+      showEditDel = 
+      <div className="car-show-edit-del">
+        <Link to={`/cars/${this.props.car.id}/edit`}>
+          <button>Edit this car</button>
+        </Link>
+        <br />
+        <button onClick={(e) => { if (window.confirm('Are you sure you wish to delete this item?')) {this.handleDelete(e)} } }>Delete this car</button>
+      </div>
+    }
 
     const randomNumber = (min, max) => {
       return Math.floor(Math.random() * (max - min) + min);
@@ -58,6 +56,10 @@ class CarShow extends React.Component {
     const notAllowedCursor = () => {  
       cursor: not-allowed;
     }
+
+    const { avgReviewScore } = this.props 
+
+    const { reviews } = this.props
 
     const ShowTransmission = () => {
       let trans = this.props.car.transmission;
@@ -129,11 +131,143 @@ class CarShow extends React.Component {
                 </span>
                 <div className="car-show-star-wrapper">
                   <div className="car-show-star-inner">
-                    <div className="car-show-left-full-star"/>
-                    <div className="car-show-left-full-star"/>
-                    <div className="car-show-left-full-star"/>
-                    <div className="car-show-left-full-star"/>
-                    <div className="car-show-left-full-star"/>
+
+                    {(() => {
+                      if (reviews.length !== 0) {
+                        if (avgReviewScore === 0) {
+                          return (
+                            <>
+                              <div className="car-show-left-empty-star" />
+                              <div className="car-show-left-empty-star" />
+                              <div className="car-show-left-empty-star" />
+                              <div className="car-show-left-empty-star" />
+                              <div className="car-show-left-empty-star" />
+                            </>
+                          )
+                        }
+                        if (avgReviewScore === 0.5) {
+                          return (
+                            <>
+                              <div className="car-show-left-half-star" />
+                              <div className="car-show-left-empty-star" />
+                              <div className="car-show-left-empty-star" />
+                              <div className="car-show-left-empty-star" />
+                              <div className="car-show-left-empty-star" />
+                            </>
+                          )
+                        }
+                        if (avgReviewScore === 1) {
+                          return (
+                            <>
+                              <div className="car-show-left-full-star" />
+                              <div className="car-show-left-empty-star" />
+                              <div className="car-show-left-empty-star" />
+                              <div className="car-show-left-empty-star" />
+                              <div className="car-show-left-empty-star" />
+                            </>
+                          )
+                        }
+                        if (avgReviewScore === 1.5) {
+                          return (
+                            <>
+                              <div className="car-show-left-full-star" />
+                              <div className="car-show-left-half-star" />
+                              <div className="car-show-left-empty-star" />
+                              <div className="car-show-left-empty-star" />
+                              <div className="car-show-left-empty-star" />
+                            </>
+                          )
+                        }
+                        if (avgReviewScore === 2) {
+                          return (
+                            <>
+                              <div className="car-show-left-full-star" />
+                              <div className="car-show-left-full-star" />
+                              <div className="car-show-left-empty-star" />
+                              <div className="car-show-left-empty-star" />
+                              <div className="car-show-left-empty-star" />
+                            </>
+                          )
+                        }
+                        if (avgReviewScore === 2.5) {
+                          return (
+                            <>
+                              <div className="car-show-left-full-star" />
+                              <div className="car-show-left-full-star" />
+                              <div className="car-show-left-half-star" />
+                              <div className="car-show-left-empty-star" />
+                              <div className="car-show-left-empty-star" />
+                            </>
+                          )
+                        }
+                        if (avgReviewScore === 3) {
+                          return (
+                            <>
+                              <div className="car-show-left-full-star" />
+                              <div className="car-show-left-full-star" />
+                              <div className="car-show-left-full-star" />
+                              <div className="car-show-left-empty-star" />
+                              <div className="car-show-left-empty-star" />
+                            </>
+                          )
+                        }
+                        if (avgReviewScore === 3.5) {
+                          return (
+                            <>
+                              <div className="car-show-left-full-star" />
+                              <div className="car-show-left-full-star" />
+                              <div className="car-show-left-full-star" />
+                              <div className="car-show-left-half-star" />
+                              <div className="car-show-left-empty-star" />
+                            </>
+                          )
+                        }
+                        if (avgReviewScore === 4) {
+                          return (
+                            <>
+                              <div className="car-show-left-full-star" />
+                              <div className="car-show-left-full-star" />
+                              <div className="car-show-left-full-star" />
+                              <div className="car-show-left-full-star" />
+                              <div className="car-show-left-empty-star" />
+                            </>
+                          )
+                        }
+                        if (avgReviewScore === 4.5) {
+                          return (
+                            <>
+                              <div className="car-show-left-full-star" />
+                              <div className="car-show-left-full-star" />
+                              <div className="car-show-left-full-star" />
+                              <div className="car-show-left-full-star" />
+                              <div className="car-show-left-half-star" />
+                            </>
+                          )
+                        }
+                        if (avgReviewScore === 5.0) {
+                          return (
+                            <>
+                              <div className="car-show-left-full-star" />
+                              <div className="car-show-left-full-star" />
+                              <div className="car-show-left-full-star" />
+                              <div className="car-show-left-full-star" />
+                              <div className="car-show-left-full-star" />
+                            </>
+                          )
+                        }
+                      } else {
+                        return (
+                          <>
+                            <div className="car-show-left-full-star" />
+                            <div className="car-show-left-full-star" />
+                            <div className="car-show-left-full-star" />
+                            <div className="car-show-left-full-star" />
+                            <div className="car-show-left-full-star" />
+                          </>
+                        )
+                      }
+                    })()}
+
                     <span className="car-show-top-trips">
                       ∙ {randomNumber(100, 200)} trips
                     </span>
