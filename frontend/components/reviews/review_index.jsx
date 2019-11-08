@@ -60,7 +60,7 @@ class ReviewIndex extends React.Component {
     const avgReviewScore = () => {
       let revScores = reviews.map(review => review.rating)
       let revScoreSum = revScores.reduce((acc, el) => acc + el, 0)
-      return (revScoreSum / reviews.length - 0.5) + 0.5
+      return (Math.round(revScoreSum / reviews.length) - 0.5) + 0.5
     }
 
     return (
