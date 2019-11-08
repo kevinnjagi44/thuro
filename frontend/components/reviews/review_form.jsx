@@ -22,7 +22,7 @@ class ReviewForm extends React.Component {
       .then(this.props.history.push(`/cars/${this.props.carId}`))
       .then(setTimeout(() => {
         window.scrollTo(0, document.body.scrollHeight/3);
-      }, 900));
+      }, 1200));
   }
 
   update(field) {
