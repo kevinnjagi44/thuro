@@ -12,7 +12,6 @@ class ReviewForm extends React.Component {
       car_id: props.carId
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.updateRadio = this.updateRadio.bind(this);
     this.update = this.update.bind(this);
   }
 
@@ -34,12 +33,6 @@ class ReviewForm extends React.Component {
     };
   }
 
-  updateRadio(e) {
-    this.setState({
-      rating: e.currentTarget.value
-    });
-  }
-
   render() {
 
     return (
@@ -59,23 +52,28 @@ class ReviewForm extends React.Component {
                 1
               <input type="radio" 
                 onChange={this.update("rating")}
-                value="1"
+                value="1" 
+                checked={this.state.rating === "1"}
               /> 2  
               <input type="radio" 
                 onChange={this.update("rating")}
-                value="2"
+                value="2" 
+                checked={this.state.rating === "2"}
               /> 3 
               <input type="radio" 
                 onChange={this.update("rating")}
-                value="3"
+                value="3" 
+                checked={this.state.rating === "3"}
               /> 4 
               <input type="radio" 
                 onChange={this.update("rating")}
-                value="4"
+                value="4" 
+                checked={this.state.rating === "4"}
               /> 5 
               <input type="radio" 
                 onChange={this.update("rating")}
-                value="5"
+                value="5" 
+                checked={this.state.rating === "5"}
               />
             </label>
             <br />
