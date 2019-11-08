@@ -27,10 +27,20 @@ class RentalForm extends React.Component {
       status: 'pending'
     };
     this.props.processForm(newRental)
-      .then(document.getElementById("pre-rental").innerHTML = ("<h2>Rental Booked!</h2>"))
-      .then(document.getElementById("pre-rental").setAttribute("id", "rental-requested"))
-      .then(document.getElementById("rental-book-btn").style.display = "none")
-      .then(document.getElementById("rentals-idx-btn").style.display = "unset");
+
+    setTimeout(() => {
+      document.getElementById("pre-rental").innerHTML = ("<h2>Rental Booked!</h2>")
+        document.getElementById("pre-rental").setAttribute("id", "rental-requested")
+        document.getElementById("rental-book-btn").style.display = "none"
+        document.getElementById("rentals-idx-btn").style.display = "unset"
+    }, 400);
+
+
+    // this.props.processForm(newRental)
+    //   .then(document.getElementById("pre-rental").innerHTML = ("<h2>Rental Booked!</h2>"))
+    //   .then(document.getElementById("pre-rental").setAttribute("id", "rental-requested"))
+    //   .then(document.getElementById("rental-book-btn").style.display = "none")
+    //   .then(document.getElementById("rentals-idx-btn").style.display = "unset");
   }
 
   render() {
@@ -53,8 +63,8 @@ class RentalForm extends React.Component {
         <button id="rental-book-btn" onClick={this.handleSubmit}>Book Now</button>
         
 
-      <RentalShow 
-      />
+      {/* <RentalShow 
+      /> */}
 
       <Link to="/rentals">
         <button id="rentals-idx-btn">Check out your rentals</button>

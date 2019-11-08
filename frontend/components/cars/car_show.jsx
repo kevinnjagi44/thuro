@@ -24,6 +24,7 @@ class CarShow extends React.Component {
   }
 
   render() {
+    
     if (!this.props.car) {
       return null;
     }
@@ -64,19 +65,19 @@ class CarShow extends React.Component {
     const ShowTransmission = () => {
       let trans = this.props.car.transmission;
       let result;
-      if (this.props.car.transmission === 'manual') {
+      if (trans === 'manual') {
         result = 
         <> 
           <div title="Manual transmission" className="feature-manual-trans" /> 
           <span className="car-show-features-standard-text">Manual transmission</span>
         </> 
-      } else if (this.props.car.transmission === 'automatic') {
+      } else if (trans === 'automatic') {
         result = 
         <> 
           <div title="Automatic transmission" className="feature-auto-trans" /> 
           <span className="car-show-features-standard-text">Automatic transmission</span> 
         </>
-      } else if (this.props.car.transmission === 'none') {
+      } else if (trans === 'none') {
         result = 
         <> 
           <div title="Electric vehicle" className="electric-trans" /> 
