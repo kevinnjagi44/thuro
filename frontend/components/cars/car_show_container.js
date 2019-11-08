@@ -10,12 +10,12 @@ const mSTP = (state, ownProps) => {
   let revScoreSum = revScores.reduce((acc, el) => acc + el, 0)
 
   const carId = ownProps.match.params.id; 
-  
+  // debugger
   return {
     car: state.entities.cars[carId],
     currentUserId: state.session.id,
     reviews: reviews,
-    avgReviewScore: Math.round((revScoreSum / reviews.length) - 0.5) + 0.5
+    avgReviewScore: ((revScoreSum / revScores.length) - 0.5) + 0.5,
   };
 };
 

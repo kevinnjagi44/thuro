@@ -24,10 +24,6 @@ class TripIndex extends React.Component {
 
     const { rentals } = this.props;
 
-    if (!rentals) {
-      return <h1>Loading</h1>
-    }
-
     const ConvertDate = (date) => {
       let newDate = new Date(date);
       return `${1 + newDate.getMonth()}/${newDate.getDate()}/${1900 + newDate.getYear()}`;
@@ -49,6 +45,10 @@ class TripIndex extends React.Component {
         </div>
       )
     })
+
+    // if (rentalItems.length === 0) {
+    //   return <h1>Loading</h1>
+    // }
 
     // const rentalItems = rentals.map(rental => {
     //   return (

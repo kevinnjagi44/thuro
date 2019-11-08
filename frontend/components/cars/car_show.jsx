@@ -24,7 +24,7 @@ class CarShow extends React.Component {
   }
 
   render() {
-    
+    // debugger
     if (!this.props.car) {
       return null;
     }

@@ -22,7 +22,7 @@ class ReviewForm extends React.Component {
       .then(this.props.history.push(`/cars/${this.props.carId}`))
       .then(setTimeout(() => {
         window.scrollTo(0, document.body.scrollHeight/3);
-      }, 500));
+      }, 900));
   }
 
   update(field) {
@@ -53,27 +53,32 @@ class ReviewForm extends React.Component {
               <input type="radio" 
                 onChange={this.update("rating")}
                 value="1" 
-                checked={this.state.rating === "1"}
+                checked={this.state.rating === "1"}  
+                name="rating" 
               /> 2  
               <input type="radio" 
                 onChange={this.update("rating")}
                 value="2" 
-                checked={this.state.rating === "2"}
+                checked={this.state.rating === "2"} 
+                name="rating" 
               /> 3 
               <input type="radio" 
                 onChange={this.update("rating")}
                 value="3" 
-                checked={this.state.rating === "3"}
+                checked={this.state.rating === "3"} 
+                name="rating" 
               /> 4 
               <input type="radio" 
                 onChange={this.update("rating")}
                 value="4" 
-                checked={this.state.rating === "4"}
+                checked={this.state.rating === "4"} 
+                name="rating" 
               /> 5 
               <input type="radio" 
                 onChange={this.update("rating")}
                 value="5" 
-                checked={this.state.rating === "5"}
+                checked={this.state.rating === "5"} 
+                name="rating" 
               />
             </label>
             <br />
