@@ -109,19 +109,23 @@
 
   .item-1 {
     grid-area: f-trans;
-    padding: 6px;    
+    padding: 6px; 
+    display: flex;   
   }
   .item-2 {
     grid-area: f-doors;
     padding: 6px;
+    display: flex;   
   }
   .item-3 {
     grid-area: f-seats;
-    padding: 6px;    
+    padding: 6px; 
+    display: flex;    
   }
   .item-4 {
     grid-area: f-mpg;
     padding: 6px;
+    display: flex; 
   }
 }
 
