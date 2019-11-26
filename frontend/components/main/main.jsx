@@ -23,12 +23,9 @@ class Main extends React.Component {
     //   let year = date.getFullYear();
     //   let month = date.getMonth() + 1;
     //   let day = date.getDate();
-
     //   month < 10 ? `0${month}` : month;
     //   day < 10 ? `0${day}` : day;
-
     //   return `${year}-${month}-${day}`
-
     // };
 
 
@@ -167,7 +164,7 @@ class Main extends React.Component {
           </div>
 
           <Link to="/cars/">
-            <form align="center">
+            <form className="form-book-perfect" align="center">
               <button className="post-grid" type="submit">Book the perfect car</button>
             </form>    
           </Link>
@@ -203,7 +200,7 @@ class Main extends React.Component {
             <h2 className="book-header">Book, unlock, and go!</h2>
               <br/>
             <p className="book-desc">Unlock the next level of car sharing convenience with Torino Go — find, book, and unlock cars on demand, right from the Torino app.</p>
-            <form align="center" action="">
+            <form className="form-learn-more" align="center" action="">
               <button className="post-grid-lm" type="submit">Learn more</button>
             </form>    
           </div>
