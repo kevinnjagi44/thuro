@@ -27,7 +27,7 @@ Things you may want to cover:
 <!-- # Torino -->
 <div style="width:100%; background: black;">
 <p align="center">
-<img src="https://github.com/fsiino/torino/blob/master/app/assets/images/readme/readme-torino-logo.png?raw=true" alt="Torino Logo"/>
+<img src="https://github.com/fsiino/torino/blob/master/app/assets/images/readme/readme-thuro-logo.png?raw=true" alt="Torino Logo"/>
 </p>
 </div>
 

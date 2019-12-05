@@ -151,7 +151,7 @@ class Main extends React.Component {
 
             <div className="item-6">
               <h3 className="mid-header">24/7 customer support</h3>
-              Rest easy knowing that everyone in the Torino community is screened, and 24/7 customer support and roadside assistance are just a click away.</div>
+              Rest easy knowing that everyone in the Thuro community is screened, and 24/7 customer support and roadside assistance are just a click away.</div>
 
             <div className="item-7">
               <img alt="shield" src="https://github.com/fsiino/torino/blob/master/app/assets/images/ic-shield-check.png?raw=true" />
@@ -159,7 +159,7 @@ class Main extends React.Component {
 
             <div className="item-8">
               <h3 className="mid-header">Insurance options included</h3>
-            Drive confidently with your choice of protection plans offered through Torino Insurance Agency — you’re covered up to $1 million in liability insurance provided by Freedom Reciprocal.</div>
+            Drive confidently with your choice of protection plans offered through Thuro Insurance Agency — you’re covered up to $1 million in liability insurance provided by Freedom Reciprocal.</div>
 
           </div>
 
@@ -183,7 +183,7 @@ class Main extends React.Component {
               <br />Host Program</h2>
             <br />
             <p className="borsche-p">
-              Torino and Borsche are proud to introduce the Borsche Host Program, a pilot program in San Francisco and Los Angeles that combines curated Borsche vehicles with top Torino hosts to give you the complete Borsche experience.
+              Thuro and Borsche are proud to introduce the Borsche Host Program, a pilot program in San Francisco and Los Angeles that combines curated Borsche vehicles with top Thuro hosts to give you the complete Borsche experience.
             </p>
             <br />
 
@@ -199,7 +199,7 @@ class Main extends React.Component {
           <div className="book-separator">
             <h2 className="book-header">Book, unlock, and go!</h2>
               <br/>
-            <p className="book-desc">Unlock the next level of car sharing convenience with Torino Go — find, book, and unlock cars on demand, right from the Torino app.</p>
+            <p className="book-desc">Unlock the next level of car sharing convenience with Thuro Go — find, book, and unlock cars on demand, right from the Thuro app.</p>
             <form className="form-learn-more" align="center" action="">
               <button className="post-grid-lm" type="submit">Learn more</button>
             </form>    
@@ -228,7 +228,7 @@ class Main extends React.Component {
 
           <div className="wires-container">
             <h3 className="wires-header">The car that pays for itself</h3>
-            <p className="wires-text">Make a dent in your monthly car payments — on average, Torino hosts can cover their payments by sharing their cars just nine days per month.</p>
+          <p className="wires-text">Make a dent in your monthly car payments — on average, Thuro hosts can cover their payments by sharing their cars just nine days per month.</p>
             <br/><br/>  
             <p className="wires-text">You’re covered with up to $1 million in liability insurance, and your car is contractually protected against theft and physical damage. Or bring your own commercial rental insurance and take a bigger piece of the pie.*</p>
 

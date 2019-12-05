@@ -8,7 +8,7 @@ class Footer extends React.Component {
       <div>
 
         <div className="footer-top">
-          *&nbsp;&nbsp;&nbsp;All Freedom Reciprocal liability insurance in the US is offered through Torino Insurance Agency. Terms, conditions, and exclusions apply.
+          *&nbsp;&nbsp;&nbsp;All Freedom Reciprocal liability insurance in the US is offered through Thuro Insurance Agency. Terms, conditions, and exclusions apply.
         </div>
 
         <div className="footer-container">
@@ -22,14 +22,14 @@ class Footer extends React.Component {
                 <li>Make money with your car</li>
                 <li>Carculator</li>
                 <li>All-Star Hosts</li>
-                <li>Torino for business</li>
+                <li>Thuro for business</li>
               </ul>
             </div>
 
             <div className="footer-col">
               <ul>
                 <li><h2 className="footer-header">Learn more</h2></li>
-                <li>How Torino works</li>
+                <li>How Thuro works</li>
                 <li>Policies</li>
                 <li>Trust & safety</li>
                 <li>Owner tools</li>
@@ -79,9 +79,9 @@ class Footer extends React.Component {
           <div className="footer-2-col-container">
             <div className="footer-bottom-row">
               <ul>
-                <li><h2 className="footer-header">About Torino</h2></li>
+                <li><h2 className="footer-header">About Thuro</h2></li>
                 <li>
-                  &copy; 2019 Torino&nbsp;&nbsp;&nbsp;
+                  &copy; 2019 Thuro&nbsp;&nbsp;&nbsp;
                   </li>
                 <li>
                   About&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

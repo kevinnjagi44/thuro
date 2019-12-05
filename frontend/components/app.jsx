@@ -21,7 +21,7 @@ const App = () => (
     <Modal/>
     <header className="navbar"> 
         <Link to="/">
-          <img className="navlogo" alt="logo" src="https://github.com/fsiino/torino/blob/master/app/assets/images/torino-logo.png?raw=true"/>
+          <img className="navlogo" alt="logo" src="https://github.com/fsiino/torino/blob/master/app/assets/images/thuro-logo.png?raw=true"/>
         </Link>
       <NavBarContainer/>
       <AuthRoute path ="/login" component={LogInFormContainer} />
