@@ -24,19 +24,19 @@ Things you may want to cover:
 * ... -->
 
 
-<!-- # Torino -->
+<!-- # Thuro -->
 <div style="width:100%; background: black;">
 <p align="center">
-<img src="https://github.com/fsiino/torino/blob/master/app/assets/images/readme/readme-thuro-logo.png?raw=true" alt="Torino Logo"/>
+<img src="https://github.com/fsiino/thuro/blob/master/app/assets/images/readme/readme-thuro-logo.png?raw=true" alt="Thuro Logo"/>
 </p>
 </div>
 
 <p align="center">
-  <img src="https://github.com/fsiino/torino/blob/master/app/assets/images/readme/readme-mbp.png?raw=true" alt="Torino Splash"/>
+  <img src="https://github.com/fsiino/thuro/blob/master/app/assets/images/readme/readme-mbp.png?raw=true" alt="Thuro Splash"/>
 </p>
-Torino is a full stack web application inspired by Turo, a peer-to-peer carsharing company.
+Thuro is a full stack web application inspired by Turo, a peer-to-peer carsharing company.
 
-[Live Link](https://torino-fsp.herokuapp.com/#/)
+[Live Link](https://thuro.herokuapp.com/#/)
 
 ## Technologies:
 
@@ -106,7 +106,7 @@ end
  
  An automated demo login button can be found on the login modal for quicker access to the UX.
 
-<!-- <img src="https://github.com/fsiino/torino/blob/master/app/assets/images/readme/readme-login.png?raw=true" alt="Login Modal" width=30%> -->
+<!-- <img src="https://github.com/fsiino/thuro/blob/master/app/assets/images/readme/readme-login.png?raw=true" alt="Login Modal" width=30%> -->
 
 ### Car Create, Update, & Delete
 Car owners can post their cars for rent, selecting optional features such as heated seats, GPS, or bluetooth. Mandatory fields such as transmission are also included for potential renter decision-making.
@@ -129,22 +129,22 @@ render() {
   }
 ```
 <p align="center">
-  <img src="https://github.com/fsiino/torino/blob/master/app/assets/images/readme/readme-car-edit.gif?raw=true" alt="Torino car edit demo"/>
+  <img src="https://github.com/fsiino/thuro/blob/master/app/assets/images/readme/readme-car-edit.gif?raw=true" alt="Thuro car edit demo"/>
 </p>
 
 ### Rentals
 Once a potential customer finds a car they like, a rental can be booked on the right side of the car show page. After accepting the confirmation dialog, a new ```<div>``` will appear in the same pane giving the user the option to navigate to their rentals page for review.
 
-<!-- ![User Rentals Page](https://github.com/fsiino/torino/blob/master/app/assets/images/readme/readme-rentals.png?raw=true) -->
+<!-- ![User Rentals Page](https://github.com/fsiino/thuro/blob/master/app/assets/images/readme/readme-rentals.png?raw=true) -->
 <p align="center">
-  <img src="https://github.com/fsiino/torino/blob/master/app/assets/images/readme/readme-booking-demo.gif?raw=true" alt="Torino booking demo"/>
+  <img src="https://github.com/fsiino/thuro/blob/master/app/assets/images/readme/readme-booking-demo.gif?raw=true" alt="Thuro booking demo"/>
 </p>
 
 ### Interactive Notifications
 Owners will see a toast-tyle notification on the upper right-hand corner of their screen, just below the navbar. The goal of this feature is to let cars owners know upon login that a customer has booked a rental for one of their vehicles. To enable a dynamic transition in the CSS, a styled-components module was used to update position properties based on state changes.
 
 <p align="center">
-  <img src ="https://github.com/fsiino/torino/blob/master/app/assets/images/readme/renter-owner-norif.gif?raw=true" alt="Torino booking notification"/>
+  <img src ="https://github.com/fsiino/thuro/blob/master/app/assets/images/readme/renter-owner-norif.gif?raw=true" alt="Thuro booking notification"/>
 </p>
 
 ```js
@@ -172,7 +172,7 @@ Owners will see a toast-tyle notification on the upper right-hand corner of thei
 Additionally, once the notification is consumed by the owner by clicking the notification, the notification will not show again when logging out/back in. 
 
 <p align="center">
-  <img src="https://github.com/fsiino/torino/blob/master/app/assets/images/readme/notif-gone-relog.gif?raw=true" alt="Torino booking demo"/>
+  <img src="https://github.com/fsiino/thuro/blob/master/app/assets/images/readme/notif-gone-relog.gif?raw=true" alt="Thuro booking demo"/>
 </p>
 
 ```js

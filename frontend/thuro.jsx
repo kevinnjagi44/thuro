@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// let http = require("http");
 	// setInterval(function () {
-	// 	http.get("http://torino-fsp.herokuapp.com");
+	// 	http.get("http://thuro.herokuapp.com");
 	// }, 300000); // every 5 minutes (300000)
 	
 	//TESTING START

@@ -66,7 +66,7 @@ class Footer extends React.Component {
             <div className="footer-col">
               <ul>
                 <li><h2 className="footer-header">Talk to us</h2></li>
-                <li><img src="https://github.com/fsiino/torino/blob/master/app/assets/images/footer-social.png?raw=true" /></li>
+                <li><img src="https://github.com/fsiino/thuro/blob/master/app/assets/images/footer-social.png?raw=true" /></li>
                 <li>Read our blog</li>
                 <li>Contact customer support</li>
               </ul>
@@ -109,7 +109,7 @@ class Footer extends React.Component {
             <div className="footer-bottom-row">
               <ul>
                 <li><h2 className="footer-header">Language</h2></li>
-                <li><img src="https://github.com/fsiino/torino/blob/master/app/assets/images/english-us.png?raw=true" />&nbsp;English (USA)</li>
+                <li><img src="https://github.com/fsiino/thuro/blob/master/app/assets/images/english-us.png?raw=true" />&nbsp;English (USA)</li>
               </ul>
             </div>
           </div>

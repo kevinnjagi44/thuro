@@ -97,11 +97,11 @@ class Main extends React.Component {
             </div>
 
             <div className="main-social">
-            <a href="https://www.frankiesiino.com" target="_blank"><img className="main-social-icon" src="https://github.com/fsiino/torino/blob/master/app/assets/images/web-icon.png?raw=true"/>Portfolio</a>
+            <a href="https://www.frankiesiino.com" target="_blank"><img className="main-social-icon" src="https://github.com/fsiino/thuro/blob/master/app/assets/images/web-icon.png?raw=true"/>Portfolio</a>
               <br/>
-            <a href="https://www.github.com/fsiino" target="_blank"><img className="main-social-icon" src="https://github.com/fsiino/torino/blob/master/app/assets/images/github-icon.png?raw=true"/>GitHub</a>
+            <a href="https://www.github.com/fsiino" target="_blank"><img className="main-social-icon" src="https://github.com/fsiino/thuro/blob/master/app/assets/images/github-icon.png?raw=true"/>GitHub</a>
               <br/>
-            <a href="https://www.linkedin.com/in/fsiino" target="_blank"><img className="main-social-icon" src="https://github.com/fsiino/torino/blob/master/app/assets/images/linkedin-icon.png?raw=true"/>LinkedIn</a>
+            <a href="https://www.linkedin.com/in/fsiino" target="_blank"><img className="main-social-icon" src="https://github.com/fsiino/thuro/blob/master/app/assets/images/linkedin-icon.png?raw=true"/>LinkedIn</a>
             </div>
           </div>
 
@@ -115,7 +115,7 @@ class Main extends React.Component {
               Insurance Provider
               </div>
               <div>
-                <img className="mid-ins-img" src="https://github.com/fsiino/torino/blob/master/app/assets/images/insurance-fr.png?raw=true" alt="Freedom Reciprocal" />
+                <img className="mid-ins-img" src="https://github.com/fsiino/thuro/blob/master/app/assets/images/insurance-fr.png?raw=true" alt="Freedom Reciprocal" />
               </div>
             </div>
           </div>
@@ -130,7 +130,7 @@ class Main extends React.Component {
           <div className="grid-container">
 
             <div className="item-1">
-              <img alt="car-photos" src="https://github.com/fsiino/torino/blob/master/app/assets/images/ic-car-photos.png?raw=true"/>
+              <img alt="car-photos" src="https://github.com/fsiino/thuro/blob/master/app/assets/images/ic-car-photos.png?raw=true"/>
             </div>
 
             <div className="item-2">
@@ -138,7 +138,7 @@ class Main extends React.Component {
               Choose from hundreds of models you won’t find anywhere else. Pick it up or get it delivered where you want it.</div>
 
             <div className="thumbs-up">
-              <img alt="car-photos" src="https://github.com/fsiino/torino/blob/master/app/assets/images/ic-thumbs-up.png?raw=true" />
+              <img alt="car-photos" src="https://github.com/fsiino/thuro/blob/master/app/assets/images/ic-thumbs-up.png?raw=true" />
             </div>              
 
             <div className="item-4">
@@ -146,7 +146,7 @@ class Main extends React.Component {
               Cancel for free up to 24 hours before your trip starts. Because life happens and it helps to be flexible when it does.</div>
 
             <div className="item-5">
-              <img alt="support" src="https://github.com/fsiino/torino/blob/master/app/assets/images/ic-support.png?raw=true" />
+              <img alt="support" src="https://github.com/fsiino/thuro/blob/master/app/assets/images/ic-support.png?raw=true" />
             </div>            
 
             <div className="item-6">
@@ -154,7 +154,7 @@ class Main extends React.Component {
               Rest easy knowing that everyone in the Thuro community is screened, and 24/7 customer support and roadside assistance are just a click away.</div>
 
             <div className="item-7">
-              <img alt="shield" src="https://github.com/fsiino/torino/blob/master/app/assets/images/ic-shield-check.png?raw=true" />
+              <img alt="shield" src="https://github.com/fsiino/thuro/blob/master/app/assets/images/ic-shield-check.png?raw=true" />
             </div>            
 
             <div className="item-8">
@@ -194,7 +194,7 @@ class Main extends React.Component {
         </div>
 
         <div className="book-container">
-          <img className="book-pic" alt="book-unlock-go" src="https://github.com/fsiino/torino/blob/master/app/assets/images/book-unlock-go.jpg?raw=true"/>
+          <img className="book-pic" alt="book-unlock-go" src="https://github.com/fsiino/thuro/blob/master/app/assets/images/book-unlock-go.jpg?raw=true"/>
 
           <div className="book-separator">
             <h2 className="book-header">Book, unlock, and go!</h2>

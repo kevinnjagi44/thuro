@@ -439,7 +439,7 @@ class CarShow extends React.Component {
               </div>
 
               <button style={{notAllowedCursor}} className="car-show-add-fav-btn">
-                <img className="car-show-add-fav-icon" src="https://github.com/fsiino/torino/blob/master/app/assets/images/add-fav-transp.png?raw=true"/>&nbsp;Add to favorites
+                <img className="car-show-add-fav-icon" src="https://github.com/fsiino/thuro/blob/master/app/assets/images/add-fav-transp.png?raw=true"/>&nbsp;Add to favorites
               </button>
               <br/>
 
