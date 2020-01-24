@@ -6,17 +6,19 @@
 
 .mid-h2 {
   text-align: center;
-  font-family: Plantin,AmericanTypewriter-Condensed,Times New Roman,serif;
+  // font-family: Plantin,AmericanTypewriter-Condensed,Times New Roman,serif;
+  font-family: BasisBlack, Avenir, Helvetica Neue, Helvetica, sans-serif;
   line-height: 1.2;
-  text-transform: uppercase;  
+  // text-transform: uppercase;  
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .mid-h3 {
   text-align: center;
   font-family: Freight,HoeflerText-Black,Times New Roman,serif;
   font-size: 46px;
+  font-weight: bold;
 }
 
 .mid-header {

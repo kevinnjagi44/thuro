@@ -120,7 +120,7 @@ class Main extends React.Component {
             </div>
           </div>
 
-          <h3 className="mid-h2">Skip The Rental Counter</h3>
+          <h3 className="mid-h2">Skip the rental counter</h3>
           <br/>
           <h2 className="mid-h3">Discover the world’s largest car sharing marketplace</h2>
         </div>
