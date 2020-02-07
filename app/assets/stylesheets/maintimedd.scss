@@ -10,6 +10,13 @@
     width: 102px;
     background: white;
     border: none;
+    // Remove default select style for Windows/Firefox.
+    -webkit-appearance: none;
+    background: url(data:image/gif;base64,R0lGODlhCwALAJEAAAAAAP///xUVFf///yH5BAEAAAMALAAAAAALAAsAAAIPnI+py+0/hJzz0IruwjsVADs=);
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: no-repeat;
+    background-position: 95% 42%;
 }
 
 .main-date {
