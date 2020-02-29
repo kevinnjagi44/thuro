@@ -90,7 +90,8 @@
   margin-top: 30px;
   padding: 11px 18px ;
   opacity: 0.75;
-  transition: 0.7s;   
+  transition: 0.7s; 
+  width: 175px;  
 }
 
 .post-grid:hover {opacity: 1}
@@ -131,6 +132,7 @@
   color: #231F20;
   text-align: center;
   padding-top: 170px;
+  font-weight: bold;
 }
 
 .wires-text {
@@ -178,16 +180,19 @@
 }
 
 .borsche-h3 {
-  font-family: Plantin,AmericanTypewriter-Condensed,Times New Roman,serif;
+  // font-family: Plantin,AmericanTypewriter-Condensed,Times New Roman,serif;
+  font-family: BasisBlack, Avenir, Helvetica Neue, Helvetica, sans-serif;
+  font-weight: 600;
   line-height: 1.2;
-  text-transform: uppercase;  
+  // text-transform: uppercase;  
   font-size: 22px;
 }
 
 .borsche-h2 {
   font-family: Freight,HoeflerText-Black,Times New Roman,serif;
   line-height: 1;
-  font-weight: 400;
+  // font-weight: 400;
+  font-weight: bold;
   font-size: 62px;
 }
 
@@ -211,6 +216,7 @@
   color: #231F20;
   font-family: Freight,HoeflerText-Black,Times New Roman,serif;
   line-height: 1;
+  font-weight: bold;
 }
 
 .book-desc {
@@ -226,7 +232,7 @@
 }
 
 .book-pic {
-  max-width: 400px;
+  // max-width: 400px;
   max-height: 225px;
   padding-top: 50px;
 }
@@ -246,7 +252,7 @@
   margin-top: 30px;
   padding: 11px 18px ;
   opacity: 0.75;
-  transition: 0.7s;   
+  transition: 0.7s; 
 }
 
 .post-grid-lm:hover {opacity: 1}

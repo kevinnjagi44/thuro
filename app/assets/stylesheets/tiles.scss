@@ -37,7 +37,9 @@
 
 .tiles-text-h3 {
   margin-top: 30%;
-  font-family: Plantin,AmericanTypewriter-Condensed,Times New Roman,serif;
+  // font-family: Plantin,AmericanTypewriter-Condensed,Times New Roman,serif;
+  font-family: BasisBlack, Avenir, Helvetica Neue, Helvetica, sans-serif;
+  font-weight: 600;
   line-height: 1.2;
   text-transform: uppercase;
   font-size: 24px;
@@ -48,12 +50,13 @@
   font-family: Freight,HoeflerText-Black,Times New Roman,serif;
   line-height: 1;
   font-size: 56px;
+  font-weight: bold;
 }
 
 .tiles-text-desc {
   padding-top: 10px;  
   font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
 }
