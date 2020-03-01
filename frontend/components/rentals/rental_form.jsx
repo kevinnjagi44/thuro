@@ -27,20 +27,12 @@ class RentalForm extends React.Component {
       status: 'pending'
     };
     this.props.processForm(newRental)
-
-    setTimeout(() => {
-      document.getElementById("pre-rental").innerHTML = ("<h2>Rental Booked!</h2>")
-        document.getElementById("pre-rental").setAttribute("id", "rental-requested")
-        document.getElementById("rental-book-btn").style.display = "none"
-        document.getElementById("rentals-idx-btn").style.display = "unset"
-    }, 400);
-
-
-    // this.props.processForm(newRental)
-    //   .then(document.getElementById("pre-rental").innerHTML = ("<h2>Rental Booked!</h2>"))
-    //   .then(document.getElementById("pre-rental").setAttribute("id", "rental-requested"))
-    //   .then(document.getElementById("rental-book-btn").style.display = "none")
-    //   .then(document.getElementById("rentals-idx-btn").style.display = "unset");
+    .then(() => {
+      document.getElementById("pre-rental").innerHTML = "<h2>Rental Booked!</h2>"
+      document.getElementById("pre-rental").setAttribute("id", "rental-requested")
+      document.getElementById("rental-book-btn").style.display = "none"
+      document.getElementById("rentals-idx-btn").style.display = "unset"
+    },6000)
   }
 
   render() {
