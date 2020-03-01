@@ -17,11 +17,11 @@ class CarIndexItem extends React.Component {
         <Link to={`/cars/${id}`}>
           <div className="car-index-photo-wrapper">
             <img className="car-index-photo" src={this.props.car.photoUrl || this.props.car.photoUrls[0]} />
+            <div className="car-price">
+              ${rate}<span className="price-per-day"> /day</span>
+            </div>
           </div>
         </Link>
-        <div className="car-price">
-          ${rate}<span className="price-per-day"> /day</span>
-        </div>
         <div className="car-make-model-year-container">
           <span className="car-make-model">
             {make}&nbsp;{model}

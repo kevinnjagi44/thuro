@@ -88,10 +88,10 @@
   font-weight: 700;
   font-size: 18px;
   margin-top: 30px;
-  padding: 11px 18px ;
+  padding: 18px 18px ;
   opacity: 0.75;
   transition: 0.7s; 
-  width: 175px;  
+  width: 235px;  
 }
 
 .post-grid:hover {opacity: 1}
@@ -106,7 +106,7 @@
   position: relative;
   text-align: center;
 
-    button { 
+  button { 
     border: 1px solid black;
     color: #231F20;
     font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
@@ -118,7 +118,7 @@
     transition: 0.8s;    
   }
 
-    button:hover {
+  button:hover {
     background-color: #8f63f4;
     color: white;
   }    
@@ -180,18 +180,15 @@
 }
 
 .borsche-h3 {
-  // font-family: Plantin,AmericanTypewriter-Condensed,Times New Roman,serif;
   font-family: BasisBlack, Avenir, Helvetica Neue, Helvetica, sans-serif;
   font-weight: 600;
   line-height: 1.2;
-  // text-transform: uppercase;  
   font-size: 22px;
 }
 
 .borsche-h2 {
   font-family: Freight,HoeflerText-Black,Times New Roman,serif;
   line-height: 1;
-  // font-weight: 400;
   font-weight: bold;
   font-size: 62px;
 }
