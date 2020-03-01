@@ -10,7 +10,6 @@ const mSTP = (state, ownProps) => {
   let revScoreSum = revScores.reduce((acc, el) => acc + el, 0)
 
   const carId = ownProps.match.params.id; 
-  // debugger
   return {
     car: state.entities.cars[carId],
     currentUserId: state.session.id,
